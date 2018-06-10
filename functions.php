@@ -28,3 +28,85 @@ function add_child_theme_textdomain() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
+
+
+/**
+ * Load Advanced Custom Fields options page.
+ */
+if(function_exists('acf_add_options_page')) { 
+	acf_add_options_page();
+}
+
+
+/**
+ * Add custom CSS/JS for Advanced Custom Fields.
+ */
+function understrap_acf_admin_head() {
+	?>
+	<style type="text/css">
+		.acf-editor-wrap iframe {
+		    max-height: 120px;
+		}
+		.short .acf-editor-wrap iframe {
+		    max-height: 120px;
+		    min-height: 0;
+		}		
+		[data-toolbar="very_simple"] .mce-menubar {
+			display: none;
+		}
+		[data-toolbar="very_simple"] .mce-edit-area {
+			padding: 10px !important;
+		}
+	</style>
+
+	<script type="text/javascript">
+	(function($){
+
+		/* ... */
+
+	})(jQuery);
+	</script>
+	<?php
+}
+add_action('acf/input/admin_head', 'understrap_acf_admin_head');
+
+
+/**
+ * Edits toolbars for WYSIWYG fields in Advanced Custom Fields.
+ */
+function understrap_toolbars( $toolbars ) {
+
+	// Add a new toolbar called "Very Simple"
+	$toolbars['Very Simple' ] = array();
+	$toolbars['Very Simple' ][1] = array('bold' , 'italic' , 'link', 'unlink' );
+ 
+	// Edit the "Basic" toolbar
+	if( ($key = array_search('underline', $toolbars['Basic'][1])) !== false ) {
+	    unset( $toolbars['Basic'][1][$key] );
+	}
+	if( ($key = array_search('blockquote', $toolbars['Basic'][1])) !== false ) {
+	    unset( $toolbars['Basic'][1][$key] );
+	}
+	if( ($key = array_search('strikethrough', $toolbars['Basic'][1])) !== false ) {
+	    unset( $toolbars['Basic'][1][$key] );
+	}
+	if( ($key = array_search('alignright', $toolbars['Basic'][1])) !== false ) {
+	    unset( $toolbars['Basic'][1][$key] );
+	}
+	if( ($key = array_search('fullscreen', $toolbars['Basic'][1])) !== false ) {
+	    unset( $toolbars['Basic'][1][$key] );
+	}
+ 
+	return $toolbars;
+}
+add_filter( 'acf/fields/wysiwyg/toolbars' , 'understrap_toolbars'  );
+
+
+/**
+ * Filter media library by PDF
+ */
+function understrap_modify_post_mime_types( $post_mime_types ) {
+    $post_mime_types['application/pdf'] = array( __( 'PDFs' ), __( 'Manage PDFs' ), _n_noop( 'PDF <span class="count">(%s)</span>', 'PDFs <span class="count">(%s)</span>' ) );
+    return $post_mime_types; 
+}
+add_filter( 'post_mime_types', 'understrap_modify_post_mime_types' );
