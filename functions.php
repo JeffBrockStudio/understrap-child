@@ -110,3 +110,65 @@ function understrap_modify_post_mime_types( $post_mime_types ) {
     return $post_mime_types; 
 }
 add_filter( 'post_mime_types', 'understrap_modify_post_mime_types' );
+
+
+/**
+ * Allow a draft page to be set as a parent
+ */
+function understrap_attributes_dropdown_pages_args($dropdown_args) {
+  $dropdown_args['post_status'] = array('publish','draft');
+  return $dropdown_args;
+}
+add_filter('page_attributes_dropdown_pages_args', 'understrap_attributes_dropdown_pages_args', 1, 1);
+
+
+/**
+ * Remove anchor from "Read more" link
+ */
+function understrap_remove_more_link_scroll( $link ) {
+	$link = preg_replace( '|#more-[0-9]+|', '', $link );
+	return $link;
+}
+add_filter( 'the_content_more_link', 'understrap_remove_more_link_scroll' );
+
+
+/**
+ * Prevent Yoast SEO from adding "Make Primary" to all categories
+ */
+add_filter( 'wpseo_primary_term_taxonomies', '__return_false' );
+
+
+function foobar_func( $atts ){
+	return "foo and bar";
+}
+//add_shortcode( 'foobar', 'foobar_func' );
+
+
+/**
+ * Convert text to a slug
+ */
+function slugify($text) {
+  // replace non letter or digits by -
+  $text = preg_replace('~[^\pL\d]+~u', '-', $text);
+
+  // transliterate
+  $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+
+  // remove unwanted characters
+  $text = preg_replace('~[^-\w]+~', '', $text);
+
+  // trim
+  $text = trim($text, '-');
+
+  // remove duplicate -
+  $text = preg_replace('~-+~', '-', $text);
+
+  // lowercase
+  $text = strtolower($text);
+
+  if (empty($text)) {
+    return 'n-a';
+  }
+
+  return $text;
+}
