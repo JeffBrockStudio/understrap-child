@@ -138,6 +138,20 @@ add_filter( 'the_content_more_link', 'understrap_remove_more_link_scroll' );
 add_filter( 'wpseo_primary_term_taxonomies', '__return_false' );
 
 
+/**
+ * Hide "Order" field in Page Attributes sidebar
+ */
+add_action('admin_head', 'hide_order_attribution');
+function hide_order_attribution() {
+         echo '<style>
+               label[for="menu_order"],
+               input[name="menu_order"] {
+                 display:none;
+               }
+              </style>';
+}   
+
+
 function foobar_func( $atts ){
 	return "foo and bar";
 }
