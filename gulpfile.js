@@ -141,6 +141,39 @@ gulp.task( 'scripts', function() {
 
         paths.dev + '/js/skip-link-focus-fix.js',
 
+				// Font Awesome Pro
+		    paths.dev + '/js/fontawesome.min.js',
+    
+				// ImagesLoaded
+		    paths.dev + '/js/imagesloaded.pkgd.min.js',
+
+				// Isotope
+		    paths.dev + '/js/isotope.pkgd.min.js',
+
+				// LazySizes
+		    paths.dev + '/js/lazysizes.min.js',
+
+				// MatchHeight
+		    paths.dev + '/js/jquery.matchHeight-min.js',
+
+				// Modernizr
+//		    paths.dev + '/js/jquery.matchHeight-min.js',
+
+				// Parallax
+		    paths.dev + '/js/parallax.min.js',
+
+				// Slick
+		    paths.dev + '/js/slick.min.js',
+		    
+		    // SmoothScroll				
+		    paths.dev + '/js/smooth-scroll.min.js',
+		    
+		    // Sticky
+		    paths.dev + '/js/jquery.sticky.js',
+
+		    // TouchSwipe
+		    paths.dev + '/js/jquery.touchSwipe.min.js',
+
         // Adding currently empty javascript file to add on for your own themes´ customizations
         // Please add any customizations to this .js file only!
         paths.dev + '/js/custom-javascript.js'
@@ -200,6 +233,58 @@ gulp.task( 'copy-assets', function() {
         .pipe( gulp.dest( paths.js + paths.vendor ) );
     gulp.src( paths.node + 'popper.js/dist/umd/popper.js' )
         .pipe( gulp.dest( paths.js + paths.vendor ) );
+
+// Copy Bootstrap Select files
+    gulp.src( paths.node + 'bootstrap-select/dist/js/bootstrap-select.min.js' )
+        .pipe( gulp.dest( paths.dev + '/js'  ) );
+
+// Copy Font Awesome Pro files
+    gulp.src( paths.node + '@fortawesome/fontawesome-pro/js/fontawesome.min.js' )
+        .pipe( gulp.dest( paths.dev + '/js' ) );
+    gulp.src( paths.node + '@fortawesome/fontawesome-pro/scss/*.scss' )
+        .pipe( gulp.dest( paths.dev + '/sass/fontawesome-pro' ) );
+
+// Copy ImagesLoaded files
+    gulp.src( paths.node + 'imagesloaded/imagesloaded.pkgd.min.js' )
+        .pipe( gulp.dest( paths.dev + '/js' ) );
+
+// Copy Isotope files
+    gulp.src( paths.node + 'isotope-layout/dist/isotope.pkgd.min.js' )
+        .pipe( gulp.dest( paths.dev + '/js' ) );
+
+// Copy LazySizes files
+    gulp.src( paths.node + 'lazysizes/lazysizes.min.js' )
+        .pipe( gulp.dest( paths.dev + '/js' ) );
+
+// Copy MatchHeight files
+    gulp.src( paths.node + 'jquery-match-height/dist/jquery.matchHeight-min.js' )
+        .pipe( gulp.dest( paths.dev + '/js' ) );
+
+// Copy Modernizr files
+/*
+    gulp.src( paths.node + 'lazysizes/lazysizes.min.js' )
+        .pipe( gulp.dest( paths.js + paths.vendor ) );
+*/
+
+// Copy Parallax files
+    gulp.src( paths.node + 'jquery-parallax.js/parallax.min.js' )
+        .pipe( gulp.dest( paths.dev + '/js' ) );
+
+// Copy SmoothScroll files
+    gulp.src( paths.node + 'smooth-scroll/dist/smooth-scroll.min.js' )
+        .pipe( gulp.dest( paths.dev + '/js' ) );
+
+// Copy Slick files
+    gulp.src( paths.node + 'slick-carousel/slick/slick.min.js' )
+        .pipe( gulp.dest( paths.dev + '/js' ) );
+
+// Copy Sticky files
+    gulp.src( paths.node + 'jquery-sticky/jquery.sticky.js' )
+        .pipe( gulp.dest( paths.dev + '/js' ) );
+
+// Copy TouchSwipe files
+    gulp.src( paths.node + 'jquery-touchswipe/jquery.touchSwipe.min.js' )
+        .pipe( gulp.dest( paths.dev + '/js' ) );
 
 // UnderStrap SCSS files
     gulp.src( paths.node + 'understrap/sass/**/*.scss' )

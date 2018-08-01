@@ -22,6 +22,10 @@ function theme_enqueue_styles() {
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
+
+    // Add Google Fonts
+    wp_enqueue_style( 'child-understrap-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300', false ); 
+    
 }
 
 function add_child_theme_textdomain() {
@@ -33,8 +37,42 @@ add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 /**
  * Load Advanced Custom Fields options page.
  */
-if(function_exists('acf_add_options_page')) { 
-	acf_add_options_page();
+if( current_user_can('manage_options') AND function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title'  => 'Global Settings',
+		'menu_title'  => 'Global Settings',
+		'menu_slug'   => 'theme-general-options',
+		'capability'  => 'edit_posts',
+		'redirect'    => true,
+		'icon_url'	  => 'dashicons-admin-site',
+		'position'    => 58 // End of the menu, before the separator at 59
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title'  => 'Social Media',
+		'menu_title'  => 'Social',
+		'parent_slug' => 'theme-general-options',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title'  => 'Header',
+		'menu_title'  => 'Header',
+		'parent_slug' => 'theme-general-options',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title'  => 'Footer',
+		'menu_title'  => 'Footer',
+		'parent_slug' => 'theme-general-options',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title'  => 'External Scripts',
+		'menu_title'  => 'External Scripts',
+		'parent_slug' => 'theme-general-options',
+	));
+	
 }
 
 
@@ -110,3 +148,13 @@ function understrap_modify_post_mime_types( $post_mime_types ) {
     return $post_mime_types; 
 }
 add_filter( 'post_mime_types', 'understrap_modify_post_mime_types' );
+
+
+/**
+ * Add Support for SVGs
+ */
+function understrap_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'understrap_mime_types');

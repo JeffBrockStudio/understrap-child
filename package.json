@@ -26,9 +26,11 @@
   "homepage": "https://understrap.com",
   "dependencies": {
     "bootstrap": "4.1.0",
+    "bootstrap-select": "^1.13.1",
     "browser-sync": "^2.23.6",
     "del": "^3.0.0",
     "font-awesome": "^4.7.0",
+    "@fortawesome/fontawesome-pro": "",
     "gulp": "3.9.1",
     "gulp-clean-css": "^3.9.2",
     "gulp-clone": "2.0.1",
@@ -46,12 +48,21 @@
     "gulp-sourcemaps": "2.6.4",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "5.0.0",
+    "imagesloaded": "^4.1.4",
+    "isotope-layout": "^3.0.6",
+    "jquery-match-height": "^0.7.2",
+    "jquery-sticky": "^1.0.4",
+    "jquery-touchswipe": "^1.6.18",
+    "lazysizes": "^4.0.4",
     "merge2": "^1.2.1",
+    "modernizr": "^3.6.0",
+    "jquery-parallax.js": "^1.5.0",
     "popper.js": "^1.12.9",
     "run-sequence": "^2.2.1",
     "undescores-for-npm": "^1.0.0",
     "gulp-autoprefixer": "^5.0.0",
+    "slick-carousel": "^1.8.1",
+    "smooth-scroll": "^14.2.1",
     "understrap": "^0.8.2"
   }
-    
 }
