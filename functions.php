@@ -103,7 +103,6 @@ function understrap_add_custom_taxonomies() {
 add_action( 'init', 'understrap_add_custom_taxonomies', 0 );
 
 
-
 /**
  * Load Advanced Custom Fields options page.
  */
@@ -136,6 +135,12 @@ if( current_user_can('manage_options') AND function_exists('acf_add_options_page
 		'menu_title'  => 'Footer',
 		'parent_slug' => 'theme-general-options',
 	));
+	
+	acf_add_options_sub_page(array(
+		'page_title'  => 'Admin',
+		'menu_title'  => 'Admin',
+		'parent_slug' => 'theme-general-options',
+	));	
 
 	acf_add_options_sub_page(array(
 		'page_title'  => 'External Scripts',
@@ -160,6 +165,10 @@ function understrap_acf_admin_head() {
 		    min-height: 0;
 		}
 		
+		.acf-tab-group {
+			padding-left: 0;
+		}
+		
 		/* "Very Simple" editor */		
 		[data-toolbar="very_simple"] iframe {
 			height: 150px !important;
@@ -174,8 +183,11 @@ function understrap_acf_admin_head() {
 				
 		/* Add border between repeater items */		
 		.acf-repeater.-block .ui-sortable tr.acf-row td {
- 			border-bottom: 4px solid #E1E1E1;
- 			border-top: 4px solid #E1E1E1;
+ 			border-bottom: 4px solid #F9F9F9;
+ 			border-top: 4px solid #F9F9F9;
+		}
+		.acf-repeater.-block .ui-sortable tr.acf-row:first-child td {
+			border-top: none;
 		}
 		.acf-repeater.-block .ui-sortable tr.acf-row:nth-last-child(2) td {
 			border-bottom: none;
@@ -188,18 +200,52 @@ function understrap_acf_admin_head() {
 		#side-sortables .acf-field-image .acf-label {
 			display: none;
 		}		
+		
+		/* Color palette field */
+		.acf-palette-field-layout .acf-palette-label:before {
+			border-color: #ffffff;
+		}				
 	</style>
 
 	<script type="text/javascript">
 	(function($){
 
-		/* ... */
+	  jQuery('#pageparentdiv label[for=menu_order]').parents('p').eq(0).remove();
+	  jQuery('#pageparentdiv input#menu_order').remove();
 
 	})(jQuery);
 	</script>
 	<?php
 }
 add_action('acf/input/admin_head', 'understrap_acf_admin_head');
+
+
+/**
+ * Hide drafts in ACF pickers.
+ */
+function acf_hide_drafts($options, $field, $the_post) {
+	$options['post_status'] = array('publish');
+	return $options;
+}
+add_filter('acf/fields/relationship/query', 'acf_hide_drafts', 10, 3);
+
+
+add_editor_style( 'css/custom-editor-style.css' );
+
+
+/**
+ * Hide Order field in admin sidebar.
+ */
+function hide_order_attribution() {
+	echo '<style>
+	     label[for="menu_order"],
+	     input[name="menu_order"],
+	     #pageparentdiv .inside p:last-of-type {
+	       display:none;
+	     }
+	    </style>';
+} 
+add_action('admin_head', 'hide_order_attribution');
 
 
 /**
@@ -231,6 +277,21 @@ function understrap_toolbars( $toolbars ) {
 	return $toolbars;
 }
 add_filter( 'acf/fields/wysiwyg/toolbars' , 'understrap_toolbars'  );
+
+
+/**
+ * Use WordPress' native, generated PDF thumbnails in ACF.
+ */
+function acf_change_icon_on_files ( $icon, $mime, $attachment_id ){ 
+	if ( strpos( $_SERVER[ 'REQUEST_URI' ], '/wp-admin/upload.php' ) === false && $mime === 'application/pdf' ){
+		$get_image = wp_get_attachment_image_src ( $attachment_id, 'thumbnail' );
+		if ( $get_image ) {
+			$icon = $get_image[0];
+		} 
+	}
+	return $icon;
+}
+add_filter( 'wp_mime_type_icon', 'acf_change_icon_on_files', 10, 3 );
 
 
 /**
@@ -271,6 +332,15 @@ function understrap_mime_types($mimes) {
   return $mimes;
 }
 add_filter('upload_mimes', 'understrap_mime_types');
+
+
+/**
+ * Remove support for post formats.
+ */
+function remove_featured_images_from_child_theme() {
+	remove_theme_support( 'post-formats' );
+} 
+add_action( 'after_setup_theme', 'remove_featured_images_from_child_theme', 11 ); 
 
 
 /**
@@ -347,6 +417,19 @@ function understrap_all_excerpts_get_more_link( $post_excerpt ) {
 	return $post_excerpt;
 }
 add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
+
+
+/**
+ * Limit number of words.
+ */
+function understrap_limit_text($text, $limit) {
+  if (str_word_count($text, 0) > $limit) {
+    $words = str_word_count($text, 2);
+    $pos = array_keys($words);
+    $text = substr($text, 0, $pos[$limit]) . '...';
+  }
+  return $text;
+}
 
 
 /**
