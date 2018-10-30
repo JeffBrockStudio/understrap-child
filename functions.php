@@ -209,6 +209,13 @@ function understrap_acf_admin_head() {
 		.acf-palette-field-layout .acf-palette-label:before {
 			border-color: #ffffff;
 		}				
+		
+		/* Make SVG icons 100% width */
+		.acf-image-uploader .image-wrap {
+			max-width: 100% !important;
+			width: 100%;
+		}
+		
 	</style>
 
 	<script type="text/javascript">

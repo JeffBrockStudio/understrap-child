@@ -1,3 +1,83 @@
 html {
 	-webkit-font-smoothing: antialiased;	
 }
+
+
+//
+// Formidable Form
+// --------------------------------------------------
+body .frm_style_formidable-style.with_frm_style {
+	
+	// Fields
+	.form-field {
+		input[type=password], 
+		input[type=email], 
+		input[type=number]
+		input[type=url],
+		input[type=tel],
+		input[type=file],
+		input[type=search],
+		input[type=text],
+		button,
+		select,
+		textarea {
+			border-radius: $border-radius;
+			font-family: $font-family-base;
+			font-size: 1rem;
+			font-weight: $font-weight-light;
+			height: 44px;			
+		}			 							
+		textarea {
+			height: auto;
+		}
+	}
+	
+	// Submit
+	.frm_submit {
+		button {
+			background: $secondary;
+			border: none;
+			border-radius: $btn-border-radius;
+			box-shadow: $btn-box-shadow;
+			font-family: $font-family-base;
+			font-size: 1rem;
+			font-weight: $font-weight-bold;
+			padding: $btn-padding-y $btn-padding-x;
+			text-transform: uppercase;
+			transition: $btn-transition;
+			&:hover {
+				background: $primary;
+				color: $white;
+			}
+		}
+	}
+	
+	// Error message
+	.frm_error {
+		color: $red;
+		font-family: $font-family-base;		
+		font-size: 0.8rem;
+		margin-top: 0.3rem;
+	}
+	.frm_error_style {
+		border-radius: $border-radius;
+		color: $red;
+		font-size: 1rem;
+		p {
+			font-weight: $font-weight-bold;
+			margin-bottom: 0;
+		}			
+	}			
+	
+	// Confirmation message
+	.frm_message {
+		border-radius: $border-radius;
+		color: $green;
+		font-size: 1rem;
+		p {
+			font-weight: $font-weight-bold;
+			margin-bottom: 0;
+		}
+	}
+		
+}
