@@ -26,6 +26,18 @@ body .frm_style_formidable-style.with_frm_style {
 			font-size: 1rem;
 			font-weight: $font-weight-light;
 			height: 44px;			
+			&::-webkit-input-placeholder {
+			  color: $primary;
+			}
+			&::-moz-placeholder {
+			  color: $primary;
+			}
+			&:-ms-input-placeholder {
+			  color: $primary;
+			}
+			&:-moz-placeholder {
+			  color: $primary;
+			}							
 		}			 							
 		textarea {
 			height: auto;
