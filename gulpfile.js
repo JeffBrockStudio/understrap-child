@@ -144,37 +144,37 @@ gulp.task( 'scripts', function() {
         paths.dev + '/js/skip-link-focus-fix.js',
 
 				// Font Awesome Pro
-		    paths.dev + '/js/fontawesome.min.js',
+				paths.dev + '/js/fontawesome.min.js',
     
 				// ImagesLoaded
-		    paths.dev + '/js/imagesloaded.pkgd.min.js',
+				paths.dev + '/js/imagesloaded.pkgd.min.js',
 
 				// Isotope
-		    paths.dev + '/js/isotope.pkgd.min.js',
+				paths.dev + '/js/isotope.pkgd.min.js',
 
 				// LazySizes
-		    paths.dev + '/js/lazysizes.min.js',
+				paths.dev + '/js/lazysizes.min.js',
 
 				// MatchHeight
-		    paths.dev + '/js/jquery.matchHeight-min.js',
+				paths.dev + '/js/jquery.matchHeight-min.js',
 
 				// Modernizr
-//		    paths.dev + '/js/jquery.matchHeight-min.js',
+				paths.dev + '/js/modernizr-custom.js',
 
 				// Parallax
-		    paths.dev + '/js/parallax.min.js',
+				paths.dev + '/js/parallax.min.js',
 
 				// Slick
-		    paths.dev + '/js/slick.min.js',
-		    
-		    // SmoothScroll				
-		    paths.dev + '/js/smooth-scroll.min.js',
-		    
-		    // Sticky
-		    paths.dev + '/js/jquery.sticky.js',
+				paths.dev + '/js/slick.min.js',
+				
+				// SmoothScroll
+				paths.dev + '/js/smooth-scroll.min.js',
+				
+				// Sticky
+				paths.dev + '/js/jquery.sticky.js',
 
-		    // TouchSwipe
-		    paths.dev + '/js/jquery.touchSwipe.min.js',
+				// TouchSwipe
+				paths.dev + '/js/jquery.touchSwipe.min.js',
 
         // Adding currently empty javascript file to add on for your own themes´ customizations
         // Please add any customizations to this .js file only!
