@@ -544,4 +544,38 @@ function remove_dashboard_meta() {
   remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
 }
 add_action( 'admin_init', 'remove_dashboard_meta' );
+
+
+/**
+ * Make last space in a sentence a non-breaking space to prevent typographic widows.
+ */
+function widont( $str = '' ) {
+
+	// Strip spaces.
+	$str = trim( $str );
+	// Find the last space.
+	$space = strrpos( $str, ' ' );
+
+	// If there's a space then replace the last on with a non breaking space.
+	if ( false !== $space ) {
+		$str = substr( $str, 0, $space ) . '&nbsp;' . substr( $str, $space + 1 );
+	}
+
+	// Return the string.
+	return $str;
+
+}
+add_filter( 'the_title', 'widont' );
+add_filter( 'the_content', 'widont' );
+
+
+/**
+ * Convert phone number into clickable link.
+ */
+function format_phone( $str = '' ) {
+	$str = trim( $str );	
+	$str = preg_replace("/[^0-9]/", "", $str );
+	$str = 'tel://+1' . $str;
+	return $str;
+}
 ?>
