@@ -263,10 +263,6 @@ add_action('admin_head', 'hide_order_attribution');
  */
 function understrap_toolbars( $toolbars ) {
 
-	// Add a new toolbar called "Very Simple"
-	$toolbars['Very Simple' ] = array();
-	$toolbars['Very Simple' ][1] = array('bold' , 'italic' , 'link', 'unlink' );
- 
 	// Edit the "Basic" toolbar
 	if( ($key = array_search('underline', $toolbars['Basic'][1])) !== false ) {
 	    unset( $toolbars['Basic'][1][$key] );
@@ -544,29 +540,6 @@ function remove_dashboard_meta() {
   remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
 }
 add_action( 'admin_init', 'remove_dashboard_meta' );
-
-
-/**
- * Make last space in a sentence a non-breaking space to prevent typographic widows.
- */
-function widont( $str = '' ) {
-
-	// Strip spaces.
-	$str = trim( $str );
-	// Find the last space.
-	$space = strrpos( $str, ' ' );
-
-	// If there's a space then replace the last on with a non breaking space.
-	if ( false !== $space ) {
-		$str = substr( $str, 0, $space ) . '&nbsp;' . substr( $str, $space + 1 );
-	}
-
-	// Return the string.
-	return $str;
-
-}
-add_filter( 'the_title', 'widont' );
-add_filter( 'the_content', 'widont' );
 
 
 /**
