@@ -143,6 +143,9 @@ gulp.task( 'scripts', function() {
 
         paths.dev + '/js/skip-link-focus-fix.js',
 
+				// Bootstrap Select
+				paths.dev + '/js/bootstrap-select.min.js',
+
 				// Font Awesome Pro
 				paths.dev + '/js/fontawesome.min.js',
     
