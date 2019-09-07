@@ -543,6 +543,20 @@ add_action( 'admin_init', 'remove_dashboard_meta' );
 
 
 /**
+ * Generate random string (for CSS ID's)
+ */
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
+
+/**
  * Convert phone number into clickable link.
  */
 function format_phone( $str = '' ) {
