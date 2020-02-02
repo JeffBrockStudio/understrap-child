@@ -24,7 +24,8 @@ var paths = cfg.paths;
 // gulp sass
 // Compiles SCSS files in CSS
 gulp.task( 'sass', function() {
-    var stream = gulp.src( `${paths.sass}/*.scss` )
+      var stream = gulp.src( `${paths.sass}/*.scss` )
+    
         .pipe( sourcemaps.init( { loadMaps: true } ) )
         .pipe( plumber( {
             errorHandler: function( err ) {
@@ -129,38 +130,38 @@ gulp.task( 'scripts', function() {
 
         `${paths.dev}/js/skip-link-focus-fix.js`,
 
-				// Font Awesome Pro
-				`${paths.dev}/js/fontawesome.min.js`,
+        // Font Awesome Pro
+        `${paths.dev}/js/fontawesome.min.js`,
     
-				// ImagesLoaded
-				`${paths.dev}/js/imagesloaded.pkgd.min.js`,
+        // ImagesLoaded
+        `${paths.dev}/js/imagesloaded.pkgd.min.js`,
 
-				// Isotope
-				`${paths.dev}/js/isotope.pkgd.min.js`,
+        // Isotope
+        `${paths.dev}/js/isotope.pkgd.min.js`,
 
-				// LazySizes
-				`${paths.dev}/js/lazysizes.min.js`,
+        // LazySizes
+        `${paths.dev}/js/lazysizes.min.js`,
 
-				// MatchHeight
-				`${paths.dev}/js/jquery.matchHeight-min.js`,
+        // MatchHeight
+        `${paths.dev}/js/jquery.matchHeight-min.js`,
 
-				// Modernizr
-				`${paths.dev}/js/modernizr-custom.js`,
+        // Modernizr
+        `${paths.dev}/js/modernizr-custom.js`,
 
-				// Parallax
-				`${paths.dev}/js/parallax.min.js`,
+        // Parallax
+        `${paths.dev}/js/parallax.min.js`,
 
-				// Slick
-				`${paths.dev}/js/slick.min.js`,
-				
-				// SmoothScroll
-				`${paths.dev}/js/smooth-scroll.min.js`,
-				
-				// Sticky
-				`${paths.dev}/js/jquery.sticky.js`,
+        // Slick
+        `${paths.dev}/js/slick.min.js`,
+        
+        // SmoothScroll
+        `${paths.dev}/js/smooth-scroll.min.js`,
+        
+        // Sticky
+        `${paths.dev}/js/jquery.sticky.js`,
 
-				// TouchSwipe
-				`${paths.dev}/js/jquery.touchSwipe.min.js`,
+        // TouchSwipe
+        `${paths.dev}/js/jquery.touchSwipe.min.js`,
 
         // Adding currently empty javascript file to add on for your own themes´ customizations
         // Please add any customizations to this .js file only!
@@ -221,6 +222,8 @@ gulp.task( 'copy-assets', function() {
 // Copy Bootstrap Select files
     gulp.src( `${paths.node}bootstrap-select/dist/js/bootstrap-select.min.js` )
         .pipe( gulp.dest( `${paths.dev}/js` ) );
+    gulp.src( `${paths.node}bootstrap-select/sass/*.scss` )
+        .pipe( gulp.dest( `${paths.dev}/sass/bootstrap-select` ) );        
 
 // Copy Font Awesome Pro files
     gulp.src( `${paths.node}@fortawesome/fontawesome-pro/js/fontawesome.min.js` )

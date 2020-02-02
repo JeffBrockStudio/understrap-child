@@ -163,9 +163,15 @@ function understrap_acf_admin_head() {
 		.acf-editor-wrap iframe {
 		    max-height: 400px;
 		}
+		.short .acf-editor-wrap {
+			top: -32px;
+		}
 		.short .acf-editor-wrap iframe {
-		    max-height: 200px;
+		    max-height: 160px;
 		    min-height: 0;
+		}
+		.short .acf-editor-wrap 	.mce-menubar {
+			display: none;
 		}
 		
 		.acf-tab-group {
@@ -565,4 +571,15 @@ function format_phone( $str = '' ) {
 	$str = 'tel://+1' . $str;
 	return $str;
 }
+
+
+/**
+ * Current year shortcode
+ */
+function current_year() {
+	ob_start();
+	echo date( 'Y' );
+  return ob_get_clean();
+}
+add_shortcode('current_year', 'current_year');
 ?>
