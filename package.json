@@ -1,14 +1,14 @@
 {
   "name": "understrap-child",
   "version": "0.5.5",
-  "description": "Basic Child Theme for UnderStrap Theme Framework: https://github.com/holger1411/understrap",
+  "description": "Custom WordPress theme for [CLIENT]. Forked from basic child theme for UnderStrap Theme Framework: https://github.com/holger1411/understrap",
   "main": "index.js",
   "scripts": {
     "postinstall": "gulp copy-assets"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/holger1411/understrap-child.git"
+    "url": "https://github.com/JeffBrockStudio/[NAME].git"
   },
   "keywords": [
     "wordpress",
@@ -17,10 +17,10 @@
     "bootstrap",
     "underscores"
   ],
-  "author": "Holger Koenemann",
+  "author": "Jeff Brock Studio",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/holger1411/understrap-child/issues"
+    "url": "https://github.com/JeffBrockStudio/[NAME]/issues"
   },
   "homepage": "https://understrap.com",
   "dependencies": {
@@ -55,11 +55,10 @@
     "jquery-touchswipe": "^1.6.18",
     "lazysizes": "^4.0.4",
     "merge2": "^1.2.3",
-    "popper.js": "^1.15.0",
+    "popper.js": "^1.16.0",
     "run-sequence": "^2.2.1",
     "slick-carousel": "^1.8.1",
     "smooth-scroll": "^14.2.1",
-    "through2": "^3.0.1",
     "understrap": "^0.8.9",
     "undescores-for-npm": "^1.0.0"
   }
