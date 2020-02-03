@@ -35,7 +35,7 @@ So you have one clean CSS file at the end and just one request.
 
 ### Installing Dependencies
 - Make sure you have installed Node.js and Gulp on your computer globally
-- Open your terminal and browse to the location of the CSSP theme
+- Open your terminal and browse to the location of the [CLIENT] theme
 - Run: `$ npm install`
 - Run: `$ gulp scripts`
 - Run: `$ gulp styles`

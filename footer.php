@@ -11,6 +11,8 @@
 defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
+
+global $script_code;
 ?>
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
@@ -42,6 +44,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div><!-- wrapper end -->
 
 </div><!-- #page we need this extra closing tag here -->
+
+<?php echo $script_code['footer']; ?>	
 
 <?php wp_footer(); ?>
 
