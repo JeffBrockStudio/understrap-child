@@ -8,6 +8,17 @@
 @import "assets/underscores";                            // <------- Underscores media styles
 
 // Any additional imported files //
+@import "assets/fontawesome-pro/fontawesome"; // <------- Font Awesome Pro Icon font
+@import "assets/fontawesome-pro/duotone"; // <------- Font Awesome Pro Duotone font
+@import "assets/fontawesome-pro/brands"; // <------- Font Awesome Pro Brands font
+@import "assets/fontawesome-pro/regular"; // <------- Font Awesome Pro Regular font
+@import "assets/fontawesome-pro/light"; // <------- Font Awesome Pro Light font
+@import "assets/fontawesome-pro/solid"; // <------- Font Awesome Pro Solid font
+
+@import "assets/slick/theme/slick-theme"; // <------- Slick Carousel theme
+@import "assets/slick/theme/slick"; // <------- Slick Carousel styles
+@import "assets/bootstrap-select/bootstrap-select"; // <------- Bootstrap Select
+
 @import "theme/child_theme";                             // <------- Add your styles into this file
 @import "assets/understrap/theme/colors";           // <-------- This creates the necessary bootstrap color classes.
 @import "assets/understrap/theme/blocks";           // <-------- This adds Bootstrap styles to blocks.
