@@ -3,5 +3,14 @@
 // Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
 
 
-$purple: #5533ff; // Thats a sample how you could change a BootStrap variable.
-$primary: $purple;  // Once we've changed the value, we'll also make it the primary brand color.
+// Set Font Awesome Pro font folder
+$fa-font-path: "../fonts" !default;
+
+// Slick Carousel
+$slick-font-family: "Font Awesome 5 Pro" !default;
+$slick-font-path: "../fonts/" !default;
+$slick-loader-path: "../img/" !default;
+$slick-arrow-color: #ffffff !default;
+$slick-prev-character: "\f053" !default;
+$slick-next-character: "\f054" !default;
+

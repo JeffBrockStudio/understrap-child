@@ -87,3 +87,10 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+
+
+/**
+ * Loads custom functions.
+ */
+include( get_stylesheet_directory() . '/inc/custom-functions.php' );
