@@ -50,7 +50,7 @@ if( current_user_can('manage_options') AND function_exists('acf_add_options_page
 /**
  * Add custom CSS/JS for Advanced Custom Fields.
  */
-function understrap_acf_admin_head() {
+function custom_acf_admin_head() {
 	?>
 	<style type="text/css">
 		.acf-editor-wrap iframe {
@@ -102,7 +102,9 @@ function understrap_acf_admin_head() {
 		#side-sortables .acf-field-image .acf-label {
 			display: none;
 		}		
-		#side-sortables #funding_statusdiv {
+		#side-sortables #team_rolesdiv,
+		#side-sortables #resource_typesdiv,
+		#side-sortables #resource_topicsdiv {
 			display: none;			
 		}
 		
@@ -137,7 +139,7 @@ function understrap_acf_admin_head() {
 	</script>
 	<?php
 }
-add_action('acf/input/admin_head', 'understrap_acf_admin_head');
+add_action('acf/input/admin_head', 'custom_acf_admin_head');
 
 
 /**
@@ -156,7 +158,7 @@ add_editor_style( 'css/custom-editor-style.css' );
 /**
  * Edit toolbars for WYSIWYG fields in Advanced Custom Fields.
  */
-function understrap_toolbars( $toolbars ) {
+function custom_toolbars( $toolbars ) {
 
 	// Edit the "Basic" toolbar
 	if( ($key = array_search('underline', $toolbars['Basic'][1])) !== false ) {
@@ -177,7 +179,7 @@ function understrap_toolbars( $toolbars ) {
  
 	return $toolbars;
 }
-add_filter( 'acf/fields/wysiwyg/toolbars' , 'understrap_toolbars'  );
+add_filter( 'acf/fields/wysiwyg/toolbars' , 'custom_toolbars'  );
 
 
 /**

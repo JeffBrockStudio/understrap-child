@@ -4,32 +4,61 @@
  * Register custom post types.
  */
 function custom_create_post_types() {
-	register_post_type( 'item',
+	register_post_type( 'resource',
 		array(
 			'labels' => array(
-				'name'               => __( 'Items' ),
-				'singular_name'      => __( 'Items' ),
-				'menu_name'          => __( 'Items' ),
-				'name_admin_bar'     => __( 'Item' ),
+				'name'               => __( 'Resources' ),
+				'singular_name'      => __( 'Resource' ),
+				'menu_name'          => __( 'Resources' ),
+				'name_admin_bar'     => __( 'Resource' ),
 				'add_new'            => __( 'Add New' ),
-				'add_new_item'       => __( 'Add New Item' ),
-				'new_item'           => __( 'New Item' ),
-				'edit_item'          => __( 'Edit Item' ),
-				'view_item'          => __( 'View Item' ),
-				'all_items'          => __( 'All Items' ),
-				'search_items'       => __( 'Search Items' ),
-				'parent_item_colon'  => __( 'Parent Items:' ),
-				'not_found'          => __( 'No items found.' ),
-				'not_found_in_trash' => __( 'No items found in Trash.' )
+				'add_new_item'       => __( 'Add New Resource' ),
+				'new_item'           => __( 'New Resource' ),
+				'edit_item'          => __( 'Edit Resource' ),
+				'view_item'          => __( 'View Resource' ),
+				'all_items'          => __( 'All Resources' ),
+				'search_items'       => __( 'Search Resources' ),
+				'parent_item_colon'  => __( 'Parent Resources:' ),
+				'not_found'          => __( 'No resources found.' ),
+				'not_found_in_trash' => __( 'No resources found in Trash.' )
 			),
-			'menu_icon' => 'dashicons-clipboard',			
+			'menu_icon' => 'dashicons-analytics',			
 			'public' => true,
 			'hierarchical' => false,
-			'supports' => array( 'title', 'editor', 'revisions' )
+			'supports' => array( 'title', 'editor' ),
+			'has_archive' => true,
+			'rewrite' => array( 'slug' => 'resource', 'with_front' => TRUE)
 		)
 	);
+	
+	// Team Member
+	register_post_type( 'team',
+		array(
+			'labels' => array(
+				'name'               => __( 'Team Member' ),
+				'singular_name'      => __( 'Team Member' ),
+				'menu_name'          => __( 'Team Members' ),
+				'name_admin_bar'     => __( 'Team Member' ),
+				'add_new'            => __( 'Add New' ),
+				'add_new_item'       => __( 'Add New Team Member' ),
+				'new_item'           => __( 'New Team Member' ),
+				'edit_item'          => __( 'Edit Team Member' ),
+				'view_item'          => __( 'View Team Member' ),
+				'all_items'          => __( 'All Team Members' ),
+				'search_items'       => __( 'Search Team Members' ),
+				'parent_item_colon'  => __( 'Parent Team Members:' ),
+				'not_found'          => __( 'No team members found.' ),
+				'not_found_in_trash' => __( 'No team members found in Trash.' )
+			),
+			'menu_icon' => 'dashicons-groups',			
+			'public' => true,
+			'hierarchical' => true,
+			'supports' => array( 'title', 'editor', 'thumbnail' ),
+			'has_archive' => true			
+		)
+	);	
 }
-//add_action( 'init', 'custom_create_post_types' );
+add_action( 'init', 'custom_create_post_types' );
 
 
 /**
@@ -48,7 +77,8 @@ function custom_register_menus() {
 	register_nav_menus(
 		array(
 			'footer-menu' => __( 'Footer Menu' ),
-			'utility-menu' => __( 'Utility Menu' )
+			'utility-menu' => __( 'Utility Menu' ),
+			'legal-menu' => __( 'Legal Menu' )
 		)
 	);
 }

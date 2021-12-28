@@ -1,24 +1,6 @@
 {
     "key": "group_57a4dfacd4491",
     "title": "External Scripts",
-    "location": [
-        [
-            {
-                "param": "options_page",
-                "operator": "==",
-                "value": "acf-options-external-scripts"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "seamless",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": 1,
-    "description": "",
-    "modified": 1528690796,
     "fields": [
         {
             "key": "field_57a4dfe160b8b",
@@ -97,9 +79,7 @@
                         "body": "Body",
                         "footer": "Footer"
                     },
-                    "default_value": [
-                        "footer"
-                    ],
+                    "default_value": "footer",
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
@@ -130,5 +110,31 @@
                 }
             ]
         }
-    ]
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-external-scripts"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1640678064
 }
