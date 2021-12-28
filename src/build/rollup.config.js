@@ -36,6 +36,7 @@ module.exports = {
     path.resolve(__dirname, '../js/skip-link-focus-fix.js'), 
     path.resolve(__dirname, '../js/custom-javascript.js'), 
     path.resolve(__dirname, '../js/bootstrap-select.min.js'),     // Bootstrap Select
+    path.resolve(__dirname, '../js/jquery.gridder.min.js'),       // Gridder
     path.resolve(__dirname, '../js/imagesloaded.pkgd.min.js'),    // Imagesloaded
     path.resolve(__dirname, '../js/lazysizes.min.js'),            // Lazysizes
     path.resolve(__dirname, '../js/jquery.matchHeight-min.js'),   // MatchHeight

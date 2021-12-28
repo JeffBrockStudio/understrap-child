@@ -48,3 +48,17 @@ modernizr.build({
     fs.writeFile('./src/js/modernizer-custom.js', result ); 
 });
 
+// Download Gridder from GitHub
+const fs2 = require('fs');
+const https = require('https');
+const url = 'https://raw.githubusercontent.com/oriongunning/gridder/master/dist/js/jquery.gridder.min.js';
+  
+https.get(url,(res) => {
+    const path = './src/js/jquery.gridder.min.js'; 
+    const filePath = fs2.createWriteStream(path);
+    res.pipe(filePath);
+    filePath.on('finish',() => {
+        filePath.close();
+        console.log('Download Completed'); 
+    })
+})
