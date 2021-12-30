@@ -1,0 +1,24 @@
+body.blog {
+}
+
+.row.spinner-row {
+	display: none;
+	height: 3rem;
+	margin-top: 2rem;
+	&.visible {
+		display: block;
+	}
+	.icon-spinner-circle {
+		background: url(../img/spinner.svg) no-repeat center;
+		background-size: cover;
+		margin: 0 auto;
+		height: 2rem;
+		width: 2rem;	
+	}
+}
+
+.pagination-row {
+}
+
+.meta-data {
+}

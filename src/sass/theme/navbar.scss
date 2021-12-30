@@ -1,0 +1,14 @@
+#wrapper-navbar {
+	
+	.navbar-toggler {
+		.navbar-toggler-icon {
+			background-image: url( '../img/bars-regular.svg' );
+		}
+		&[aria-expanded='true'] {
+			.navbar-toggler-icon {
+				background-image: url( '../img/times-regular.svg' );
+			}
+		}
+	}		
+	
+}
