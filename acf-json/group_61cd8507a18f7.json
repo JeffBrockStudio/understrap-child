@@ -1,0 +1,113 @@
+{
+    "key": "group_61cd8507a18f7",
+    "title": "WYSIWYG Editor (Basic)",
+    "fields": [
+        {
+            "key": "field_61c3a3110465f",
+            "label": "Text",
+            "name": "text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "instruction_placement": "field",
+            "acfe_permissions": "",
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0,
+            "acfe_wysiwyg_min_height": 50,
+            "acfe_wysiwyg_max_height": 500,
+            "acfe_wysiwyg_valid_elements": "",
+            "acfe_wysiwyg_custom_style": "",
+            "acfe_wysiwyg_disable_wp_style": 0,
+            "acfe_wysiwyg_autoresize": 1,
+            "acfe_wysiwyg_disable_resize": 0,
+            "acfe_wysiwyg_remove_path": 1,
+            "acfe_wysiwyg_menubar": 0,
+            "acfe_wysiwyg_transparent": 0,
+            "acfe_wysiwyg_merge_toolbar": 0,
+            "acfe_wysiwyg_custom_toolbar": 1,
+            "acfe_wysiwyg_toolbar_buttons": {
+                "acfe_wysiwyg_toolbar_1": {
+                    "2": {
+                        "acfe_wysiwyg_toolbar_row": "bold"
+                    },
+                    "3": {
+                        "acfe_wysiwyg_toolbar_row": "italic"
+                    },
+                    "6": {
+                        "acfe_wysiwyg_toolbar_row": "|"
+                    },
+                    "7": {
+                        "acfe_wysiwyg_toolbar_row": "bullist"
+                    },
+                    "8": {
+                        "acfe_wysiwyg_toolbar_row": "numlist"
+                    },
+                    "9": {
+                        "acfe_wysiwyg_toolbar_row": "alignleft"
+                    },
+                    "10": {
+                        "acfe_wysiwyg_toolbar_row": "aligncenter"
+                    },
+                    "61cd83d3b2321": {
+                        "acfe_wysiwyg_toolbar_row": "|"
+                    },
+                    "1": {
+                        "acfe_wysiwyg_toolbar_row": "link"
+                    },
+                    "13": {
+                        "acfe_wysiwyg_toolbar_row": "|"
+                    },
+                    "14": {
+                        "acfe_wysiwyg_toolbar_row": "source_code"
+                    }
+                },
+                "acfe_wysiwyg_toolbar_2": "",
+                "acfe_wysiwyg_toolbar_3": "",
+                "acfe_wysiwyg_toolbar_4": ""
+            },
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "acfe_field_group_condition": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 1,
+    "acfe_display_title": "",
+    "acfe_permissions": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1640859041
+}

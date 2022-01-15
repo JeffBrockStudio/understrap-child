@@ -5,7 +5,8 @@
 				<?php 
 				if ( get_sub_field( 'form' )) {?>
 					<div class="form">
-						<?php echo do_shortcode( '[gravityform id="' .get_sub_field( 'form' ). '" title="false" description="false" ajax="true"]' ); ?>
+						<?php echo FrmFormsController::get_form_shortcode( array( 'id' => get_sub_field( 'form' ), 'title' => false, 'description' => false ) ); ?>
+						<?php // echo do_shortcode( '[gravityform id="' .get_sub_field( 'form' ). '" title="false" description="false" ajax="true"]' ); ?>
 					</div>		
 					<?php
 				}

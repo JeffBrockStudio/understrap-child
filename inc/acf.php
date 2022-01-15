@@ -57,7 +57,7 @@ function custom_acf_admin_head() {
 		    max-height: 400px;
 		}
 		.short .acf-editor-wrap {
-			top: -32px;
+			/*top: -32px;*/
 		}
 		.short .acf-editor-wrap iframe {
 		    max-height: 160px;
@@ -102,6 +102,8 @@ function custom_acf_admin_head() {
 		#side-sortables .acf-field-image .acf-label {
 			display: none;
 		}		
+		
+		/* Hide unnecessary taxonomies in sidebar ACF */
 		#side-sortables #team_rolesdiv,
 		#side-sortables #resource_typesdiv,
 		#side-sortables #resource_topicsdiv {
@@ -119,6 +121,7 @@ function custom_acf_admin_head() {
 			width: 100%;
 		}
 		
+		/* TinyMCE */
 		.mce-edit-area {
 			padding-left: 1rem !important;
 			padding-right: 1rem !important;
@@ -126,6 +129,23 @@ function custom_acf_admin_head() {
 		.mce-edit-area iframe {
 			margin-top: 1rem;
 		}				
+		
+		/* Restore some admin CSS that gets overridden by Bootstrap for the Dynamic Previews */
+		#wpwrap {
+			background: #F0F0F1;
+		}
+		#wpwrap #titlediv #title {
+			font-size: 1.25rem;
+		}		
+		#edit-slug-box {
+			font-size: 13px;
+		}
+		#sample-permalink a,
+		#side-sortables a,
+		#message a {
+			color: #2271b1;
+		}
+		
 		
 	</style>
 
@@ -137,9 +157,27 @@ function custom_acf_admin_head() {
 
 	})(jQuery);
 	</script>
+		
 	<?php
 }
 add_action('acf/input/admin_head', 'custom_acf_admin_head');
+
+
+/**
+ * Add custom enqueue scripts for Advanced Custom Fields.
+ */
+function custom_acf_admin_enqueue_scripts() {
+	
+	// Include Bootstrap & custom CSS if this page includes blocks
+	$the_theme = wp_get_theme();
+	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+	// Grab asset urls.
+	$theme_styles  = "/css/child-theme{$suffix}.css";
+	
+	wp_enqueue_style( 'acfe-blocks-layout', get_stylesheet_directory_uri() . $theme_styles, array(), $the_theme->get( 'Version' ) );	
+
+}
+add_action('acf/input/admin_enqueue_scripts', 'custom_acf_admin_enqueue_scripts');
 
 
 /**
@@ -218,3 +256,15 @@ function get_meta_values( $key = '', $type = 'post', $status = 'publish' ) {
     return $r;
 }
 	
+	
+add_filter('acfe/flexible/render/style/', 'my_acf_layout_style', 10, 4);
+function my_acf_layout_style($file, $field, $layout, $is_preview){
+
+		$file = get_stylesheet_directory() . '/css/child-theme.css';
+
+		// Do not include the style file
+		// return false;
+
+		return $file;
+
+}	

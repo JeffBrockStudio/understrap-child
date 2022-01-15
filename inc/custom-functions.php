@@ -11,10 +11,6 @@ require_once('acf.php');
 require_once('admin.php');
 
 
-// Blocks
-require_once('blocks.php');
-
-
 // Custom post types
 require_once('custom-post-types.php');
 

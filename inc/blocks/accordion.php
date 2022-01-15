@@ -1,33 +1,32 @@
-<?php $accordion_block_id = generateRandomString();?>
-<div class="block accordion" id="accordion-block-<?php echo $accordion_block_id; ?>">
+<div id="<?php echo $block_id;?>" class="block accordion <?php echo ($is_preview) ? 'is-preview' : ''; ?>" style="<?php if ( get_sub_field( 'padding_top' ) ): echo 'padding-top: ' . get_sub_field( 'padding_top' ). 'rem; '; endif; ?><?php if ( get_sub_field( 'padding_bottom' ) ): echo 'padding-bottom: ' . get_sub_field( 'padding_bottom' ). 'rem;'; endif; ?>">
+
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
 				<<?php the_sub_field( 'heading_level' );?>><?php the_sub_field( 'heading' );?></<?php the_sub_field( 'heading_level' );?>>
-				<hr />
 				
-				<div class="text intro">
-					<?php echo apply_filters( 'the_content', the_sub_field( 'text' )); ?>
-				</div>
-	
+				<?php if ( get_sub_field( 'text' )): ?>
+					<div class="text intro">
+						<?php echo apply_filters( 'the_content', get_sub_field( 'text' )); ?>
+					</div>
+				<?php endif; ?>	
 		
 				<?php 
-				$posts = get_sub_field('items');
-				if( $posts ): 
+				$items = get_sub_field('items');
+				if( $items ): 
 					$i = 1;
-					foreach( $posts as $post):
-						setup_postdata($post); ?>
+					foreach( $items as $item): ?>
 						<div class="accordion">
-							<a class="question collapsed" role="button" data-toggle="collapse" data-target="#accordion-block-<?php echo $accordion_block_id; ?> #accordion-<?php echo $i; ?>">
+							<a class="question collapsed" role="button" data-toggle="collapse" data-target="#block-<?php echo $block_id; ?> #accordion-<?php echo $i; ?>">
 								<i class="fas fa-plus"></i>
 								<i class="fas fa-minus"></i>
-								<?php the_title(); ?>
-								<?php if ( get_field('subheading')): ?>
+								<?php echo $item['heading']; ?>
+								<?php if ( $item['subheading'] ): ?>
 									<div class="subheading"><?php echo $item['subheading']; ?></div>
 								<?php endif; ?>
 							</a>
 							<div class="answer collapse text" id="accordion-<?php echo $i; ?>">
-								<?php the_content(); ?>
+								<?php echo apply_filters( 'the_content', $item['text'] ); ?>
 							</div>
 						</div>
 						<?php 

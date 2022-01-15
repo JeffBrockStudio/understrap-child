@@ -1,4 +1,4 @@
-<div id="<?php echo $block_id;?>" class="block columns" style="<?php if ( get_sub_field( 'padding_top' ) ): echo 'padding-top: ' . get_sub_field( 'padding_top' ). 'rem; '; endif; ?><?php if ( get_sub_field( 'padding_bottom' ) ): echo 'padding-bottom: ' . get_sub_field( 'padding_bottom' ). 'rem;'; endif; ?>">
+<div id="<?php echo $block_id;?>" class="block columns <?php echo ($is_preview) ? 'is-preview' : ''; ?>" style="<?php if ( get_sub_field( 'padding_top' ) ): echo 'padding-top: ' . get_sub_field( 'padding_top' ). 'rem; '; endif; ?><?php if ( get_sub_field( 'padding_bottom' ) ): echo 'padding-bottom: ' . get_sub_field( 'padding_bottom' ). 'rem;'; endif; ?>">
 
 	<div class="container">							
 		<?php if ( get_sub_field( 'heading' )): ?>

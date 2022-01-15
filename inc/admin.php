@@ -48,7 +48,7 @@ if ( ! function_exists( 'mytheme_theme_setup' ) ) {
 /**
  * Prevent Yoast SEO from adding "Make Primary" to all categories.
  */
-add_filter( 'wpseo_primary_term_taxonomies', '__return_false' );
+//add_filter( 'wpseo_primary_term_taxonomies', '__return_false' );
 
 
 /**

@@ -1,6 +1,6 @@
 /*!
   * Understrap v1.1.0 (https://understrap.com)
-  * Copyright 2013-2021 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
+  * Copyright 2013-2022 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
   * Licensed under GPL (http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
   */
 (function (global, factory) {
@@ -9299,6 +9299,37 @@
 	    }, false);
 	  }
 	})();
+
+	jQuery(document).ready(function ($) {
+	  $('.answer.collapse').on('shown.bs.collapse', function (e) {
+	    var $fixed_offset = 110;
+	    var $fixed_offset = 0;
+
+	    if (Modernizr.mq('(max-width: 1024px)')) {
+	      console.log('1024');
+	      $fixed_offset = 110;
+	    }
+
+	    if (Modernizr.mq('(max-width: 768px)')) {
+	      console.log('768');
+	      $fixed_offset = 110;
+	    }
+
+	    var $card = $(this).parent();
+	    var $scroll_top = $card.offset().top - $fixed_offset;
+	    $('html,body').animate({
+	      scrollTop: $scroll_top
+	    }, 500);
+	  });
+	});
+	jQuery(function ($) {
+	  $(window).on('resize', function () {
+	    /*
+	    		if ( Modernizr.mq('(min-width: 768px)')) {
+	    		}
+	    */
+	  }).trigger('resize');
+	});
 
 	var bootstrapSelect_min = {exports: {}};
 
