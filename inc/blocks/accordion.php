@@ -17,7 +17,7 @@
 					$i = 1;
 					foreach( $items as $item): ?>
 						<div class="accordion">
-							<a class="question collapsed" role="button" data-toggle="collapse" data-target="#block-<?php echo $block_id; ?> #accordion-<?php echo $i; ?>">
+							<a class="question collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#<?php echo $block_id; ?> #accordion-<?php echo $i; ?>" id="question-<?php echo $block_id; ?> #accordion-<?php echo $i; ?>">
 								<i class="fas fa-plus"></i>
 								<i class="fas fa-minus"></i>
 								<?php echo $item['heading']; ?>
@@ -25,7 +25,7 @@
 									<div class="subheading"><?php echo $item['subheading']; ?></div>
 								<?php endif; ?>
 							</a>
-							<div class="answer collapse text" id="accordion-<?php echo $i; ?>">
+							<div class="answer collapse text" id="accordion-<?php echo $i; ?>" aria-labelledby="#question-<?php echo $block_id; ?> #accordion-<?php echo $i; ?>">
 								<?php echo apply_filters( 'the_content', $item['text'] ); ?>
 							</div>
 						</div>

@@ -1,6 +1,7 @@
 <?php 
  // loop through the rows of data
 
+$is_preview = FALSE;
 while ( have_rows('blocks', $post->ID) ) : the_row();
 
 	// Set a unique block ID

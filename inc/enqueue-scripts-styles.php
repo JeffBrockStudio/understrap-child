@@ -7,6 +7,9 @@ function custom_theme_enqueue_styles() {
     // Add Google Fonts
     wp_enqueue_style( 'child-understrap-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,600,700,300', false ); 
     
+    $the_theme = wp_get_theme();
+    wp_enqueue_script( 'custom-javascript', get_stylesheet_directory_uri() . '/src/js/custom-javascript.js', array(), $the_theme->get( 'Version' ), true );
+    
 }
 add_action( 'wp_enqueue_scripts', 'custom_theme_enqueue_styles' );
 

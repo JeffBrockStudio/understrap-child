@@ -36,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php while ( have_posts() ) : the_post(); ?>
 				
 				<?php if( !post_password_required( $post )): ?>
-					<?php // require( 'inc/blocks.php' ); ?>
+					<?php require( 'inc/blocks.php' ); ?>
 				<?php endif; ?>
 	
 			<?php endwhile; ?>
@@ -47,8 +47,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 	else:
 	?>
 	
-	<?php /* ?>
-
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="row">
@@ -80,7 +78,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div><!-- #content -->
 	
 	<?php
-	*/
 	endif;
 	?>
 

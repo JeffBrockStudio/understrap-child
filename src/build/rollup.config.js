@@ -34,7 +34,6 @@ module.exports = {
   input: [
     path.resolve(__dirname, '../js/bootstrap.js'), 
     path.resolve(__dirname, '../js/skip-link-focus-fix.js'), 
-    path.resolve(__dirname, '../js/custom-javascript.js'), 
     path.resolve(__dirname, '../js/bootstrap-select.min.js'),     // Bootstrap Select
     path.resolve(__dirname, '../js/jquery.gridder.min.js'),       // Gridder
     path.resolve(__dirname, '../js/imagesloaded.pkgd.min.js'),    // Imagesloaded
@@ -45,7 +44,7 @@ module.exports = {
     path.resolve(__dirname, '../js/slick.min.js'),                // Slick Carousel
     path.resolve(__dirname, '../js/smooth-scroll.min.js'),        // Smooth Scroll    
     path.resolve(__dirname, '../js/jquery.sticky.js'),            // Sticky
-    path.resolve(__dirname, '../js/jquery.touxchSwipe.min.js')    // Touchswipe
+    path.resolve(__dirname, '../js/jquery.touchSwipe.min.js')     // Touchswipe
   ],
   output: {
     banner,

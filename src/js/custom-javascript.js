@@ -1,3 +1,4 @@
+// Custom JavaScript
 jQuery(document).ready(function($) {
 	
 	$('.answer.collapse').on('shown.bs.collapse', function(e) {
