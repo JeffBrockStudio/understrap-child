@@ -1,4 +1,5 @@
-<div id="<?php echo $block_id;?>" class="block blog" style="<?php if ( get_sub_field( 'padding_top' ) ): echo 'padding-top: ' . get_sub_field( 'padding_top' ). 'rem; '; endif; ?><?php if ( get_sub_field( 'padding_bottom' ) ): echo 'padding-bottom: ' . get_sub_field( 'padding_bottom' ). 'rem;'; endif; ?><?php if ( get_sub_field( 'background_color' ) ): echo ' background-color: ' . get_sub_field( 'background_color' ). '; '; endif; ?>">
+<?php include( get_stylesheet_directory() . '/inc/blocks/block-settings.php' ); ?>
+
 	<div class="container">
 		
 		<?php if ( get_sub_field( 'heading' )): ?>

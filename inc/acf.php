@@ -174,7 +174,7 @@ function custom_acf_admin_enqueue_scripts() {
 	// Grab asset urls.
 	$theme_styles  = "/css/child-theme{$suffix}.css";
 	
-	wp_enqueue_style( 'acfe-blocks-layout', get_stylesheet_directory_uri() . $theme_styles, array(), $the_theme->get( 'Version' ) );	
+	//wp_enqueue_style( 'acfe-blocks-layout', get_stylesheet_directory_uri() . $theme_styles, array(), $the_theme->get( 'Version' ) );	
 
 }
 add_action('acf/input/admin_enqueue_scripts', 'custom_acf_admin_enqueue_scripts');

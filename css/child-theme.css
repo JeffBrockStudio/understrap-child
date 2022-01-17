@@ -33671,6 +33671,10 @@ body.admin-bar .fixed-top {
   border-color: #000;
 }
 
+.buttons {
+  margin-top: 2rem;
+}
+
 html {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
@@ -33841,9 +33845,9 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   padding-bottom: 0;
 }
 
-.block.accordion {
+.block {
   padding-bottom: 3rem;
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 .block.accordion .text {
   margin-bottom: 0.75rem;
@@ -34010,33 +34014,47 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   height: 100px;
   width: auto;
 }
-.block.carousel-block {
-  color: #fff;
+.block.carousel .carousel-inner {
+  margin-bottom: 1rem;
 }
-.block.carousel-block h3, .block.carousel-block .h3 {
-  color: #0d6efd;
-  font-size: 0.75rem;
+.block.carousel .heading {
   font-weight: 600;
   margin-bottom: 0.25rem;
-  text-transform: uppercase;
 }
-.block.carousel-block .btn, .block.carousel-block .wpcf7 input[type=submit], .wpcf7 .block.carousel-block input[type=submit], .block.carousel-block .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message .block.carousel-block a.button, .block.carousel-block .woocommerce-info a.button, .woocommerce-info .block.carousel-block a.button {
+.block.carousel .btn, .block.carousel .wpcf7 input[type=submit], .wpcf7 .block.carousel input[type=submit], .block.carousel .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message .block.carousel a.button, .block.carousel .woocommerce-info a.button, .woocommerce-info .block.carousel a.button {
   margin-top: 1.25rem;
 }
-.block.carousel-block .carousel-indicators {
+.block.carousel .carousel-indicators {
   margin-bottom: 0;
   position: relative;
 }
 @media (max-width: 575.98px) {
-  .block.carousel-block .carousel-indicators {
+  .block.carousel .carousel-indicators {
     margin-top: 1.5rem;
   }
 }
-.block.carousel-block .carousel-indicators li {
+.block.carousel .carousel-indicators button {
+  background-color: #0d6efd;
   border-radius: 50%;
   height: 30px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.block.carousel .carousel-control-prev,
+.block.carousel .carousel-control-next {
+  width: 30px;
+}
+.block.carousel .carousel-control-prev {
+  justify-content: flex-start;
+}
+.block.carousel .carousel-control-next {
+  justify-content: flex-end;
+}
+.block.carousel .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+.block.carousel .carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 .block.columns {
   text-align: center;
@@ -34063,6 +34081,7 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   margin-bottom: 2.5rem;
 }
 .block.columns .column {
+  background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 100%;
   padding: 1.5rem 2rem;

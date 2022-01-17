@@ -1,4 +1,4 @@
-<div id="<?php echo $block_id;?>" class="block accordion <?php echo ($is_preview) ? 'is-preview' : ''; ?>" style="<?php if ( get_sub_field( 'padding_top' ) ): echo 'padding-top: ' . get_sub_field( 'padding_top' ). 'rem; '; endif; ?><?php if ( get_sub_field( 'padding_bottom' ) ): echo 'padding-bottom: ' . get_sub_field( 'padding_bottom' ). 'rem;'; endif; ?>">
+<?php include( get_stylesheet_directory() . '/inc/blocks/block-settings.php' ); ?>
 
 	<div class="container">
 		<div class="row">
@@ -34,7 +34,7 @@
 					endforeach;
 					wp_reset_postdata();
 				endif; ?>
-	
+				
 			</div>						
 		</div>
 	</div>

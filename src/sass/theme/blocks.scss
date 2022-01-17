@@ -3,12 +3,12 @@
 	padding-bottom: 0;
 }
 .block {
+	padding-bottom: 3rem;
+	padding-top: 3rem;
 	
 	// Accordion
 	// ----------------------------------------------	
-	&.accordion {
-		padding-bottom: 3rem;
-		padding-top: 2rem;
+	&.accordion {		
 		.text {
 			margin-bottom: 0.75rem;
 		}
@@ -16,7 +16,7 @@
 			margin-bottom: 1.5rem;
 		}
 		.accordion {
-			background: $blue;
+			background: $primary;
 			color: $white;
 			cursor: pointer;
 			font-weight: bold;
@@ -176,14 +176,13 @@
 	
 	// Carousel
 	// ----------------------------------------------	
-	&.carousel-block {
-		color: $white;
-		h3 {
-			color: $blue;
-			font-size: 0.75rem;
+	&.carousel {
+		.carousel-inner {
+			margin-bottom: 1rem;
+		}
+		.heading {
 			font-weight: 600;
 			margin-bottom: .25rem;
-			text-transform: uppercase;
 		}
 		.btn {
 			margin-top: 1.25rem;
@@ -194,12 +193,29 @@
 			@include media-breakpoint-down(sm) {
 				margin-top: 1.5rem;
 			}
-			 li {
-				 border-radius: 50%;
-				 height: 30px;
-				 margin-left: 15px;
-				 margin-right: 15px;
-			 }
+		  button {
+				background-color: $primary;
+				border-radius: 50%;
+				height: 30px;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+		}
+		.carousel-control-prev,
+		.carousel-control-next {
+			width: 30px;
+		}
+		.carousel-control-prev {
+			justify-content: flex-start;
+		}
+		.carousel-control-next {
+			justify-content: flex-end;
+		}		
+		.carousel-control-prev-icon {
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+		}
+		.carousel-control-next-icon {
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 		}
 	}
 	
@@ -235,6 +251,7 @@
 			margin-bottom: 2.5rem;
 		}
 		.column {
+			background: $white;
 			box-shadow: 0 0 10px rgba( $black, 0.1 );
 			height: 100%;				
 			padding: 1.5rem 2rem;

@@ -14403,9 +14403,6 @@
 	});
 	}(jquery_touchSwipe_min));
 
-	// Custom JavaScript
-	console.log('JBS');
-
 	exports.Alert = alert;
 	exports.Button = button;
 	exports.Carousel = carousel;
