@@ -18,7 +18,9 @@
 										<?php echo apply_filters( 'the_content', $item['text']); ?>
 										<?php $button = $item['button'];
 										if ( $button ): ?>
-											<a class="btn btn-primary" href="<?php echo $button['url'];?>" target="<?php echo $button['target']; ?>"><span><?php echo $button['title']; ?></span></a>
+											<div class="buttons">
+												<a class="btn btn-primary" href="<?php echo $button['url'];?>" target="<?php echo $button['target']; ?>"><span><?php echo $button['title']; ?></span></a>
+											</div>
 											<?php
 										endif;?>										
 									</div>					

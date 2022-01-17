@@ -18,7 +18,7 @@
 					
 					<?php $link = get_sub_field( 'button' );
 					if ($link): ?>
-						<div class="button">
+						<div class="buttons">
 							<a class="btn btn-primary" href="<?php echo $link['url'];?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
 						</div>
 						<?php

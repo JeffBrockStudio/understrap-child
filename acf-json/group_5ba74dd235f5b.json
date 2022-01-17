@@ -1252,7 +1252,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "66.66",
+                                "width": "40",
                                 "class": "",
                                 "id": ""
                             },
@@ -1272,9 +1272,75 @@
                             "acfe_field_group_condition": 0
                         },
                         {
+                            "key": "field_61e5d07134b80",
+                            "label": "Subheading",
+                            "name": "subheading",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 2,
+                            "new_lines": "br",
+                            "acfe_textarea_code": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_61e5d08e34b81",
+                            "label": "Text Color",
+                            "name": "text_color",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "default_value": "",
+                            "enable_opacity": 0,
+                            "return_format": "string",
+                            "display": "default",
+                            "button_label": "Select Color",
+                            "color_picker": 0,
+                            "input": 0,
+                            "allow_null": 1,
+                            "theme_colors": 0,
+                            "colors": {
+                                "#000000": "#000000",
+                                "#ffffff": "#ffffff"
+                            },
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_field_group_condition": 0,
+                            "absolute": false
+                        },
+                        {
                             "key": "field_61ad25d2cc44d",
-                            "label": "Image",
-                            "name": "image",
+                            "label": "Background Image",
+                            "name": "background_image",
                             "type": "image_aspect_ratio_crop",
                             "instructions": "",
                             "required": 0,
@@ -1303,6 +1369,54 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_61e5d78424c55",
+                            "label": "Button 1",
+                            "name": "button_1",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "return_format": "array",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_61e5d7a824c56",
+                            "label": "Button 2",
+                            "name": "button_2",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "return_format": "array",
                             "acfe_settings": "",
                             "acfe_validate": "",
                             "acfe_field_group_condition": 0
@@ -1708,5 +1822,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1642289814
+    "modified": 1642452917
 }

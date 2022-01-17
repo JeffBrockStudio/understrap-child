@@ -184,9 +184,6 @@
 			font-weight: 600;
 			margin-bottom: .25rem;
 		}
-		.btn {
-			margin-top: 1.25rem;
-		}
 		.carousel-indicators {
 			margin-bottom: 0;
 			position: relative;
@@ -277,40 +274,133 @@
 		}
 	}
 
-	// Featured Story
+	// Feature
 	// ----------------------------------------------
-	&.featured-story {
+	&.feature {
+	}
+	
+	// Hero
+	// ----------------------------------------------
+	&.hero {
+		background-position: center;
+		background-repeat: no-repeat;
 		background-size: cover;
-		margin-top: 5rem;
-		padding-bottom: 8rem;
-		.text {
-			background: $yellow;
-			margin-top: -2rem;
-			padding: 2rem;
-		}
-		.overlay {
-			align-items: center;			
-			display: flex;
-			justify-content: center;
-			height: 100%;
-			width: 100%;
-		}
 	}
 	
-	// Promo Bar
-	// ----------------------------------------------
-	&.promo-bar {
-		background: $gray-100;
-		color: $white;
-		padding: 2rem 0;
-		.align-items-right {
-			justify-content: flex-end;
+	//
+	// Form
+	// --------------------------------------------------
+	&.form {
+		.frm_style_formidable-style.with_frm_style {
+				
+			// Fields
+			.form-field {
+				input[type=password], 
+				input[type=email], 
+				input[type=number]
+				input[type=url],
+				input[type=tel],
+				input[type=file],
+				input[type=search],
+				input[type=text],
+				button,
+				select,
+				textarea {
+					border: none;
+					border-radius: $border-radius;
+					font-family: $font-family-sans-serif;
+					font-size: 1.111rem;
+					font-weight: 600;
+					height: 44px;			
+					&::-webkit-input-placeholder {
+						color: $primary;
+					}
+					&::-moz-placeholder {
+						color: $primary;
+					}
+					&:-ms-input-placeholder {
+						color: $primary;
+					}
+					&:-moz-placeholder {
+						color: $primary;
+					}							
+				}			 							
+				textarea {
+					height: auto;
+				}
+				label {
+					color: $black;
+					font-family: $font-family-sans-serif;
+					font-size: 0.9444rem;
+					font-weight: 600;
+				}
+				.frm_description {
+					font-family: $font-family-sans-serif;
+				}
+			}
+			
+			// Submit
+			.frm_submit {
+				button {
+					background: $primary;
+					background-position: right 1.1rem center;
+					border: none;
+					border-radius: $btn-border-radius;
+					box-shadow: none;
+					font-family: $font-family-sans-serif;
+					font-size:  1.111rem;
+					font-weight: 600;
+					height: 44px;
+					line-height: 1;
+					padding: .5rem 1.5rem .5rem 1.5rem;
+					transition: $btn-transition;
+					width: auto;
+					@include media-breakpoint-down(md) {
+						width: auto;
+					}
+					&:hover {
+						//background: $secondary url( '../img/icon-right-arrow.svg' ) no-repeat right center;
+						//background-position: right 1.1rem center;
+						background: $secondary;
+						color: $white;
+					}
+				}
+			}
+			
+			// Error message
+			.frm_error {
+				color: $red;
+				font-family: $font-family-base;		
+				font-size: 0.8rem;
+				margin-top: 0.3rem;
+			}
+			.frm_error_style {
+				border-radius: $border-radius;
+				color: $red;
+				font-size: 1rem;
+				p {
+					font-weight: $font-weight-bold;
+					margin-bottom: 0;
+				}			
+			}			
+			
+			// Confirmation message
+			.frm_message {
+				border-radius: $border-radius;
+				color: $green;
+				font-size: 1rem;
+				p {
+					font-weight: $font-weight-bold;
+					margin-bottom: 0;
+				}
+			}
+					
 		}
-	}
-	
-	// Text with Media (Right)
+	}	
+		
+	// Text with Media
 	// ----------------------------------------------
-	&.text-large-image-right {
+	&.text-media {
 		padding: 5rem 0;
 		.text {
 			padding-top: 2rem;
@@ -320,15 +410,6 @@
 		}
 	}
 	
-	// Text with Media (Left)
-	// ----------------------------------------------
-	&.text-large-image-left {
-		padding: 5rem 0;
-		.text {
-			padding-top: 2rem;
-		}
-	}
-
 	// WYSIWYG
 	// ----------------------------------------------
 	&.wysiwyg {

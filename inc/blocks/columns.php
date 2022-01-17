@@ -28,7 +28,7 @@
 						<div class="column">						
 							<?php if ( $item['image'] ): ?>
 								<div class="image">
-									<img src="<?php $image =  $item['image']; echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
+									<img src="<?php $image = $item['image']; echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
 								</div>
 							<?php
 								endif;
@@ -39,7 +39,9 @@
 								<?php echo apply_filters( 'the_content', $item['text']); ?>					
 								<?php
 								if ( $item['link'] ): ?>
-									<a class="btn btn-primary" href="<?php $link = $item['link']; echo $link['url'];?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+									<div class="buttons">
+										<a class="btn btn-primary" href="<?php $link = $item['link']; echo $link['url'];?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+									</div>
 									<?php
 								endif;?>
 										
@@ -57,12 +59,11 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="buttons">
-						<a class="btn btn-outline-primary" href="<?php $link = get_sub_field( 'button' ); echo $link['url'];?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+						<a class="btn btn-secondary" href="<?php $link = get_sub_field( 'button' ); echo $link['url'];?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
 					</div>
 				</div>
 			</div>
-		<?php endif; ?>	
-		
+		<?php endif; ?>			
 		
 	</div>
 		

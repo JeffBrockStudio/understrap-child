@@ -28,6 +28,10 @@ a {
 	transition: $transition-base;
 }
 
+p:last-of-type {
+	margin-bottom: 0;
+}
+
 blockquote {
 	border-top: 3px #ffc915 solid;
 	border-bottom: 3px #ffc915 solid;

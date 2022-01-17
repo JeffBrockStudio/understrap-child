@@ -14,8 +14,8 @@ endif;
 <div 	
 	id="<?php echo $block_id;?>" 
 	class="block <?php echo $layout;?> <?php echo ($is_preview) ? 'is-preview' : ''; ?>" 
-	style="<?php 
-		if ( $layout_settings['padding_top'] ):
+	style="
+		<?php if ( $layout_settings['padding_top'] ):
 			echo 'padding-top: ' .  $layout_settings['padding_top']. 'rem; '; 
 		endif;
 		if ( $layout_settings['padding_bottom'] ):
@@ -24,4 +24,9 @@ endif;
 		if ( $layout_settings['background_color'] ): 
 			echo 'background-color: ' . $layout_settings['background_color']. '; '; 
 		endif; 
-		?>">
+		if ( get_sub_field('background_image')): 
+			$image = get_sub_field('background_image');
+			echo 'background-image: url(' . $image['url'] . '); '; 
+		endif; 
+		?>
+">

@@ -33672,7 +33672,7 @@ body.admin-bar .fixed-top {
 }
 
 .buttons {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 html {
@@ -33687,6 +33687,10 @@ html {
 
 a {
   transition: all 0.2s ease-in-out;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
 }
 
 blockquote {
@@ -34021,9 +34025,6 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
-.block.carousel .btn, .block.carousel .wpcf7 input[type=submit], .wpcf7 .block.carousel input[type=submit], .block.carousel .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message .block.carousel a.button, .block.carousel .woocommerce-info a.button, .woocommerce-info .block.carousel a.button {
-  margin-top: 1.25rem;
-}
 .block.carousel .carousel-indicators {
   margin-bottom: 0;
   position: relative;
@@ -34103,47 +34104,146 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
     display: none;
   }
 }
-.block.featured-story {
+.block.hero {
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 5rem;
-  padding-bottom: 8rem;
 }
-.block.featured-story .text {
-  background: #ffc107;
-  margin-top: -2rem;
-  padding: 2rem;
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=password],
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=email],
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url],
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=tel],
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=file],
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=search],
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=text],
+.block.form .frm_style_formidable-style.with_frm_style .form-field button,
+.block.form .frm_style_formidable-style.with_frm_style .form-field select,
+.block.form .frm_style_formidable-style.with_frm_style .form-field textarea {
+  border: none;
+  border-radius: 0.25rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.111rem;
+  font-weight: 600;
+  height: 44px;
 }
-.block.featured-story .overlay {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=password]::-webkit-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=email]::-webkit-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url]::-webkit-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=tel]::-webkit-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=file]::-webkit-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=search]::-webkit-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=text]::-webkit-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field button::-webkit-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field select::-webkit-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field textarea::-webkit-input-placeholder {
+  color: #0d6efd;
 }
-.block.promo-bar {
-  background: #f8f9fa;
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=password]::-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=email]::-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url]::-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=tel]::-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=file]::-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=search]::-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=text]::-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field button::-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field select::-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field textarea::-moz-placeholder {
+  color: #0d6efd;
+}
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=password]:-ms-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=email]:-ms-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url]:-ms-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=tel]:-ms-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=file]:-ms-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=search]:-ms-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=text]:-ms-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field button:-ms-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field select:-ms-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field textarea:-ms-input-placeholder {
+  color: #0d6efd;
+}
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=password]:-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=email]:-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url]:-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=tel]:-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=file]:-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=search]:-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=text]:-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field button:-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field select:-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field textarea:-moz-placeholder {
+  color: #0d6efd;
+}
+.block.form .frm_style_formidable-style.with_frm_style .form-field textarea {
+  height: auto;
+}
+.block.form .frm_style_formidable-style.with_frm_style .form-field label {
+  color: #000;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.9444rem;
+  font-weight: 600;
+}
+.block.form .frm_style_formidable-style.with_frm_style .form-field .frm_description {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.block.form .frm_style_formidable-style.with_frm_style .frm_submit button {
+  background: #0d6efd;
+  background-position: right 1.1rem center;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.111rem;
+  font-weight: 600;
+  height: 44px;
+  line-height: 1;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: auto;
+}
+@media (max-width: 767.98px) {
+  .block.form .frm_style_formidable-style.with_frm_style .frm_submit button {
+    width: auto;
+  }
+}
+.block.form .frm_style_formidable-style.with_frm_style .frm_submit button:hover {
+  background: #6c757d;
   color: #fff;
-  padding: 2rem 0;
 }
-.block.promo-bar .align-items-right {
-  justify-content: flex-end;
+.block.form .frm_style_formidable-style.with_frm_style .frm_error {
+  color: #dc3545;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
 }
-.block.text-large-image-right {
+.block.form .frm_style_formidable-style.with_frm_style .frm_error_style {
+  border-radius: 0.25rem;
+  color: #dc3545;
+  font-size: 1rem;
+}
+.block.form .frm_style_formidable-style.with_frm_style .frm_error_style p {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.block.form .frm_style_formidable-style.with_frm_style .frm_message {
+  border-radius: 0.25rem;
+  color: #198754;
+  font-size: 1rem;
+}
+.block.form .frm_style_formidable-style.with_frm_style .frm_message p {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.block.text-media {
   padding: 5rem 0;
 }
-.block.text-large-image-right .text {
+.block.text-media .text {
   padding-top: 2rem;
 }
 @media (max-width: 575.98px) {
-  .block.text-large-image-right .text {
+  .block.text-media .text {
     margin-bottom: 2rem;
   }
-}
-.block.text-large-image-left {
-  padding: 5rem 0;
-}
-.block.text-large-image-left .text {
-  padding-top: 2rem;
 }
 .row.spinner-row {
   display: none;
