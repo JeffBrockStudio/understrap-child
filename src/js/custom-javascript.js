@@ -1,7 +1,9 @@
 // Custom JavaScript
 jQuery(document).ready(function($) {
 	
-	// Search button
+	/**
+	 * Search overlay
+	 */
 	$('li.search .nav-link').click(function(e) {
 		e.preventDefault();
 		if ( $('body').hasClass('search-open') ) {
@@ -22,7 +24,40 @@ jQuery(document).ready(function($) {
 		$('#wrapper-search').attr('role', '');
 	});
 	
-	// Accordion
+	
+	/**
+	 * Gridder for team page
+	 */
+	$('body.page-template-page-team-php .gridder-list').matchHeight({
+		property: 'min-height',
+		byRow: false	  
+	});        	
+	
+	$('body.page-template-page-team-php .gridder').gridderExpander({
+			scroll: true,
+			scrollOffset: 140,
+			scrollTo: "panel",                  // panel or listitem
+			animationSpeed: 400,
+			animationEasing: "easeInOutExpo",
+			showNav: true,                      // Show Navigation
+			nextText: "Next",                   // Next button text
+			prevText: "Previous",               // Previous button text
+			closeText: "",                 			// Close button text
+			onStart: function(){
+					//Gridder Inititialized
+			},
+			onContent: function(){
+					//Gridder Content Loaded
+			},
+			onClosed: function(){
+					//Gridder Closed
+			}
+	});
+	
+	
+	/**
+	 * Accordion
+	 */
 	$('.answer.collapse').on('shown.bs.collapse', function(e) {
 		
 		var $fixed_offset = 92;
