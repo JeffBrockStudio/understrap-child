@@ -184,6 +184,13 @@
 			font-weight: 600;
 			margin-bottom: .25rem;
 		}
+		.carousel-item {
+			.buttons {
+				@include media-breakpoint-down(sm) {
+					margin-bottom: 1rem;
+				}
+			}
+		}
 		.carousel-indicators {
 			margin-bottom: 0;
 			position: relative;
@@ -252,6 +259,7 @@
 			box-shadow: 0 0 10px rgba( $black, 0.1 );
 			height: 100%;				
 			padding: 1.5rem 2rem;
+			position: relative;
 		}
 		.image {
 			margin-bottom: 0.75rem;
@@ -262,7 +270,6 @@
 		}
 		.text {
 			h3 {
-				color: $primary;
 				font-size: 1.333rem;
 				font-weight: 600;
 				@include media-breakpoint-down(sm) {
@@ -277,6 +284,11 @@
 	// Feature
 	// ----------------------------------------------
 	&.feature {
+		.image {
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 2rem;		
+			}
+		}		
 	}
 	
 	// Hero
@@ -400,10 +412,22 @@
 		
 	// Text with Media
 	// ----------------------------------------------
-	&.text-media {
+	&.text_media {
 		padding: 5rem 0;
-		.text {
-			padding-top: 2rem;
+		&.right {
+			.col-text {
+				order: 1;
+			}			
+			.col-image {
+				@include media-breakpoint-down(sm) {
+					margin-bottom: 2rem;	
+				}				
+			}
+			.col-text {
+				margin-bottom: 0;
+			}
+		}		
+		.col-text {
 			@include media-breakpoint-down(sm) {
 				margin-bottom: 2rem;
 			}

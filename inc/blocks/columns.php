@@ -40,12 +40,16 @@
 								<?php
 								if ( $item['link'] ): ?>
 									<div class="buttons">
-										<a class="btn btn-primary" href="<?php $link = $item['link']; echo $link['url'];?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+										
 									</div>
 									<?php
 								endif;?>
 										
 							</div>
+							
+							<?php if ( $item['link'] ): ?>
+								<a class="btn btn-primary stretched-link" href="<?php $link = $item['link']; echo $link['url'];?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+							<?php endif; ?>
 						</div>
 					</div>
 					

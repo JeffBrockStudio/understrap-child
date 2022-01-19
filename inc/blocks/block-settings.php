@@ -10,10 +10,12 @@ if(have_rows('layout_settings')):
 	endwhile;
 endif;
 ?>
-
 <div 	
 	id="<?php echo $block_id;?>" 
-	class="block <?php echo $layout;?> <?php echo ($is_preview) ? 'is-preview' : ''; ?>" 
+	class="block 
+		<?php echo $layout . ' ';
+		if ( get_sub_field( 'text_placement' )): echo get_sub_field( 'text_placement' ) . ' '; endif;
+		echo ($is_preview) ? 'is-preview' : ''; ?>" 
 	style="
 		<?php if ( $layout_settings['padding_top'] ):
 			echo 'padding-top: ' .  $layout_settings['padding_top']. 'rem; '; 

@@ -33570,7 +33570,24 @@ body.admin-bar .fixed-top {
 }
 
 .wrapper {
-  padding: 50px 0;
+  padding: 0;
+}
+
+#page-wrapper {
+  padding-bottom: 0;
+}
+
+#wrapper-navbar + .wrapper {
+  margin-top: 92px;
+}
+@media (max-width: 575.98px) {
+  #wrapper-navbar + .wrapper {
+    margin-top: 68px;
+  }
+}
+
+.wrapper:not(#page-wrapper) {
+  padding: 3rem 0;
 }
 
 .dont-break-out {
@@ -33718,6 +33735,156 @@ blockquote {
 }
 #wrapper-navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
   background-image: url("../img/times-regular.svg");
+}
+@media (max-width: 575.98px) {
+  #wrapper-navbar .navbar-brand img {
+    height: 40px;
+  }
+}
+
+body #page {
+  transition: transform 0.3s;
+}
+
+body.search-open #wrapper-search {
+  align-items: center;
+  display: flex;
+}
+body.search-open #search-overlay {
+  display: block;
+}
+
+#wrapper-search {
+  background: #fff;
+  display: none;
+  height: 164px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+}
+#wrapper-search .close {
+  cursor: pointer;
+  margin-top: 6px;
+  position: absolute;
+  right: 14%;
+  top: 60px;
+}
+#wrapper-search .btn, #wrapper-search .wpcf7 input[type=submit], .wpcf7 #wrapper-search input[type=submit], #wrapper-search .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message #wrapper-search a.button, #wrapper-search .woocommerce-info a.button, .woocommerce-info #wrapper-search a.button {
+  margin-top: 0;
+}
+#wrapper-search .search-form input[type=search] {
+  font-size: 1.5rem;
+  height: 73px;
+}
+@media (max-width: 575.98px) {
+  #wrapper-search .search-form input[type=search] {
+    font-size: 1rem;
+    height: 50px;
+  }
+}
+@media (max-width: 575.98px) {
+  #wrapper-search .search-form .input-group {
+    flex-direction: column;
+  }
+}
+@media (max-width: 575.98px) {
+  #wrapper-search .search-form .input-group .form-control, #wrapper-search .search-form .input-group .wpcf7 .wpcf7-validation-errors, .wpcf7 #wrapper-search .search-form .input-group .wpcf7-validation-errors, #wrapper-search .search-form .input-group .wpcf7 input[type=text], .wpcf7 #wrapper-search .search-form .input-group input[type=text],
+#wrapper-search .search-form .input-group .wpcf7 input[type=search],
+.wpcf7 #wrapper-search .search-form .input-group input[type=search],
+#wrapper-search .search-form .input-group .wpcf7 input[type=url],
+.wpcf7 #wrapper-search .search-form .input-group input[type=url],
+#wrapper-search .search-form .input-group .wpcf7 input[type=tel],
+.wpcf7 #wrapper-search .search-form .input-group input[type=tel],
+#wrapper-search .search-form .input-group .wpcf7 input[type=number],
+.wpcf7 #wrapper-search .search-form .input-group input[type=number],
+#wrapper-search .search-form .input-group .wpcf7 input[type=range],
+.wpcf7 #wrapper-search .search-form .input-group input[type=range],
+#wrapper-search .search-form .input-group .wpcf7 input[type=date],
+.wpcf7 #wrapper-search .search-form .input-group input[type=date],
+#wrapper-search .search-form .input-group .wpcf7 input[type=month],
+.wpcf7 #wrapper-search .search-form .input-group input[type=month],
+#wrapper-search .search-form .input-group .wpcf7 input[type=week],
+.wpcf7 #wrapper-search .search-form .input-group input[type=week],
+#wrapper-search .search-form .input-group .wpcf7 input[type=time],
+.wpcf7 #wrapper-search .search-form .input-group input[type=time],
+#wrapper-search .search-form .input-group .wpcf7 input[type=datetime],
+.wpcf7 #wrapper-search .search-form .input-group input[type=datetime],
+#wrapper-search .search-form .input-group .wpcf7 input[type=datetime-local],
+.wpcf7 #wrapper-search .search-form .input-group input[type=datetime-local],
+#wrapper-search .search-form .input-group .wpcf7 input[type=color],
+.wpcf7 #wrapper-search .search-form .input-group input[type=color],
+#wrapper-search .search-form .input-group .wpcf7 input[type=email],
+.wpcf7 #wrapper-search .search-form .input-group input[type=email],
+#wrapper-search .search-form .input-group .wpcf7 input[type=file],
+.wpcf7 #wrapper-search .search-form .input-group input[type=file],
+#wrapper-search .search-form .input-group .wpcf7 input[type=submit],
+.wpcf7 #wrapper-search .search-form .input-group input[type=submit],
+#wrapper-search .search-form .input-group .wpcf7 select,
+.wpcf7 #wrapper-search .search-form .input-group select,
+#wrapper-search .search-form .input-group .wpcf7 textarea,
+.wpcf7 #wrapper-search .search-form .input-group textarea, #wrapper-search .search-form .input-group .widget_categories select, .widget_categories #wrapper-search .search-form .input-group select,
+#wrapper-search .search-form .input-group .widget_archive select,
+.widget_archive #wrapper-search .search-form .input-group select {
+    width: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  #wrapper-search .search-form .input-group .input-group-append {
+    margin-top: 1rem;
+  }
+}
+
+#search-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 164px;
+  width: 100%;
+  z-index: 9999;
+}
+
+.searchwp-live-search-result a {
+  text-decoration: none;
+}
+
+#wrapper-footer {
+  background-color: #212529;
+}
+#wrapper-footer .menu {
+  list-style: none;
+  padding-left: 0;
+}
+#wrapper-footer .menu li {
+  display: inline-block;
+}
+#wrapper-footer .menu li:first-of-type a {
+  padding-left: 0;
+}
+#wrapper-footer .menu li a {
+  color: #fff;
+}
+#wrapper-footer .legal {
+  color: #fff;
+}
+@media (max-width: 575.98px) {
+  #wrapper-footer .legal {
+    margin-bottom: 1rem;
+  }
+}
+#wrapper-footer .logo {
+  margin-bottom: 1rem;
+}
+#wrapper-footer .social-media a {
+  font-size: 2rem;
+  margin-right: 0.75rem;
+  text-decoration: none;
+}
+#wrapper-footer .social-media a:last-of-type {
+  margin-right: 0;
 }
 
 body .frm_style_formidable-style.with_frm_style .form-field input[type=password],
@@ -34025,6 +34192,11 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
+@media (max-width: 575.98px) {
+  .block.carousel .carousel-item .buttons {
+    margin-bottom: 1rem;
+  }
+}
 .block.carousel .carousel-indicators {
   margin-bottom: 0;
   position: relative;
@@ -34086,6 +34258,7 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 100%;
   padding: 1.5rem 2rem;
+  position: relative;
 }
 .block.columns .image {
   margin-bottom: 0.75rem;
@@ -34095,13 +34268,17 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   width: auto;
 }
 .block.columns .text h3, .block.columns .text .h3 {
-  color: #0d6efd;
   font-size: 1.333rem;
   font-weight: 600;
 }
 @media (max-width: 575.98px) {
   .block.columns .text h3 br, .block.columns .text .h3 br {
     display: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .block.feature .image {
+    margin-bottom: 2rem;
   }
 }
 .block.hero {
@@ -34234,14 +34411,22 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   font-weight: 700;
   margin-bottom: 0;
 }
-.block.text-media {
+.block.text_media {
   padding: 5rem 0;
 }
-.block.text-media .text {
-  padding-top: 2rem;
+.block.text_media.right .col-text {
+  order: 1;
 }
 @media (max-width: 575.98px) {
-  .block.text-media .text {
+  .block.text_media.right .col-image {
+    margin-bottom: 2rem;
+  }
+}
+.block.text_media.right .col-text {
+  margin-bottom: 0;
+}
+@media (max-width: 575.98px) {
+  .block.text_media .col-text {
     margin-bottom: 2rem;
   }
 }

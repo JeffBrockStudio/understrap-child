@@ -47,7 +47,7 @@
 			} else {
 				get_template_part( 'loop-templates/content', 'none' );
 			}
-			
+			wp_reset_postdata();
 			?>
 		</div><!-- .row -->
 				

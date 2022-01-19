@@ -24,6 +24,18 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
+
+<div id="wrapper-search" aria-hidden="true">
+	<div class="container">
+		<div class="row">
+			<div class="col-8 offset-1 col-md-8 offset-md-2">
+					<?php get_search_form(); ?>
+					<div class="close"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icon-close.svg"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->

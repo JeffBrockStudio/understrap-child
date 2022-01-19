@@ -91,12 +91,12 @@
             "allow_null": 1,
             "theme_colors": 0,
             "colors": {
-                "#FDFE34": "#FDFE34",
-                "#2ECC4B": "#2ECC4B",
-                "#FFFFFF": "#FFFFFF",
-                "#121212": "#121212",
-                "#B2B4B2": "#B2B4B2",
-                "#EFEEE6": "#EFEEE6"
+                "#0d6efd": "#0d6efd",
+                "#10CAF0": "#10CAF0",
+                "#6D757D": "#6D757D",
+                "#212529": "#212529",
+                "#F8F9FA": "#F8F9FA",
+                "#FFFFFF": "#FFFFFF"
             },
             "acfe_settings": "",
             "acfe_validate": "",
@@ -199,5 +199,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1642441823
+    "modified": 1642461994
 }

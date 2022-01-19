@@ -101,10 +101,10 @@ function wpb_stop_update_emails( $send, $type, $core_update, $result ) {
 /**
  * Disable auto update notification emails for plugins
  */
-// add_filter( 'auto_plugin_update_send_email', '__return_false' );
+add_filter( 'auto_plugin_update_send_email', '__return_false' );
 
 
 /**
  * Disable auto update notification emails for themes
  */
-// add_filter( 'auto_theme_update_send_email', '__return_false' );
+add_filter( 'auto_theme_update_send_email', '__return_false' );

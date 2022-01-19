@@ -1,17 +1,36 @@
 // Custom JavaScript
 jQuery(document).ready(function($) {
 	
+	// Search button
+	$('li.search .nav-link').click(function(e) {
+		e.preventDefault();
+		if ( $('body').hasClass('search-open') ) {
+			$('body').removeClass('search-open');						
+			$('#wrapper-search').attr('aria-hidden', 'true');
+			$('#wrapper-search').attr('role', '');
+		} else {
+			$('body').addClass('search-open');			
+			$('#wrapper-search #s').focus();
+			$('#wrapper-search').attr('aria-hidden', 'false');
+			$('#wrapper-search').attr('role', 'search');
+		}				
+	});
+	
+	$('#wrapper-search .close').click(function() {
+		$('body').removeClass('search-open');						
+		$('#wrapper-search').attr('aria-hidden', 'true');
+		$('#wrapper-search').attr('role', '');
+	});
+	
+	// Accordion
 	$('.answer.collapse').on('shown.bs.collapse', function(e) {
 		
-		var $fixed_offset = 110;
-		var $fixed_offset = 0;
+		var $fixed_offset = 92;
 		if ( Modernizr.mq('(max-width: 1024px)')) {
-			console.log( '1024' );
-			$fixed_offset = 110;
+			$fixed_offset = 92;
 		}
 		if ( Modernizr.mq('(max-width: 768px)')) {
-			console.log( '768' );
-			$fixed_offset = 110;
+			$fixed_offset = 68;
 		}
 		
 		var $card = $(this).parent();

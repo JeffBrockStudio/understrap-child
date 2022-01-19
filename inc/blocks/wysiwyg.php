@@ -1,7 +1,13 @@
-<div id="<?php echo $block_id; ?>" class="block wrapper wysiwyg" style="<?php if ( get_sub_field( 'padding_top' ) ): echo 'padding-top: ' . get_sub_field( 'padding_top' ). 'rem; '; endif; ?><?php if ( get_sub_field( 'padding_bottom' ) ): echo 'padding-bottom: ' . get_sub_field( 'padding_bottom' ). 'rem;'; endif; ?><?php if ( get_sub_field( 'background_color' ) ): echo ' background-color: ' . get_sub_field( 'background_color' ). '; '; endif; ?>">
+<?php include( get_stylesheet_directory() . '/inc/blocks/block-settings.php' ); ?>
+
 	<div class="container">
-		<div class="row row-wysiwyg">
-			<div class="col-12 col-md-<?php echo get_sub_field( 'columns' );?>">
+		<div class="row">
+			<?php if ( get_sub_field( 'width' ) == 'narrow'):
+				$columns = 'col-12 col-md-8 offset-md-2';
+			else:
+				$columns = 'col-12';
+			endif; ?>
+			<div class="<?php echo $columns;?>">
 					
 				<div class="text">
 					<?php echo apply_filters( 'the_content', get_sub_field( 'wysiwyg' )); ?>

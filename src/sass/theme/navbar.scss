@@ -11,4 +11,93 @@
 		}
 	}		
 	
+	.navbar-brand {
+		img {
+			@include media-breakpoint-down(sm) {
+				height: 40px;
+			}
+		}
+	}
+	
+}
+
+
+//
+// Search
+// --------------------------------------------------
+body #page {
+	transition: transform .3s;
+}
+body.search-open {
+	#wrapper-search {
+		align-items: center;
+		display: flex;
+	}
+	#search-overlay {
+		display: block;	
+	}
+} 
+#wrapper-search {
+	background: $white;
+	display: none;
+	height: 164px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99999;
+	.close {
+		cursor: pointer;
+		margin-top: 6px;
+		position: absolute;
+		right: 14%;
+		top: 60px;
+	}
+	.btn {
+		margin-top: 0;
+	}
+	.search-form {
+		input[type=search] {
+			font-size: 1.5rem;
+			height: 73px;
+			@include media-breakpoint-down(sm) {
+					font-size: 1rem;
+					height: 50px;
+				}
+		}
+		.input-group {
+			@include media-breakpoint-down(sm) {
+				flex-direction: column;
+			}
+			.form-control {
+				@include media-breakpoint-down(sm) {
+					width: 100%;
+				}
+			}
+			.input-group-append {
+				@include media-breakpoint-down(sm) {
+					margin-top: 1rem;
+				}
+			}
+		}
+	}
+}
+#search-overlay {
+	background: rgba( 0, 0, 0, 0.5);
+	backdrop-filter: blur(10px);
+	display: none;
+	height: 100vh;
+	position: fixed;
+	top: 164px;	
+	width: 100%;
+	z-index: 9999;
+}
+
+
+//
+// SearchWP Live Search Results
+// --------------------------------------------------
+.searchwp-live-search-result {
+	a {
+		text-decoration: none;
+	}
 }

@@ -1,9 +1,5 @@
-<div 
-	id="<?php echo $block_id;?>"	class="block text-image <?php 
-		if ( get_sub_field( 'text_position' ) == 'Left' ): echo 'left'; endif;
-		if ( get_sub_field( 'text_position' ) == 'Right' ): echo 'right'; endif;
-		if ( get_sub_field( 'text_position' ) == 'Bottom' ): echo 'bottom-text'; endif;?>" 
-	style="<?php if ( get_sub_field( 'padding_top' ) ): echo 'padding-top: ' . get_sub_field( 'padding_top' ). 'rem; '; endif; ?><?php if ( get_sub_field( 'padding_bottom' ) ): echo 'padding-bottom: ' . get_sub_field( 'padding_bottom' ). 'rem;'; endif; ?><?php if ( get_sub_field( 'background_color' ) ): echo ' background-color: ' . get_sub_field( 'background_color' ). '; '; endif; ?>">
+<?php include( get_stylesheet_directory() . '/inc/blocks/block-settings.php' ); ?>
+
 	<div class="container">
 
 		<div class="row">
@@ -29,7 +25,7 @@
 				<?php if ( get_sub_field( 'button_link' )) {
 					$link = get_sub_field( 'button_link' );?>
 					<div class="buttons">
-				 		<a class="btn btn-secondary" href="<?php echo $link['url']?>" target="<?php echo $link['target']?>"><?php echo $link['title']; ?></a>
+				 		<a class="btn btn-primary" href="<?php echo $link['url']?>" target="<?php echo $link['target']?>"><?php echo $link['title']; ?></a>
 					</div>
 				<?php } ?>									
 			</div>														

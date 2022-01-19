@@ -15,7 +15,19 @@ body.admin-bar .fixed-top {
 } 
 
 .wrapper {
-	padding: 50px 0;
+	padding: 0;
+}
+#page-wrapper {
+	padding-bottom: 0;
+}
+#wrapper-navbar + .wrapper {
+	margin-top: 92px;
+	@include media-breakpoint-down(sm) {
+		margin-top: 68px;
+	}
+}
+.wrapper:not(#page-wrapper) {
+	padding: 3rem 0;
 }
 
 

@@ -1,5 +1,43 @@
 //
 // Footer
 // --------------------------------------------------
-#wrapper-footer {
+#wrapper-footer {	
+	background-color: $gray-900;
+	.menu {
+		list-style: none;
+		padding-left: 0;
+		li {
+			display: inline-block;
+			&:first-of-type {
+				a {
+					padding-left: 0;
+				}
+			}
+			a {
+				color: $white;
+			}
+		}
+	}
+	
+	.legal {
+		color: $white;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 1rem;
+		}
+	}
+	
+	.logo {
+		margin-bottom: 1rem;
+	}
+	
+	.social-media {
+		a {
+			font-size: 2rem;
+			margin-right: 0.75rem;
+			text-decoration: none;
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
 }
