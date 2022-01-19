@@ -33692,6 +33692,11 @@ body.admin-bar .fixed-top {
   margin-top: 1rem;
 }
 
+body.error404 .page-content .search-form {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
 html {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
