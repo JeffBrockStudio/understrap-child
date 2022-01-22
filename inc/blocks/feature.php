@@ -12,7 +12,7 @@
 			</div>
 			
 			<div class="col-12 col-md-7">	
-				<?php if ( get_sub_field( 'text' )): ?>
+				<?php if ( get_sub_field( 'text' ) OR get_sub_field( 'heading' )): ?>
 					<<?php the_sub_field( 'heading_level' );?>><?php the_sub_field( 'heading' );?></<?php the_sub_field( 'heading_level' );?>>
 					<div class="text">
 						<?php echo apply_filters( 'the_content', the_sub_field( 'text' )); ?>

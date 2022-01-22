@@ -33894,7 +33894,8 @@ body.search-open #search-overlay {
 
 body .frm_style_formidable-style.with_frm_style .form-field input[type=password],
 body .frm_style_formidable-style.with_frm_style .form-field input[type=email],
-body .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url],
+body .frm_style_formidable-style.with_frm_style .form-field input[type=number],
+body .frm_style_formidable-style.with_frm_style .form-field input[type=url],
 body .frm_style_formidable-style.with_frm_style .form-field input[type=tel],
 body .frm_style_formidable-style.with_frm_style .form-field input[type=file],
 body .frm_style_formidable-style.with_frm_style .form-field input[type=search],
@@ -33911,7 +33912,8 @@ body .frm_style_formidable-style.with_frm_style .form-field textarea {
 }
 body .frm_style_formidable-style.with_frm_style .form-field input[type=password]::-webkit-input-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=email]::-webkit-input-placeholder,
-body .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url]::-webkit-input-placeholder,
+body .frm_style_formidable-style.with_frm_style .form-field input[type=number]::-webkit-input-placeholder,
+body .frm_style_formidable-style.with_frm_style .form-field input[type=url]::-webkit-input-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=tel]::-webkit-input-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=file]::-webkit-input-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=search]::-webkit-input-placeholder,
@@ -33923,7 +33925,8 @@ body .frm_style_formidable-style.with_frm_style .form-field textarea::-webkit-in
 }
 body .frm_style_formidable-style.with_frm_style .form-field input[type=password]::-moz-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=email]::-moz-placeholder,
-body .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url]::-moz-placeholder,
+body .frm_style_formidable-style.with_frm_style .form-field input[type=number]::-moz-placeholder,
+body .frm_style_formidable-style.with_frm_style .form-field input[type=url]::-moz-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=tel]::-moz-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=file]::-moz-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=search]::-moz-placeholder,
@@ -33935,7 +33938,8 @@ body .frm_style_formidable-style.with_frm_style .form-field textarea::-moz-place
 }
 body .frm_style_formidable-style.with_frm_style .form-field input[type=password]:-ms-input-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=email]:-ms-input-placeholder,
-body .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url]:-ms-input-placeholder,
+body .frm_style_formidable-style.with_frm_style .form-field input[type=number]:-ms-input-placeholder,
+body .frm_style_formidable-style.with_frm_style .form-field input[type=url]:-ms-input-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=tel]:-ms-input-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=file]:-ms-input-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=search]:-ms-input-placeholder,
@@ -33947,7 +33951,8 @@ body .frm_style_formidable-style.with_frm_style .form-field textarea:-ms-input-p
 }
 body .frm_style_formidable-style.with_frm_style .form-field input[type=password]:-moz-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=email]:-moz-placeholder,
-body .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url]:-moz-placeholder,
+body .frm_style_formidable-style.with_frm_style .form-field input[type=number]:-moz-placeholder,
+body .frm_style_formidable-style.with_frm_style .form-field input[type=url]:-moz-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=tel]:-moz-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=file]:-moz-placeholder,
 body .frm_style_formidable-style.with_frm_style .form-field input[type=search]:-moz-placeholder,
@@ -34293,7 +34298,8 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 }
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=password],
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=email],
-.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url],
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number],
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=url],
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=tel],
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=file],
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=search],
@@ -34310,7 +34316,8 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 }
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=password]::-webkit-input-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=email]::-webkit-input-placeholder,
-.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url]::-webkit-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number]::-webkit-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=url]::-webkit-input-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=tel]::-webkit-input-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=file]::-webkit-input-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=search]::-webkit-input-placeholder,
@@ -34322,7 +34329,8 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 }
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=password]::-moz-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=email]::-moz-placeholder,
-.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url]::-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number]::-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=url]::-moz-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=tel]::-moz-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=file]::-moz-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=search]::-moz-placeholder,
@@ -34334,7 +34342,8 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 }
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=password]:-ms-input-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=email]:-ms-input-placeholder,
-.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url]:-ms-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number]:-ms-input-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=url]:-ms-input-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=tel]:-ms-input-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=file]:-ms-input-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=search]:-ms-input-placeholder,
@@ -34346,7 +34355,8 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 }
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=password]:-moz-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=email]:-moz-placeholder,
-.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number] input[type=url]:-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=number]:-moz-placeholder,
+.block.form .frm_style_formidable-style.with_frm_style .form-field input[type=url]:-moz-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=tel]:-moz-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=file]:-moz-placeholder,
 .block.form .frm_style_formidable-style.with_frm_style .form-field input[type=search]:-moz-placeholder,
@@ -34550,6 +34560,7 @@ body.page-template-page-team .gridder-show {
   margin-left: 15px;
   margin-right: 15px;
   position: relative;
+  width: 100%;
 }
 @media (max-width: 575.98px) {
   body.page-template-page-team .gridder-show {

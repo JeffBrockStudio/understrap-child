@@ -8,25 +8,6 @@ get_header();
 
 $container = get_theme_mod( 'understrap_container_type' );
 
-if ( array_key_exists( 'team_roles', $_GET ) && $_GET['team_roles'] ) {
-	$first_visit = FALSE;
-	if ( $_GET['team_roles'] == 'board' ) {
-		$board = TRUE;
-	} else {
-		$board = FALSE;
-	}
-} else {
-	$board = FALSE;
-	$first_visit = TRUE; ?>
-	<script>
-		jQuery(function($) {		
-			var queryParams = new URLSearchParams(window.location.search);    
-			queryParams.set('team_roles', 'staff');
-			history.pushState(null, null, '?'+queryParams.toString());
-		});
-	</script>
-	<?php	
-}
 ?>
 
 <div class="wrapper" id="page-wrapper">
@@ -50,14 +31,42 @@ if ( array_key_exists( 'team_roles', $_GET ) && $_GET['team_roles'] ) {
 	endif;
 	?>
 	
-	<div id="team-type-wrapper" <?php if ( $board ) echo 'class="board"';?>>
+	<?php 
+	$taxonomy = 'team_roles';
+	$terms = get_terms([
+			'taxonomy' => $taxonomy,
+			'hide_empty' => true
+	]);	
+	foreach( $terms AS $term ):
+		$first_role = $term->slug;
+		break;
+	endforeach;
+	
+	if ( array_key_exists( 'team_roles', $_GET ) && $_GET['team_roles'] ) {
+		$first_visit = FALSE;
+		$team_roles = $_GET['team_roles'];
+	} else {
+		$first_visit = TRUE; 
+		$team_roles = $first_role; ?>
+		<script>
+			jQuery(function($) {		
+				var queryParams = new URLSearchParams(window.location.search);    
+				queryParams.set('team_roles', '<?php echo $team_roles;?>');
+				history.pushState(null, null, '?'+queryParams.toString());
+			});
+		</script>
+		<?php	
+	} ?>
+	
+	<div id="team-type-wrapper">
 		<div class="container">
 			
 			<div class="row">
 				<div class="col-12">	
 					<div class="buttons">
-						<a data-team-role="staff" class="team-role btn <?php if ( $board ) { echo 'btn-outline-primary'; } else { echo 'btn-primary';};?>" href="<?php global $wp; echo home_url( $wp->request ) ?>/?team_roles=staff">Staff</a>				
-						<a data-team-role="board" class="team-role btn <?php if ( $board ) { echo 'btn-primary'; } else { echo 'btn-outline-primary';};?>" href="<?php global $wp; echo home_url( $wp->request ) ?>/?team_roles=board">Board</a>				
+						<?php foreach( $terms AS $term ): ?>
+								<a data-team-role="<?php echo $term->slug; ?>" class="team-role btn <?php if ( $team_roles == $term->slug ) { echo 'btn-primary'; } else { echo 'btn-outline-primary';};?>" href="<?php global $wp; echo home_url( $wp->request ) ?>/?team_roles=<?php echo $term->slug; ?>"><?php echo $term->name; ?></a>				 
+						 <?php endforeach; ?>			
 					</div>
 				</div>
 			</div>
@@ -91,10 +100,10 @@ if ( array_key_exists( 'team_roles', $_GET ) && $_GET['team_roles'] ) {
 	};
 	
 	if ( $first_visit == TRUE ):
-		 $filter_roles = 'staff';
+		 $filter_roles = $first_role;
 		 $querystring .= 'team_roles=' . $filter_roles . '&';		    
 		 $filters[] = 'team_roles';   
-		 $_GET['team_roles'] = 'staff';
+		 $_GET['team_roles'] = $first_role;
 	endif;	
 	
 	if ( array_key_exists( 'team_roles', $_GET ) && $_GET['team_roles'] ) {
@@ -158,7 +167,7 @@ if ( array_key_exists( 'team_roles', $_GET ) && $_GET['team_roles'] ) {
 			array(
 				'taxonomy' => 'team_roles',
 				'field'    => 'slug',
-				'terms'    => 'staff',
+				'terms'    => $first_role,
 			)
 		);	          
 		

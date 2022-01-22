@@ -126,3 +126,12 @@ function custom_searchwp_basic_auth_creds() {
   return $credentials;
 }
 //add_filter( 'searchwp_basic_auth_creds', 'my_searchwp_basic_auth_creds' );
+
+
+/**
+ * Formidable Pro offset scroll
+ */
+add_filter('frm_scroll_offset', 'frm_scroll_offset');
+function frm_scroll_offset(){
+  return 92; //adjust this as needed
+}

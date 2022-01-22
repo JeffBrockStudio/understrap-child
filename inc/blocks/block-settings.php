@@ -17,10 +17,10 @@ endif;
 		if ( get_sub_field( 'text_placement' )): echo get_sub_field( 'text_placement' ) . ' '; endif;
 		echo ($is_preview) ? 'is-preview' : ''; ?>" 
 	style="
-		<?php if ( $layout_settings['padding_top'] ):
+		<?php if ( $layout_settings['padding_top'] != '' ):
 			echo 'padding-top: ' .  $layout_settings['padding_top']. 'rem; '; 
 		endif;
-		if ( $layout_settings['padding_bottom'] ):
+		if ( $layout_settings['padding_bottom'] != '' ):
 			echo 'padding-bottom: ' . $layout_settings['padding_bottom']. 'rem; '; 
 		endif;
 		if ( $layout_settings['background_color'] ): 
