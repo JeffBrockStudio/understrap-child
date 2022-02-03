@@ -258,18 +258,43 @@ body.error404 {
 // Pretty Dropdown
 // --------------------------------------------------
 .prettydropdown {
-	&.arrow>ul>li.selected:after {
-		border-top-color: $primary;
-	}
-	&.arrow>ul>li.selected:before {
-		border-top-color: $white;
+	&.arrow>ul>li.selected {
+		&:after {
+			border-top-color: $primary;
+		}
+		&:before {
+			border-top-color: $white;
+		}		
 	}
 	> ul {
 		background: $primary;
 		border-color: $primary;
 		border-radius: $border-radius;
 		color: $white;
-		font: normal 1rem $font-family-base;		
+		font: normal 1rem $font-family-base;				
+		&.active {
+			> li:not(.label):hover, 
+			> li.hover:not(.label), 
+			> li:first-child:hover:after {
+				background: $link-hover-color;
+				color: #fff;
+			}
+			> li.nohover {
+				background: inherit !important;
+				color: inherit !important;
+			}
+			> li.hover:before, 
+			> li.nohover:after {
+				border-top-color: #fff !important;
+			}
+			> li.hover:after, 
+			> li.nohover:before {
+				border-top-color:  $link-hover-color !important;
+			}
+		}
+		li {
+			//transition: $transition-base;
+		}
 	}	
 	> ul:focus, 
 	&:not(.disabled) > ul:hover {
@@ -281,23 +306,5 @@ body.error404 {
 	> ul > li {
 		height: 48px;
 		line-height: 46px;
-	}
-	> ul.active > li:not(.label):hover, 
-	> ul.active > li.hover:not(.label), 
-	> ul.active > li:first-child:hover:after {
-		background: $link-hover-color;
-		color: #fff;
-	}
-	> ul.active > li.nohover {
-		background: inherit !important;
-		color: inherit !important;
-	}
-	> ul.active > li.hover:before, 
-	> ul.active > li.nohover:after {
-		border-top-color: #fff !important;
-	}
-	> ul.active > li.hover:after, 
-	> ul.active > li.nohover:before {
-		border-top-color:  $link-hover-color !important;
-	}
+	}			
 } 

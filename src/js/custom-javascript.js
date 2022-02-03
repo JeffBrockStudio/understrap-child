@@ -136,10 +136,11 @@ jQuery(document).ready(function($) {
 	
 	
 	/**
-	 * StyleSelect
+	 * Pretty Dropdown
 	 */
 	$('select').prettyDropdown({
 		classic: true,
+		height: 44,
 		width: '100%'
 	});	
 	

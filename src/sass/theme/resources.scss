@@ -24,6 +24,11 @@ body.page-template-page-resources-php {
 	
 	.filter-wrapper {		
 		padding: 2rem 0;
+		.filter {
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 1rem;
+			}
+		}
 		.label {
 			font-weight: 700;
 			margin-bottom: 0.5rem;	
@@ -42,9 +47,17 @@ body.page-template-page-resources-php {
 				background: $link-hover-color;
 			}
 		}
+		.col-search {
+			@include media-breakpoint-down(sm) {
+				margin-top: 1rem;
+			}
+		}
 		.clear-filters {
 			cursor: pointer;
 			margin-top: 1rem;
+			@include media-breakpoint-down(sm) {
+				margin-top: 0;
+			}
 			&:hover {
 				color: $link-hover-color;
 			}

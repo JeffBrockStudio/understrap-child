@@ -33224,16 +33224,6 @@ body.error404 .page-content .search-form {
   color: #fff;
   font: normal 1rem var(--bs-font-sans-serif);
 }
-.prettydropdown > ul:focus, .prettydropdown:not(.disabled) > ul:hover {
-  border-color: #0d6efd;
-}
-.prettydropdown:not(.disabled) > ul.active {
-  border-color: #0d6efd;
-}
-.prettydropdown > ul > li {
-  height: 48px;
-  line-height: 46px;
-}
 .prettydropdown > ul.active > li:not(.label):hover,
 .prettydropdown > ul.active > li.hover:not(.label),
 .prettydropdown > ul.active > li:first-child:hover:after {
@@ -33251,6 +33241,16 @@ body.error404 .page-content .search-form {
 .prettydropdown > ul.active > li.hover:after,
 .prettydropdown > ul.active > li.nohover:before {
   border-top-color: #0a58ca !important;
+}
+.prettydropdown > ul:focus, .prettydropdown:not(.disabled) > ul:hover {
+  border-color: #0d6efd;
+}
+.prettydropdown:not(.disabled) > ul.active {
+  border-color: #0d6efd;
+}
+.prettydropdown > ul > li {
+  height: 48px;
+  line-height: 46px;
 }
 
 html {
@@ -34233,6 +34233,11 @@ body.page-template-page-resources-php #featured-resource .text {
 body.page-template-page-resources-php .filter-wrapper {
   padding: 2rem 0;
 }
+@media (max-width: 575.98px) {
+  body.page-template-page-resources-php .filter-wrapper .filter {
+    margin-bottom: 1rem;
+  }
+}
 body.page-template-page-resources-php .filter-wrapper .label {
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -34251,9 +34256,19 @@ body.page-template-page-resources-php .filter-wrapper input.submit {
 body.page-template-page-resources-php .filter-wrapper input.submit:hover {
   background: #0a58ca;
 }
+@media (max-width: 575.98px) {
+  body.page-template-page-resources-php .filter-wrapper .col-search {
+    margin-top: 1rem;
+  }
+}
 body.page-template-page-resources-php .filter-wrapper .clear-filters {
   cursor: pointer;
   margin-top: 1rem;
+}
+@media (max-width: 575.98px) {
+  body.page-template-page-resources-php .filter-wrapper .clear-filters {
+    margin-top: 0;
+  }
 }
 body.page-template-page-resources-php .filter-wrapper .clear-filters:hover {
   color: #0a58ca;
