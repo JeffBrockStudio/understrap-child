@@ -18,6 +18,7 @@ function remove_default_format_select( $buttons ) {
 }
 add_filter( 'mce_buttons', 'remove_default_format_select' );
 
+
 /**
  * Add styles/classes to the "Styles" drop-down
  */ 
@@ -32,10 +33,20 @@ function fb_mce_before_init( $settings ) {
             'classes' => 'none'
         ),
         array(
-            'title' => 'Button',
+            'title' => 'Button: Primary',
+            'block' => 'div',
+            'classes' => 'btn btn-primary btn-wysiwyg'
+        ), 
+        array(
+            'title' => 'Button: Secondary',
             'block' => 'div',
             'classes' => 'btn btn-secondary btn-wysiwyg'
         ), 
+        array(
+            'title' => 'Button: Info',
+            'block' => 'div',
+            'classes' => 'btn btn-info btn-wysiwyg'
+        ),         
         array(
             'title' => 'Link',
             'block' => 'div',
@@ -48,8 +59,8 @@ function fb_mce_before_init( $settings ) {
     return $settings;
 
 }
-	
-	
+
+
 /**
  * Add "Pullquote" button to TinyMCE Editor.
  */

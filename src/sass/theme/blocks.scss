@@ -284,6 +284,9 @@
 	// Feature
 	// ----------------------------------------------
 	&.feature {
+		.buttons {
+			text-align: center;
+		}
 		.image {
 			@include media-breakpoint-down(sm) {
 				margin-bottom: 2rem;		

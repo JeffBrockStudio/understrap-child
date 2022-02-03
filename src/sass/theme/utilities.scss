@@ -215,6 +215,29 @@ body.admin-bar .fixed-top {
 	}
 }
 
+//
+// Inline WYSIWYG buttons
+// --------------------------------------------------
+.btn-wysiwyg {
+	display: table;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding: 0;
+	a {
+		color: $white;
+ 		display: block;
+		font-weight: 500;
+		padding: $btn-padding-y $btn-padding-x;
+		text-decoration: none;
+	}	
+}
+.mce-content-body .btn-wysiwyg a[data-mce-selected] {
+	background: transparent;
+	box-shadow: none;
+	margin-top: 0;
+	padding: $btn-padding-y $btn-padding-x;
+}
+
 
 .buttons {
 	margin-top: 1rem;
@@ -229,3 +252,52 @@ body.error404 {
 		}
 	}
 }
+
+
+//
+// Pretty Dropdown
+// --------------------------------------------------
+.prettydropdown {
+	&.arrow>ul>li.selected:after {
+		border-top-color: $primary;
+	}
+	&.arrow>ul>li.selected:before {
+		border-top-color: $white;
+	}
+	> ul {
+		background: $primary;
+		border-color: $primary;
+		border-radius: $border-radius;
+		color: $white;
+		font: normal 1rem $font-family-base;		
+	}	
+	> ul:focus, 
+	&:not(.disabled) > ul:hover {
+		border-color: $primary;
+	}
+	&:not(.disabled) > ul.active {
+		border-color: $primary;
+	}
+	> ul > li {
+		height: 48px;
+		line-height: 46px;
+	}
+	> ul.active > li:not(.label):hover, 
+	> ul.active > li.hover:not(.label), 
+	> ul.active > li:first-child:hover:after {
+		background: $link-hover-color;
+		color: #fff;
+	}
+	> ul.active > li.nohover {
+		background: inherit !important;
+		color: inherit !important;
+	}
+	> ul.active > li.hover:before, 
+	> ul.active > li.nohover:after {
+		border-top-color: #fff !important;
+	}
+	> ul.active > li.hover:after, 
+	> ul.active > li.nohover:before {
+		border-top-color:  $link-hover-color !important;
+	}
+} 

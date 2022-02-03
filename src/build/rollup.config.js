@@ -34,13 +34,13 @@ module.exports = {
   input: [
     path.resolve(__dirname, '../js/bootstrap.js'), 
     path.resolve(__dirname, '../js/skip-link-focus-fix.js'), 
-    path.resolve(__dirname, '../js/bootstrap-select.min.js'),     // Bootstrap Select
     path.resolve(__dirname, '../js/jquery.gridder.min.js'),       // Gridder
     path.resolve(__dirname, '../js/imagesloaded.pkgd.min.js'),    // Imagesloaded
     path.resolve(__dirname, '../js/lazysizes.min.js'),            // Lazysizes
     path.resolve(__dirname, '../js/jquery.matchHeight-min.js'),   // MatchHeight
     path.resolve(__dirname, '../js/modernizer-custom.js'),        // Modernizr
     path.resolve(__dirname, '../js/parallax.min.js'),             // Parallax
+    path.resolve(__dirname, '../js/jquery.prettydropdowns.js'),   // Pretty Dropdowns
     path.resolve(__dirname, '../js/slick.min.js'),                // Slick Carousel
     path.resolve(__dirname, '../js/smooth-scroll.min.js'),        // Smooth Scroll    
     path.resolve(__dirname, '../js/jquery.sticky.js'),            // Sticky

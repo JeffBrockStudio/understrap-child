@@ -58,7 +58,7 @@ jQuery(document).ready(function($) {
 	/**
 	 * Accordion
 	 */
-	$('.answer.collapse').on('shown.bs.collapse', function(e) {
+	$('.answer.collapse').on('shown.bs.collapse', function() {
 		
 		var $fixed_offset = 92;
 		if ( Modernizr.mq('(max-width: 1024px)')) {
@@ -75,6 +75,74 @@ jQuery(document).ready(function($) {
 		}, 500)
 		
 	});	
+	
+	
+	/**
+	 * Team Members
+	 */
+	
+	// Team Roles
+	$('body.page-template-page-team-php a.team-role').click(function(event) {
+			event.preventDefault();
+			
+			if ( $(this).hasClass( 'btn-primary' )) {
+				$('a.team-role').removeClass( 'btn-outline-primary' ).addClass('btn-primary');
+				$(this).removeClass( 'btn-primary' ).addClass( 'btn-outline-primary' );
+			} else {
+				$('a.team-role').removeClass( 'btn-primary' ).addClass('btn-outline-primary');
+				$(this).removeClass( 'btn-outline-primary' ).addClass( 'btn-primary' );
+			}
+			
+			var url = [location.protocol, '//', location.host, location.pathname].join('');	 
+			
+			var team_role = $(this).data('team-role');
+			
+			$('.pagination-row').remove();		
+			$('#posts-ajax .resource').remove();
+			$('.gridder-show').hide();			
+			$('.spinner-row').addClass('visible');
+	
+			var href = url + '?team_roles=' + team_role;		    		    
+	
+			history.pushState(null, null, '?team_roles=' + team_role);
+			
+			$('#posts-ajax').load(href + ' #posts-ajax>*', function(){
+				$('.spinner-row.visible').remove();
+				
+				// Call Gridder
+				$('.gridder').gridderExpander({
+						scroll: true,
+						scrollOffset: 140,
+						scrollTo: "panel",                  // panel or listitem
+						animationSpeed: 400,
+						animationEasing: "easeInOutExpo",
+						showNav: true,                      // Show Navigation
+						nextText: "Next",                   // Next button text
+						prevText: "Previous",               // Previous button text
+						closeText: "",                 			// Close button text
+						onStart: function(){
+								//Gridder Inititialized
+						},
+						onContent: function(){
+								//Gridder Content Loaded
+						},
+						onClosed: function(){
+								//Gridder Closed
+						}
+				});
+				
+			});		
+	});
+	
+	
+	/**
+	 * StyleSelect
+	 */
+	$('select').prettyDropdown({
+		classic: true,
+		width: '100%'
+	});	
+	
 		
 });
 

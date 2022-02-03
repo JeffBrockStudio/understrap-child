@@ -69,7 +69,6 @@
     "sass": "^1.44.0",
     "terser": "^5.10.0",
     "understrap": "github:understrap/understrap#develop",
-    "bootstrap-select": "^1.13.18",
     "@fortawesome/fontawesome-pro": "^5.15.4",
     "imagesloaded": "^4.1.4",
     "isotope-layout": "^3.0.6",
@@ -79,6 +78,7 @@
     "jquery-touchswipe": "^1.6.19",
     "lazysizes": "^5.3.2",
     "modernizr": "^3.11.8",
+    "pretty-dropdowns": "^4.17.0",    
     "slick-carousel": "^1.8.1",
     "smooth-scroll": "^16.1.3"
   }

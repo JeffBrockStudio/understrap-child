@@ -1,0 +1,55 @@
+body.page-template-page-resources-php {
+	
+	//
+	// Featured Resource
+	// --------------------------------------------------
+	
+	#featured-resource {
+		background-color: $gray-100;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		
+		.superheading {
+			margin-bottom: 0.5rem;
+		}
+		.text {
+			margin-bottom: 1rem;
+		}
+	}
+	
+	
+	//
+	// Filters
+	// --------------------------------------------------
+	
+	.filter-wrapper {		
+		padding: 2rem 0;
+		.label {
+			font-weight: 700;
+			margin-bottom: 0.5rem;	
+		}
+		input.submit {
+			background: $primary;
+			border-bottom-left-radius: $border-radius;
+			border-top-left-radius: $border-radius;
+			color: $white;
+			border: none;
+			font-family: 'Font Awesome 5 Pro';
+			height: 100%;
+			transition: $transition-base;
+			width: 2rem;
+			&:hover {
+				background: $link-hover-color;
+			}
+		}
+		.clear-filters {
+			cursor: pointer;
+			margin-top: 1rem;
+			&:hover {
+				color: $link-hover-color;
+			}
+		}
+	}
+	
+	
+}

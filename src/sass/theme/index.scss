@@ -4,7 +4,8 @@ body.blog {
 .row.spinner-row {
 	display: none;
 	height: 3rem;
-	margin-top: 2rem;
+	margin-top: 0;
+	margin-bottom: 3rem;
 	&.visible {
 		display: block;
 	}
