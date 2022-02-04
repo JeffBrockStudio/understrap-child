@@ -83,66 +83,115 @@ jQuery(document).ready(function($) {
 	
 	// Team Roles
 	$('body.page-template-page-team-php a.team-role').click(function(event) {
-			event.preventDefault();
+		
+		event.preventDefault();
+		
+		if ( $(this).hasClass( 'btn-primary' )) {
+			$('a.team-role').removeClass( 'btn-outline-primary' ).addClass('btn-primary');
+			$(this).removeClass( 'btn-primary' ).addClass( 'btn-outline-primary' );
+		} else {
+			$('a.team-role').removeClass( 'btn-primary' ).addClass('btn-outline-primary');
+			$(this).removeClass( 'btn-outline-primary' ).addClass( 'btn-primary' );
+		}
+		
+		var url = [location.protocol, '//', location.host, location.pathname].join('');	 
+		
+		var team_role = $(this).data('team-role');
+		
+		$('.pagination-row').remove();		
+		$('#posts-ajax .resource').remove();
+		$('.gridder-show').hide();			
+		$('.spinner-row').addClass('visible');
+
+		var href = url + '?team_roles=' + team_role;		    		    
+
+		history.pushState(null, null, '?team_roles=' + team_role);
+		
+		$('#posts-ajax').load(href + ' #posts-ajax>*', function(){
+			$('.spinner-row.visible').remove();
 			
-			if ( $(this).hasClass( 'btn-primary' )) {
-				$('a.team-role').removeClass( 'btn-outline-primary' ).addClass('btn-primary');
-				$(this).removeClass( 'btn-primary' ).addClass( 'btn-outline-primary' );
-			} else {
-				$('a.team-role').removeClass( 'btn-primary' ).addClass('btn-outline-primary');
-				$(this).removeClass( 'btn-outline-primary' ).addClass( 'btn-primary' );
-			}
+			// Call Gridder
+			$('.gridder').gridderExpander({
+					scroll: true,
+					scrollOffset: 140,
+					scrollTo: "panel",                  // panel or listitem
+					animationSpeed: 400,
+					animationEasing: "easeInOutExpo",
+					showNav: true,                      // Show Navigation
+					nextText: "Next",                   // Next button text
+					prevText: "Previous",               // Previous button text
+					closeText: "",                 			// Close button text
+					onStart: function(){
+							//Gridder Inititialized
+					},
+					onContent: function(){
+							//Gridder Content Loaded
+					},
+					onClosed: function(){
+							//Gridder Closed
+					}
+			});
 			
-			var url = [location.protocol, '//', location.host, location.pathname].join('');	 
-			
-			var team_role = $(this).data('team-role');
-			
-			$('.pagination-row').remove();		
-			$('#posts-ajax .resource').remove();
-			$('.gridder-show').hide();			
-			$('.spinner-row').addClass('visible');
-	
-			var href = url + '?team_roles=' + team_role;		    		    
-	
-			history.pushState(null, null, '?team_roles=' + team_role);
-			
-			$('#posts-ajax').load(href + ' #posts-ajax>*', function(){
-				$('.spinner-row.visible').remove();
-				
-				// Call Gridder
-				$('.gridder').gridderExpander({
-						scroll: true,
-						scrollOffset: 140,
-						scrollTo: "panel",                  // panel or listitem
-						animationSpeed: 400,
-						animationEasing: "easeInOutExpo",
-						showNav: true,                      // Show Navigation
-						nextText: "Next",                   // Next button text
-						prevText: "Previous",               // Previous button text
-						closeText: "",                 			// Close button text
-						onStart: function(){
-								//Gridder Inititialized
-						},
-						onContent: function(){
-								//Gridder Content Loaded
-						},
-						onClosed: function(){
-								//Gridder Closed
-						}
-				});
-				
-			});		
+		});		
 	});
 	
 	
 	/**
 	 * Pretty Dropdown
 	 */
-	$('select').prettyDropdown({
+	 
+	$dropdown = $('select').prettyDropdown({
 		classic: true,
 		height: 44,
 		width: '100%'
 	});	
+	
+	
+	/**
+	 * Resources
+	 */
+	 
+	// AJAX pagination 
+	$('#posts-ajax').on('click', '#pagination-ajax', function(e){
+		
+		e.preventDefault();
+		$('.pagination-row').remove();
+		$('.spinner-row').addClass('visible');
+		
+		var existinghtml = $('#posts-ajax').html();
+		$('#posts-ajax').load($(this).attr('href') + ' #posts-ajax>*', function(){
+			$('#posts-ajax').prepend(existinghtml);
+			$('.spinner-row.visible').remove();
+		});
+		
+	}); 
+	
+	// Clear filters
+	$('.clear-filters').click(function() {
+	
+		var post_type = $(this).data('post_type');
+		var search_placeholder = $(this).data('search_placeholder');
+		
+		var url = [location.protocol, '//', location.host, location.pathname].join('');	 
+		var queryParams = new URLSearchParams(window.location.search);
+		var href = url + '?';		    		    		
+		queryParams.delete('search');
+		history.pushState(null, null, '?'+queryParams.toString());
+	
+		$('.pagination-row').remove();		
+		$('#posts-ajax .item').remove();
+		$('.not-found').hide();
+		
+		$('.filter select').val('').attr('selected','selected').change();;		
+		$dropdown.refresh();
+		
+		$('#' + post_type + '-search-query').val('').attr('placeholder', search_placeholder );			
+		$('.spinner-row').addClass('visible');
+		
+		$('#posts-ajax').load(href + ' #posts-ajax>*', function(){
+			$('.spinner-row.visible').remove();
+		});		    
+	});
 	
 		
 });

@@ -100,7 +100,7 @@ endif;
 									
 								</div>
 								
-								<div class="clear-filters">
+								<div class="clear-filters" data-post_type="<?php echo $post_type; ?>" data-search_placeholder="<?php echo $post_type_labels->search_items; ?>">
 									<i class="far fa-times"></i> Clear all filters
 								</div>
 							</div>
@@ -165,7 +165,7 @@ if ( array_key_exists( 'orderby', $_GET ) && $_GET['orderby'] ) {
 	}
 	
 } else {
-	$args['orderby'] = 'title';								
+	$args['orderby'] = 'date';								
 	$querystring .= 'orderby=title&';
 }	  
 
@@ -175,7 +175,7 @@ if ( array_key_exists( 'order', $_GET ) && $_GET['order'] ) {
 	$querystring .= 'order=' . $_GET['order'] . '&';
 	$order = $_GET['order'];
 } else {
-	$args['order'] = 'ASC';								
+	$args['order'] = 'DESC';								
 	$querystring .= 'order=ASC&';
 }		
 	
@@ -292,8 +292,7 @@ if ( array_key_exists( 'search', $_GET ) && $_GET['search'] ) {
 					while ( $the_query->have_posts() ):
 						$the_query->the_post();										
 						$resource_id = $post->ID;						
-						$resources_list[$resource_id]['id'] = $post->ID;
-						$resources_list[$resource_id]['title'] = get_the_title( $resource_id );						
+						$resources_list[$resource_id]['id'] = $post->ID;					
 					endwhile;
 			
 					if ( count($resources_list) > 0 ):
@@ -301,10 +300,8 @@ if ( array_key_exists( 'search', $_GET ) && $_GET['search'] ) {
 						foreach ( $resources_list AS $resource_item):			
 							$resource_id = $resource_item['id'];?>
 
-							<div class="item <?php echo $post_type; ?>">		
-							
-								<a href="<?php echo get_permalink($resource_id); ?>">	
-							
+							<div class="item <?php echo $post_type; ?>">									
+								<a href="<?php echo get_permalink($resource_id); ?>">								
 									<div class="row">
 
 										<div class="col-12 col-md-6 date">		
@@ -347,13 +344,10 @@ if ( array_key_exists( 'search', $_GET ) && $_GET['search'] ) {
 											<div class="text">
 												<?php echo apply_filters( 'the_content', get_field( 'resource_short_description_text', $resource_id )); ?>	
 											</div>
-
 										</div>
 														
 									</div>
-								
-								</a>
-								
+								</a>								
 							</div>
 
 							<?php	     

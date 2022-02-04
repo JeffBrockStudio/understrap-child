@@ -34316,6 +34316,9 @@ body.page-template-page-resources-php .list-wrapper .item .type {
 body.page-template-page-resources-php .list-wrapper .item .text {
   margin-top: 1rem;
 }
+body.page-template-page-resources-php .pagination-row {
+  text-align: center;
+}
 
 .has-blue-color,
 .has-blue-color:visited {
