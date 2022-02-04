@@ -31,7 +31,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 	endif;
 	?>
 
-	<?php require('inc/resources.php'); ?>
+	<?php 
+	$post_type = 'resource';
+	require( 'inc/resources.php' ); ?>
 	
 </div><!-- #page-wrapper -->
 

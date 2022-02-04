@@ -6472,7 +6472,7 @@ textarea.form-control-lg {
   background-color: rgba(255, 255, 255, 0.85);
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
 }
 .toast.showing {
@@ -7789,7 +7789,7 @@ textarea.form-control-lg {
 }
 
 .shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.1) !important;
 }
 
 .shadow-sm {
@@ -33297,6 +33297,9 @@ blockquote {
 #wrapper-navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
   background-image: url("../img/times-regular.svg");
 }
+#wrapper-navbar .navbar-brand {
+  max-width: 234px;
+}
 @media (max-width: 575.98px) {
   #wrapper-navbar .navbar-brand img {
     height: 40px;
@@ -34272,6 +34275,46 @@ body.page-template-page-resources-php .filter-wrapper .clear-filters {
 }
 body.page-template-page-resources-php .filter-wrapper .clear-filters:hover {
   color: #0a58ca;
+}
+body.page-template-page-resources-php .list-wrapper {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+}
+body.page-template-page-resources-php .list-wrapper .item {
+  background: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+body.page-template-page-resources-php .list-wrapper .item > a {
+  color: inherit;
+  display: block;
+  padding: 2rem;
+  text-decoration: none;
+}
+@media (max-width: 575.98px) {
+  body.page-template-page-resources-php .list-wrapper .item > a {
+    padding: 1rem;
+  }
+}
+body.page-template-page-resources-php .list-wrapper .item > a:hover {
+  outline: 8px solid #0d6efd;
+}
+body.page-template-page-resources-php .list-wrapper .item .title {
+  margin-top: 0.75rem;
+}
+body.page-template-page-resources-php .list-wrapper .item .date {
+  font-weight: 700;
+}
+body.page-template-page-resources-php .list-wrapper .item .topic {
+  font-weight: 700;
+  text-align: right;
+}
+body.page-template-page-resources-php .list-wrapper .item .type {
+  font-style: italic;
+}
+body.page-template-page-resources-php .list-wrapper .item .text {
+  margin-top: 1rem;
 }
 
 .has-blue-color,

@@ -12,6 +12,7 @@
 	}		
 	
 	.navbar-brand {
+		max-width: 234px;
 		img {
 			@include media-breakpoint-down(sm) {
 				height: 40px;
