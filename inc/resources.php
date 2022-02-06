@@ -66,7 +66,7 @@ endif;
 								
 								<div class="row">
 									
-									<?php $taxonomies = get_object_taxonomies( $post_type );
+									<?php $taxonomies = get_object_taxonomies( $post_type );									
 									foreach ( $taxonomies AS $taxonomy ): 
 										$taxonomy_details = get_taxonomy( $taxonomy );
 										$taxonomy_labels = $taxonomy_details->labels;
@@ -74,7 +74,7 @@ endif;
 										<div class="col-12 col-md-6">		
 											<div class="filter <?php echo $taxonomy; ?>">
 												<label for="select-<?php echo $taxonomy; ?>" class="sr-only"><?php echo $taxonomy_labels->menu_name; ?></label>
-												<select id="select-<?php echo $taxonomy; ?>">
+												<select id="select-<?php echo $taxonomy; ?>" data-taxonomies='<?php echo json_encode( $taxonomies ) ?>' data-post_type="<?php echo $post_type; ?>">
 													<option value="" selected><?php echo $taxonomy_labels->menu_name; ?></option>
 													<?php
 													if ( isset( $_GET[$taxonomy] )):
@@ -100,7 +100,7 @@ endif;
 									
 								</div>
 								
-								<div class="clear-filters" data-post_type="<?php echo $post_type; ?>" data-search_placeholder="<?php echo $post_type_labels->search_items; ?>">
+								<div class="clear-filters" data-post_type="<?php echo $post_type; ?>" data-taxonomies='<?php echo json_encode( $taxonomies ) ?>' data-search_placeholder="<?php echo $post_type_labels->search_items; ?>">
 									<i class="far fa-times"></i> Clear all filters
 								</div>
 							</div>
@@ -109,7 +109,7 @@ endif;
 								<div class="label"><?php echo $post_type_labels->search_items; ?></div>							
 								
 								<div class="search">
-									<form id="<?php echo $post_type; ?>-search">
+									<form id="<?php echo $post_type; ?>-search" class="filters-search-form" data-post_type="<?php echo $post_type; ?>" data-taxonomies='<?php echo json_encode( $taxonomies ) ?>'>
 										<label class="sr-only" for="s">Search</label>
 										<div class="input-group">
 											<span class="input-group-prepend">
@@ -117,7 +117,7 @@ endif;
 											</span>
 											<input 
 												id="<?php echo $post_type; ?>-search-query" 
-												class="field form-control" 
+												class="field form-control search-query" 
 												type="text"
 												placeholder="<?php if ( isset($_GET['search']) ) { esc_attr_e( $_GET['search'], 'understrap' ); } else { esc_attr_e( $post_type_labels->search_items, 'understrap' ); }; ?>" 
 												value="">											

@@ -108,3 +108,46 @@ add_filter( 'auto_plugin_update_send_email', '__return_false' );
  * Disable auto update notification emails for themes
  */
 add_filter( 'auto_theme_update_send_email', '__return_false' );
+
+
+/**
+ * Provide HTTP Basic Authentication credentials to SearchWP (and WP Cron).
+ */
+class MySearchWPBasicAuthCreds {
+  private $username = ''; // HTTP Basic Auth username.
+  private $password = ''; // HTTP Basic Auth password.
+
+  function __construct() {
+    // Provide HTTP Basic Authentication credentials to SearchWP.
+    add_filter(
+      'searchwp\background_process\http_basic_auth_credentials',
+      function( $credentials ) {
+        return [
+          'username' => $this->username,
+          'password' => $this->password,
+        ];
+      }
+    );
+
+    // Also provide HTTP Basic Authentication credentials to WP Cron.
+    // This can be removed if handled elsewhere, otherwise *REQUIRED*
+    add_filter( 'cron_request', function( $cron_request ) {
+      if ( ! isset( $cron_request['args']['headers'] ) ) {
+        $cron_request['args']['headers'] = [];
+      }
+
+      if ( isset( $cron_request['args']['headers']['Authorization'] ) ) {
+        return $cron_request;
+      }
+
+      $cron_request['args']['headers']['Authorization'] = sprintf(
+        'Basic %s',
+        base64_encode( $this->username . ':' . $this->password )
+      );
+      
+      return $cron_request;
+    }, 999 );
+  }
+}
+
+//new MySearchWPBasicAuthCreds();

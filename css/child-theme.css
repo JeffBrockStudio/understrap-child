@@ -34007,6 +34007,108 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
     margin-bottom: 2rem;
   }
 }
+body.single-resource #page-wrapper {
+  padding-bottom: 3rem;
+}
+body.single-resource .page-intro {
+  padding: 3rem 0;
+}
+body.single-resource .page-intro h1, body.single-resource .page-intro .h1 {
+  text-align: center;
+}
+body.single-resource .date {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 575.98px) {
+  body.single-resource .date {
+    font-size: 1.3888888889rem;
+  }
+}
+body.single-resource .button {
+  margin-top: 2rem;
+}
+body.single-resource .entry {
+  margin-bottom: 2rem;
+}
+body.single-resource .topic {
+  font-size: 1.3888888889rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+body.single-resource .website {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+body.single-resource .col-top-button {
+  text-align: right;
+}
+@media (max-width: 575.98px) {
+  body.single-resource .col-top-button {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+}
+body.single-resource .col-top-button .button {
+  margin-top: 0.5rem;
+}
+body.single-resource .bottom-button {
+  text-align: right;
+}
+@media (max-width: 575.98px) {
+  body.single-resource .bottom-button {
+    text-align: left;
+  }
+}
+body.single-resource .related-resources {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+body.single-resource .related-resources h2, body.single-resource .related-resources .h2 {
+  margin: 2rem;
+  text-align: center;
+}
+body.single-resource .related-resources .resource {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 575.98px) {
+  body.single-resource .related-resources .resource {
+    margin-bottom: 2rem;
+  }
+}
+body.single-resource .related-resources .resource a {
+  color: #000;
+  display: block;
+  padding: 0.5rem 1rem 1rem;
+  text-decoration: none;
+}
+body.single-resource .related-resources .resource a:hover {
+  outline: 8px solid #D42E19;
+}
+body.single-resource .related-resources .resource .date,
+body.single-resource .related-resources .resource .topic {
+  font-size: 0.9444444444rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+body.single-resource .related-resources .resource h3, body.single-resource .related-resources .resource .h3 {
+  font-size: 1.5555555556rem;
+  line-height: 1.43;
+}
+@media (max-width: 575.98px) {
+  body.single-resource .related-resources .resource h3, body.single-resource .related-resources .resource .h3 {
+    font-weight: 700;
+  }
+}
+body.single-resource .related-resources .resource .type {
+  font-size: 0.9444444444rem;
+  font-style: italic;
+  font-weight: 300;
+}
+body.single-resource .related-resources .resource img {
+  width: 100%;
+}
+
 .row.spinner-row {
   display: none;
   height: 3rem;

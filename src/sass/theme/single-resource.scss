@@ -1,0 +1,103 @@
+body.single-resource {
+	#page-wrapper {
+		padding-bottom: 3rem;
+	}
+	
+	.page-intro {
+		padding: 3rem 0;
+		h1 {
+			text-align: center;
+		}
+	}		
+	
+	.date {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		@include media-breakpoint-down(sm) {
+			font-size: rem(25);
+		}
+	}
+	
+	.button {
+		margin-top: 2rem;
+	}
+	
+	.entry {
+		margin-bottom: 2rem;
+	}
+	
+	.topic {
+		font-size: rem(25);
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+	
+	.website {
+		font-weight: $font-weight-bold;
+		margin-bottom: 2rem;
+	}
+	
+	.col-top-button {
+		text-align: right;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 2rem;
+			text-align: left;
+		}
+		.button {
+			margin-top: .5rem;	
+		}		
+	}
+	
+	.bottom-button {
+		text-align: right;
+		@include media-breakpoint-down(sm) {
+			text-align: left;
+		}
+	}
+	
+	.related-resources {
+		margin-top: 5rem;		
+		margin-bottom: 3rem;
+		h2 {
+			margin: 2rem;
+			text-align: center;
+		}
+		
+		.resource {
+			box-shadow: 0 0 10px rgba( $black, 0.2);
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 2rem;
+			}			
+			a {
+				color: $black;
+				display: block;
+				padding: .5rem 1rem 1rem;
+				text-decoration: none;
+				&:hover {
+					outline: 8px solid #D42E19;
+				}
+			}
+			.date,
+			.topic {
+				font-size: rem(17);
+				font-weight: 600;
+				margin-bottom: .5rem;
+			}
+			h3 {
+				font-size: rem(28);
+				line-height: 1.43;
+				@include media-breakpoint-down(sm) {
+					font-weight: 700;
+				}
+			}
+			.type {
+				font-size: rem(17);
+				font-style: italic;
+				font-weight: 300;
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
