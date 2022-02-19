@@ -15,6 +15,12 @@
                 "class": "",
                 "id": ""
             },
+            "hide_field": "",
+            "hide_label": "all",
+            "hide_instructions": "",
+            "hide_required": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
             "crop_type": "aspect_ratio",
             "aspect_ratio_width": 1,
             "aspect_ratio_height": 1,
@@ -28,6 +34,8 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
+            "acfe_settings": "",
+            "acfe_validate": "",
             "acfe_field_group_condition": 0
         }
     ],
@@ -54,9 +62,10 @@
     "acfe_autosync": [
         "json"
     ],
-    "acfe_form": 0,
+    "acfe_form": 1,
     "acfe_display_title": "",
+    "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1640679988
+    "modified": 1644994611
 }

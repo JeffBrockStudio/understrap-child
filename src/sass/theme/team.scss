@@ -50,6 +50,19 @@ body.page-template-page-team {
 			
 			.thumb {
 				margin-bottom: 1rem;
+				position: relative;
+				.plus {
+					align-items: center;
+					background: rgba( $black, .5 );
+					bottom: 0;
+					color: $white;
+					display: flex;
+					height: 40px;
+					justify-content: center;
+					position: absolute;
+					right: 0;
+					width: 40px;
+				}
 			}
 			.text {
 				text-align: left;
@@ -188,6 +201,9 @@ body.page-template-page-team {
 				font-family: 'Font Awesome 5 Pro';
 				font-size: 2rem;		
 				margin-left: 4px;				
+				@include media-breakpoint-down(sm) {
+					display: block !important;
+				}
 			}
 		}
 	}  

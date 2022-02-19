@@ -247,6 +247,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 												<div class="inner">
 														<div class="thumb">
 																<?php echo get_the_post_thumbnail( $resource_id, 'medium' ); ?>
+																<div class="plus"><i class="fas fa-plus"></i></div>
 														</div>
 														<div class="text">
 															<h3><?php echo get_the_title( $resource_id ); ?></h3>

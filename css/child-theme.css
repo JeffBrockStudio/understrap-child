@@ -34180,6 +34180,19 @@ body.page-template-page-team .gridder .gridder-list img {
 }
 body.page-template-page-team .gridder .gridder-list .thumb {
   margin-bottom: 1rem;
+  position: relative;
+}
+body.page-template-page-team .gridder .gridder-list .thumb .plus {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  width: 40px;
 }
 body.page-template-page-team .gridder .gridder-list .text {
   text-align: left;
@@ -34322,6 +34335,11 @@ body.page-template-page-team .gridder-navigation .gridder-close:after {
   font-family: "Font Awesome 5 Pro";
   font-size: 2rem;
   margin-left: 4px;
+}
+@media (max-width: 575.98px) {
+  body.page-template-page-team .gridder-navigation .gridder-close:after {
+    display: block !important;
+  }
 }
 
 body.page-template-page-resources-php #featured-resource {
