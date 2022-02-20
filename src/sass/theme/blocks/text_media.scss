@@ -1,0 +1,23 @@
+// Text with Media
+// ----------------------------------------------
+.block.text_media {
+	padding: 5rem 0;
+	&.right {
+		.col-text {
+			order: 1;
+		}			
+		.col-image {
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 2rem;	
+			}				
+		}
+		.col-text {
+			margin-bottom: 0;
+		}
+	}		
+	.col-text {
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 2rem;
+		}
+	}
+}

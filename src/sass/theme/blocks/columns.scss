@@ -1,0 +1,57 @@
+// Columns
+// ----------------------------------------------
+.block.columns {
+	text-align: center;
+	.col-column {
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 2rem;					
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}				
+		&.col-md-3 {
+			.column {
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+			.text {
+				h3 {
+					font-size: 1.083rem;
+				}	
+			}		
+			.image {
+				img {
+					height: 100px;
+				}
+			}			
+		}
+	}
+	h2 {
+		margin-bottom: 2.5rem;
+	}
+	.column {
+		background: $white;
+		box-shadow: 0 0 10px rgba( $black, 0.1 );
+		height: 100%;				
+		padding: 1.5rem 2rem;
+		position: relative;
+	}
+	.image {
+		margin-bottom: 0.75rem;
+		img {
+			height: 127px;
+			width: auto;
+		}
+	}
+	.text {
+		h3 {
+			font-size: 1.333rem;
+			font-weight: 600;
+			@include media-breakpoint-down(sm) {
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+}
