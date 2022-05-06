@@ -1,26 +1,18 @@
 <?php
 /**
- * Custom login logo
+ * Add header and footer to login screen
  */
-function custom_login_logo() { ?>
-  <style type="text/css">
-    .login h1 a {
-      background-image: url( <?php $image = get_field( 'login_logo', 'options' ); echo $image['url']; ?> );
-      height: 84px;
-      width: 100%;
-      background-size: contain;
-    }
-  </style>
-<?php }
-add_action( 'login_head', 'custom_login_logo' );
-
-function custom_login_logo_url() {
-  return get_bloginfo( 'url' );
+add_action( 'login_head', 'custom_login_header' );
+function custom_login_header() {
+  echo '<link rel="stylesheet" href="' . get_bloginfo('stylesheet_directory') . '/css/wp-custom-login.css" type="text/css" />';
+  do_action('wp_custom_login_header_before');
+  get_header();
+  do_action('wp_custom_login_header_after');
 }
-add_filter( 'login_headerurl', 'custom_login_logo_url' );
 
-function custom_login_logo_url_title() {
-  return get_bloginfo( 'name' );
-}
-add_filter( 'login_headertitle', 'custom_login_logo_url_title' );
-	
+add_action( 'login_footer', 'custom_login_footer' );
+function custom_login_footer() {
+  do_action('wp_custom_login_footer_before');
+  get_footer('login');
+  do_action('wp_custom_login_footer_after');
+}	

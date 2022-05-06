@@ -151,3 +151,13 @@ class MySearchWPBasicAuthCreds {
 }
 
 //new MySearchWPBasicAuthCreds();
+
+/**
+ * Custom debug file
+ */
+function custom_debug( $debug_variable, $file, $line ) {
+  $logfile = get_stylesheet_directory() . '/debug.log';
+  date_default_timezone_set('America/Los_Angeles');
+  $message = print_r( $debug_variable, TRUE ) . ' | ' . $file . ':' . $line . ' | ' . date( 'Y-m-d H:i:s' );
+  error_log( $message."\n", 3, $logfile );  
+}

@@ -44,7 +44,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
-    "@fortawesome/fontawesome-pro": "^5.15.4",
+    "@fortawesome/fontawesome-pro": "^6.0.0",
     "@popperjs/core": "^2.11.0",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^21.0.0",

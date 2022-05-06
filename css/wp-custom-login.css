@@ -1,0 +1,206 @@
+/*
+Theme Name: Mimic
+Description: Custom CSS for login
+Version: 1.0
+Author: Christine Estrada via Project 9 Creative
+Author URI: http://www.project9creative.com
+*/
+
+#login,
+.content-container.narrow {
+  min-width: 420px;
+  max-width: 500px;
+  width: auto;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.content-container.narrow {
+  margin-bottom: 45px;
+}
+#login {
+	padding-top: 4rem;	
+	padding-bottom: 4rem;
+}
+#login #login_error {
+	background: red;
+	color: white;
+	margin-bottom: 2rem;
+	padding: 1rem;
+}
+#login p.message {
+	background: green;
+	color: white;
+	margin-bottom: 2rem;
+	padding: 1rem;
+}
+#login a {
+	border-bottom: 2px solid #605F5C;
+}
+#login a:hover {
+	border-color: $black;
+	color: $black;
+	text-decoration: none;
+}
+#login h1 {
+  display: none;
+}
+
+#login #nav {
+  color: #fff;
+}
+
+.login .section-header-right .no-border {
+  margin-bottom: 10px;
+}
+
+#loginform {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+  background: none !important;
+} 
+#login form p {
+	margin-top: 0;
+}
+#login form p.submit {
+  clear: both;
+	margin-top: 1rem;
+  margin-bottom: 2rem;  
+}
+
+#login form p.submit #wp-submit {
+	background: #605F5C;
+	border: none;
+	color: white;
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: .25rem 1rem;
+	text-transform: uppercase;	
+}
+#login form p.submit #wp-submit:hover {
+	background: #000000;	
+}
+#login .wp-hide-pw {
+	background: #605F5C;
+	border: none;
+}
+#login .wp-hide-pw:hover {
+	background: #000000;	
+}
+#login .wp-hide-pw>.dashicons {
+ 	color: white;
+ 	top: 1px;
+} 
+#loginform label[for='user_login'],
+#loginform label[for='user_pass'] {
+	display: block;
+	font-weight: bold;
+}
+#lostpasswordform label[for='user_login'] {
+	font-weight: bold;
+}
+#loginform .user-pass-wrap {
+	margin-top: 1.5rem;
+}
+
+#loginform p {
+  margin-top: 20px;
+}
+
+h3.sign-up {
+  margin-top: 45px;
+}
+
+  .login p:first-child label {
+    margin-left: 0;
+  }
+
+.login .page-content form .input,
+.login .page-content input[type='text'] {
+  font-size: 14px;
+  background: none;
+}
+
+.login footer input[type='text'] {
+  font-size: 12px !important;
+}
+
+#login form p.forgetmenot {
+  display: block;
+  clear: both;
+  margin-top: 0.5rem;
+}
+
+  .login .forgetmenot label {
+    font-weight: normal;
+    color: #4F5363;
+    margin: 0;
+    padding: 0;
+  }
+
+.login #nav {
+  display: block;
+  clear: both;
+  margin: 0 0 0 -5px;
+  padding: 0;
+  color: #fff;
+}
+
+.login #nav a:first-child {
+  display: none;
+}
+
+.login #backtoblog {
+  display: none;
+}
+
+.login footer {
+  padding-top: 20px;
+}
+
+.login .message {
+  margin-left: 0;
+}
+
+.login #login_error {
+  margin-left: 0;
+}
+
+#lostpasswordform + #nav {
+  display: none;
+}
+
+.login .button {
+  font-size: 18px;
+  display: inline-block;
+  min-width: 100px;
+  line-height: 28px;
+margin: 20px 0;
+  padding: 2px 30px 0;
+  border: 1px solid #777878;
+  border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+  background-color: #fff;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.login .button:hover {
+  color: #fff !important;
+}
+#login #lostpasswordform p.submit {
+	margin-top: 2rem;
+}
+#login #lostpasswordform label {
+	display: block;
+}
+#login .privacy-policy-page-link {
+	display: none;
+}
