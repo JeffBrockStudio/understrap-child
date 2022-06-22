@@ -54,21 +54,33 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		<!-- The WordPress Menu goes here -->
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location'  => 'primary',
-				'container_class' => 'collapse navbar-collapse',
-				'container_id'    => 'navbarNavDropdown',
-				'menu_class'      => 'navbar-nav ms-auto',
-				'fallback_cb'     => '',
-				'menu_id'         => 'main-menu',
-				'depth'           => 2,
-				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-			)
-		);
-		?>
+		<div id="navbarNavDropdown" class="collapse navbar-collapse flex-column">
+			
+			<?php wp_nav_menu(
+				array(
+					'theme_location'  => 'utility-menu',
+					'container' 			=> false,
+					'menu_class'      => 'navbar-nav ml-auto',
+					'fallback_cb'     => '',
+					'menu_id'         => 'utility-menu',
+					'depth'           => 2,
+					'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+				)
+			); ?>
+		
+			<?php wp_nav_menu(
+				array(
+					'theme_location'  => 'primary',
+					'container' 			=> false,
+					'menu_class'      => 'navbar-nav ml-auto',
+					'fallback_cb'     => '',
+					'menu_id'         => 'main-menu',
+					'depth'           => 3,
+					'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+				)
+			); ?>
+		
+		</div>
 
 	</div><!-- .container(-fluid) -->
 

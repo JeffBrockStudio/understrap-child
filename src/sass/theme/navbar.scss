@@ -20,6 +20,19 @@
 		}
 	}
 	
+	#navbarNavDropdown {
+		align-items: end;
+	}
+	
+	#main-menu {
+		> li:last-of-type {
+			.dropdown-menu[data-bs-popper] {
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+	
 }
 
 

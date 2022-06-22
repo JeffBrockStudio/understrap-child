@@ -36,6 +36,7 @@ Author URI: http://www.project9creative.com
 }
 #login a {
 	border-bottom: 2px solid #605F5C;
+  text-decoration: none;
 }
 #login a:hover {
 	border-color: $black;
