@@ -82,7 +82,7 @@ jQuery(document).ready(function($) {
 	 */
 	
 	// Team Roles
-	$('body.page-template-page-team-php a.team-role').click(function(event) {
+	$('.block.team a.team-role').click(function(event) {
 		
 		event.preventDefault();
 		
