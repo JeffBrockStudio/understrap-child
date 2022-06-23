@@ -106,7 +106,8 @@ function custom_acf_admin_head() {
 		/* Hide unnecessary taxonomies in sidebar ACF */
 		#side-sortables #team_rolesdiv,
 		#side-sortables #resource_typesdiv,
-		#side-sortables #resource_topicsdiv {
+		#side-sortables #resource_topicsdiv,
+		#side-sortables #event_typesdiv {
 			display: none;			
 		}
 		

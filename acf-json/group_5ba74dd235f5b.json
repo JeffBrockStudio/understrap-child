@@ -925,6 +925,137 @@
                     "acfe_layout_col": "auto",
                     "acfe_layout_allowed_col": false
                 },
+                "layout_62b3aeb03d844": {
+                    "key": "layout_62b3aeb03d844",
+                    "name": "events",
+                    "label": "Events",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b3aeb03d845",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "clone": [
+                                "group_61cd28ab51da9"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_settings": "",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_62b3aeb03d846",
+                            "label": "Number of Events",
+                            "name": "number_of_events",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_62b3aeb03d84b",
+                            "label": "Button",
+                            "name": "button",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "acfe_field_group_condition": 0,
+                            "required_message": "",
+                            "return_format": "array",
+                            "acfe_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_location": "",
+                                    "acfe_settings_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_setting_type": "required",
+                                            "acfe_settings_setting_name": "",
+                                            "acfe_settings_setting_operator": "true",
+                                            "acfe_settings_setting_value": ""
+                                        }
+                                    }
+                                }
+                            },
+                            "acfe_validate": {
+                                "acfcloneindex": {
+                                    "acfe_validate_location": "",
+                                    "acfe_validate_rules_and": {
+                                        "acfcloneindex": {
+                                            "acfe_validate_function": "value",
+                                            "acfe_validate_operator": "==",
+                                            "acfe_validate_match": ""
+                                        }
+                                    },
+                                    "acfe_validate_error": ""
+                                }
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_modal_edit_size": "xlarge",
+                    "acfe_flexible_settings": [
+                        "group_61cce0b5674f5"
+                    ],
+                    "acfe_flexible_settings_size": "xlarge",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_layout_locations": [],
+                    "acfe_flexible_category": false,
+                    "acfe_layout_col": "auto",
+                    "acfe_layout_allowed_col": false
+                },
                 "layout_61c3a628d1f4a": {
                     "key": "layout_61c3a628d1f4a",
                     "name": "feature",
@@ -1894,7 +2025,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-team.php"
+                "value": "default"
             }
         ],
         [
@@ -1924,5 +2055,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1655931325
+    "modified": 1655943131
 }

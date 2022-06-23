@@ -10,13 +10,14 @@ function omit_heading_sizes($args) {
 add_filter('tiny_mce_before_init', 'omit_heading_sizes' );
 
 
+/**
+ * Remove the format dropdown select and text color selector
+ */
 function remove_default_format_select( $buttons ) {
-    //Remove the format dropdown select and text color selector
     $remove = array( 'formatselect' );
-
     return array_diff( $buttons, $remove );
 }
-add_filter( 'mce_buttons', 'remove_default_format_select' );
+//add_filter( 'mce_buttons', 'remove_default_format_select' );
 
 
 /**

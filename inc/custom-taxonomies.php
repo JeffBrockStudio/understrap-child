@@ -94,6 +94,36 @@ function custom_add_custom_taxonomies() {
 			'hierarchical' => true		
 		)
 	);
+	
+	// Event Types
+	register_taxonomy('event_types', 'event', 
+		array(
+			'labels' => array(
+				'name'                       => __( 'Event Types' ),
+				'singular_name'              => __( 'Event Type' ),
+				'menu_name'                  => __( 'Types' ),
+				'all_items'                  => __( 'All Types' ),
+				'parent_item'                => __( 'Parent Type' ),
+				'parent_item_colon'          => __( 'Parent Type' ),
+				'new_item_name'              => __( 'New Type Name' ),
+				'add_new_item'               => __( 'Add Type' ),
+				'edit_item'                  => __( 'Edit Type' ),
+				'update_item'                => __( 'Update Type' ),
+				'view_item'                  => __( 'View Type' ),
+				'separate_items_with_commas' => __( 'Separate types with commas' ),
+				'add_or_remove_items'        => __( 'Add or remove types' ),
+				'choose_from_most_used'      => __( 'Choose from the most used' ),
+				'popular_items'              => __( 'Popular Types' ),
+				'search_items'               => __( 'Search Types' ),
+				'not_found'                  => __( 'Not Found' ),
+				'no_terms'                   => __( 'No items' ),
+				'items_list'                 => __( 'Types list' ),
+				'items_list_navigation'      => __( 'Types list navigation' )
+			),		
+			'label' => __( 'Event Types' ),
+			'hierarchical' => true		
+		)
+	);
 
 };
 add_action( 'init', 'custom_add_custom_taxonomies', 0 );

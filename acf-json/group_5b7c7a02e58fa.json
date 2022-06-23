@@ -77,11 +77,32 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "No resources found with the requested filter\/keywords.",
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62b40c6ee4c38",
+            "label": "No Events Found Text",
+            "name": "text_no_events_found",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "No events found with the requested filter\/keywords.",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "acfe_field_group_condition": 0
         },
         {
             "key": "field_6119bc2c64bc2",
@@ -147,5 +168,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1640678150
+    "modified": 1655966888
 }
