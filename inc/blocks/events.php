@@ -288,9 +288,13 @@ if ( array_key_exists( 'search', $_GET ) && $_GET['search'] ) {
 												
 									<div class="row">
 										
-										<div class="col-12 col-md-5 col-lg-4">		
+										<div class="col-12 col-md-5 col-lg-4">
 											<div class="image">
-												<?php echo get_the_post_thumbnail( $resource_id, 'large' ); ?>
+												<?php if ( get_the_post_thumbnail( $resource_id )): ?>															
+													<?php echo get_the_post_thumbnail( $resource_id, 'large' ); ?>
+												<?php else: ?>	
+													<img src="<?php $image = get_field( 'default_image_event', 'options' ); echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
+												<?php endif; ?>
 											</div>
 										</div>
 

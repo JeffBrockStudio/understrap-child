@@ -1,0 +1,33 @@
+body.single-event {
+	#page-wrapper {
+		padding-bottom: 3rem;
+	}
+	
+	.type {
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+	
+	.entry {
+		margin-bottom: 2rem;
+	}
+	
+	.sidebar {
+		.date {
+			font-size: 1.2rem;
+			margin-bottom: 1rem;
+		}
+		
+		.location-text {
+			font-weight: $font-weight-bold;
+		}
+		
+		.time {
+			margin-bottom: 0.5rem;
+		}
+	}	
+	
+	.button {
+		margin-top: 2rem;
+	}
+}

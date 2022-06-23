@@ -13,6 +13,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="wrapper" id="page-wrapper">
+	<main class="site-main" id="content">
+		
+		<header>
+			<div class="<?php echo esc_attr( $container ); ?>">				
+				<div class="row">				
+					<div class="col-12">
+						<h1>Resources</h1>
+					</div>
+				</div>
+			</div>
+		</header>		
 	
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
@@ -21,14 +32,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main" id="main">
-
 				<?php
 				while ( have_posts() ) {
 					the_post();?>
-					<div class="page-intro">
-						<h1>Resources</h1>
-					</div>
 					
 					<div class="date">
 						<?php echo get_the_date( get_option('date_format'), $post->ID ); ?>

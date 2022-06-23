@@ -29004,7 +29004,7 @@ body.admin-bar .fixed-top {
 }
 
 #wrapper-navbar + .wrapper {
-  margin-top: 92px;
+  margin-top: 108px;
 }
 @media (max-width: 575.98px) {
   #wrapper-navbar + .wrapper {
@@ -29182,6 +29182,15 @@ body.error404 .page-content .search-form {
 .prettydropdown > ul > li {
   height: 48px;
   line-height: 46px;
+}
+
+.site-main > header {
+  background: #f8f9fa;
+  margin-bottom: 3rem;
+  padding: 3rem 0;
+}
+.site-main > header h1, .site-main > header .h1 {
+  text-align: center;
 }
 
 html {
@@ -29791,7 +29800,6 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 
 .block.events .filter-wrapper {
   background: #fff;
-  margin-top: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -29848,7 +29856,7 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 }
 .block.events .list-wrapper {
   background-color: #f8f9fa;
-  padding: 3rem 0;
+  padding-top: 3rem;
 }
 .block.events .list-wrapper .item {
   background: #fff;
@@ -30418,6 +30426,30 @@ body.single-resource .related-resources .resource .type {
 }
 body.single-resource .related-resources .resource img {
   width: 100%;
+}
+
+body.single-event #page-wrapper {
+  padding-bottom: 3rem;
+}
+body.single-event .type {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+body.single-event .entry {
+  margin-bottom: 2rem;
+}
+body.single-event .sidebar .date {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+body.single-event .sidebar .location-text {
+  font-weight: 700;
+}
+body.single-event .sidebar .time {
+  margin-bottom: 0.5rem;
+}
+body.single-event .button {
+  margin-top: 2rem;
 }
 
 .row.spinner-row {

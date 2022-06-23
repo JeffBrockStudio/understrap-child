@@ -8,7 +8,6 @@
 	
 	.filter-wrapper {		
 		background: $white;
-		margin-top: 2rem;
 		padding-top: 2rem;
 		padding-bottom: 2rem;
 		.filter {
@@ -72,7 +71,7 @@
 	
 	.list-wrapper {
 		background-color: $light;
-		padding: 3rem 0;
+		padding-top: 3rem;
 		
 		.item {
 			background: $white;
