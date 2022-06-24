@@ -30334,6 +30334,35 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   }
 }
 
+body.single-post article {
+  margin-bottom: 3rem;
+}
+body.single-post article .type {
+  font-weight: 700;
+}
+body.single-post article .entry-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+body.single-post article .entry-meta {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+body.single-post article .entry-meta .byline {
+  display: none;
+}
+body.single-post article .excerpt {
+  margin-bottom: 2rem;
+}
+body.single-post article .focus-areas {
+  font-size: 0.9rem;
+}
+@media (max-width: 767.98px) {
+  body.single-post article .featured-image {
+    margin-bottom: 1rem;
+  }
+}
+
 body.single-resource #page-wrapper {
   padding-bottom: 3rem;
 }

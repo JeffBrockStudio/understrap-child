@@ -1,2 +1,35 @@
 body.single-post {
+	
+	.entry-meta {
+		
+	}
+	
+	article {
+		margin-bottom: 3rem;
+		.type {
+			font-weight: $font-weight-bold;
+		}
+		.entry-title {
+			font-weight: $font-weight-bold;
+			margin-bottom: 1rem;
+		}
+		.entry-meta {
+			font-style: italic;
+			margin-bottom: 0.5rem;
+			.byline {
+				display: none;
+			}
+		}
+		.excerpt {
+			margin-bottom: 2rem;
+		}
+		.focus-areas {
+			font-size: 0.9rem;
+		}
+		.featured-image {
+			@include media-breakpoint-down(md) {
+				margin-bottom: 1rem;
+			}
+		}
+	}	
 }

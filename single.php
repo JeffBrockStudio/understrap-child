@@ -65,11 +65,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 					
 						</div><!-- .entry-content -->
 					
+						<?php /* ?>
 						<footer class="entry-footer">
 					
 							<?php understrap_entry_footer(); ?>
 					
 						</footer><!-- .entry-footer -->
+						<?php */ ?>
 					
 					</article><!-- #post-## -->
 					<?php
