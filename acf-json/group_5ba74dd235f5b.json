@@ -1569,6 +1569,126 @@
                     "acfe_layout_col": "auto",
                     "acfe_layout_allowed_col": false
                 },
+                "layout_62b57c7565ace": {
+                    "key": "layout_62b57c7565ace",
+                    "name": "statistics",
+                    "label": "Statistics",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b57ca365acf",
+                            "label": "Statistics",
+                            "name": "statistics",
+                            "type": "repeater",
+                            "instructions": "Add statistics in groups of 3.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "acfe_repeater_stylised_button": 0,
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Statistic",
+                            "acfe_settings": "",
+                            "acfe_field_group_condition": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_62b57cdc65ad0",
+                                    "label": "Heading",
+                                    "name": "heading",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "33.33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "acfe_field_group_condition": 0
+                                },
+                                {
+                                    "key": "field_62b57cfb65ad1",
+                                    "label": "Statistic",
+                                    "name": "statistic",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "20",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "acfe_field_group_condition": 0
+                                },
+                                {
+                                    "key": "field_62b57d1265ad2",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 3,
+                                    "new_lines": "br",
+                                    "acfe_textarea_code": 0,
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "acfe_field_group_condition": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_modal_edit_size": "xlarge",
+                    "acfe_flexible_settings": [
+                        "group_61cce0b5674f5"
+                    ],
+                    "acfe_flexible_settings_size": "xlarge",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_layout_locations": [],
+                    "acfe_flexible_category": false,
+                    "acfe_layout_col": "auto",
+                    "acfe_layout_allowed_col": false
+                },
                 "layout_62b381177140c": {
                     "key": "layout_62b381177140c",
                     "name": "team",
@@ -2055,5 +2175,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1655943131
+    "modified": 1656061250
 }

@@ -30090,6 +30090,47 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   background-size: cover;
 }
 
+.block.statistics {
+  text-align: center;
+}
+.block.statistics .statistic {
+  height: 100%;
+  padding: 2rem;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-top: 1.5rem solid;
+}
+@media (max-width: 767.98px) {
+  .block.statistics .statistic {
+    height: auto;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .block.statistics .statistic {
+    padding: 1.25rem;
+  }
+}
+.block.statistics .col-12:nth-of-type(1) .statistic {
+  border-color: #0d6efd;
+}
+.block.statistics .col-12:nth-of-type(2) .statistic {
+  border-color: #6c757d;
+}
+.block.statistics .col-12:nth-of-type(3) .statistic {
+  border-color: #0dcaf0;
+}
+.block.statistics .number h4, .block.statistics .number .h4 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+@media (max-width: 991.98px) {
+  .block.statistics .number h4, .block.statistics .number .h4 {
+    font-size: 2.5rem;
+  }
+}
+
 .block.team #team-type-wrapper {
   padding-top: 3rem;
   text-align: center;

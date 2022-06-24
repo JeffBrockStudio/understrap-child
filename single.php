@@ -13,24 +13,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="wrapper" id="single-wrapper">
-
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-
-		<div class="row">
-
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
-
+		
 			<main class="site-main" id="main">
 
 				<?php
 				while ( have_posts() ) {
-					the_post();
-					//include( 'loop-templates/content-single.php' );
-					// get_template_part( 'loop-templates/content', 'single' );
-					?>
-					
-					<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+					the_post(); ?>
 					
 						<header class="entry-header">
 					
@@ -48,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<div class="featured-image">
 								<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 							</div>
-						<?php endif; ?>
+						<?php endif; ?>						
 					
 						<div class="entry-content">
 					
@@ -64,6 +52,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					
 					
 						</div><!-- .entry-content -->
+					</article><!-- #post-## -->
 					
 						<?php /* ?>
 						<footer class="entry-footer">
@@ -73,7 +62,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</footer><!-- .entry-footer -->
 						<?php */ ?>
 					
-					</article><!-- #post-## -->
+					
 					<?php
 					
 					understrap_post_nav();
