@@ -29378,6 +29378,9 @@ body.search-open #search-overlay {
 #wrapper-footer .menu li a {
   color: #fff;
 }
+#wrapper-footer .newsletter-heading {
+  color: #fff;
+}
 #wrapper-footer .legal {
   color: #fff;
 }
@@ -29488,6 +29491,7 @@ body .frm_style_formidable-style.with_frm_style .frm_submit button {
   font-weight: 600;
   height: 44px;
   line-height: 1;
+  margin-top: 3px !important;
   padding: 0.5rem 2.5rem 0.5rem 1.5rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   width: 100%;
@@ -29525,6 +29529,10 @@ body .frm_style_formidable-style.with_frm_style .frm_message {
 body .frm_style_formidable-style.with_frm_style .frm_message p {
   font-weight: 700;
   margin-bottom: 0;
+}
+
+#wrapper-footer .frm_style_formidable-style.with_frm_style .form-field {
+  margin-bottom: 10px;
 }
 
 .blocks {
@@ -30450,6 +30458,57 @@ body.single-event .sidebar .time {
 }
 body.single-event .button {
   margin-top: 2rem;
+}
+
+body.blog #index-wrapper {
+  padding-top: 0;
+}
+body.blog #featured-post {
+  background: #f8f9fa;
+  padding: 3rem 0;
+}
+body.blog #featured-post h2, body.blog #featured-post .h2 {
+  font-weight: 700;
+}
+@media (max-width: 767.98px) {
+  body.blog #featured-post .featured-image {
+    margin-bottom: 1rem;
+  }
+}
+body.blog #newsletter-signup-body {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+body.blog #newsletter-signup-body h3, body.blog #newsletter-signup-body .h3 {
+  font-weight: 700;
+}
+body.blog article {
+  margin-bottom: 3rem;
+}
+body.blog article .type {
+  font-weight: 700;
+}
+body.blog article .entry-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+body.blog article .entry-meta {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+body.blog article .entry-meta .byline {
+  display: none;
+}
+body.blog article .excerpt {
+  margin-bottom: 2rem;
+}
+body.blog article .focus-areas {
+  font-size: 0.9rem;
+}
+@media (max-width: 767.98px) {
+  body.blog article .featured-image {
+    margin-bottom: 1rem;
+  }
 }
 
 .row.spinner-row {

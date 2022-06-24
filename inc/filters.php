@@ -64,15 +64,6 @@ add_filter('image_resize_dimensions', 'custom_image_crop_dimensions', 10, 6);
 
 
 /**
- * Remove "Read More" button from excerpts.
- */
-function custom_all_excerpts_get_more_link( $post_excerpt ) {
-	return $post_excerpt;
-}
-add_filter( 'wp_trim_excerpt', 'custom_all_excerpts_get_more_link' );
-	
-  
-/**
  * Prints HTML with meta information for the current post-date/time and author.
  */
 if ( ! function_exists( 'understrap_posted_on' ) ) {

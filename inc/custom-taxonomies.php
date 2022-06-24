@@ -5,6 +5,36 @@
  */
 function custom_add_custom_taxonomies() {
 	
+	// Focus Areas
+	register_taxonomy('focus_areas', array( 'resource', 'event', 'post' ), 
+		array(
+			'labels' => array(
+				'name'                       => __( 'Focus Areas' ),
+				'singular_name'              => __( 'Focus Area' ),
+				'menu_name'                  => __( 'Focus Areas' ),
+				'all_items'                  => __( 'All Focus Areas' ),
+				'parent_item'                => __( 'Parent Focus Area' ),
+				'parent_item_colon'          => __( 'Parent Focus Area:' ),
+				'new_item_name'              => __( 'New Focus Area Name' ),
+				'add_new_item'               => __( 'Add Focus Area' ),
+				'edit_item'                  => __( 'Edit Focus Area' ),
+				'update_item'                => __( 'Update Focus Area' ),
+				'view_item'                  => __( 'View Focus Area' ),
+				'separate_items_with_commas' => __( 'Separate focus areas with commas' ),
+				'add_or_remove_items'        => __( 'Add or remove focus areas' ),
+				'choose_from_most_used'      => __( 'Choose from the most used' ),
+				'popular_items'              => __( 'Popular Focus Areas' ),
+				'search_items'               => __( 'Search Focus Areas' ),
+				'not_found'                  => __( 'Not Found' ),
+				'no_terms'                   => __( 'No items' ),
+				'items_list'                 => __( 'Focus areas list' ),
+				'items_list_navigation'      => __( 'Focus areas list navigation' )
+			),		
+			'label' => __( 'Focus Areas' ),
+			'hierarchical' => true			
+		)
+	);	
+	
 	// Resource Types
 	register_taxonomy('resource_types', 'resource', 
 		array(
@@ -127,3 +157,11 @@ function custom_add_custom_taxonomies() {
 
 };
 add_action( 'init', 'custom_add_custom_taxonomies', 0 );
+
+
+/**
+ * Disable tags
+ */
+add_action('init', function(){
+	register_taxonomy( 'post_tag', [] );
+});

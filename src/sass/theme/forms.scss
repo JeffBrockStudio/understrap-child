@@ -59,6 +59,7 @@ body .frm_style_formidable-style.with_frm_style {
 			font-weight: 600;
 			height: 44px;
 			line-height: 1;
+			margin-top: 3px !important;
 			padding: .5rem 2.5rem .5rem 1.5rem;
 			transition: $btn-transition;
 			width: 100%;
@@ -101,4 +102,10 @@ body .frm_style_formidable-style.with_frm_style {
 		}
 	}
 		
+}
+
+#wrapper-footer {
+	.frm_style_formidable-style.with_frm_style .form-field {
+		margin-bottom: 10px;
+	}
 }

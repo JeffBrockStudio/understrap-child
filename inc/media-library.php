@@ -2,7 +2,7 @@
 /**
  * Add custom image sizes.
  */
-//add_image_size( 'large_square', 1400, 1400, true );
+add_image_size( 'thumbnail_4_3', 800, 600, true );
 
 
 /**

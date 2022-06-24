@@ -3,6 +3,42 @@
     "title": "Footer",
     "fields": [
         {
+            "key": "field_62b52e37ef7a2",
+            "label": "Newsletter Heading",
+            "name": "footer_newsletter_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62b52e5cef7a3",
+            "label": "Newsletter Form",
+            "name": "footer_newsletter_form",
+            "type": "formidable_select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "allow_null": 1,
+            "acfe_field_group_condition": 0
+        },
+        {
             "key": "field_61cabc2fbca0a",
             "label": "Legal",
             "name": "legal",
@@ -87,5 +123,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1642471104
+    "modified": 1656041102
 }

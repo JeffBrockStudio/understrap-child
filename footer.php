@@ -35,6 +35,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 									</a>
 								</div>
 							<?php endif; ?>
+							
+							<?php if ( get_field( 'footer_newsletter_form', 'options' )): ?>
+								<div class="newsletter">
+									<h3 class="newsletter-heading"><?php echo get_field( 'footer_newsletter_heading', 'options' ); ?></h3>
+									<?php       
+									echo FrmFormsController::get_form_shortcode(array(
+										'id' => get_field( 'footer_newsletter_form', 'options' ), 
+										'title' => false, 
+										'description' => false
+									));	          
+									?>		
+								</div>
+							<?php endif; ?>
+							
 						</div>
 						
 						<div class="col-12 col-md-6">

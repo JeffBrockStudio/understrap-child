@@ -5,7 +5,7 @@ return array (
   'title' => 'Posts',
   'type' => 'post',
   'id' => '62b3ed54e2f36',
-  'updated' => 1655958868,
+  'updated' => 1656035936,
   'columns' => 
   array (
     'title' => 
@@ -34,13 +34,32 @@ return array (
       'search' => 'on',
       'name' => 'author',
     ),
+    '62b51a481f7cec' => 
+    array (
+      'type' => 'column-taxonomy',
+      'label' => 'Focus Areas',
+      'width' => '',
+      'width_unit' => '%',
+      'taxonomy' => 'focus_areas',
+      'term_link_to' => 'filter',
+      'number_of_items' => '10',
+      'edit' => 'on',
+      'enable_term_creation' => 'off',
+      'export' => 'off',
+      'sort' => 'on',
+      'bulk_edit' => 'on',
+      'search' => 'on',
+      'filter' => 'off',
+      'filter_label' => '',
+      'name' => '62b51a481f7cec',
+    ),
     'categories' => 
     array (
       'type' => 'categories',
       'label' => 'Categories',
       'width' => '15',
       'width_unit' => '%',
-      'edit' => 'off',
+      'edit' => 'on',
       'enable_term_creation' => 'off',
       'export' => 'off',
       'sort' => 'on',
@@ -48,21 +67,6 @@ return array (
       'search' => 'on',
       'filter' => 'on',
       'name' => 'categories',
-    ),
-    'tags' => 
-    array (
-      'type' => 'tags',
-      'label' => 'Tags',
-      'width' => '15',
-      'width_unit' => '%',
-      'export' => 'off',
-      'sort' => 'on',
-      'edit' => 'off',
-      'bulk_edit' => 'on',
-      'search' => 'on',
-      'filter' => 'off',
-      'filter_label' => '',
-      'name' => 'tags',
     ),
     '62b3ed4f8f1aa0' => 
     array (

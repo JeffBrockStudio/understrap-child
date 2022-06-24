@@ -1,8 +1,15 @@
 <?php 
- // loop through the rows of data
+if ( is_home() ):
+	$post_id = get_option( 'page_for_posts' );
+else:
+	$post_id = $post->ID;
+endif; 
+
+// loop through the rows of data
+ 
 
 $is_preview = FALSE;
-while ( have_rows('blocks', $post->ID) ) : the_row();
+while ( have_rows('blocks', $post_id ) ) : the_row();
 
 	// Set a unique block ID
 	if ( get_sub_field( 'anchor_id' )):
