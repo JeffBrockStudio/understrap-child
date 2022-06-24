@@ -60,7 +60,7 @@ defined( 'ABSPATH' ) || exit;
 				<div class="excerpt">
 					<?php				
 					if ( $post->post_excerpt ):						
-						echo $post->post_excerpt;
+						echo strip_tags( $post->post_excerpt );
 					else:
 						// $content = apply_filters('the_content', $content);
 						// $content = str_replace(']]>', ']]&gt;', $content);

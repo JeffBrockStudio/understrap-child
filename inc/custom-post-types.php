@@ -111,3 +111,11 @@ function custom_register_menus() {
 }
 add_action( 'init', 'custom_register_menus' );
 
+
+/**
+ * Disable post formats
+ */
+function remove_post_formats() {
+	remove_theme_support('post-formats');
+}
+add_action( 'after_setup_theme', 'remove_post_formats', 11 );

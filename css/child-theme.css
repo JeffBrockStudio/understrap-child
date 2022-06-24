@@ -30460,6 +30460,57 @@ body.single-event .button {
   margin-top: 2rem;
 }
 
+body.blog .filter-wrapper {
+  background: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+@media (max-width: 575.98px) {
+  body.blog .filter-wrapper .filter {
+    margin-bottom: 1rem;
+  }
+}
+body.blog .filter-wrapper .filter br {
+  display: none;
+}
+body.blog .filter-wrapper .label {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+body.blog .filter-wrapper input.submit {
+  background: #0d6efd;
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  color: #fff;
+  border: none;
+  font-family: "Font Awesome 5 Pro";
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+  width: 2rem;
+}
+body.blog .filter-wrapper input.search-query {
+  height: 44px;
+  padding-left: 1rem;
+}
+@media (max-width: 575.98px) {
+  body.blog .filter-wrapper .col-search {
+    margin-top: 1rem;
+  }
+}
+body.blog .filter-wrapper .clear-filters {
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+body.blog .filter-wrapper .clear-filters:hover {
+  color: #0a58ca;
+}
+body.blog .filter-wrapper .instructions {
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.2;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
 body.blog #index-wrapper {
   padding-top: 0;
 }
