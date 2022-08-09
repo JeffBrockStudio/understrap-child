@@ -1,6 +1,6 @@
 <?php include( get_stylesheet_directory() . '/inc/blocks/block-settings.php' ); ?>
 
-	<div id="<?php echo $block_id; ?>-carousel" class="carousel slide" data-ride="carousel">
+	<div id="<?php echo $block_id; ?>-carousel" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-inner">				
 			<?php 
 			if ( get_sub_field( 'slides' )) {
@@ -8,7 +8,7 @@
 				$i = 1;
 				foreach ( $items AS $item ) {
 				?>
-					<div class="carousel-item<?php if ( $i == 1 ) { echo ' active'; }; ?>" data-interval="7500">
+					<div class="carousel-item<?php if ( $i == 1 ) { echo ' active'; }; ?>" data-bs-interval="7500">
 						<div class="container">
 							<div class="row">
 								

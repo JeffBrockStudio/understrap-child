@@ -126,3 +126,9 @@ add_filter('frm_scroll_offset', 'frm_scroll_offset');
 function frm_scroll_offset(){
   return 92; //adjust this as needed
 }
+
+
+/**
+ * Remove "Category:" from title of category pages
+ */
+add_filter( 'get_the_archive_title_prefix', '__return_empty_string' );

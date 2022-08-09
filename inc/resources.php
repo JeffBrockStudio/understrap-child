@@ -70,31 +70,31 @@ endif;
 									foreach ( $taxonomies AS $taxonomy ): 
 										$taxonomy_details = get_taxonomy( $taxonomy );
 										$taxonomy_labels = $taxonomy_details->labels;
-										?>
-										<div class="col-12 col-md-6">		
-											<div class="filter <?php echo $taxonomy; ?>">
-												<label for="select-<?php echo $taxonomy; ?>" class="sr-only"><?php echo $taxonomy_labels->menu_name; ?></label>
-												<select id="select-<?php echo $taxonomy; ?>" data-taxonomies='<?php echo json_encode( $taxonomies ) ?>' data-post_type="<?php echo $post_type; ?>">
-													<option value="" selected><?php echo $taxonomy_labels->menu_name; ?></option>
-													<?php
-													if ( isset( $_GET[$taxonomy] )):
-														$current = $_GET[$taxonomy];
-													else:
-														$current = '';
-													endif; 		 
-													$terms = get_terms( array(
-														'taxonomy' => $taxonomy,
-														'hide_empty' => false
-													) );   
-													foreach ( $terms AS $term ) {?>
-														<option value="<?php echo $term->slug; ?>"<?php if ( $term->slug == $current) { echo ' selected'; };  ?>><?php echo $term->name; ?></option>
-															<?php 
-													};
-													wp_reset_postdata(); ?> 		                        
-												</select>
+										if ( $taxonomy_details->public ): ?>
+											<div class="col-12 col-md-6">		
+												<div class="filter <?php echo $taxonomy; ?>">
+													<label for="select-<?php echo $taxonomy; ?>" class="sr-only"><?php echo $taxonomy_labels->menu_name; ?></label>
+													<select id="select-<?php echo $taxonomy; ?>" data-taxonomies='<?php echo json_encode( $taxonomies ) ?>' data-post_type="<?php echo $post_type; ?>">
+														<option value="" selected><?php echo $taxonomy_labels->menu_name; ?></option>
+														<?php
+														if ( isset( $_GET[$taxonomy] )):
+															$current = $_GET[$taxonomy];
+														else:
+															$current = '';
+														endif; 		 
+														$terms = get_terms( array(
+															'taxonomy' => $taxonomy,
+															'hide_empty' => false
+														) );   
+														foreach ( $terms AS $term ) {?>
+															<option value="<?php echo $term->slug; ?>"<?php if ( $term->slug == $current) { echo ' selected'; };  ?>><?php echo $term->name; ?></option>
+																<?php 
+														};
+														wp_reset_postdata(); ?> 		                        
+													</select>
+												</div>
 											</div>
-										</div>
-										<?php											
+										<?php endif;
 									endforeach;										
 									?>
 									

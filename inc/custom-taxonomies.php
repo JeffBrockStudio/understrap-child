@@ -31,7 +31,9 @@ function custom_add_custom_taxonomies() {
 				'items_list_navigation'      => __( 'Focus areas list navigation' )
 			),		
 			'label' => __( 'Focus Areas' ),
-			'hierarchical' => true			
+			'hierarchical' => true,			
+			'public' => true,
+			'show_ui' => true
 		)
 	);	
 	
@@ -61,7 +63,9 @@ function custom_add_custom_taxonomies() {
 				'items_list_navigation'      => __( 'Resource Types list navigation' )
 			),		
 			'label' => __( 'Types' ),
-			'hierarchical' => true			
+			'hierarchical' => true,
+			'public' => false,
+			'show_ui' => true			
 		)
 	);
 	
@@ -91,7 +95,9 @@ function custom_add_custom_taxonomies() {
 				'items_list_navigation'      => __( 'Resource topics list navigation' )
 			),		
 			'label' => __( 'Topics' ),
-			'hierarchical' => true			
+			'hierarchical' => true,
+			'public' => true,
+			'show_ui' => true			
 		)
 	);	
 	
@@ -121,7 +127,9 @@ function custom_add_custom_taxonomies() {
 				'items_list_navigation'      => __( 'Team Roles list navigation' )
 			),		
 			'label' => __( 'Team Roles' ),
-			'hierarchical' => true		
+			'hierarchical' => true,
+			'public' => true,
+			'show_ui' => true		
 		)
 	);
 	
@@ -151,17 +159,20 @@ function custom_add_custom_taxonomies() {
 				'items_list_navigation'      => __( 'Types list navigation' )
 			),		
 			'label' => __( 'Event Types' ),
-			'hierarchical' => true		
+			'hierarchical' => true,
+			'public' => true,
+			'show_ui' => true		
 		)
 	);
-
+	
 };
 add_action( 'init', 'custom_add_custom_taxonomies', 0 );
 
 
 /**
- * Disable tags
+ * Disable tags and post formats
  */
 add_action('init', function(){
 	register_taxonomy( 'post_tag', [] );
+	register_taxonomy( 'post_format', []);
 });
