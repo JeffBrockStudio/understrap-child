@@ -1,7 +1,7 @@
 @import "theme/child_theme_variables";                   // <------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
 @import "assets/bootstrap5/bootstrap";                             // <------- Loads Bootstrap4
 @import "assets/understrap/theme/understrap";  // <------- Loads the Understrap defaults. Just a few classes to incorporate BS in WP
-@import "assets/understrap/theme/woocommerce"; // <------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
+//@import "assets/understrap/theme/woocommerce"; // <------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
 
 // Optional files - If you don´t use the corresponding scripts/fonts comment em out
 //@import "assets/fontawesome/font-awesome";                           // <------- Font Awesome Icon font
@@ -9,18 +9,18 @@
 
 // Any additional imported files //
 @import "assets/fontawesome-pro/fontawesome"; // <------- Font Awesome Pro Icon font
-@import "assets/fontawesome-pro/duotone"; // <------- Font Awesome Pro Duotone font
+//@import "assets/fontawesome-pro/duotone"; // <------- Font Awesome Pro Duotone font
 @import "assets/fontawesome-pro/brands"; // <------- Font Awesome Pro Brands font
-@import "assets/fontawesome-pro/regular"; // <------- Font Awesome Pro Regular font
-@import "assets/fontawesome-pro/light"; // <------- Font Awesome Pro Light font
+//@import "assets/fontawesome-pro/regular"; // <------- Font Awesome Pro Regular font
+//@import "assets/fontawesome-pro/light"; // <------- Font Awesome Pro Light font
 @import "assets/fontawesome-pro/solid"; // <------- Font Awesome Pro Solid font
 //@import "assets/fontawesome-pro/thin"; // <------- Font Awesome Pro Thin font
 
-@import "assets/slick/theme/slick-theme"; // <------- Slick Carousel theme
-@import "assets/slick/theme/slick"; // <------- Slick Carousel styles
+// @import "assets/slick/theme/slick-theme"; // <------- Slick Carousel theme
+// @import "assets/slick/theme/slick"; // <------- Slick Carousel styles
 @import "assets/prettydropdowns"; // <------- Pretty Dropdowns
 
 @import "theme/child_theme";                             // <------- Add your styles into this file
 @import "assets/understrap/theme/colors";           // <-------- This creates the necessary bootstrap color classes.
 @import "assets/understrap/theme/blocks";           // <-------- This adds Bootstrap styles to blocks.
-@import "assets/understrap/theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support
+// @import "assets/understrap/theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support

@@ -21,9 +21,15 @@ body.admin-bar .fixed-top {
 	padding-bottom: 0;
 }
 #wrapper-navbar + .wrapper {
-	margin-top: 108px;
-	@include media-breakpoint-down(sm) {
-		margin-top: 68px;
+	margin-top: $offset-xl;	
+	@include media-breakpoint-down(xl) {
+		margin-top: $offset-lg;
+	}
+	@include media-breakpoint-down(lg) {
+		margin-top: $offset-md;
+	}
+	@include media-breakpoint-down(md) {
+		margin-top: $offset-sm;
 	}
 }
 .wrapper:not(#page-wrapper) {
@@ -194,7 +200,7 @@ body.admin-bar .fixed-top {
 	&:after {
 		content: "\f061";
 		display: inline-block;
-		font-family: "Font Awesome 5 Pro"; 
+		font-family: "Font Awesome 6 Pro"; 
 		font-size: .9rem;
 		font-style: normal;
 		font-variant: normal;
@@ -315,5 +321,22 @@ body.error404 {
 	padding: 3rem 0;
 	h1 {
 		text-align: center;
+	}
+}
+
+
+//
+// Login
+// --------------------------------------------------
+#page #login {
+	margin-top: $offset-xl;	
+	@include media-breakpoint-down(lg) {
+		margin-top: $offset-lg;
+	}
+	@include media-breakpoint-down(md) {
+		margin-top: $offset-md;
+	}
+	@include media-breakpoint-down(sm) {
+		margin-top: $offset-sm;
 	}
 }

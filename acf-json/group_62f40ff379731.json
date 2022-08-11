@@ -1,0 +1,176 @@
+{
+    "key": "group_62f40ff379731",
+    "title": "Contact Info",
+    "fields": [
+        {
+            "key": "field_62f41009675ec",
+            "label": "Phone",
+            "name": "contact_phone",
+            "type": "acfe_phone_number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "countries": [
+                "us"
+            ],
+            "preferred_countries": "",
+            "default_country": "us",
+            "geolocation": 0,
+            "native": 0,
+            "national": 0,
+            "dropdown": 0,
+            "dial_code": 0,
+            "default_value": "",
+            "placeholder": "",
+            "return_format": "number",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62f41058675ed",
+            "label": "Email",
+            "name": "contact_email",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62f44d400a6bc",
+            "label": "Address",
+            "name": "contact_address",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62f44d7fc322e",
+            "label": "City",
+            "name": "contact_city",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62f44e3662df7",
+            "label": "State",
+            "name": "contact_state",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 2,
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62f44e745a8a0",
+            "label": "ZIP",
+            "name": "contact_zip",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 10,
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62f44f471ad43",
+            "label": "Google Map Link",
+            "name": "contact_google_map_link",
+            "type": "url",
+            "instructions": "Only needed if automatic map link is inaccurate.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "acfe_field_group_condition": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-contact-info"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1660181116
+}

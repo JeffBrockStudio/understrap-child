@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="col-12 col-md-6">
 							<?php if ( get_field( 'logo_footer', 'options' )): ?>
 								<div class="logo">
-									<a href="">
+									<a href="<?php echo get_site_url(); ?>">
 										<img src="<?php $image = get_field( 'logo_footer', 'options' ); echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
 									</a>
 								</div>
@@ -62,7 +62,26 @@ $container = get_theme_mod( 'understrap_container_type' );
 										'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 									)
 								); ?>					
-							<?php endif; ?>							
+							<?php endif; ?>		
+							
+							<?php 
+							if ( get_field( 'footer_affiliations_partners', 'options' )):
+								$items = get_field( 'footer_affiliations_partners', 'options' );?>
+								<div class="affiliations-partners">
+									<?php
+									foreach ( $items AS $item ) {?>
+										<div class="item">
+											<a href="<?php $link = $item['link']; echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
+												<img src="<?php $image = $item['image']; echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" width="<?php echo $image['width']; ?>" height="<?php echo $image['height']; ?>" />
+											</a>
+										</div>
+									<?php
+									}?>
+								</div>
+								<?php
+							endif;
+							?>
+												
 						</div>
 					
 					</div>					
@@ -89,6 +108,58 @@ $container = get_theme_mod( 'understrap_container_type' );
 									)
 								); ?>				
 							<?php endif; ?>
+							
+							<div class="contact">
+								
+								<?php if ( get_field( 'footer_contact_heading', 'options' )):?>
+									<h3 class="contact-heading"><?php echo get_field( 'footer_contact_heading', 'options' );?></h3>
+								<?php endif; ?>
+								
+								<?php if ( get_field( 'contact_address', 'options' )):?>
+									<div class="address">
+										<?php echo get_field( 'contact_address', 'options' ); ?>
+									</div>
+								<?php endif; ?>
+								<?php if ( get_field( 'contact_city', 'options' ) OR get_field( 'contact_state',  'options' ) OR get_field( 'contact_zip',  'options' ) ):?>
+									<div class="city-state-zip">
+										<?php echo get_field( 'contact_city', 'options' ); ?>
+										<?php echo get_field( 'contact_state', 'options' ); ?> 										
+										<?php echo get_field( 'contact_zip', 'options' ); ?>
+									</div>
+									<div class="map-link">
+										<?php if ( get_field( 'contact_google_map_link', 'options' )):
+												$map_link = get_field( 'contact_google_map_link', 'options' );												
+											else:												
+												$map_link = 'https://www.google.com/maps?q=' .
+												urlencode(get_field( 'contact_address', 'options' )) . ',' .
+												urlencode(get_field( 'contact_city', 'options' )) . ',' .
+												urlencode(get_field( 'contact_state', 'options' )) . ',' .
+												urlencode(get_field( 'contact_zip', 'options' ));												
+											endif;
+											?>										
+										[<a href="<?php echo $map_link ?>" target="_blank">Map</a>]
+									</div>
+								<?php endif; ?>
+								
+								<?php if ( get_field( 'contact_phone', 'options' )):
+									$phone = get_field( 'contact_phone', 'options' ); ?>
+									<div class="phone">
+										<a aria-label="Call us at <?php echo display_phone( $phone ); ?>" href="<?php echo format_phone( $phone ); ?>" /><?php echo display_phone( $phone ); ?></a>
+									</div>
+									<?php									
+								endif;
+								?>
+								
+								<?php if ( get_field( 'contact_email', 'options' )):
+									$email = get_field( 'contact_email', 'options' ); ?>
+									<div class="email">
+										<a aria-label="Email us at <?php echo $email; ?>" href="mailto:<?php echo $email; ?>" /><?php echo $email; ?></a>
+									</div>
+									<?php									
+								endif;
+								?>
+							
+							</div>
 							
 							<?php					
 							if ( get_field( 'social_media', 'options' )) {?>

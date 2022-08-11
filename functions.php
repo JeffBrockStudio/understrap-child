@@ -89,6 +89,21 @@ function understrap_child_customize_controls_js() {
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
 
 
+/**
+ * Remove parent theme page templates.
+ */
+function child_remove_page_templates( $page_templates ) {
+	unset( $page_templates['page-templates/blank.php'] );
+	unset( $page_templates['page-templates/both-sidebarspage.php'] );
+	unset( $page_templates['page-templates/empty.php'] );
+	unset( $page_templates['page-templates/fullwidthpage.php'] );
+	unset( $page_templates['page-templates/left-sidebarpage.php'] );
+	unset( $page_templates['page-templates/right-sidebarpage.php'] );
+
+	return $page_templates;
+}
+add_filter( 'theme_page_templates', 'child_remove_page_templates' );
+
 
 /**
  * Loads custom functions.

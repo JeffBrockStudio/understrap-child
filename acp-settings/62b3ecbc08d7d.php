@@ -1,11 +1,11 @@
 <?php
 
 return array (
-  'version' => '5.7.2',
+  'version' => '5.7.3',
   'title' => 'Team Member',
   'type' => 'team',
   'id' => '62b3ecbc08d7d',
-  'updated' => 1655964378,
+  'updated' => 1660117257,
   'columns' => 
   array (
     'title' => 

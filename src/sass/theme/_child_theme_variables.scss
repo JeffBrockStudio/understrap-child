@@ -6,6 +6,7 @@
 // Set Font Awesome Pro font folder
 $fa-font-path: "../fonts" !default;
 
+
 // Slick Carousel
 $slick-font-family: "Font Awesome 6 Pro" !default;
 $slick-font-path: "../fonts/" !default;
@@ -14,4 +15,156 @@ $slick-arrow-color: #ffffff !default;
 $slick-prev-character: "\f053" !default;
 $slick-next-character: "\f054" !default;
 
-$box-shadow: 0 0 0.75rem rgba( #000000, 0.1 );
+
+// Offset for fixed navbar
+$offset-sm: 67px;
+$offset-md: 92px;
+$offset-lg: 108px;
+$offset-xl: 108px;
+
+
+// scss-docs-start color-variables
+// $blue:    #0d6efd;
+// $indigo:  #6610f2;
+// $purple:  #6f42c1;
+// $pink:    #d63384;
+// $red:     #dc3545;
+// $orange:  #fd7e14;
+// $yellow:  #ffc107;
+// $green:   #198754;
+// $teal:    #20c997;
+// $cyan:    #0dcaf0;
+$black:			#000000;
+$white:			#ffffff;
+// scss-docs-end color-variables
+
+
+// scss-docs-start theme-color-variables
+// $primary:       $blue;
+// $secondary:     $gray-600;
+// $success:       $green;
+// $info:          $cyan;
+// $warning:       $yellow;
+// $danger:        $red;
+// $light:         $gray-100;
+// $dark:          $gray-900;
+// scss-docs-end theme-color-variables
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+// $enable-caret:                true;
+// $enable-rounded:              true;
+// $enable-shadows:              false;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+// $body-bg:                   $white;
+// $body-color:                $gray-900;
+
+
+// Links
+//
+// Style anchor elements.
+
+// $link-color:                              $primary;
+// $link-decoration:                         underline;
+// $link-shade-percentage:                   20%;
+// $link-hover-color:                        shift-color($link-color, $link-shade-percentage);
+// $link-hover-decoration:                   null;
+
+
+// Paragraphs
+//
+// Style p element.
+
+// $paragraph-margin-bottom:   1rem;
+
+
+// scss-docs-start border-radius-variables
+// $border-radius:               .375rem;
+// $border-radius-sm:            .25rem;
+// $border-radius-lg:            .5rem;
+// scss-docs-end border-radius-variables
+
+
+// scss-docs-start box-shadow-variables
+$box-shadow: 0 0 0.75rem rgba( $black, 0.1 );
+// scss-docs-end box-shadow-variables
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// scss-docs-start font-variables
+// stylelint-disable value-keyword-case
+// $font-family-sans-serif: '';
+// stylelint-enable value-keyword-case
+// $font-family-base: $font-family-sans-serif;
+
+// $line-height-base:            1.5;
+
+// $h1-font-size:                $font-size-base * 2.5;
+// $h2-font-size:                $font-size-base * 2;
+// $h3-font-size:                $font-size-base * 1.75;
+// $h4-font-size:                $font-size-base * 1.5;
+
+// scss-docs-start headings-variables
+// $headings-margin-bottom:      $spacer * .5;
+// $headings-font-family:        null;
+// $headings-font-style:         null;
+// $headings-font-weight:        500;
+// $headings-line-height:        1.2;
+// $headings-color:              null;
+// scss-docs-end headings-variables
+
+// $hr-margin-y:                 $spacer;
+// $hr-color:                    inherit;
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+// scss-docs-start input-btn-variables
+// $input-btn-padding-y:         .375rem;
+// $input-btn-padding-x:         .75rem;
+// $input-btn-font-family:       null;
+// $input-btn-font-size:         $font-size-base;
+// $input-btn-line-height:       $line-height-base;
+// scss-docs-end input-btn-variables
+
+
+// Navbar
+
+// scss-docs-start navbar-theme-variables
+$navbar-dark-color:                 $white;
+$navbar-dark-hover-color:           $black;
+$navbar-dark-active-color:          $black;
+$navbar-dark-toggler-border-color:  rgba($white, .1);
+
+// $navbar-light-color:                rgba($black, .55);
+// $navbar-light-hover-color:          rgba($black, .7);
+// $navbar-light-active-color:         rgba($black, .9);
+// $navbar-light-toggler-border-color: rgba($black, .1);	
+
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+// scss-docs-start dropdown-variables
+// $dropdown-font-size:                $font-size-base;
+// $dropdown-color:                    $body-color;
+// $dropdown-bg:                       $primary;
+// $dropdown-border-color:             $black;
+// $dropdown-border-radius:            $border-radius;
+// $dropdown-link-color:               $gray-900;
+// $dropdown-link-hover-color:         shade-color($dropdown-link-color, 10%);
+// $dropdown-link-hover-bg:            $gray-200;

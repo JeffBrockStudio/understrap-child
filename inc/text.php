@@ -63,7 +63,20 @@ function generateRandomString($length = 10) {
 function format_phone( $str = '' ) {
 	$str = trim( $str );	
 	$str = preg_replace("/[^0-9]/", "", $str );
-	$str = 'tel://+1' . $str;
+	$str = 'tel://+' . $str;
 	return $str;
 }
+
+
+/**
+ * Convert phone number for displayy.
+ */
+function display_phone( $str = '' ) {
+  $str = trim( $str );	  
+  if(  preg_match( '/^\+\d(\d{3})(\d{3})(\d{4})$/', $str,  $matches ) ) {
+    $result = $matches[1] . '-' .$matches[2] . '-' . $matches[3];
+  }
+  return $result;
+}
+
 	

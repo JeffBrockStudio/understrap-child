@@ -21,6 +21,12 @@ if( current_user_can('manage_options') AND function_exists('acf_add_options_page
 	));	
 
 	acf_add_options_sub_page(array(
+		'page_title'  => 'Contact Info',
+		'menu_title'  => 'Contact Info',
+		'parent_slug' => 'theme-general-options',
+	));
+	
+	acf_add_options_sub_page(array(
 		'page_title'  => 'External Scripts',
 		'menu_title'  => 'External Scripts',
 		'parent_slug' => 'theme-general-options',

@@ -3,6 +3,10 @@
 // --------------------------------------------------
 body .frm_style_formidable-style.with_frm_style {
 	
+	@include media-breakpoint-down(md) {
+		margin-bottom: 2rem;
+	}
+	
 	// Fields
 	.form-field {
 		input[type=password], 
@@ -39,7 +43,7 @@ body .frm_style_formidable-style.with_frm_style {
 			height: auto;
 		}
 		label {
-			color: $white;
+			color: $gray-500;
 			font-family: $font-family-sans-serif;
 			font-size: 0.9444rem;
 			font-weight: 600;

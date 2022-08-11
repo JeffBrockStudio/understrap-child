@@ -39,6 +39,53 @@
             "acfe_field_group_condition": 0
         },
         {
+            "key": "field_61e61bf5545a4",
+            "label": "Logo",
+            "name": "logo_footer",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "uploader": "",
+            "acfe_thumbnail": 0,
+            "return_format": "array",
+            "preview_size": "large",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "acfe_field_group_condition": 0,
+            "library": "all"
+        },
+        {
+            "key": "field_62f460568d1fe",
+            "label": "Contact Heading",
+            "name": "footer_contact_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "acfe_field_group_condition": 0
+        },
+        {
             "key": "field_61cabc2fbca0a",
             "label": "Legal",
             "name": "legal",
@@ -71,31 +118,70 @@
             "acfe_field_group_condition": 0
         },
         {
-            "key": "field_61e61bf5545a4",
-            "label": "Logo",
-            "name": "logo_footer",
-            "type": "image",
+            "key": "field_62f46efc0d11c",
+            "label": "Affiliations\/Partners",
+            "name": "footer_affiliations_partners",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33.33",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "uploader": "",
-            "acfe_thumbnail": 0,
-            "return_format": "array",
-            "preview_size": "large",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
+            "acfe_repeater_stylised_button": 0,
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Affiliation\/Partner",
             "acfe_field_group_condition": 0,
-            "library": "all"
+            "sub_fields": [
+                {
+                    "key": "field_62f470c90d11d",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "uploader": "",
+                    "acfe_thumbnail": 0,
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "acfe_field_group_condition": 0,
+                    "library": "all"
+                },
+                {
+                    "key": "field_62f473110d11e",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "66.66",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "acfe_field_group_condition": 0
+                }
+            ]
         }
     ],
     "location": [
@@ -123,5 +209,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1656041102
+    "modified": 1660187852
 }

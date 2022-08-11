@@ -32,6 +32,8 @@ function remove_featured_images_from_child_theme() {
 add_action( 'after_setup_theme', 'remove_featured_images_from_child_theme', 11 ); 
 
 
+
+
 /*
 add_action( 'after_setup_theme', 'mytheme_theme_setup' );
 
@@ -95,7 +97,7 @@ function wpb_stop_update_emails( $send, $type, $core_update, $result ) {
   }
     return true;
   }
-// add_filter( 'auto_core_update_send_email', 'wpb_stop_auto_update_emails', 10, 4 );
+add_filter( 'auto_core_update_send_email', 'wpb_stop_auto_update_emails', 10, 4 );
 
 
 /**
