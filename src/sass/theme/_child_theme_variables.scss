@@ -3,24 +3,41 @@
 // Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
 
 
+//
+// Pōwehi variables
+// --------------------------------------------------
+
+// Enable fixed navbar?
+$powehi-enable-fixed-navbar: true !default;
+
+// Is search in the main nav?
+$powehi-search-main-nav: true !default;
+
+// Do main nav menu links feature a bottom border when active?
+$poowehi-enable-main-nav-border: false !default;
+
+// Offset for fixed navbar
+$powehi-offset-sm: 67px;
+$powehi-offset-md: 92px;
+$powehi-offset-lg: 108px;
+$powehi-offset-xl: 108px;
+
 // Set Font Awesome Pro font folder
 $fa-font-path: "../fonts" !default;
 
 
 // Slick Carousel
-$slick-font-family: "Font Awesome 6 Pro" !default;
-$slick-font-path: "../fonts/" !default;
-$slick-loader-path: "../img/" !default;
-$slick-arrow-color: #ffffff !default;
-$slick-prev-character: "\f053" !default;
-$slick-next-character: "\f054" !default;
+// $slick-font-family: "Font Awesome 6 Pro" !default;
+// $slick-font-path: "../fonts/" !default;
+// $slick-loader-path: "../img/" !default;
+// $slick-arrow-color: #ffffff !default;
+// $slick-prev-character: "\f053" !default;
+// $slick-next-character: "\f054" !default;
 
 
-// Offset for fixed navbar
-$offset-sm: 67px;
-$offset-md: 92px;
-$offset-lg: 108px;
-$offset-xl: 108px;
+//
+// Bootstrap variables
+// --------------------------------------------------
 
 
 // scss-docs-start color-variables
@@ -143,11 +160,25 @@ $box-shadow: 0 0 0.75rem rgba( $black, 0.1 );
 
 // Navbar
 
+// scss-docs-start navbar-variables
+// $navbar-padding-y:                  $spacer * .5;
+// $navbar-padding-x:                  null;
+
+$navbar-nav-link-padding-x:         1rem;
+
+// $navbar-toggler-padding-y:          .25rem;
+// $navbar-toggler-padding-x:          .75rem;
+// $navbar-toggler-font-size:          $font-size-lg;
+// $navbar-toggler-border-radius:      $btn-border-radius;
+// $navbar-toggler-focus-width:        $btn-focus-width;
+// $navbar-toggler-transition:         box-shadow .15s ease-in-out;
+// scss-docs-end navbar-variables
+
 // scss-docs-start navbar-theme-variables
 $navbar-dark-color:                 $white;
 $navbar-dark-hover-color:           $black;
 $navbar-dark-active-color:          $black;
-$navbar-dark-toggler-border-color:  rgba($white, .1);
+$navbar-dark-toggler-border-color:  rgba($white, .8);
 
 // $navbar-light-color:                rgba($black, .55);
 // $navbar-light-hover-color:          rgba($black, .7);

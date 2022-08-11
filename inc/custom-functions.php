@@ -52,3 +52,7 @@ add_filter( 'acp/storage/file/directory', function() {
 		// Use a writable path, directory will be created for you
 		return get_stylesheet_directory() . '/acp-settings';
 } );
+
+
+// Theme-wide variables
+define( 'POWEHI_ENABLE_FIXED_NAVBAR', TRUE );

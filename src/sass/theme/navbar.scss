@@ -25,6 +25,41 @@
 	#main-menu {
 		
 		.nav-item {
+						
+			@if $poowehi-enable-main-nav-border {
+				// Add bottom border to active man nav items
+				&:after {
+					border-bottom: 2px solid transparent;
+					content: '';
+					display: block;
+					margin-left: $nav-link-padding-x;
+					margin-right: $nav-link-padding-x;				
+					margin-top: -0.5rem;
+					margin-bottom: 0.25rem;
+					@include media-breakpoint-down(lg) {
+						margin-left: 0;
+						margin-right: 0;
+					}
+				}
+				&:hover,
+				&:active,
+				&.current_page_item,
+				&.current_page_ancestor {
+					&:after {
+						border-color: $black;
+					}
+				}				
+				
+				&.search,
+				.dropdown-menu .nav-item {
+					&:after {
+						border-bottom: none;
+						content: none;
+						display: none;
+					}
+				}
+			}			
+			
 			&.current_page_item,
 			&.current_page_ancestor {
 				a {
@@ -33,22 +68,28 @@
 			}
 		}		
 		
-		// Search is in utility menu		
-		// > li:last-of-type {
-		// 	.dropdown-menu[data-bs-popper] {
-		// 		left: auto;
-		// 		right: 0;
-		// 	}
-		// }
-		
-		// Search is in main menu
-		> li:nth-last-child(2) {
-			.dropdown-menu[data-bs-popper] {
-				left: auto;
-				right: 0;
+		@if $powehi-search-main-nav {
+			
+			// Search is in main menu
+			> li:nth-last-child(2) {
+				.dropdown-menu[data-bs-popper] {
+					left: auto;
+					right: 0;
+				}
 			}
+			
+		} @else {
+			
+			// Search is in utility menu		
+			> li:last-of-type {
+				.dropdown-menu[data-bs-popper] {
+					left: auto;
+					right: 0;
+				}
+			}
+			
 		}
-		
+				
 		// Replace Bootstrap dropdown toggle icon
 		.dropdown-toggle:after {
 			border: none;

@@ -20,18 +20,22 @@ body.admin-bar .fixed-top {
 #page-wrapper {
 	padding-bottom: 0;
 }
-#wrapper-navbar + .wrapper {
-	margin-top: $offset-xl;	
-	@include media-breakpoint-down(xl) {
-		margin-top: $offset-lg;
-	}
-	@include media-breakpoint-down(lg) {
-		margin-top: $offset-md;
-	}
-	@include media-breakpoint-down(md) {
-		margin-top: $offset-sm;
+
+@if $powehi-enable-fixed-navbar {
+	#wrapper-navbar + .wrapper {
+		margin-top: $powehi-offset-xl;	
+		@include media-breakpoint-down(xl) {
+			margin-top: $powehi-offset-lg;
+		}
+		@include media-breakpoint-down(lg) {
+			margin-top: $powehi-offset-md;
+		}
+		@include media-breakpoint-down(md) {
+			margin-top: $powehi-offset-sm;
+		}
 	}
 }
+
 .wrapper:not(#page-wrapper) {
 	padding: 3rem 0;
 }
@@ -329,14 +333,16 @@ body.error404 {
 // Login
 // --------------------------------------------------
 #page #login {
-	margin-top: $offset-xl;	
-	@include media-breakpoint-down(lg) {
-		margin-top: $offset-lg;
-	}
-	@include media-breakpoint-down(md) {
-		margin-top: $offset-md;
-	}
-	@include media-breakpoint-down(sm) {
-		margin-top: $offset-sm;
+	@if $powehi-enable-fixed-navbar {
+		margin-top: $powehi-offset-xl;	
+		@include media-breakpoint-down(lg) {
+			margin-top: $powehi-offset-lg;
+		}
+		@include media-breakpoint-down(md) {
+			margin-top: $powehi-offset-md;
+		}
+		@include media-breakpoint-down(sm) {
+			margin-top: $powehi-offset-sm;
+		}
 	}
 }

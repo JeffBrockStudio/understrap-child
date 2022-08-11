@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<nav id="main-nav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" aria-labelledby="main-nav-label">
+<nav id="main-nav" class="navbar navbar-expand-lg navbar-dark bg-primary<?php if ( POWEHI_ENABLE_FIXED_NAVBAR ) echo ' fixed-top' ; ?>" aria-labelledby="main-nav-label">
 
 	<h2 id="main-nav-label" class="screen-reader-text">
 		<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
