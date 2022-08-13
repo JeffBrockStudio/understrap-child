@@ -673,6 +673,40 @@
                             "acfe_field_group_condition": 0
                         },
                         {
+                            "key": "field_62f7436cb5eee",
+                            "label": "Indicators",
+                            "name": "indicators",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "16.666666666666667",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "choices": {
+                                "buttons": "Buttons",
+                                "none": "None",
+                                "numbers": "Numbers"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_field_group_condition": 0,
+                            "save_other_choice": 0
+                        },
+                        {
                             "key": "field_61ad623bac56a",
                             "label": "Slides",
                             "name": "slides",
@@ -2672,5 +2706,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1660349848
+    "modified": 1660372503
 }
