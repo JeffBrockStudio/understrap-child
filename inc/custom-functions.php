@@ -3,6 +3,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+// Theme variables
+require_once('theme_variables.php');
+
+
 // Advanced Custom Fields functions 
 require_once('acf.php');
 
@@ -54,5 +58,3 @@ add_filter( 'acp/storage/file/directory', function() {
 } );
 
 
-// Theme-wide variables
-define( 'POWEHI_ENABLE_FIXED_NAVBAR', TRUE );

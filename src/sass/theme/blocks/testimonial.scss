@@ -2,6 +2,9 @@
 // ----------------------------------------------
 .block.testimonial {
 	text-align: center;
+	.text {
+		margin-bottom: 1rem;
+	}
 	.author {
 		font-weight: $font-weight-bold;
 	}

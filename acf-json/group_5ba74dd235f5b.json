@@ -513,15 +513,15 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_61c389e109dc6",
-                            "label": "Text Color",
-                            "name": "text_color",
-                            "type": "color_picker",
+                            "key": "field_62f6c5eeb16d7",
+                            "label": "Layout",
+                            "name": "block_layout",
+                            "type": "radio",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "25",
+                                "width": "16.666666666666667",
                                 "class": "",
                                 "id": ""
                             },
@@ -531,17 +531,143 @@
                             "hide_required": "",
                             "instruction_placement": "",
                             "acfe_permissions": "",
+                            "choices": {
+                                "narrow": "Narrow Image",
+                                "wide": "Wide Image"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
                             "default_value": "",
-                            "enable_opacity": 0,
-                            "return_format": "string",
-                            "display": "default",
-                            "button_label": "Select Color",
-                            "color_picker": 1,
-                            "absolute": 0,
-                            "input": 1,
-                            "allow_null": 1,
-                            "theme_colors": 0,
-                            "colors": [],
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_field_group_condition": 0,
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_62f5ba2b40b0f",
+                            "label": "Transition Style",
+                            "name": "transition_style",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "16.666666666666667",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "choices": {
+                                "fade": "Fade",
+                                "slide": "Slide"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "slide",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_field_group_condition": 0,
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_62f5d132f317f",
+                            "label": "Loop?",
+                            "name": "loop",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "16.666666666666667",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_62f5b04c87801",
+                            "label": "Autoplay?",
+                            "name": "autoplay",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "16.666666666666667",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_62f5b1a687802",
+                            "label": "Slide Speed",
+                            "name": "slide_speed",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_62f5b04c87801",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "16.666666666666667",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "default_value": 5,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "second(s)",
+                            "min": 1,
+                            "max": 10,
+                            "step": "0.5",
                             "acfe_settings": "",
                             "acfe_validate": "",
                             "acfe_field_group_condition": 0
@@ -2546,5 +2672,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1656066344
+    "modified": 1660349848
 }

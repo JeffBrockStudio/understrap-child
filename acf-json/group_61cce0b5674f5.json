@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "20",
+                "width": "10",
                 "class": "",
                 "id": ""
             },
@@ -41,7 +41,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "20",
+                "width": "10",
                 "class": "",
                 "id": ""
             },
@@ -63,15 +63,51 @@
             "acfe_field_group_condition": 0
         },
         {
+            "key": "field_62f6ef1db838d",
+            "label": "Gradient?",
+            "name": "gradient",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "acfe_field_group_condition": 0
+        },
+        {
             "key": "field_61ccfa1a84f87",
             "label": "Background Color",
             "name": "background_color",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62f6ef1db838d",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "20",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -84,10 +120,8 @@
             "default_value": "",
             "enable_opacity": 0,
             "return_format": "string",
-            "display": "default",
-            "button_label": "Select Color",
+            "display": "palette",
             "color_picker": 0,
-            "input": 0,
             "allow_null": 1,
             "theme_colors": 0,
             "colors": {
@@ -101,16 +135,80 @@
             "acfe_settings": "",
             "acfe_validate": "",
             "acfe_field_group_condition": 0,
-            "absolute": false
+            "button_label": "Select Color",
+            "absolute": false,
+            "input": true
+        },
+        {
+            "key": "field_62f6f70a1923b",
+            "label": "Accent Color",
+            "name": "accent_color",
+            "type": "color_picker",
+            "instructions": "Only if background color is light.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61ccfa1a84f87",
+                        "operator": "==",
+                        "value": "#ffffff"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_61ccfa1a84f87",
+                        "operator": "==",
+                        "value": "#F8F9FA"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "instruction_placement": "field",
+            "acfe_permissions": "",
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "display": "palette",
+            "color_picker": 0,
+            "allow_null": 1,
+            "theme_colors": 0,
+            "colors": {
+                "#0d6efd": "#0d6efd",
+                "#10CAF0": "#10CAF0",
+                "#6D757D": "#6D757D",
+                "#212529": "#212529"
+            },
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "acfe_field_group_condition": 0,
+            "button_label": "Select Color",
+            "absolute": false,
+            "input": true
         },
         {
             "key": "field_61cd004a6da45",
-            "label": "Background Color (Bottom)",
-            "name": "background_color_bottom",
+            "label": "Gradient Start",
+            "name": "background_color_gradient_start",
             "type": "color_picker",
-            "instructions": "Only needed for gradients.",
+            "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62f6ef1db838d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "20",
                 "class": "",
@@ -127,29 +225,78 @@
             "return_format": "string",
             "display": "default",
             "button_label": "Select Color",
-            "color_picker": 0,
-            "input": 0,
+            "color_picker": 1,
+            "absolute": 0,
+            "input": 1,
             "allow_null": 1,
             "theme_colors": 0,
             "colors": {
-                "#FDFE34": "#FDFE34",
-                "#2ECC4B": "#2ECC4B",
-                "#FFFFFF": "#FFFFFF",
-                "#121212": "#121212",
-                "#B2B4B2": "#B2B4B2",
-                "#EFEEE6": "#EFEEE6"
+                "#0d6efd": "#0d6efd",
+                "#10CAF0": "#10CAF0",
+                "#6D757D": "#6D757D",
+                "#212529": "#212529",
+                "#F8F9FA": "#F8F9FA",
+                "#FFFFFF": "#FFFFFF"
             },
             "acfe_settings": "",
             "acfe_validate": "",
-            "acfe_field_group_condition": 0,
-            "absolute": false
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62f6f2344f38d",
+            "label": "Gradient End",
+            "name": "background_color_gradient_end",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62f6ef1db838d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "instruction_placement": "field",
+            "acfe_permissions": "",
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "display": "default",
+            "button_label": "Select Color",
+            "color_picker": 1,
+            "absolute": 0,
+            "input": 1,
+            "allow_null": 1,
+            "theme_colors": 0,
+            "colors": {
+                "#0d6efd": "#0d6efd",
+                "#10CAF0": "#10CAF0",
+                "#6D757D": "#6D757D",
+                "#212529": "#212529",
+                "#F8F9FA": "#F8F9FA",
+                "#FFFFFF": "#FFFFFF"
+            },
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "acfe_field_group_condition": 0
         },
         {
             "key": "field_61ccf8dde643e",
             "label": "Anchor ID",
             "name": "anchor_id",
             "type": "acfe_slug",
-            "instructions": "Only lowercase and hyphens.",
+            "instructions": "Lowercase & hyphens. Visible to public.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -199,5 +346,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1642461994
+    "modified": 1660353868
 }

@@ -2,7 +2,14 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
+						
+			<?php if ( get_sub_field( 'width' ) == 'narrow'):
+				$columns = 'col-12 col-md-8 offset-md-2';
+			else:
+				$columns = 'col-12';
+			endif; ?>
+			<div class="<?php echo $columns;?>">
+			
 				<<?php the_sub_field( 'heading_level' );?>><?php the_sub_field( 'heading' );?></<?php the_sub_field( 'heading_level' );?>>
 				
 				<?php if ( get_sub_field( 'text' )): ?>
