@@ -42,6 +42,22 @@
 		}
 	}		
 	
+	.carousel-indicators-numbers {
+		display: flex;
+		font-size: 1.2rem;
+		font-weight: 700;
+		justify-content: center;
+		margin-bottom: 0;
+		margin-left: 30%;
+		padding: 0;		
+		position: relative;
+		width: 40%;
+		z-index: 99999;
+		.numbers {
+			
+		}
+	}
+	
 	.carousel-indicators {
 		margin-bottom: 0;
 		button {
@@ -107,8 +123,9 @@
 					margin-bottom: 1rem;
 				}
 			}
-		}
-		.carousel-indicators {
+		}		
+		.carousel-indicators,
+		.carousel-indicators-numbers {
 			bottom: 3rem;			
 			position: absolute;		
 			@include media-breakpoint-down(lg) {

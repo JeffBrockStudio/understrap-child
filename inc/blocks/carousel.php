@@ -117,20 +117,33 @@ endif;
 		
 		<?php if ( get_sub_field( 'indicators' ) != 'none' ): ?>
 		
-			<div class="carousel-indicators">
-							
-				<?php
-				$i = 0;
-				foreach ( $items AS $item ) {?>
-					<button data-bs-target="#<?php echo $block_id; ?>-carousel" data-bs-slide-to="<?php echo $i; ?>" <?php 
-						if ( $i == 0 ) { 
-							echo ' class="active"';
-							echo ' aria-current="true"';
-						}; ?>></li>
-					<?php 
-					$i++;
-				}?>			
-			</div>
+			<?php if ( get_sub_field( 'indicators' ) == 'numbers' ): ?>
+			
+				<div class="carousel-indicators-numbers">
+					<div class="numbers">
+						<span class="num">1</span>&nbsp;of <?php echo count( $items ); ?> 
+					</div>
+				</div>
+			
+			<?php else: ?>
+			
+				<div class="carousel-indicators">
+								
+					<?php
+					$i = 0;
+					foreach ( $items AS $item ) {?>
+						<button data-bs-target="#<?php echo $block_id; ?>-carousel" data-bs-slide-to="<?php echo $i; ?>" <?php 
+							if ( $i == 0 ) { 
+								echo ' class="active"';
+								echo ' aria-current="true"';
+							}; ?>>
+						<?php 
+						$i++;
+					}?>
+					
+				</div>
+			
+			<?php endif; ?>
 			
 		<?php endif; ?>
 		
@@ -138,14 +151,13 @@ endif;
 
 	<script>
 	jQuery(document).ready(function($) {
-		var totalItems = $('#<?php echo $block_id; ?>-carousel .carousel-item').length;
+		
+		// Show number of current slide
 		var currentIndex = $('#<?php echo $block_id; ?>-carousel div.active').index() + 1;
-		$('#<?php echo $block_id; ?>-carousel').bind('slid', function() {
-				currentIndex = $('#<?php echo $block_id; ?>-carouseldiv.active').index() + 1;
-			 $('#<?php echo $block_id; ?>-carousel .num').html(''+currentIndex+'/'+totalItems+'');
+		$('#<?php echo $block_id; ?>-carousel').on('slid.bs.carousel', function() {
+				currentIndex = $('#<?php echo $block_id; ?>-carousel div.active').index() + 1;
+			 $('#<?php echo $block_id; ?>-carousel .num').html(''+currentIndex+' ');
 		});
-		console.log( totalItems );
-		console.log( currentIndex );
 		
 	});
 	</script>

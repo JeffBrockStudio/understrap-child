@@ -31240,6 +31240,18 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
     display: none;
   }
 }
+.block.carousel .carousel-indicators-numbers {
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-left: 30%;
+  padding: 0;
+  position: relative;
+  width: 40%;
+  z-index: 99999;
+}
 .block.carousel .carousel-indicators {
   margin-bottom: 0;
 }
@@ -31318,19 +31330,22 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
     margin-bottom: 1rem;
   }
 }
-.block.carousel.wide .carousel-indicators {
+.block.carousel.wide .carousel-indicators,
+.block.carousel.wide .carousel-indicators-numbers {
   bottom: 3rem;
   position: absolute;
 }
 @media (max-width: 991.98px) {
-  .block.carousel.wide .carousel-indicators {
+  .block.carousel.wide .carousel-indicators,
+.block.carousel.wide .carousel-indicators-numbers {
     justify-content: flex-end;
     margin-right: 1rem;
     margin-top: 1.5rem;
   }
 }
 @media (max-width: 767.98px) {
-  .block.carousel.wide .carousel-indicators {
+  .block.carousel.wide .carousel-indicators,
+.block.carousel.wide .carousel-indicators-numbers {
     justify-content: flex-start;
     margin-left: 1rem;
     margin-bottom: -2rem;
