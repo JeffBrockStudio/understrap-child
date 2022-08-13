@@ -1,9 +1,9 @@
 <?php include( get_stylesheet_directory() . '/inc/blocks/block-settings.php' ); ?>
 
 <?php 
-print ( '<pre>' );
-print_r( POWEHI_THEME_PALETTE );
-print ( '</pre> ');
+// print ( '<pre>' );
+// print_r( POWEHI_THEME_PALETTE );
+// print ( '</pre> ');
 
 $autoplay = get_sub_field( 'autoplay' );
 if ( $autoplay ):
@@ -44,7 +44,7 @@ endif;
 								<div class="row">
 									
 									<div class="col-12 col-md-9 col-lg-8">
-										<div class="text" style="color: <?php echo $item['text_color']; ?>">
+										<div class="text" style="color: <?php echo $text_color; ?>">
 											<h2 class="heading"><?php echo $item['heading']; ?></h2>
 											<?php echo apply_filters( 'the_content', $item['text']); ?>
 											<?php $button = $item['button'];

@@ -42,20 +42,22 @@ $button_class = '';
 $accent_color = '';
 
 if ( $layout_settings['background_color']):
-	switch( $layout_settings['background_color'] ):
-		case '#555392':
-			$accent_class = 'accent-primary';
-			$svg_bg_color = '#555392';
-			$svg_line_color = '#ffffff';
-			$button_class = 'btn-light';
-			break;
-		case '#FFFFFF':
-		case '#ffffff':
-			$svg_bg_color = '#ffffff';						
-			$accent_color = $layout_settings['accent_color'];
-			$svg_line_color = $accent_color;						
-			break;		
-	endswitch;	
+	
+	$theme_palette = POWEHI_THEME_PALETTE[$layout_settings['background_color']];
+	
+	if ( $theme_palette['level'] == 'dark' ):
+		$accent_class = 'accent-' . $theme_palette['bs_class'];
+		$button_class = 'btn-light';
+		$svg_line_color = '#ffffff';
+		$svg_bg_color = $theme_palette['hex'];
+		$text_color = '#ffffff';
+	else:
+		$accent_color = $layout_settings['accent_color'];
+		$svg_bg_color = '#ffffff';
+		$svg_line_color = $accent_color;
+		$text_color = $theme_palette['hex'];
+	endif;
+	
 endif; 
 ?>
 <div 	

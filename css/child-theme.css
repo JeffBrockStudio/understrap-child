@@ -31240,6 +31240,16 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
     display: none;
   }
 }
+.block.carousel .carousel-indicators {
+  margin-bottom: 0;
+}
+.block.carousel .carousel-indicators button {
+  background-color: #0d6efd;
+  border-radius: 50%;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .block.carousel.wide {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -31310,7 +31320,6 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 }
 .block.carousel.wide .carousel-indicators {
   bottom: 3rem;
-  margin-bottom: 0;
   position: absolute;
 }
 @media (max-width: 991.98px) {
@@ -31330,18 +31339,6 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
     right: auto;
   }
 }
-.block.carousel.wide .carousel-indicators button {
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  height: 13px;
-  margin-left: 7px;
-  margin-right: 7px;
-  width: 13px;
-}
-.block.carousel.wide .carousel-indicators button.active {
-  background-color: #ffffff;
-}
 .block.carousel.narrow .carousel-inner {
   margin-bottom: 1rem;
 }
@@ -31351,20 +31348,12 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   }
 }
 .block.carousel.narrow .carousel-indicators {
-  margin-bottom: 0;
   position: relative;
 }
 @media (max-width: 575.98px) {
   .block.carousel.narrow .carousel-indicators {
     margin-top: 1.5rem;
   }
-}
-.block.carousel.narrow .carousel-indicators button {
-  background-color: #0d6efd;
-  border-radius: 50%;
-  height: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 .block.carousel .heading {
   font-weight: 600;

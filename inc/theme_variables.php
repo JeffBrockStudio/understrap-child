@@ -39,15 +39,15 @@ $theme_palette['#0dcaf0']['btn_class'] 	= 'btn-light';
 $theme_palette['#0dcaf0']['level'] 			= 'dark';
 
 // Black
-$theme_palette['#000000']['name'] 			= 'black';
-$theme_palette['#000000']['hex'] 				= '#000000';
-$theme_palette['#000000']['bs_class'] 	= 'dark';
-$theme_palette['#000000']['btn_class'] 	= 'btn-light';
-$theme_palette['#000000']['level'] 			= 'dark';
+$theme_palette['#212529']['name'] 			= 'black';
+$theme_palette['#212529']['hex'] 				= '#212529';
+$theme_palette['#212529']['bs_class'] 	= 'dark';
+$theme_palette['#212529']['btn_class'] 	= 'btn-light';
+$theme_palette['#212529']['level'] 			= 'dark';
 
 // White
 $theme_palette['#ffffff']['name'] 			= 'white';
-$theme_palette['#ffffff']['hex'] 				= '#000000';
+$theme_palette['#ffffff']['hex'] 				= '#ffffff';
 $theme_palette['#ffffff']['bs_class'] 	= 'light';
 $theme_palette['#ffffff']['btn_class'] 	= 'btn-light';
 $theme_palette['#ffffff']['level'] 			= 'light';
