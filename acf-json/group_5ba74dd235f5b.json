@@ -934,15 +934,15 @@
                             "acfe_settings": "",
                             "sub_fields": [
                                 {
-                                    "key": "field_5fee2d8e18205",
+                                    "key": "field_62f868a55b5ce",
                                     "label": "Heading",
                                     "name": "heading",
-                                    "type": "text",
+                                    "type": "clone",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "50",
+                                        "width": "",
                                         "class": "",
                                         "id": ""
                                     },
@@ -952,13 +952,15 @@
                                     "hide_required": "",
                                     "instruction_placement": "",
                                     "acfe_permissions": "",
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": "",
+                                    "clone": [
+                                        "field_61cd28d50e7ec",
+                                        "field_61cd29150e7ed"
+                                    ],
+                                    "display": "seamless",
+                                    "layout": "block",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0,
                                     "acfe_settings": "",
-                                    "acfe_validate": "",
                                     "acfe_field_group_condition": 0
                                 },
                                 {
@@ -999,14 +1001,20 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "50",
+                                        "width": "33.33",
                                         "class": "",
                                         "id": ""
                                     },
+                                    "hide_field": "",
+                                    "hide_label": "",
+                                    "hide_instructions": "",
+                                    "hide_required": "",
+                                    "instruction_placement": "",
                                     "acfe_permissions": "",
                                     "return_format": "array",
                                     "acfe_settings": "",
-                                    "acfe_validate": ""
+                                    "acfe_validate": "",
+                                    "acfe_field_group_condition": 0
                                 },
                                 {
                                     "key": "field_61ae62b53eb71",
@@ -1017,10 +1025,15 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "50",
+                                        "width": "33.33",
                                         "class": "",
                                         "id": ""
                                     },
+                                    "hide_field": "",
+                                    "hide_label": "",
+                                    "hide_instructions": "",
+                                    "hide_required": "",
+                                    "instruction_placement": "",
                                     "acfe_permissions": "",
                                     "uploader": "",
                                     "acfe_thumbnail": 0,
@@ -1035,7 +1048,42 @@
                                     "mime_types": "",
                                     "acfe_settings": "",
                                     "acfe_validate": "",
+                                    "acfe_field_group_condition": 0,
                                     "library": "all"
+                                },
+                                {
+                                    "key": "field_62f857304a114",
+                                    "label": "Image Layout",
+                                    "name": "image_layout",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "33.33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "hide_field": "",
+                                    "hide_label": "",
+                                    "hide_instructions": "",
+                                    "hide_required": "",
+                                    "instruction_placement": "",
+                                    "acfe_permissions": "",
+                                    "choices": {
+                                        "bottom": "Bottom",
+                                        "left": "Left",
+                                        "top": "Top"
+                                    },
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "default_value": "top",
+                                    "layout": "vertical",
+                                    "return_format": "value",
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "acfe_field_group_condition": 0,
+                                    "save_other_choice": 0
                                 }
                             ]
                         },
@@ -1059,40 +1107,6 @@
                             "instruction_placement": "",
                             "acfe_permissions": "",
                             "return_format": "array",
-                            "acfe_settings": "",
-                            "acfe_validate": "",
-                            "acfe_field_group_condition": 0
-                        },
-                        {
-                            "key": "field_61c39d5d6e897",
-                            "label": "Accent Color",
-                            "name": "accent_color",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "25",
-                                "class": "",
-                                "id": ""
-                            },
-                            "hide_field": "",
-                            "hide_label": "",
-                            "hide_instructions": "",
-                            "hide_required": "",
-                            "instruction_placement": "",
-                            "acfe_permissions": "",
-                            "default_value": "",
-                            "enable_opacity": 0,
-                            "return_format": "string",
-                            "display": "default",
-                            "button_label": "Select Color",
-                            "color_picker": 1,
-                            "absolute": 0,
-                            "input": 1,
-                            "allow_null": 1,
-                            "theme_colors": 0,
-                            "colors": [],
                             "acfe_settings": "",
                             "acfe_validate": "",
                             "acfe_field_group_condition": 0
@@ -2735,5 +2749,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1660427221
+    "modified": 1660446931
 }

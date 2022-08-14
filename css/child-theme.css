@@ -31436,6 +31436,23 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 .block.columns .col-column.col-md-3 .image img {
   height: 100px;
 }
+.block.columns .col-column.image-layout-left .image {
+  margin-right: 1rem;
+}
+.block.columns .col-column.image-layout-left .image img {
+  height: auto;
+}
+.block.columns .col-column.image-layout-left .text {
+  text-align: left;
+}
+.block.columns .col-column.image-layout-bottom .column {
+  display: flex;
+  flex-direction: column;
+}
+.block.columns .col-column.image-layout-bottom .column .image {
+  margin-top: 2rem;
+  order: 1;
+}
 .block.columns h2, .block.columns .h2 {
   margin-bottom: 2.5rem;
 }

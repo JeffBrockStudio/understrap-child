@@ -25,6 +25,27 @@
 				}
 			}			
 		}
+		&.image-layout-left {
+			.image {
+				margin-right: 1rem;
+				img {
+					height: auto;
+				}
+			}
+			.text {
+				text-align: left;
+			}
+		}
+		&.image-layout-bottom {
+			.column {
+				display: flex;
+				flex-direction: column;
+				.image {
+					margin-top: 2rem;
+					order: 1;
+				}	
+			}			
+		}
 	}
 	h2 {
 		margin-bottom: 2.5rem;
