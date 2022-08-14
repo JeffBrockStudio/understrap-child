@@ -126,11 +126,11 @@
             "theme_colors": 0,
             "colors": {
                 "#0d6efd": "#0d6efd",
-                "#10CAF0": "#10CAF0",
-                "#6D757D": "#6D757D",
+                "#10caf0": "#10caf0",
+                "#6d757d": "#6d757d",
                 "#212529": "#212529",
-                "#F8F9FA": "#F8F9FA",
-                "#FFFFFF": "#FFFFFF"
+                "#f8f9fa": "#f8f9fa",
+                "#ffffff": "#ffffff"
             },
             "acfe_settings": "",
             "acfe_validate": "",
@@ -346,5 +346,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1660353868
+    "modified": 1660432242
 }

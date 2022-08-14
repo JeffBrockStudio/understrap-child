@@ -13,10 +13,14 @@
 			
 			<div class="col-12 col-md-7">	
 				<?php if ( get_sub_field( 'text' ) OR get_sub_field( 'heading' )): ?>
-					<<?php the_sub_field( 'heading_level' );?>><?php the_sub_field( 'heading' );?></<?php the_sub_field( 'heading_level' );?>>
+					
+					<?php if ( get_sub_field( 'heading' )): ?>
+						<?php include( get_stylesheet_directory() . '/inc/blocks/headings.php' ); ?>
+					<?php endif; ?>				
 					<div class="text">
 						<?php echo apply_filters( 'the_content', the_sub_field( 'text' )); ?>
 					</div>
+					
 				<?php endif; ?>					
 			</div>					
 				

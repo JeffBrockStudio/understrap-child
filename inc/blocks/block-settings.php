@@ -40,6 +40,7 @@ $svg_bg_color = '#555392';
 $svg_line_color = '#ffffff';
 $button_class = '';
 $accent_color = '';
+$text_color = '#000000';
 
 if ( $layout_settings['background_color']):
 	

@@ -12,8 +12,8 @@
 			
 			<div class="col-12 col-md-<?php echo get_sub_field( 'text_width' ); ?> col-text<?php if ( !get_sub_field( 'text' )) echo ' no-text'; ?>">
 				
-				<?php if ( get_sub_field( 'text_width' ) != 4 ): ?>
-			 		<<?php the_sub_field( 'heading_level' );?>><?php the_sub_field( 'heading' );?></<?php the_sub_field( 'heading_level' );?>>
+				<?php if ( get_sub_field( 'text_width' ) != 4 ): ?>				
+					<?php include( get_stylesheet_directory() . '/inc/blocks/headings.php' ); ?>				
 				<?php endif; ?>	
 				
 				<?php if ( the_sub_field( 'text' )): ?>

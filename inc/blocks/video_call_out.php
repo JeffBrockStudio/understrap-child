@@ -7,7 +7,9 @@
 		
 		<div class="col-12 col-md-6">
 			<div class="text">
-				<h2><?php the_sub_field('heading');?></h2>
+				<?php if ( get_sub_field( 'heading' )): ?>
+					<?php include( get_stylesheet_directory() . '/inc/blocks/headings.php' ); ?>
+				<?php endif; ?>				
 				<?php echo apply_filters( 'the_content', get_sub_field( 'text' )); ?>
 				<button class="btn btn-primary" href="<?php $link = get_sub_field( 'button' ); echo $link['url'];?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></button>
 			</div>

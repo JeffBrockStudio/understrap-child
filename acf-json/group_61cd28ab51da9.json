@@ -3,35 +3,6 @@
     "title": "Heading",
     "fields": [
         {
-            "key": "field_61cd6913fdfa1",
-            "label": "(Column 9\/12)",
-            "name": "",
-            "type": "acfe_column",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "hide_field": "",
-            "hide_label": "",
-            "hide_instructions": "",
-            "hide_required": "",
-            "acfe_permissions": "",
-            "instruction_placement": "",
-            "columns": "9\/12",
-            "endpoint": 0,
-            "border": [
-                "column"
-            ],
-            "acfe_field_group_condition": 0,
-            "border_endpoint": [
-                "endpoint"
-            ]
-        },
-        {
             "key": "field_61cd28d50e7ec",
             "label": "Heading",
             "name": "heading",
@@ -40,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
@@ -60,33 +31,6 @@
             "acfe_field_group_condition": 0
         },
         {
-            "key": "field_61cd696cfdfa2",
-            "label": "(Column 3\/12)",
-            "name": "",
-            "type": "acfe_column",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "hide_field": "",
-            "hide_label": "",
-            "hide_instructions": "",
-            "hide_required": "",
-            "acfe_permissions": "",
-            "instruction_placement": "",
-            "columns": "3\/12",
-            "endpoint": 0,
-            "border": "",
-            "acfe_field_group_condition": 0,
-            "border_endpoint": [
-                "endpoint"
-            ]
-        },
-        {
             "key": "field_61cd29150e7ed",
             "label": "Heading Level",
             "name": "heading_level",
@@ -95,7 +39,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "10",
                 "class": "",
                 "id": ""
             },
@@ -125,15 +69,15 @@
             "ajax": 0
         },
         {
-            "key": "field_61cd697ffdfa3",
-            "label": "(Column Endpoint)",
-            "name": "",
-            "type": "acfe_column",
+            "key": "field_62f8185b7bde9",
+            "label": "Subheading",
+            "name": "subheading",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -143,13 +87,42 @@
             "hide_required": "",
             "instruction_placement": "",
             "acfe_permissions": "",
-            "endpoint": 1,
-            "border_endpoint": [
-                "endpoint"
-            ],
-            "acfe_field_group_condition": 0,
-            "columns": "6\/12",
-            "border": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62f8188c7bdeb",
+            "label": "Superheading",
+            "name": "superheading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "acfe_field_group_condition": 0
         }
     ],
     "location": [
@@ -178,5 +151,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1640852439
+    "modified": 1660426780
 }

@@ -19,6 +19,12 @@ else:
 endif;
 ?>
 
+	<?php if ( get_sub_field( 'heading' )): ?>
+		<div class="container">
+			<?php include( get_stylesheet_directory() . '/inc/blocks/headings.php' ); ?>
+		</div>
+	<?php endif; ?>
+
 	<div 
 		id="<?php echo $block_id; ?>-carousel" 
 		class="carousel slide 

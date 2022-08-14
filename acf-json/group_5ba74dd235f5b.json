@@ -707,6 +707,35 @@
                             "save_other_choice": 0
                         },
                         {
+                            "key": "field_62f81b5024253",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "clone": [
+                                "group_61cd28ab51da9"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_settings": "",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
                             "key": "field_61ad623bac56a",
                             "label": "Slides",
                             "name": "slides",
@@ -2706,5 +2735,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1660372503
+    "modified": 1660427221
 }

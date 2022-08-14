@@ -1,12 +1,9 @@
 <?php include( get_stylesheet_directory() . '/inc/blocks/block-settings.php' ); ?>
 
-	<div class="container">							
+	<div class="container">
+		
 		<?php if ( get_sub_field( 'heading' )): ?>
-			<div class="row">
-				<div class="col-12">
-					<<?php the_sub_field( 'heading_level' );?>><?php the_sub_field( 'heading' );?></<?php the_sub_field( 'heading_level' );?>>
-				</div>
-			</div>
+			<?php include( get_stylesheet_directory() . '/inc/blocks/headings.php' ); ?>
 		<?php endif; ?>
 	
 		<?php 

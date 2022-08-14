@@ -32,11 +32,18 @@ $theme_palette['#198754']['btn_class'] 	= 'btn-light';
 $theme_palette['#198754']['level'] 			= 'dark';
 
 // Cyan
-$theme_palette['#0dcaf0']['name'] 			= 'cyan';
-$theme_palette['#0dcaf0']['hex'] 				= '#0dcaf0';
-$theme_palette['#0dcaf0']['bs_class'] 	= 'success';
-$theme_palette['#0dcaf0']['btn_class'] 	= 'btn-light';
-$theme_palette['#0dcaf0']['level'] 			= 'dark';
+$theme_palette['#10dcaf0']['name'] 			= 'cyan';
+$theme_palette['#10dcaf0']['hex'] 			= '#10dcaf0';
+$theme_palette['#10dcaf0']['bs_class'] 	= 'success';
+$theme_palette['#10dcaf0']['btn_class'] = 'btn-light';
+$theme_palette['#10dcaf0']['level'] 		= 'dark';
+
+// Light Gray
+$theme_palette['#f8f9fa']['name'] 			= 'gray-light';
+$theme_palette['#f8f9fa']['hex'] 				= '#f8f9fa';
+$theme_palette['#f8f9fa']['bs_class'] 	= 'light';
+$theme_palette['#f8f9fa']['btn_class'] 	= 'btn-light';
+$theme_palette['#f8f9fa']['level'] 			= 'light';
 
 // Black
 $theme_palette['#212529']['name'] 			= 'black';

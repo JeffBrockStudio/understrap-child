@@ -10,8 +10,10 @@
 			endif; ?>
 			<div class="<?php echo $columns;?>">
 			
-				<<?php the_sub_field( 'heading_level' );?>><?php the_sub_field( 'heading' );?></<?php the_sub_field( 'heading_level' );?>>
-				
+				<?php if ( get_sub_field( 'heading' )): ?>
+					<?php include( get_stylesheet_directory() . '/inc/blocks/headings.php' ); ?>
+				<?php endif; ?>
+			
 				<?php if ( get_sub_field( 'text' )): ?>
 					<div class="text intro">
 						<?php echo apply_filters( 'the_content', get_sub_field( 'text' )); ?>
