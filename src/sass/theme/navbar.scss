@@ -66,6 +66,39 @@
 					color: $navbar-dark-hover-color;	
 				}				
 			}
+			
+			// Megamenu with 2 columns
+			&.columns-2 {
+				.dropdown-menu {
+					columns: 2;
+					@include media-breakpoint-down(md) {
+						columns: 1;
+					}
+				}
+			}
+			
+			// Megamenu with 3 columns			
+			&.columns-3 {
+				.dropdown-menu {
+					columns: 3;
+					@include media-breakpoint-down(md) {
+						columns: 1;
+					}
+				}
+			}
+			
+			// Megamenu with 4 columns			
+			&.columns-4 {
+				.dropdown-menu {
+					columns: 4;
+					@include media-breakpoint-down(lg) {
+						columns: 2;
+					}
+					@include media-breakpoint-down(md) {
+						columns: 1;
+					}
+				}
+			}
 		}		
 		
 		@if $powehi-search-main-nav {
