@@ -3,13 +3,19 @@
 	<div class="container">
 		<div class="row">
 			<?php if ( get_sub_field( 'width' ) == 'narrow'):
-				$columns = 'col-12 col-md-8 offset-md-2';
+				if ( get_sub_field( 'alignment' ) == 'right' ):
+					$columns = 'col-10 offset-2 col-md-8 offset-md-4';
+				elseif ( get_sub_field( 'alignment' ) == 'left' ):
+					$columns = 'col-10 col-md-8';
+				else:				
+					$columns = 'col-10 offset-1 col-md-8 offset-md-2';
+				endif;
 			else:
 				$columns = 'col-12';
 			endif; ?>
 			<div class="<?php echo $columns;?>">
 					
-				<div class="text">
+				<div class="text columns-<?php echo get_sub_field( 'columns' ); ?>">
 					<?php echo apply_filters( 'the_content', get_sub_field( 'wysiwyg' )); ?>
 				</div>
 	

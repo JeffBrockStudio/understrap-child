@@ -32059,6 +32059,31 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   }
 }
 
+.block.wysiwyg .columns-1 {
+  -moz-columns: 1;
+  columns: 1;
+}
+.block.wysiwyg .columns-2 {
+  -moz-columns: 2;
+  columns: 2;
+}
+@media (max-width: 767.98px) {
+  .block.wysiwyg .columns-2 {
+    -moz-columns: 1;
+    columns: 1;
+  }
+}
+.block.wysiwyg .columns-3 {
+  -moz-columns: 3;
+  columns: 3;
+}
+@media (max-width: 767.98px) {
+  .block.wysiwyg .columns-3 {
+    -moz-columns: 1;
+    columns: 1;
+  }
+}
+
 body.single-post article {
   margin-bottom: 3rem;
 }
