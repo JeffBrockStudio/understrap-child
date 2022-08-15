@@ -32053,10 +32053,20 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 .block.text_media.right .col-text {
   margin-bottom: 0;
 }
+.block.text_media .col-text {
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 575.98px) {
   .block.text_media .col-text {
     margin-bottom: 2rem;
   }
+}
+.block.text_media .col-text.center {
+  justify-content: center;
+}
+.block.text_media .col-text.bottom {
+  justify-content: flex-end;
 }
 
 .block.wysiwyg .columns-1 {

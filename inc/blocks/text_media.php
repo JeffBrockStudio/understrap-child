@@ -4,20 +4,12 @@
 
 		<div class="row">
 			
-			<?php if ( get_sub_field( 'text_width' ) == 4 ): ?>
-				<div class="col-12">
-					<<?php the_sub_field( 'heading_level' );?> class="full-width"><?php the_sub_field( 'heading' );?></<?php the_sub_field( 'heading_level' );?>>
-				</div>
-			<?php endif; ?>			
-			
-			<div class="col-12 col-md-<?php echo get_sub_field( 'text_width' ); ?> col-text<?php if ( !get_sub_field( 'text' )) echo ' no-text'; ?>">
+			<div class="col-12 col-md-<?php echo get_sub_field( 'text_width' ); ?> col-text<?php if ( !get_sub_field( 'text' )) echo ' no-text'; ?> <?php echo get_sub_field( 'text_alignment' );?>" >
 				
-				<?php if ( get_sub_field( 'text_width' ) != 4 ): ?>				
-					<?php include( get_stylesheet_directory() . '/inc/blocks/headings.php' ); ?>				
-				<?php endif; ?>	
+				<?php include( get_stylesheet_directory() . '/inc/blocks/headings.php' ); ?>				
 				
-				<?php if ( the_sub_field( 'text' )): ?>
-					<div class="text">
+				<?php if ( get_sub_field( 'text' )): ?>
+					<div class="text" style="color: <?php echo $text_color; ?>">
 						<?php echo apply_filters( 'the_content', the_sub_field( 'text' )); ?>
 					</div>
 				<?php endif; ?>
@@ -25,7 +17,7 @@
 				<?php if ( get_sub_field( 'button_link' )) {
 					$link = get_sub_field( 'button_link' );?>
 					<div class="buttons">
-				 		<a class="btn btn-primary" href="<?php echo $link['url']?>" target="<?php echo $link['target']?>"><?php echo $link['title']; ?></a>
+				 		<a class="btn <?php echo $theme_palette['btn_class']; ?>" href="<?php echo $link['url']?>" target="<?php echo $link['target']?>"><?php echo $link['title']; ?></a>
 					</div>
 				<?php } ?>									
 			</div>														
@@ -42,6 +34,11 @@
 					<?php if ( get_sub_field( 'interactive_image' )): 
 						$interactive_image = get_sub_field( 'interactive_image' );
 						echo do_shortcode( '['. $interactive_image .']' );
+					elseif ( get_sub_field( 'video' )): ?>				
+						<div class="video-wrapper">
+							<?php echo get_sub_field( 'video' ); ?>
+						</div>
+						<?php	
 					else:	?>
 						<img src="<?php $image = get_sub_field( 'image' ); echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
 					<?php 

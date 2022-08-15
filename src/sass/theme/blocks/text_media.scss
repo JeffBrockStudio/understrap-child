@@ -16,8 +16,16 @@
 		}
 	}		
 	.col-text {
+		display: flex;
+		flex-direction: column;
 		@include media-breakpoint-down(sm) {
 			margin-bottom: 2rem;
+		}
+		&.center {
+			justify-content: center;
+		}
+		&.bottom {
+			justify-content: flex-end;
 		}
 	}
 }
