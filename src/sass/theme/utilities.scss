@@ -354,3 +354,16 @@ body.error404 {
 .headings {
 	margin-bottom: 1rem;
 }
+
+
+//
+// Captions
+// --------------------------------------------------
+.wp-caption { 
+	.wp-caption-text {
+		font-style: italic;
+	}
+	.image + .wp-caption-text {
+		margin-top: 0.75rem;
+	}
+}

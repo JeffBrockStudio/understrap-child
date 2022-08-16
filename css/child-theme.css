@@ -30669,6 +30669,13 @@ body.error404 .page-content .search-form {
   margin-bottom: 1rem;
 }
 
+.wp-caption .wp-caption-text {
+  font-style: italic;
+}
+.wp-caption .image + .wp-caption-text {
+  margin-top: 0.75rem;
+}
+
 html {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;

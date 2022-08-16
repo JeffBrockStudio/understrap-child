@@ -1772,6 +1772,215 @@
                     "acfe_layout_col": "auto",
                     "acfe_layout_allowed_col": false
                 },
+                "layout_5ded2860b9846": {
+                    "key": "layout_5ded2860b9846",
+                    "name": "large_media",
+                    "label": "Large Media",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62fb09b93cbae",
+                            "label": "Width",
+                            "name": "width",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "acfe_field_group_condition": 0,
+                            "required_message": "",
+                            "choices": {
+                                "wide": "Wide",
+                                "narrow": "Narrow"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "acfe_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_location": "",
+                                    "acfe_settings_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_setting_type": "required",
+                                            "acfe_settings_setting_name": "",
+                                            "acfe_settings_setting_operator": "true",
+                                            "acfe_settings_setting_value": ""
+                                        }
+                                    }
+                                }
+                            },
+                            "acfe_validate": {
+                                "acfcloneindex": {
+                                    "acfe_validate_location": "",
+                                    "acfe_validate_rules_and": {
+                                        "acfcloneindex": {
+                                            "acfe_validate_function": "value",
+                                            "acfe_validate_operator": "==",
+                                            "acfe_validate_match": ""
+                                        }
+                                    },
+                                    "acfe_validate_error": ""
+                                }
+                            }
+                        },
+                        {
+                            "key": "field_62f9970230532",
+                            "label": "Block Alignment",
+                            "name": "alignment",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "choices": {
+                                "left": "Left",
+                                "center": "Center",
+                                "right": "Right"
+                            },
+                            "default_value": "left",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "max": "",
+                            "ui": 0,
+                            "return_format": "value",
+                            "prepend": "",
+                            "append": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_field_group_condition": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5ded2860b9849",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "short",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "clone": [
+                                "group_61cd8507a18f7"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_settings": "",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_61c39178172e8",
+                            "label": "Video",
+                            "name": "video",
+                            "type": "oembed",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "width": "",
+                            "height": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_5ded2860b984a",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image_aspect_ratio_crop",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "crop_type": "aspect_ratio",
+                            "aspect_ratio_width": 16,
+                            "aspect_ratio_height": 9,
+                            "return_format": "array",
+                            "preview_size": "large",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "acfe_field_group_condition": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_modal_edit_size": "xlarge",
+                    "acfe_flexible_settings": [
+                        "group_61cce0b5674f5"
+                    ],
+                    "acfe_flexible_settings_size": "xlarge",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_layout_locations": [],
+                    "acfe_flexible_category": false,
+                    "acfe_layout_col": "auto",
+                    "acfe_layout_allowed_col": false
+                },
                 "layout_62b57c7565ace": {
                     "key": "layout_62b57c7565ace",
                     "name": "statistics",
@@ -2118,14 +2327,14 @@
                     "acfe_layout_col": "auto",
                     "acfe_layout_allowed_col": false
                 },
-                "layout_5ded2860b9846": {
-                    "key": "layout_5ded2860b9846",
+                "layout_62faee680f510": {
+                    "key": "layout_62faee680f510",
                     "name": "text_media",
                     "label": "Text with Media",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5ded2860b9847",
+                            "key": "field_62faee680f511",
                             "label": "Heading",
                             "name": "heading",
                             "type": "clone",
@@ -2137,12 +2346,14 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
                             "hide_field": "",
                             "hide_label": "",
                             "hide_instructions": "",
                             "hide_required": "",
-                            "instruction_placement": "",
-                            "acfe_permissions": "",
+                            "acfe_field_group_condition": 0,
+                            "required_message": "",
                             "clone": [
                                 "group_61cd28ab51da9"
                             ],
@@ -2150,11 +2361,27 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0,
-                            "acfe_settings": "",
-                            "acfe_field_group_condition": 0
+                            "acfe_seamless_style": 0,
+                            "acfe_clone_modal": 0,
+                            "acfe_clone_modal_close": 0,
+                            "acfe_clone_modal_button": "",
+                            "acfe_clone_modal_size": "large",
+                            "acfe_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_location": "",
+                                    "acfe_settings_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_setting_type": "required",
+                                            "acfe_settings_setting_name": "",
+                                            "acfe_settings_setting_operator": "true",
+                                            "acfe_settings_setting_value": ""
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
-                            "key": "field_5ded2860b9849",
+                            "key": "field_62faee680f512",
                             "label": "Text",
                             "name": "text",
                             "type": "clone",
@@ -2166,12 +2393,14 @@
                                 "class": "short",
                                 "id": ""
                             },
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
                             "hide_field": "",
                             "hide_label": "",
                             "hide_instructions": "",
                             "hide_required": "",
-                            "instruction_placement": "",
-                            "acfe_permissions": "",
+                            "acfe_field_group_condition": 0,
+                            "required_message": "",
                             "clone": [
                                 "group_61cd8507a18f7"
                             ],
@@ -2179,11 +2408,27 @@
                             "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0,
-                            "acfe_settings": "",
-                            "acfe_field_group_condition": 0
+                            "acfe_seamless_style": 0,
+                            "acfe_clone_modal": 0,
+                            "acfe_clone_modal_close": 0,
+                            "acfe_clone_modal_button": "",
+                            "acfe_clone_modal_size": "large",
+                            "acfe_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_location": "",
+                                    "acfe_settings_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_setting_type": "required",
+                                            "acfe_settings_setting_name": "",
+                                            "acfe_settings_setting_operator": "true",
+                                            "acfe_settings_setting_value": ""
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
-                            "key": "field_61c39178172e8",
+                            "key": "field_62faee680f513",
                             "label": "Video",
                             "name": "video",
                             "type": "oembed",
@@ -2195,20 +2440,153 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
                             "hide_field": "",
                             "hide_label": "",
                             "hide_instructions": "",
                             "hide_required": "",
-                            "instruction_placement": "",
-                            "acfe_permissions": "",
+                            "acfe_field_group_condition": 0,
+                            "required_message": "",
                             "width": "",
                             "height": "",
-                            "acfe_settings": "",
-                            "acfe_validate": "",
-                            "acfe_field_group_condition": 0
+                            "acfe_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_location": "",
+                                    "acfe_settings_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_setting_type": "required",
+                                            "acfe_settings_setting_name": "",
+                                            "acfe_settings_setting_operator": "true",
+                                            "acfe_settings_setting_value": ""
+                                        }
+                                    }
+                                }
+                            },
+                            "acfe_validate": {
+                                "acfcloneindex": {
+                                    "acfe_validate_location": "",
+                                    "acfe_validate_rules_and": {
+                                        "acfcloneindex": {
+                                            "acfe_validate_function": "value",
+                                            "acfe_validate_operator": "==",
+                                            "acfe_validate_match": ""
+                                        }
+                                    },
+                                    "acfe_validate_error": ""
+                                }
+                            }
                         },
                         {
-                            "key": "field_5ded2860b984a",
+                            "key": "field_62faee680f515",
+                            "label": "Button",
+                            "name": "button_link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "acfe_field_group_condition": 0,
+                            "required_message": "",
+                            "return_format": "array",
+                            "acfe_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_location": "",
+                                    "acfe_settings_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_setting_type": "required",
+                                            "acfe_settings_setting_name": "",
+                                            "acfe_settings_setting_operator": "true",
+                                            "acfe_settings_setting_value": ""
+                                        }
+                                    }
+                                }
+                            },
+                            "acfe_validate": {
+                                "acfcloneindex": {
+                                    "acfe_validate_location": "",
+                                    "acfe_validate_rules_and": {
+                                        "acfcloneindex": {
+                                            "acfe_validate_function": "value",
+                                            "acfe_validate_operator": "==",
+                                            "acfe_validate_match": ""
+                                        }
+                                    },
+                                    "acfe_validate_error": ""
+                                }
+                            }
+                        },
+                        {
+                            "key": "field_62faee680f516",
+                            "label": "Text Width",
+                            "name": "text_width",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "acfe_field_group_condition": 0,
+                            "required_message": "",
+                            "choices": {
+                                "4": "One-Third",
+                                "6": "Half",
+                                "8": "Two-Thirds"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": 6,
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "acfe_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_location": "",
+                                    "acfe_settings_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_setting_type": "required",
+                                            "acfe_settings_setting_name": "",
+                                            "acfe_settings_setting_operator": "true",
+                                            "acfe_settings_setting_value": ""
+                                        }
+                                    }
+                                }
+                            },
+                            "acfe_validate": {
+                                "acfcloneindex": {
+                                    "acfe_validate_location": "",
+                                    "acfe_validate_rules_and": {
+                                        "acfcloneindex": {
+                                            "acfe_validate_function": "value",
+                                            "acfe_validate_operator": "==",
+                                            "acfe_validate_match": ""
+                                        }
+                                    },
+                                    "acfe_validate_error": ""
+                                }
+                            }
+                        },
+                        {
+                            "key": "field_62faee680f514",
                             "label": "Image",
                             "name": "image",
                             "type": "image_aspect_ratio_crop",
@@ -2220,12 +2598,14 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
                             "hide_field": "",
                             "hide_label": "",
                             "hide_instructions": "",
                             "hide_required": "",
-                            "instruction_placement": "",
-                            "acfe_permissions": "",
+                            "acfe_field_group_condition": 0,
+                            "required_message": "",
                             "crop_type": "aspect_ratio",
                             "aspect_ratio_width": 16,
                             "aspect_ratio_height": 9,
@@ -2239,70 +2619,35 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": "",
-                            "acfe_settings": "",
-                            "acfe_validate": "",
-                            "acfe_field_group_condition": 0
+                            "acfe_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_location": "",
+                                    "acfe_settings_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_setting_type": "required",
+                                            "acfe_settings_setting_name": "",
+                                            "acfe_settings_setting_operator": "true",
+                                            "acfe_settings_setting_value": ""
+                                        }
+                                    }
+                                }
+                            },
+                            "acfe_validate": {
+                                "acfcloneindex": {
+                                    "acfe_validate_location": "",
+                                    "acfe_validate_rules_and": {
+                                        "acfcloneindex": {
+                                            "acfe_validate_function": "value",
+                                            "acfe_validate_operator": "==",
+                                            "acfe_validate_match": ""
+                                        }
+                                    },
+                                    "acfe_validate_error": ""
+                                }
+                            }
                         },
                         {
-                            "key": "field_5ded50a9924fc",
-                            "label": "Button",
-                            "name": "button_link",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "20",
-                                "class": "",
-                                "id": ""
-                            },
-                            "hide_field": "",
-                            "hide_label": "",
-                            "hide_instructions": "",
-                            "hide_required": "",
-                            "instruction_placement": "",
-                            "acfe_permissions": "",
-                            "return_format": "array",
-                            "acfe_settings": "",
-                            "acfe_validate": "",
-                            "acfe_field_group_condition": 0
-                        },
-                        {
-                            "key": "field_61ad75d2809a5",
-                            "label": "Text Width",
-                            "name": "text_width",
-                            "type": "radio",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "20",
-                                "class": "",
-                                "id": ""
-                            },
-                            "hide_field": "",
-                            "hide_label": "",
-                            "hide_instructions": "",
-                            "hide_required": "",
-                            "instruction_placement": "",
-                            "acfe_permissions": "",
-                            "choices": {
-                                "4": "One-Third",
-                                "6": "Half",
-                                "8": "Two-Thirds"
-                            },
-                            "allow_null": 0,
-                            "other_choice": 0,
-                            "default_value": 6,
-                            "layout": "vertical",
-                            "return_format": "value",
-                            "acfe_settings": "",
-                            "acfe_validate": "",
-                            "acfe_field_group_condition": 0,
-                            "save_other_choice": 0
-                        },
-                        {
-                            "key": "field_61c395c252ce2",
+                            "key": "field_62faee680f517",
                             "label": "Text Placement",
                             "name": "text_placement",
                             "type": "radio",
@@ -2314,28 +2659,53 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "acfe_permissions": "",
+                            "instruction_placement": "field",
                             "hide_field": "",
                             "hide_label": "",
                             "hide_instructions": "",
                             "hide_required": "",
-                            "instruction_placement": "field",
-                            "acfe_permissions": "",
+                            "acfe_field_group_condition": 0,
+                            "required_message": "",
                             "choices": {
                                 "left": "Left",
                                 "right": "Right"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
+                            "save_other_choice": 0,
                             "default_value": "",
                             "layout": "vertical",
                             "return_format": "value",
-                            "acfe_settings": "",
-                            "acfe_validate": "",
-                            "acfe_field_group_condition": 0,
-                            "save_other_choice": 0
+                            "acfe_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_location": "",
+                                    "acfe_settings_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_setting_type": "required",
+                                            "acfe_settings_setting_name": "",
+                                            "acfe_settings_setting_operator": "true",
+                                            "acfe_settings_setting_value": ""
+                                        }
+                                    }
+                                }
+                            },
+                            "acfe_validate": {
+                                "acfcloneindex": {
+                                    "acfe_validate_location": "",
+                                    "acfe_validate_rules_and": {
+                                        "acfcloneindex": {
+                                            "acfe_validate_function": "value",
+                                            "acfe_validate_operator": "==",
+                                            "acfe_validate_match": ""
+                                        }
+                                    },
+                                    "acfe_validate_error": ""
+                                }
+                            }
                         },
                         {
-                            "key": "field_62f9b24006268",
+                            "key": "field_62faee680f518",
                             "label": "Text Alignment",
                             "name": "text_alignment",
                             "type": "radio",
@@ -2347,12 +2717,14 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
                             "hide_field": "",
                             "hide_label": "",
                             "hide_instructions": "",
                             "hide_required": "",
-                            "instruction_placement": "",
-                            "acfe_permissions": "",
+                            "acfe_field_group_condition": 0,
+                            "required_message": "",
                             "choices": {
                                 "top": "Top",
                                 "center": "Center",
@@ -2360,16 +2732,39 @@
                             },
                             "allow_null": 0,
                             "other_choice": 0,
+                            "save_other_choice": 0,
                             "default_value": "top",
                             "layout": "vertical",
                             "return_format": "value",
-                            "acfe_settings": "",
-                            "acfe_validate": "",
-                            "acfe_field_group_condition": 0,
-                            "save_other_choice": 0
+                            "acfe_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_location": "",
+                                    "acfe_settings_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_setting_type": "required",
+                                            "acfe_settings_setting_name": "",
+                                            "acfe_settings_setting_operator": "true",
+                                            "acfe_settings_setting_value": ""
+                                        }
+                                    }
+                                }
+                            },
+                            "acfe_validate": {
+                                "acfcloneindex": {
+                                    "acfe_validate_location": "",
+                                    "acfe_validate_rules_and": {
+                                        "acfcloneindex": {
+                                            "acfe_validate_function": "value",
+                                            "acfe_validate_operator": "==",
+                                            "acfe_validate_match": ""
+                                        }
+                                    },
+                                    "acfe_validate_error": ""
+                                }
+                            }
                         },
                         {
-                            "key": "field_61ae426585572",
+                            "key": "field_62faee680f519",
                             "label": "Interactive Image",
                             "name": "interactive_image",
                             "type": "text",
@@ -2381,20 +2776,45 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
                             "hide_field": "",
                             "hide_label": "",
                             "hide_instructions": "",
                             "hide_required": "",
-                            "instruction_placement": "",
-                            "acfe_permissions": "",
+                            "acfe_field_group_condition": 0,
+                            "required_message": "",
                             "default_value": "",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
                             "maxlength": "",
-                            "acfe_settings": "",
-                            "acfe_validate": "",
-                            "acfe_field_group_condition": 0
+                            "acfe_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_location": "",
+                                    "acfe_settings_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_setting_type": "required",
+                                            "acfe_settings_setting_name": "",
+                                            "acfe_settings_setting_operator": "true",
+                                            "acfe_settings_setting_value": ""
+                                        }
+                                    }
+                                }
+                            },
+                            "acfe_validate": {
+                                "acfcloneindex": {
+                                    "acfe_validate_location": "",
+                                    "acfe_validate_rules_and": {
+                                        "acfcloneindex": {
+                                            "acfe_validate_function": "value",
+                                            "acfe_validate_operator": "==",
+                                            "acfe_validate_match": ""
+                                        }
+                                    },
+                                    "acfe_validate_error": ""
+                                }
+                            }
                         }
                     ],
                     "min": "",
@@ -2726,52 +3146,6 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_62f9970230532",
-                            "label": "Block Alignment (copy)",
-                            "name": "alignment_copy",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_6115f758b4c72",
-                                        "operator": "==",
-                                        "value": "narrow"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "20",
-                                "class": "",
-                                "id": ""
-                            },
-                            "hide_field": "",
-                            "hide_label": "",
-                            "hide_instructions": "",
-                            "hide_required": "",
-                            "acfe_permissions": "",
-                            "instruction_placement": "",
-                            "choices": {
-                                "left": "Left",
-                                "center": "Center",
-                                "right": "Right"
-                            },
-                            "default_value": "left",
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "max": "",
-                            "ui": 0,
-                            "return_format": "value",
-                            "prepend": "",
-                            "append": "",
-                            "acfe_settings": "",
-                            "acfe_validate": "",
-                            "acfe_field_group_condition": 0,
-                            "ajax": 0,
-                            "placeholder": ""
-                        },
-                        {
                             "key": "field_62f978fed0dfc",
                             "label": "Columns",
                             "name": "columns",
@@ -2915,5 +3289,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1660531557
+    "modified": 1660621259
 }
