@@ -3,7 +3,15 @@
 	<div class="container">
 
 		<div class="row">
-			<div class="col-12 col-md-6">
+			
+			<?php if ( get_sub_field( 'text' )): 
+					$columns = "col-12 col-md-6";
+				else:
+					$columns = "col-12";					
+				endif;			
+			?>
+						
+			<div class="<?php echo $columns; ?>">
 				
 				<h1 style="color: <?php the_sub_field( 'text_color' );?>"><?php the_sub_field( 'heading' );?></h1>
 				 
