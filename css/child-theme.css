@@ -55,7 +55,7 @@
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
-  --bs-body-line-height: 1.5;
+  --bs-body-line-height: 1.6;
   --bs-body-color: #212529;
   --bs-body-bg: #ffffff;
   --bs-border-width: 1px;
@@ -1972,7 +1972,7 @@ progress {
   padding-bottom: calc(0.375rem + 1px);
   margin-bottom: 0;
   font-size: inherit;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .col-form-label-lg {
@@ -2000,7 +2000,7 @@ progress {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
   color: #212529;
   background-color: #ffffff;
   background-clip: padding-box;
@@ -2035,7 +2035,7 @@ progress {
 }
 .form-control::-webkit-date-and-time-value, .widget_categories select::-webkit-date-and-time-value,
 .widget_archive select::-webkit-date-and-time-value {
-  height: 1.5em;
+  height: 1.6em;
 }
 .form-control::-moz-placeholder, .widget_categories select::-moz-placeholder, .widget_archive select::-moz-placeholder {
   color: #6c757d;
@@ -2106,7 +2106,7 @@ progress {
   width: 100%;
   padding: 0.375rem 0;
   margin-bottom: 0;
-  line-height: 1.5;
+  line-height: 1.6;
   color: #212529;
   background-color: transparent;
   border: solid transparent;
@@ -2121,7 +2121,7 @@ progress {
 }
 
 .form-control-sm {
-  min-height: calc(1.5em + 0.5rem + 2px);
+  min-height: calc(1.6em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.25rem;
@@ -2140,7 +2140,7 @@ progress {
 }
 
 .form-control-lg {
-  min-height: calc(1.5em + 1rem + 2px);
+  min-height: calc(1.6em + 1rem + 2px);
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.5rem;
@@ -2159,18 +2159,18 @@ progress {
 }
 
 textarea.form-control {
-  min-height: calc(1.5em + 0.75rem + 2px);
+  min-height: calc(1.6em + 0.75rem + 2px);
 }
 textarea.form-control-sm {
-  min-height: calc(1.5em + 0.5rem + 2px);
+  min-height: calc(1.6em + 0.5rem + 2px);
 }
 textarea.form-control-lg {
-  min-height: calc(1.5em + 1rem + 2px);
+  min-height: calc(1.6em + 1rem + 2px);
 }
 
 .form-control-color {
   width: 3rem;
-  height: calc(1.5em + 0.75rem + 2px);
+  height: calc(1.6em + 0.75rem + 2px);
   padding: 0.375rem;
 }
 .form-control-color:not(:disabled):not([readonly]) {
@@ -2184,10 +2184,10 @@ textarea.form-control-lg {
   border-radius: 0.375rem;
 }
 .form-control-color.form-control-sm {
-  height: calc(1.5em + 0.5rem + 2px);
+  height: calc(1.6em + 0.5rem + 2px);
 }
 .form-control-color.form-control-lg {
-  height: calc(1.5em + 1rem + 2px);
+  height: calc(1.6em + 1rem + 2px);
 }
 
 .form-select {
@@ -2197,7 +2197,7 @@ textarea.form-control-lg {
   -moz-padding-start: calc(0.75rem - 3px);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
   color: #212529;
   background-color: #ffffff;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
@@ -2251,7 +2251,7 @@ textarea.form-control-lg {
 
 .form-check {
   display: block;
-  min-height: 1.5rem;
+  min-height: 1.6rem;
   padding-left: 1.5em;
   margin-bottom: 0.125rem;
 }
@@ -2274,7 +2274,7 @@ textarea.form-control-lg {
 .form-check-input {
   width: 1em;
   height: 1em;
-  margin-top: 0.25em;
+  margin-top: 0.3em;
   vertical-align: top;
   background-color: #ffffff;
   background-repeat: no-repeat;
@@ -2589,7 +2589,7 @@ textarea.form-control-lg {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
   color: #212529;
   text-align: center;
   white-space: nowrap;
@@ -2685,11 +2685,11 @@ textarea.form-control-lg {
 .widget_archive .was-validated select:valid, .form-control.is-valid, .widget_categories select.is-valid,
 .widget_archive select.is-valid {
   border-color: #198754;
-  padding-right: calc(1.5em + 0.75rem);
+  padding-right: calc(1.6em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right calc(0.375em + 0.1875rem) center;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-position: right calc(0.4em + 0.1875rem) center;
+  background-size: calc(0.8em + 0.375rem) calc(0.8em + 0.375rem);
 }
 .was-validated .form-control:valid:focus, .was-validated .widget_categories select:valid:focus, .widget_categories .was-validated select:valid:focus,
 .was-validated .widget_archive select:valid:focus,
@@ -2700,8 +2700,8 @@ textarea.form-control-lg {
 }
 
 .was-validated textarea.form-control:valid, textarea.form-control.is-valid {
-  padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+  padding-right: calc(1.6em + 0.75rem);
+  background-position: top calc(0.4em + 0.1875rem) right calc(0.4em + 0.1875rem);
 }
 
 .was-validated .form-select:valid, .form-select.is-valid {
@@ -2711,7 +2711,7 @@ textarea.form-control-lg {
   padding-right: 4.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-position: right 0.75rem center, center right 2.25rem;
-  background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-size: 16px 12px, calc(0.8em + 0.375rem) calc(0.8em + 0.375rem);
 }
 .was-validated .form-select:valid:focus, .form-select.is-valid:focus {
   border-color: #198754;
@@ -2719,7 +2719,7 @@ textarea.form-control-lg {
 }
 
 .was-validated .form-control-color:valid, .form-control-color.is-valid {
-  width: calc(3rem + calc(1.5em + 0.75rem));
+  width: calc(3rem + calc(1.6em + 0.75rem));
 }
 
 .was-validated .form-check-input:valid, .form-check-input.is-valid {
@@ -2792,11 +2792,11 @@ textarea.form-control-lg {
 .widget_archive .was-validated select:invalid, .form-control.is-invalid, .widget_categories select.is-invalid,
 .widget_archive select.is-invalid {
   border-color: #dc3545;
-  padding-right: calc(1.5em + 0.75rem);
+  padding-right: calc(1.6em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right calc(0.375em + 0.1875rem) center;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-position: right calc(0.4em + 0.1875rem) center;
+  background-size: calc(0.8em + 0.375rem) calc(0.8em + 0.375rem);
 }
 .was-validated .form-control:invalid:focus, .was-validated .widget_categories select:invalid:focus, .widget_categories .was-validated select:invalid:focus,
 .was-validated .widget_archive select:invalid:focus,
@@ -2807,8 +2807,8 @@ textarea.form-control-lg {
 }
 
 .was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
-  padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+  padding-right: calc(1.6em + 0.75rem);
+  background-position: top calc(0.4em + 0.1875rem) right calc(0.4em + 0.1875rem);
 }
 
 .was-validated .form-select:invalid, .form-select.is-invalid {
@@ -2818,7 +2818,7 @@ textarea.form-control-lg {
   padding-right: 4.125rem;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
   background-position: right 0.75rem center, center right 2.25rem;
-  background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-size: 16px 12px, calc(0.8em + 0.375rem) calc(0.8em + 0.375rem);
 }
 .was-validated .form-select:invalid:focus, .form-select.is-invalid:focus {
   border-color: #dc3545;
@@ -2826,7 +2826,7 @@ textarea.form-control-lg {
 }
 
 .was-validated .form-control-color:invalid, .form-control-color.is-invalid {
-  width: calc(3rem + calc(1.5em + 0.75rem));
+  width: calc(3rem + calc(1.6em + 0.75rem));
 }
 
 .was-validated .form-check-input:invalid, .form-check-input.is-invalid {
@@ -2870,8 +2870,8 @@ textarea.form-control-lg {
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
   --bs-btn-font-size: 1rem;
-  --bs-btn-font-weight: 400;
-  --bs-btn-line-height: 1.5;
+  --bs-btn-font-weight: 700;
+  --bs-btn-line-height: 1.6;
   --bs-btn-color: #212529;
   --bs-btn-bg: transparent;
   --bs-btn-border-width: 1px;
@@ -3820,7 +3820,7 @@ textarea.form-control-lg {
   --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
   --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
-  --bs-navbar-brand-padding-y: 0.3125rem;
+  --bs-navbar-brand-padding-y: 0.3rem;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 1.25rem;
   --bs-navbar-brand-color: rgba(0, 0, 0, 0.9);
@@ -5344,7 +5344,7 @@ textarea.form-control-lg {
   --bs-modal-header-padding: 1rem 1rem;
   --bs-modal-header-border-color: var(--bs-border-color);
   --bs-modal-header-border-width: 1px;
-  --bs-modal-title-line-height: 1.5;
+  --bs-modal-title-line-height: 1.6;
   --bs-modal-footer-gap: 0.5rem;
   --bs-modal-footer-bg: ;
   --bs-modal-footer-border-color: var(--bs-border-color);
@@ -5639,7 +5639,7 @@ textarea.form-control-lg {
   font-family: var(--bs-font-sans-serif);
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -5749,7 +5749,7 @@ textarea.form-control-lg {
   font-family: var(--bs-font-sans-serif);
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -6704,7 +6704,7 @@ textarea.form-control-lg {
 
 .offcanvas-title {
   margin-bottom: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .offcanvas-body {
@@ -8117,7 +8117,7 @@ a.skip-link:not(:focus):not(:focus-within) {
 }
 
 .lh-base {
-  line-height: 1.5 !important;
+  line-height: 1.6 !important;
 }
 
 .lh-lg {
@@ -31465,7 +31465,6 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 }
 .block.columns .column {
   background: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 100%;
   padding: 1.5rem 2rem;
   position: relative;

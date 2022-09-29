@@ -903,7 +903,9 @@
                             "hide_required": "",
                             "instruction_placement": "",
                             "acfe_permissions": "",
-                            "clone": "",
+                            "clone": [
+                                "group_61cd28ab51da9"
+                            ],
                             "display": "seamless",
                             "layout": "block",
                             "prefix_label": 0,
@@ -2247,12 +2249,60 @@
                 },
                 "layout_62b381177140c": {
                     "key": "layout_62b381177140c",
+                    "name": "horizontal_rule",
+                    "label": "Horizontal Rule",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62fb3af157f50",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "message": "No settings available.",
+                            "new_lines": "",
+                            "esc_html": 0,
+                            "acfe_settings": "",
+                            "acfe_field_group_condition": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_modal_edit_size": "xlarge",
+                    "acfe_flexible_settings": [
+                        "group_61cce0b5674f5"
+                    ],
+                    "acfe_flexible_settings_size": "xlarge",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_layout_locations": [],
+                    "acfe_flexible_category": false,
+                    "acfe_layout_col": "auto",
+                    "acfe_layout_allowed_col": false
+                },
+                "layout_62fb3a3524e6c": {
+                    "key": "layout_62fb3a3524e6c",
                     "name": "team",
                     "label": "Team",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_62b381407140d",
+                            "key": "field_62fb3a3624e6d",
                             "label": "Roles to Display",
                             "name": "roles_to_display",
                             "type": "repeater",
@@ -2264,12 +2314,13 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "acfe_permissions": "",
+                            "instruction_placement": "",
                             "hide_field": "",
                             "hide_label": "",
                             "hide_instructions": "",
                             "hide_required": "",
-                            "instruction_placement": "",
-                            "acfe_permissions": "",
+                            "acfe_field_group_condition": 0,
                             "required_message": "",
                             "acfe_repeater_stylised_button": 1,
                             "collapsed": "",
@@ -2277,11 +2328,22 @@
                             "max": 0,
                             "layout": "table",
                             "button_label": "Add Role",
-                            "acfe_settings": "",
-                            "acfe_field_group_condition": 0,
+                            "acfe_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_location": "",
+                                    "acfe_settings_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_setting_type": "required",
+                                            "acfe_settings_setting_name": "",
+                                            "acfe_settings_setting_operator": "true",
+                                            "acfe_settings_setting_value": ""
+                                        }
+                                    }
+                                }
+                            },
                             "sub_fields": [
                                 {
-                                    "key": "field_62b381777140e",
+                                    "key": "field_62fb3a3624e6e",
                                     "label": "Role",
                                     "name": "role",
                                     "type": "taxonomy",
@@ -2293,6 +2355,14 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "acfe_permissions": "",
+                                    "instruction_placement": "",
+                                    "hide_field": "",
+                                    "hide_label": "",
+                                    "hide_instructions": "",
+                                    "hide_required": "",
+                                    "acfe_field_group_condition": 0,
+                                    "required_message": "",
                                     "taxonomy": "team_roles",
                                     "field_type": "select",
                                     "allow_null": 0,
@@ -2301,11 +2371,37 @@
                                     "load_terms": 0,
                                     "return_format": "id",
                                     "acfe_bidirectional": {
-                                        "acfe_bidirectional_enabled": "0"
+                                        "acfe_bidirectional_enabled": "0",
+                                        "acfe_bidirectional_related": ""
                                     },
-                                    "acfe_settings": "",
-                                    "acfe_validate": "",
-                                    "acfe_field_group_condition": 0,
+                                    "min": "",
+                                    "max": "",
+                                    "acfe_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_location": "",
+                                            "acfe_settings_settings": {
+                                                "acfcloneindex": {
+                                                    "acfe_settings_setting_type": "required",
+                                                    "acfe_settings_setting_name": "",
+                                                    "acfe_settings_setting_operator": "true",
+                                                    "acfe_settings_setting_value": ""
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "acfe_validate": {
+                                        "acfcloneindex": {
+                                            "acfe_validate_location": "",
+                                            "acfe_validate_rules_and": {
+                                                "acfcloneindex": {
+                                                    "acfe_validate_function": "value",
+                                                    "acfe_validate_operator": "==",
+                                                    "acfe_validate_match": ""
+                                                }
+                                            },
+                                            "acfe_validate_error": ""
+                                        }
+                                    },
                                     "multiple": 0
                                 }
                             ]
@@ -3289,5 +3385,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1660621259
+    "modified": 1660713521
 }

@@ -1,0 +1,292 @@
+{
+    "key": "group_62d31640e4a4f",
+    "title": "Show\/Hide Elements",
+    "fields": [
+        {
+            "key": "field_62ca8cc342628",
+            "label": "Author",
+            "name": "show_author",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62d0d36c6eb62",
+            "label": "Button",
+            "name": "show_button",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62d0d36c6eb63",
+            "label": "Date",
+            "name": "show_date",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62d0d36c6eb64",
+            "label": "Excerpt",
+            "name": "show_excerpt",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62d0d36c6eb65",
+            "label": "Filters",
+            "name": "show_filters",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62d33f0917a10",
+            "label": "Location",
+            "name": "show_location",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62d3368d1f516",
+            "label": "Pronouns",
+            "name": "show_pronouns",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62d0d36c6eb66",
+            "label": "Search",
+            "name": "show_search",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62d353e6df238",
+            "label": "Social",
+            "name": "show_social",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62d37fadcd2b5",
+            "label": "Sticky",
+            "name": "show_sticky",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62d0d36c6eb67",
+            "label": "Taxonomies",
+            "name": "show_taxonomies",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62d0d36c6eb68",
+            "label": "Thumbnail",
+            "name": "show_thumbnails",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_62d336a71f517",
+            "label": "Title",
+            "name": "show_title",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_field_group_condition": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1661717991
+}

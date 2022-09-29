@@ -41,30 +41,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_5b7c7a13a554d",
-            "label": "Login Logo",
-            "name": "login_logo",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "large",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_6116ac8e41ea4",
             "label": "No Resources Found Text",
             "name": "text_no_resources_found",
@@ -222,5 +198,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1656013012
+    "modified": 1660953641
 }

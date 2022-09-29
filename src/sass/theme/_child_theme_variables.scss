@@ -39,6 +39,7 @@ $fa-font-path: "../fonts" !default;
 // Bootstrap variables
 // --------------------------------------------------
 
+$font-size-base: 1rem;
 
 // scss-docs-start color-variables
 // $blue:    #0d6efd;
@@ -103,6 +104,15 @@ $white:			#ffffff;
 // $paragraph-margin-bottom:   1rem;
 
 
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+// scss-docs-start border-variables
+// $border-width:                1px !default;
+// scss-docs-end border-variables
+
+
 // scss-docs-start border-radius-variables
 // $border-radius:               .375rem;
 // $border-radius-sm:            .25rem;
@@ -126,6 +136,13 @@ $box-shadow: 0 0 0.75rem rgba( $black, 0.1 );
 // $font-family-base: $font-family-sans-serif;
 
 // $line-height-base:            1.5;
+
+// $font-weight-light:           300;
+// $font-weight-normal:          400;
+// $font-weight-semibold:        600;
+$font-weight-bold:            700;
+
+$line-height-base:            1.6;
 
 // $h1-font-size:                $font-size-base * 2.5;
 // $h2-font-size:                $font-size-base * 2;
@@ -156,6 +173,15 @@ $box-shadow: 0 0 0.75rem rgba( $black, 0.1 );
 // $input-btn-font-size:         $font-size-base;
 // $input-btn-line-height:       $line-height-base;
 // scss-docs-end input-btn-variables
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+// scss-docs-start btn-variables
+$btn-font-weight:             $font-weight-bold;
+// scss-docs-end btn-variables
 
 
 // Navbar

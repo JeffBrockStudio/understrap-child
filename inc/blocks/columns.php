@@ -39,7 +39,7 @@
 									</div>					
 									
 									<div class="col-8 col-md-8">										
-										<div class="text">
+										<div class="text dont-break-out">
 											<h3><?php echo $item['heading']; ?></h3>
 											<?php echo apply_filters( 'the_content', $item['text']); ?>					
 											<?php
@@ -66,14 +66,14 @@
 						<div class="col-12 col-md-<?php echo $md_columns; ?> col-column <?php if ( $item['image_layout'] == 'bottom' ) echo 'image-layout-bottom'; ?>">
 							<div class="column">						
 								<?php if ( $item['image'] ): ?>
-									<div class="image">
+									<div class="image<?php if ( !$item['heading'] AND !$item['text']) echo ' no-text'; ?>">
 										<img src="<?php $image = $item['image']; echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
 									</div>
 								<?php
 									endif;
 								?>
 								
-								<div class="text">
+								<div class="text dont-break-out">
 									<h3><?php echo $item['heading']; ?></h3>
 									<?php echo apply_filters( 'the_content', $item['text']); ?>					
 									<?php

@@ -88,7 +88,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php $website = get_field( 'resource_website_url' );
 						if ( $website ):?>
 							<div class="website">
-								<a href="<?php echo $website; ?>" target="_blank"><?php echo $website; ?></a>								
+								<a href="<?php echo $website; ?>" target="_blank"><?php _e('Visit Resource', 'understrap'); ?></a>								
 							</div>
 							<?php
 						endif; ?>
