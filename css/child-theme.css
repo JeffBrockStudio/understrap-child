@@ -31533,8 +31533,60 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 .block.filters .list-wrapper article .text {
   margin-top: 1rem;
 }
+.block.filters .list-wrapper article.job .title {
+  margin-top: 0;
+}
+.block.filters .list-wrapper article.job .text {
+  margin-top: 0;
+}
+.block.filters .list-wrapper article.job .taxonomies {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.block.filters .list-wrapper article.job .entry-meta ul {
+  list-style: none;
+  padding-left: 0;
+}
+.block.filters .list-wrapper article.job .entry-meta ul li:not(:last-child) {
+  margin-bottom: 0.3rem;
+}
 .block.filters .pagination-row {
-  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+.block.filters .pagination-row .btn {
+  background-image: none;
+  padding-right: 0.75rem;
+}
+.block.filters .pagination-row .pagination {
+  display: flex;
+}
+.block.filters .pagination-row .pagination .page-numbers {
+  font-family: var(--bs-font-sans-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #ffffff;
+  background-color: #0d6efd;
+  border: 1px solid #dee2e6;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.block.filters .pagination-row .pagination .page-numbers:hover {
+  background-color: #0257d5;
+}
+.block.filters .pagination-row .pagination .current {
+  background-color: #000000;
+}
+.block.filters .pagination-row .pagination .current:hover {
+  background-color: #000000;
+}
+.block.filters .pagination-row .pagination .dots:hover {
+  background: #6c757d;
 }
 
 .block.form .with_frm_style .form-field input[type=password],

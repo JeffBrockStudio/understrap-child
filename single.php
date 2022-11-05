@@ -12,7 +12,7 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper" id="single-wrapper">
+<div class="wrapper" id="page-wrapper">
 		
 			<main class="site-main" id="main">
 
@@ -20,17 +20,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 				while ( have_posts() ) {
 					the_post(); ?>
 					
-						<header class="entry-header">
-					
-							<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-					
-							<div class="entry-meta">
-					
-								<?php understrap_posted_on(); ?>
-					
-							</div><!-- .entry-meta -->
-					
-						</header><!-- .entry-header -->
+					<header>
+						<div class="<?php echo esc_attr( $container ); ?>">				
+							<div class="row">				
+								<div class="col-12">
+									<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+									<div class="entry-meta">									
+										<?php understrap_posted_on(); ?>								
+									</div><!-- .entry-meta -->
+									
+								</div>
+							</div>
+						</div>
+					</header>		
 						
 						<?php if ( !get_field( 'hide_featured_image' )): ?>
 							<div class="featured-image">

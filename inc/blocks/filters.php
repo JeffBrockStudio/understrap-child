@@ -20,6 +20,12 @@ switch( $post_type ):
 		$search_engine = 'event';
 		break;
 		
+	// Job
+	case 'job':
+		$preselected_filter_name = 'job_categories';
+		$search_engine = 'job';
+		break;	
+		
 	// Post
 	case 'post':
 		$preselected_filter_name = 'category';
@@ -538,7 +544,8 @@ endif;
 				<?php
 				$the_query = new WP_Query( $args );
 				if ( $the_query->have_posts() ):
-							
+					
+					$permalink_parent = get_permalink( $post->ID );									
 					$resources_list = array();	
 					while ( $the_query->have_posts() ):
 						$the_query->the_post();										
@@ -593,7 +600,7 @@ endif;
 									$target = '';
 								endif;
 								
-								// Item: Event, Post, Resource, Team							
+								// Item: Event, Post, Resource, Team													
 								include( 'filters/article-' .$post_type. '.php' );	
 								
 								$i++; 

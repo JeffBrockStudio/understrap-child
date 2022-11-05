@@ -134,7 +134,7 @@
         {
             "key": "field_6365d56d644f1",
             "label": "Short Description",
-            "name": "",
+            "name": "job_short_description",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -193,5 +193,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1667619198
+    "modified": 1667682547
 }

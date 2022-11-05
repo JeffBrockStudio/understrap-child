@@ -138,6 +138,30 @@
 			.text {
 				margin-top: 1rem;
 			}
+			
+			// Job
+			// ----------------------------------------------
+			&.job {
+				.title {
+					margin-top: 0;
+				}
+				.text {
+					margin-top: 0;
+				}
+				.taxonomies {
+					font-size: 1rem;
+					margin-top: 1rem;
+				}
+				.entry-meta {
+					ul {
+						list-style: none;
+						padding-left: 0;
+						li:not(:last-child) {
+							margin-bottom: 0.3rem;
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -145,7 +169,44 @@
 	// Pagination
 	// --------------------------------------------------
 	.pagination-row {
-		text-align: center;
+		justify-content: center;
+		width: 100%;
+		.btn {
+			background-image: none;
+			padding-right: $btn-padding-x;
+		}
+	
+		.pagination {
+			display: flex;
+			//justify-content: center;
+			.page-numbers {
+				font-family: $font-family-base;
+				font-size: 1.1rem;
+				font-weight: 700;
+				position: relative;
+				display: block;
+				padding: .5rem .75rem;
+				margin-left: -1px;
+				line-height: 1.25;
+				color: $white;
+				background-color: $primary;
+				border: 1px solid #dee2e6;
+				text-decoration: none;
+				text-transform: uppercase;
+				&:hover {
+					background-color: darken( $primary, 10% );
+				}
+			}
+			.current {
+				background-color: $black;
+				&:hover {
+					background-color: $black;
+				}
+			}
+			.dots:hover {
+				background: $secondary;
+			}
+		}
 	}
 	
 }

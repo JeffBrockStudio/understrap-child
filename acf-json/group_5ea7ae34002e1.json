@@ -1,11 +1,12 @@
 {
     "key": "group_5ea7ae34002e1",
-    "title": "Team Member",
+    "title": "Team Member Details",
     "fields": [
         {
             "key": "field_5ea832e36e85f",
             "label": "Role",
             "name": "team_role",
+            "aria-label": "",
             "type": "taxonomy",
             "instructions": "",
             "required": 1,
@@ -23,12 +24,15 @@
             "save_terms": 1,
             "load_terms": 1,
             "return_format": "id",
-            "multiple": 0
+            "multiple": 0,
+            "min": "",
+            "max": ""
         },
         {
             "key": "field_5ea7b238523d8",
             "label": "First Name",
             "name": "team_first_name",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -49,6 +53,7 @@
             "key": "field_5ea7b246523d9",
             "label": "Last Name",
             "name": "team_last_name",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -69,6 +74,7 @@
             "key": "field_5ea8308383966",
             "label": "Pronouns",
             "name": "team_pronouns",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -89,6 +95,7 @@
             "key": "field_5ea830bb83968",
             "label": "Title",
             "name": "team_position",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -109,6 +116,7 @@
             "key": "field_61c358ac8d9ea",
             "label": "Social Media",
             "name": "team_social_media",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -130,6 +138,7 @@
                     "key": "field_61c358d18d9eb",
                     "label": "Title",
                     "name": "title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -144,12 +153,14 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": "",
-                    "acfe_field_group_condition": 0
+                    "acfe_field_group_condition": 0,
+                    "parent_repeater": "field_61c358ac8d9ea"
                 },
                 {
                     "key": "field_61c358d88d9ec",
                     "label": "URL",
                     "name": "url",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -161,12 +172,14 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "acfe_field_group_condition": 0
+                    "acfe_field_group_condition": 0,
+                    "parent_repeater": "field_61c358ac8d9ea"
                 },
                 {
                     "key": "field_61c358e98d9ed",
                     "label": "Icon",
                     "name": "icon",
+                    "aria-label": "",
                     "type": "font-awesome",
                     "instructions": "",
                     "required": 0,
@@ -189,9 +202,11 @@
                     "enqueue_fa": 0,
                     "acfe_field_group_condition": 0,
                     "fa_live_preview": "",
-                    "choices": []
+                    "choices": [],
+                    "parent_repeater": "field_61c358ac8d9ea"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         }
     ],
     "location": [
@@ -219,5 +234,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1640679244
+    "modified": 1667622315
 }

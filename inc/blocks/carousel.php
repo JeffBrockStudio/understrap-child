@@ -114,11 +114,11 @@ endif;
 		
 		<button class="carousel-control-prev" type="button" data-bs-target="#<?php echo $block_id; ?>-carousel" data-bs-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
+			<span class="visually-hidden"><?php _e('Previous', 'powehi') ?></span>
 		</button>
 		<button class="carousel-control-next" type="button" data-bs-target="#<?php echo $block_id; ?>-carousel" data-bs-slide="next">
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
+			<span class="visually-hidden"><?php _e('Next', 'powehi') ?></span>
 		</button>
 		
 		<?php if ( get_sub_field( 'indicators' ) != 'none' ): ?>
@@ -127,7 +127,7 @@ endif;
 			
 				<div class="carousel-indicators-numbers">
 					<div class="numbers">
-						<span class="num">1</span>&nbsp;of <?php echo count( $items ); ?> 
+						<span class="num">1</span>&nbsp;<?php _e('of', 'powehi') ?> <?php echo count( $items ); ?> 
 					</div>
 				</div>
 			
