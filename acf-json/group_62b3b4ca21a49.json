@@ -125,6 +125,36 @@
             "acfe_clone_modal_size": "large"
         },
         {
+            "key": "field_6366e832b7874",
+            "label": "Sticky?",
+            "name": "event_sticky",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "message": "",
+            "default_value": 0,
+            "style": "",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "acfe_field_group_condition": 0
+        },
+        {
             "key": "field_62b3ba895c416",
             "label": "Date & Time",
             "name": "",
@@ -579,7 +609,7 @@
     "position": "normal",
     "style": "seamless",
     "label_placement": "top",
-    "instruction_placement": "label",
+    "instruction_placement": "field",
     "hide_on_screen": "",
     "active": true,
     "description": "",
@@ -592,5 +622,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1667622291
+    "modified": 1667688686
 }

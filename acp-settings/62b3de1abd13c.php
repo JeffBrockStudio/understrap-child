@@ -5,7 +5,7 @@ return array (
   'title' => 'Events',
   'type' => 'event',
   'id' => '62b3de1abd13c',
-  'updated' => 1667523787,
+  'updated' => 1667688715,
   'columns' => 
   array (
     'title' => 
@@ -136,6 +136,21 @@ return array (
       'filter' => 'off',
       'filter_label' => '',
       'name' => '62b3e45ecb8520',
+    ),
+    '6366e904c39580' => 
+    array (
+      'type' => 'field_6366e832b7874',
+      'label' => 'Sticky?',
+      'width' => '',
+      'width_unit' => '%',
+      'export' => 'off',
+      'sort' => 'on',
+      'edit' => 'on',
+      'bulk_edit' => 'on',
+      'search' => 'on',
+      'filter' => 'off',
+      'filter_label' => '',
+      'name' => '6366e904c39580',
     ),
     '62b3e4796bc6a8' => 
     array (

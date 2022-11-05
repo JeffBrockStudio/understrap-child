@@ -14,8 +14,30 @@
 		.text {
 			margin-bottom: 1rem;
 		}
+		
+		&.job {
+			.buttons {
+				@include media-breakpoint-down(lg) {
+					margin-bottom: 2rem;
+				}
+			}
+			.excerpt {
+				padding-right: 2rem;
+				@include media-breakpoint-down(md) {
+					padding-right: 0;
+				}
+			}
+			.entry-meta {
+				ul {
+					list-style: none;
+					padding-left: 0;
+					li:not(:last-child) {
+						margin-bottom: 0.3rem;
+					}
+				}
+			}
+		}
 	}
-	
 	
 	//
 	// Filters
@@ -163,6 +185,7 @@
 				}
 			}
 		}
+				
 	}
 	
 	//

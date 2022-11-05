@@ -166,6 +166,28 @@
             "acfe_wysiwyg_auto_init": 0,
             "acfe_wysiwyg_height": 300,
             "acfe_wysiwyg_toolbar_buttons": []
+        },
+        {
+            "key": "field_6366e7301ad9b",
+            "label": "Sticky?",
+            "name": "job_sticky",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "acfe_field_group_condition": 0,
+            "style": ""
         }
     ],
     "location": [
@@ -193,5 +215,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1667682547
+    "modified": 1667688280
 }

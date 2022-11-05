@@ -1,11 +1,11 @@
 <?php
 
 return array (
-  'version' => '5.7.2',
+  'version' => '5.7.4',
   'title' => 'Resources',
   'type' => 'resource',
   'id' => '61ec9e489bd4c',
-  'updated' => 1655958658,
+  'updated' => 1667688361,
   'columns' => 
   array (
     'title' => 
@@ -58,6 +58,21 @@ return array (
       'filter' => 'off',
       'filter_label' => '',
       'name' => '62b3ec3fd89374',
+    ),
+    '6366e7a1a66668' => 
+    array (
+      'type' => 'field_6115b7da8ff7c',
+      'label' => 'Sticky?',
+      'width' => '',
+      'width_unit' => '%',
+      'export' => 'off',
+      'sort' => 'on',
+      'edit' => 'on',
+      'bulk_edit' => 'on',
+      'search' => 'on',
+      'filter' => 'off',
+      'filter_label' => '',
+      'name' => '6366e7a1a66668',
     ),
     '62b3ec7b651eb8' => 
     array (

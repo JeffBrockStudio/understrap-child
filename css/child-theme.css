@@ -31428,6 +31428,26 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 .block.filters .sticky-article .text {
   margin-bottom: 1rem;
 }
+@media (max-width: 991.98px) {
+  .block.filters .sticky-article.job .buttons {
+    margin-bottom: 2rem;
+  }
+}
+.block.filters .sticky-article.job .excerpt {
+  padding-right: 2rem;
+}
+@media (max-width: 767.98px) {
+  .block.filters .sticky-article.job .excerpt {
+    padding-right: 0;
+  }
+}
+.block.filters .sticky-article.job .entry-meta ul {
+  list-style: none;
+  padding-left: 0;
+}
+.block.filters .sticky-article.job .entry-meta ul li:not(:last-child) {
+  margin-bottom: 0.3rem;
+}
 .block.filters .filter-wrapper {
   padding: 2rem 0;
 }
