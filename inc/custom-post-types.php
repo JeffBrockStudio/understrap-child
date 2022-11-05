@@ -84,6 +84,33 @@ function custom_create_post_types() {
 			'has_archive' => true			
 		)
 	);	
+	
+	// Jobs
+	register_post_type( 'job',
+		array(
+			'labels' => array(
+				'name'               => __( 'Jobs' ),
+				'singular_name'      => __( 'Job' ),
+				'menu_name'          => __( 'Jobs' ),
+				'name_admin_bar'     => __( 'Job' ),
+				'add_new'            => __( 'Add New' ),
+				'add_new_item'       => __( 'Add New Job' ),
+				'new_item'           => __( 'New Job' ),
+				'edit_item'          => __( 'Edit Job' ),
+				'view_item'          => __( 'View Job' ),
+				'all_items'          => __( 'All Jobs' ),
+				'search_items'       => __( 'Search All Openings' ),
+				'parent_item_colon'  => __( 'Parent Jobs:' ),
+				'not_found'          => __( 'No events found.' ),
+				'not_found_in_trash' => __( 'No events found in Trash.' )
+			),
+			'menu_icon' => 'dashicons-calendar-alt',			
+			'public' => true,
+			'hierarchical' => true,
+			'supports' => array( 'title', 'editor' ),
+			'has_archive' => true			
+		)
+	);	
 }
 add_action( 'init', 'custom_create_post_types' );
 

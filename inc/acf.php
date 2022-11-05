@@ -113,7 +113,8 @@ function custom_acf_admin_head() {
 		#side-sortables #team_rolesdiv,
 		#side-sortables #resource_typesdiv,
 		#side-sortables #resource_topicsdiv,
-		#side-sortables #event_typesdiv {
+		#side-sortables #event_typesdiv,
+		#side-sortables #job_categoriesdiv {
 			display: none;			
 		}
 		

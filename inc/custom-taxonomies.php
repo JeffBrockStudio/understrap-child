@@ -165,6 +165,38 @@ function custom_add_custom_taxonomies() {
 		)
 	);
 	
+	// Job Categories
+	register_taxonomy('job_categories', 'job', 
+		array(
+			'labels' => array(
+				'name'                       => __( 'Job Categories' ),
+				'singular_name'              => __( 'Job Category' ),
+				'menu_name'                  => __( 'Job Categories' ),
+				'all_items'                  => __( 'All Job Categories' ),
+				'parent_item'                => __( 'Parent Job Category' ),
+				'parent_item_colon'          => __( 'Parent Job Category' ),
+				'new_item_name'              => __( 'New Job Category Name' ),
+				'add_new_item'               => __( 'Add Job Category' ),
+				'edit_item'                  => __( 'Edit Job Category' ),
+				'update_item'                => __( 'Update Job Category' ),
+				'view_item'                  => __( 'View Job Category' ),
+				'separate_items_with_commas' => __( 'Separate job categories with commas' ),
+				'add_or_remove_items'        => __( 'Add or remove job categories' ),
+				'choose_from_most_used'      => __( 'Choose from the most used' ),
+				'popular_items'              => __( 'Popular Job Categories' ),
+				'search_items'               => __( 'Search Job Categories' ),
+				'not_found'                  => __( 'Not Found' ),
+				'no_terms'                   => __( 'No items' ),
+				'items_list'                 => __( 'Job Categories list' ),
+				'items_list_navigation'      => __( 'Job Categories list navigation' )
+			),		
+			'label' => __( 'Job Categories' ),
+			'hierarchical' => true,
+			'public' => true,
+			'show_ui' => true		
+		)
+	);
+	
 };
 add_action( 'init', 'custom_add_custom_taxonomies', 0 );
 
