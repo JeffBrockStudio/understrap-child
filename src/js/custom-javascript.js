@@ -28,14 +28,27 @@ jQuery(document).ready(function($) {
 	/**
 	 * Gridder for team page
 	 */
-	$('body.page-template-page-team-php .gridder-list').matchHeight({
+	$('.block.filters .gridder-list .text').matchHeight({
+		property: 'min-height',
+		byRow: true	  
+	});    
+	 
+	$('.block.filters .gridder-list').matchHeight({
 		property: 'min-height',
 		byRow: false	  
 	});        	
 	
-	$('body.page-template-page-team-php .gridder').gridderExpander({
+	var $scrolloffset = 110;		
+	if ( Modernizr.mq('(max-width: 1024px)')) {
+		$scrolloffset = 92;
+	}
+	if ( Modernizr.mq('(max-width: 768px)')) {
+		$scrolloffset = 68;
+	}
+	
+	$('.block.filters .gridder').gridderExpander({
 			scroll: true,
-			scrollOffset: 140,
+			scrollOffset: $scrolloffset,
 			scrollTo: "panel",                  // panel or listitem
 			animationSpeed: 400,
 			animationEasing: "easeInOutExpo",
@@ -44,7 +57,7 @@ jQuery(document).ready(function($) {
 			prevText: "Previous",               // Previous button text
 			closeText: "",                 			// Close button text
 			onStart: function(){
-					//Gridder Inititialized
+					//Gridder Initialized
 			},
 			onContent: function(){
 					//Gridder Content Loaded

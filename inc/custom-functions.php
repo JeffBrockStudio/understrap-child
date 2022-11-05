@@ -12,7 +12,7 @@ require_once('acf.php');
 
 
 // Admin functions
-require_once('admin.php');
+require_once('admin-tools.php');
 
 
 // Custom post types
@@ -50,9 +50,3 @@ require_once('text.php');
 // TinyMCE functions
 require_once('tinymce.php');
 
-
-// Admin Columns Pro local storage
-add_filter( 'acp/storage/file/directory', function() {
-		// Use a writable path, directory will be created for you
-		return get_stylesheet_directory() . '/acp-settings';
-} );

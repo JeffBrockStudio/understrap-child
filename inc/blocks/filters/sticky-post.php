@@ -5,7 +5,7 @@
 			<div class="col-12 col-md-5">
 				<?php if ( get_the_post_thumbnail( $post->ID )): ?>
 					<div class="featured-image">
-						<a href="<?php echo esc_url( get_permalink()); ?>">
+						<a href="<?php echo get_permalink(); ?>">
 							<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail_4_3' ); ?>
 						</a>
 					</div>
@@ -30,7 +30,7 @@
 				
 				<?php if ( $show['button'] ): ?>
 					<div class="buttons">
-						<a class="btn btn-primary" href="<?php echo esc_url( get_permalink()); ?>">Learn More</a>
+						<a class="btn btn-primary" href="<?php echo esc_url( get_permalink()); ?>"><?php _e('Learn More', 'powehi');?></a>
 					</div>
 				<?php endif; ?>
 						

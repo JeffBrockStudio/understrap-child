@@ -4,12 +4,12 @@
  */
 function hide_order_attribution() {
 	echo '<style>
-	     label[for="menu_order"],
-	     input[name="menu_order"],
-	     #pageparentdiv .inside p:last-of-type {
-	       display:none;
-	     }
-	    </style>';
+			 label[for="menu_order"],
+			 input[name="menu_order"],
+			 #pageparentdiv .inside p:last-of-type {
+				 display:none;
+			 }
+			</style>';
 } 
 add_action('admin_head', 'hide_order_attribution');
 
@@ -32,8 +32,6 @@ function remove_featured_images_from_child_theme() {
 add_action( 'after_setup_theme', 'remove_featured_images_from_child_theme', 11 ); 
 
 
-
-
 /*
 add_action( 'after_setup_theme', 'mytheme_theme_setup' );
 
@@ -48,18 +46,24 @@ if ( ! function_exists( 'mytheme_theme_setup' ) ) {
 
 
 /**
- * Prevent Yoast SEO from adding "Make Primary" to all categories.
- */
-//add_filter( 'wpseo_primary_term_taxonomies', '__return_false' );
-
-
-/**
  * Move Yoast SEO to bottom of edit screen.
  */
 function yoasttobottom() {
 	return 'low';
 }
 add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+
+
+/**
+	* Remove Yoast Zapier notice
+	*/
+function webdezy_remove_yoast_zapier_free_publishbox_text() {
+	if ( class_exists( 'Yoast\WP\SEO\Integrations\Third_Party\Zapier_Free' ) ) {
+		$zapier_free = YoastSEO()->classes->get( Yoast\WP\SEO\Integrations\Third_Party\Zapier_Free::class );
+		remove_action( 'wpseo_publishbox_misc_actions', [ $zapier_free, 'add_publishbox_text' ] );
+	}
+}
+add_action( 'init', 'webdezy_remove_yoast_zapier_free_publishbox_text' );
 
 
 /**
@@ -151,8 +155,14 @@ class MySearchWPBasicAuthCreds {
     }, 999 );
   }
 }
-
 //new MySearchWPBasicAuthCreds();
+
+
+/**
+ * Remove SearchWP from top admin nav
+ */
+add_filter( 'searchwp_admin_bar', '__return_false' );
+
 
 /**
  * Custom debug file
@@ -163,3 +173,12 @@ function custom_debug( $debug_variable, $file, $line ) {
   $message = print_r( $debug_variable, TRUE ) . ' | ' . $file . ':' . $line . ' | ' . date( 'Y-m-d H:i:s' );
   error_log( $message."\n", 3, $logfile );  
 }
+
+
+/**
+ * Admin Columns Pro local storage
+ */
+add_filter( 'acp/storage/file/directory', function() {
+		// Use a writable path, directory will be created for you
+		return get_stylesheet_directory() . '/acp-settings';
+} );

@@ -1,11 +1,11 @@
 <?php
 
 return array (
-  'version' => '5.7.2',
+  'version' => '5.7.4',
   'title' => 'Events',
   'type' => 'event',
   'id' => '62b3de1abd13c',
-  'updated' => 1655957577,
+  'updated' => 1667523787,
   'columns' => 
   array (
     'title' => 
@@ -58,6 +58,25 @@ return array (
       'filter' => 'on',
       'filter_label' => '',
       'name' => '62b3e5c601cac0',
+    ),
+    '6364649c449ba4' => 
+    array (
+      'type' => 'column-taxonomy',
+      'label' => 'Focus Areas',
+      'width' => '',
+      'width_unit' => '%',
+      'taxonomy' => 'focus_areas',
+      'term_link_to' => 'filter',
+      'number_of_items' => '10',
+      'edit' => 'on',
+      'enable_term_creation' => 'off',
+      'export' => 'off',
+      'sort' => 'on',
+      'bulk_edit' => 'on',
+      'search' => 'on',
+      'filter' => 'off',
+      'filter_label' => '',
+      'name' => '6364649c449ba4',
     ),
     '62b3de64a353f8' => 
     array (

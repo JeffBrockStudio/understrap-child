@@ -11,27 +11,31 @@ $post_type = get_sub_field( 'content_type' );
 // Taxonomies for this post type
 $taxonomies = get_object_taxonomies( $post_type );		
 
-// Preselected filter, if any
+// Custom post type variables
 switch( $post_type ):
 	
 	// Event
 	case 'event':
-		$$preselected_filter_name = '';
+		$preselected_filter_name = 'event_types';
+		$search_engine = 'event';
 		break;
 		
 	// Post
 	case 'post':
 		$preselected_filter_name = 'category';
+		$search_engine = 'default';
 		break;
 		
 	// Resource
 	case 'resource':
 		$preselected_filter_name = 'resource_topics';
+		$search_engine = 'resource';
 		break;		
 		
 	// Team
 	case 'team':
-		$preselected_filter_name = 'team_roles';?>
+		$preselected_filter_name = 'team_roles';
+		$search_engine = 'default';?>
 		<style>
 			.block.filters .gridder-navigation .gridder-close:after {
 				background-image: url("data:image/svg+xml,%3Csvg id='b' xmlns='http://www.w3.org/2000/svg' width='46.82' height='46.82' viewBox='0 0 46.82 46.82'%3E%3Cg id='c'%3E%3Cg%3E%3Ccircle cx='23.41' cy='23.41' r='23.41' fill='<?php echo urlencode($accent_color);?>'/%3E%3Cpath d='M35.42,15.05l-8.26,8.26,8.67,8.67-3.86,3.86-8.67-8.67-8.3,8.3-3.69-3.69,8.3-8.3L10.98,14.84l3.86-3.86,8.63,8.63,8.26-8.26,3.69,3.69Z' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -97,10 +101,12 @@ $layout = get_sub_field( 'layout' );
 $show = array();
 
 $items = get_sub_field( 'show_hide_' . $post_type );
-foreach( $items AS $key => $value ):
-	$field = substr( $key, 5 ); // Trim "show_" from beginning of variable
-	$show[ $field ] = $value;
-endforeach;
+if ( $items ):
+	foreach( $items AS $key => $value ):
+		$field = substr( $key, 5 ); // Trim "show_" from beginning of variable
+		$show[ $field ] = $value;
+	endforeach;
+endif;
 
 // Hide individual elements in meta data ?>	
 <style>
@@ -152,117 +158,21 @@ endforeach;
 	<?php endif; ?>
 <?php endif; ?>
 	
-<?php if ( $layout == 'list'): ?>
-	<div class="container list">
+	
+<?php if ( get_sub_field( 'heading' )): ?>
+	<div class="container">
 		<div class="row">
 			
-			<div class="col-12 col-md-6 col-heading">
-				<div class="inner">			
-					<?php if ( get_sub_field( 'heading' )): ?>
-						<<?php the_sub_field( 'heading_level' );?>><?php the_sub_field( 'heading' );?></<?php the_sub_field( 'heading_level' );?>>
-					<?php endif; ?>
+			<div class="col-12 col-heading">
+				<div class="inner">		
+					<<?php the_sub_field( 'heading_level' );?>><?php the_sub_field( 'heading' );?></<?php the_sub_field( 'heading_level' );?>>
 				</div>				
-			</div>
-
-			<div class="col-12 col-md-6">
-				<?php
-				if ( get_sub_field( 'number_of_posts' )):
-					$number_of_posts = get_sub_field( 'number_of_posts' );
-				else:
-					$number_of_posts = '-1';
-				endif;
-				
-				$args = array( 
-					'post_type' => 'post',
-					'posts_per_page' => $number_of_posts,
-					'post_status' => 'publish'
-				);
-	
-				$category = get_sub_field( 'category' );
-				if ( $category ):
-					$args['category__in'] = $category;
-				endif;
-								
-				$the_query = new WP_Query( $args );
-				
-				if ( $the_query->have_posts() ) {
-					// Start the Loop.
-					while ( $the_query->have_posts() ) {
-						$the_query->the_post();?>
-	
-						<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-						
-							<header class="entry-header">
-						
-								<?php if ( 'post' === get_post_type() ) : ?>
-								
-									<div class="entry-meta">
-										<?php understrap_posted_on(); ?>
-									</div><!-- .entry-meta -->
-								
-								<?php endif; ?>
-								
-								<?php if ( has_category( 'in-the-news' )): 
-									the_title(
-										sprintf( '<h2 class="entry-title"><a target="_blank" href="%s" rel="bookmark">', get_field( 'news-external-url' ) ),
-										'</a></h2>'
-									);
-								else:
-									the_title(
-										sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-										'</a></h2>'
-									);
-								endif; ?>
-										
-							</header><!-- .entry-header -->
-						
-							<?php if ( get_the_post_thumbnail( $post->ID, 'large' ) AND $show['thumbnails'] ): ?>
-								<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-							<?php endif; ?>
-						
-							<div class="entry-content">
-								<?php if ( has_category( 'in-the-news' )): ?>
-									<a href="<?php echo get_field( 'news-external-url' ); ?>" target="_blank" class="learn-more">Learn More</a>		
-								<?php else: ?>
-									<?php
-									the_excerpt();
-									understrap_link_pages();
-									?>
-								<?php endif; ?>		
-						
-							</div><!-- .entry-content -->
-						
-							<?php if ( !has_category( 'in-the-news' )): ?>
-								<footer class="entry-footer">
-							
-									<?php understrap_entry_footer(); ?>
-							
-								</footer><!-- .entry-footer -->
-							<?php endif; ?>
-						
-						</article><!-- #post-## -->
-						<?php
-					}
-				} else {
-					get_template_part( 'loop-templates/content', 'none' );
-				}
-				wp_reset_postdata();
-				?>
-				
-				<?php if ( get_sub_field( 'button' )): ?>
-					<div class="buttons">
-						<a class="btn btn-outline" href="<?php $link = get_sub_field( 'button' ); echo $link['url'];?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
-					</div>
-					<?php
-				endif; ?>
-				
 			</div>
 			
 		</div>
 	</div>
-	
-<?php else: ?>
-	
+<?php endif; ?>
+
 	<?php
 	
 	$post_id = $post->ID;
@@ -346,7 +256,7 @@ endforeach;
 		
 									<div class="col-12 col-md-7">
 										<?php if ((array_key_exists('filters', $show)) AND $show['filters'] ): ?>
-											<div class="label">Filter by:</div>
+											<div class="label"><?php _e( 'Filter by', 'powehi' ) ?>:</div>
 											
 											<div class="row">
 												
@@ -392,7 +302,7 @@ endforeach;
 											</div>
 											
 											<div class="clear-filters" data-post_type="<?php echo $post_type; ?>" data-taxonomies='<?php echo json_encode( $taxonomies ) ?>' data-search_placeholder="<?php echo $post_type_labels->search_items; ?>">
-												<i class="far fa-times"></i> Clear all filters
+												<i class="fas fa-times"></i> <?php _e( 'Clear all filters', 'powehi' ); ?>
 											</div>
 										<?php endif; ?>
 									</div>
@@ -403,10 +313,14 @@ endforeach;
 											
 											<div class="search">
 												<form id="<?php echo $post_type; ?>-search" class="filters-search-form" data-post_type="<?php echo $post_type; ?>" data-taxonomies='<?php echo json_encode( $taxonomies ) ?>'>
-													<label class="sr-only" for="s">Search</label>
+													<label class="sr-only" for="s"><?php _e( 'Search', 'powehi' ); ?></label>
 													<div class="input-group">
 														<span class="input-group-prepend">
-															<input class="submit" name="submit" type="submit" value="&#xf002;">
+															<input 
+																class="submit" 
+																name="submit" 
+																type="submit" 
+																value="&#xf002;">
 														</span>															
 														<input 
 															id="<?php echo $post_type; ?>-search-query" 
@@ -446,9 +360,28 @@ endforeach;
 		'paged' => $paged
 	);
 	
+	// Don't move sticky items out of their original order
+	$args['ignore_sticky_posts'] = 1;
+	
+	// For chronological items, don't include past items
+	if ( $post_type == 'event') {
+		$currentdate = date( "Ymd", mktime( 0,0,0, date("m"), date("d"), date("Y") ) );	
+		$args['meta_query'] = array(
+			array(
+				'key' => 'event_start_date',
+				'compare' => '>=',
+				'value' => $currentdate,
+				'type' => 'DATE',
+			),
+		);
+	}
+	
 	// Order by
 	if ( $post_type == 'team') {
 		$args['orderby'] = 'menu_order';	
+	} elseif ( $post_type == 'event') {	
+		$args['orderby'] = 'meta_value';	
+		$args['meta_key'] = 'event_start_date';	
 	} elseif ( array_key_exists( 'orderby', $_GET ) && $_GET['orderby'] ) {								
 		$args['meta_key'] = $_GET['meta_key'];
 		
@@ -469,6 +402,8 @@ endforeach;
 	// Order
 	if ( $post_type == 'team') {
 		$args['order'] = 'ASC';
+	} elseif ( $post_type == 'event') {	
+		$args['order'] = 'ASC';	
 	} elseif ( array_key_exists( 'order', $_GET ) && $_GET['order'] ) {								
 		$args['order'] = $_GET['order'];
 		$querystring .= 'order=' . $_GET['order'] . '&';
@@ -478,7 +413,7 @@ endforeach;
 		$querystring .= 'order=ASC&';
 	}		
 		
-	// Get filters from URL`
+	// Get filters from URL
 	$filters = array();
 	
 	if ( $post_type == 'team'):
@@ -552,7 +487,7 @@ endforeach;
 	//	$args['order'] = $sort;
 		$args['s'] = $_GET['search'];	    
 		
-		$args['engine'] = 'default';              					                          
+		$args['engine'] = $search_engine;              					                          
 		
 		// print ( '<pre>' );
 		// print_r( $args );
@@ -587,8 +522,8 @@ endforeach;
 		wp_reset_postdata();
 	
 	} else {
-		$the_query = new WP_Query( $args );
-		wp_reset_postdata();
+		// $the_query = new WP_Query( $args );
+		// wp_reset_postdata();
 	}
 	
 	// print ( '<pre>' );
@@ -597,7 +532,7 @@ endforeach;
 	
 	?>
 	
-	<div id="<?php echo $post_type; ?>-list-wrapper" class="list-wrapper">
+	<div id="<?php echo $post_type; ?>-list-wrapper" class="list-wrapper layout-<?php echo $layout; ?>">
 		<div class="<?php echo esc_attr( $container ); ?>">
 			<div id="posts-ajax" class="row <?php echo $post_type; ?>">
 				<?php
@@ -751,8 +686,5 @@ endforeach;
 				</div>
 			</div>
 		</div>
-	</div>
-	
-<?php endif; ?>	
 			
 </div>
