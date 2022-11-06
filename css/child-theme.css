@@ -30632,8 +30632,47 @@ body.search-open #search-overlay {
   text-decoration: none;
 }
 
+.menu-vertical-accordion-container {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+}
+.menu-vertical-accordion-container .menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  writing-mode: vertical-lr;
+}
+.menu-vertical-accordion-container .nav-item {
+  height: 100%;
+  position: fixed;
+}
+.menu-vertical-accordion-container .nav-link {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  font-weight: 700;
+  padding-top: 8rem;
+  width: 100%;
+}
+.menu-vertical-accordion-container .nav-link img {
+  margin-bottom: 1rem;
+  width: 60%;
+}
+
+body.admin-bar .menu-vertical-accordion-container {
+  top: 32px;
+}
+
 #wrapper-footer {
   background-color: #212529;
+  position: relative;
+  z-index: 9999;
 }
 #wrapper-footer .menu {
   list-style: none;

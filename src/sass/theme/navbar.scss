@@ -223,3 +223,47 @@ body.search-open {
 		text-decoration: none;
 	}
 }
+
+
+//
+// Vertical Accordion Menu
+// --------------------------------------------------
+.menu-vertical-accordion-container {
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 9999;
+	.menu {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		//text-orientation: mixed;
+		//transform: rotate(180deg);
+		writing-mode: vertical-lr;
+	}
+	.nav-item {
+		height: 100%;
+		position: fixed;
+		//width: 3rem;		
+	}
+	.nav-link {
+		align-items: center;
+		color: $white;
+		display: flex;
+		font-family: $headings-font-family;
+		font-weight: $font-weight-bold;
+		padding-top: 8rem;
+		width: 100%;
+		img {
+			margin-bottom: 1rem;
+			width: 60%;
+		}
+	}
+}
+body.admin-bar .menu-vertical-accordion-container  {
+	top: 32px;
+}

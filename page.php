@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="wrapper" id="page-wrapper">
-	
+		
 	<?php
 	// Check if any blocks are present
 	if ( is_home()) {
@@ -83,5 +83,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #page-wrapper -->
 
-<?php
+<?php 
+if ( get_field( 'vertical_accordion_menu' )):	
+	require( 'inc/vertical-accordion-menu.php' );	
+endif;
+
 get_footer();
