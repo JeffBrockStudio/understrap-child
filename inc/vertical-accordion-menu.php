@@ -21,14 +21,16 @@ $base_font_size = 18;
 $menu_item_width = 3;
 
 // Total menu width in rem
-$menu_width = $menu_item_width * $vertical_accordion_menu_count;				
+$menu_width = $menu_item_width * $vertical_accordion_menu_count;		
+
+$container_translatex = -($menu_width/2);	
 ?>
 	<style>			
 		.menu-vertical-accordion-container li {
 			width: <?php echo $menu_item_width; ?>rem;
 		}
 		.container {
-			transform: translateX( -<?php echo $menu_width/2; ?>rem );
+			transform: translateX( <?php echo $container_translatex; ?>rem );
 		}
 		@media (min-width: 992px) {
 			.container {
@@ -59,6 +61,7 @@ $menu_width = $menu_item_width * $vertical_accordion_menu_count;
 		endforeach;
 		
 		$i = 1;		
+		$container_translatex = $container_translatex + $menu_item_width;
 		foreach ( $vertical_accordion_menu_items AS $vertical_accordion_menu_item ): ?>
 			
 			#menu-item-<?php echo $vertical_accordion_menu_item->ID;?> {
@@ -79,11 +82,15 @@ $menu_width = $menu_item_width * $vertical_accordion_menu_count;
 					right: auto;
 				} 
 				#menu-item-<?php echo $vertical_accordion_menu_item->ID;?> a:after {
-					background-image: url("data:image/svg+xml,%3Csvg width='16' height='34' viewBox='0 0 16 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.17147 31.6528L13.8286 16.8234L2.17147 2.00006' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-linecap='round'/%3E%3C/svg%3E%0A"); no-repeat top center;							
+					background-image: url("data:image/svg+xml,%3Csvg width='16' height='34' viewBox='0 0 16 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.17147 31.6528L13.8286 16.8234L2.17147 2.00006' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-linecap='round'/%3E%3C/svg%3E%0A"); 
+				}
+				.container {
+					transform: translateX( <?php echo $container_translatex; ?>rem );
 				}
 				<?php
 			endif;
 			$i++;		 
+			$container_translatex = $container_translatex + 3;
 			
 		endforeach;
 		?>
