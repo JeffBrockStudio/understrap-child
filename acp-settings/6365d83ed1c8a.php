@@ -5,7 +5,7 @@ return array (
   'title' => 'Jobs',
   'type' => 'job',
   'id' => '6365d83ed1c8a',
-  'updated' => 1667619127,
+  'updated' => 1667690507,
   'columns' => 
   array (
     'title' => 
@@ -72,6 +72,21 @@ return array (
       'filter_label' => '',
       'filter_format' => '',
       'name' => '6365d8aa30e560',
+    ),
+    '6366f00526e978' => 
+    array (
+      'type' => 'field_6366e7301ad9b',
+      'label' => 'Sticky?',
+      'width' => '',
+      'width_unit' => '%',
+      'export' => 'off',
+      'sort' => 'on',
+      'edit' => 'on',
+      'bulk_edit' => 'on',
+      'search' => 'on',
+      'filter' => 'off',
+      'filter_label' => '',
+      'name' => '6366f00526e978',
     ),
     '6365d93073f7d0' => 
     array (

@@ -1,0 +1,74 @@
+{
+    "key": "group_6366ffdfb93d0",
+    "title": "Vertical Accordion Menu",
+    "fields": [
+        {
+            "key": "field_6366ffe00a195",
+            "label": "Vertical Accordion Menu",
+            "name": "vertical_accordion_menu",
+            "aria-label": "",
+            "type": "acfe_menus",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "all",
+            "hide_instructions": "",
+            "hide_required": "",
+            "menus": "",
+            "field_type": "select",
+            "max": "",
+            "default_value": [],
+            "return_format": "object",
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "placeholder": "",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "acfe_field_group_condition": 0,
+            "choices": [],
+            "ajax": 0,
+            "search_placeholder": "",
+            "layout": "",
+            "toggle": 0,
+            "allow_custom": 0,
+            "other_choice": 0,
+            "min": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 1,
+    "acfe_display_title": "",
+    "acfe_permissions": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1667694735
+}

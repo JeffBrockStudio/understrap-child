@@ -132,6 +132,7 @@ function custom_register_menus() {
 		array(
 			'footer-menu' => __( 'Footer Menu' ),
 			'utility-menu' => __( 'Utility Menu' ),
+			'vertical-accordion-menu' => __( 'Vertical Accordion Menu' ),
 			'legal-menu' => __( 'Legal Menu' )
 		)
 	);

@@ -8,6 +8,16 @@ define( 'POWEHI_ENABLE_FIXED_NAVBAR', TRUE );
 //
 // Brand Palette
 // --------------------------------------------------
+
+// List for ACF color picker settings
+#0d6efd
+#10caf0
+#6d757d
+#212529
+#f8f9fa
+#ffffff
+
+
 $theme_palette = array();
 
 // Blue
