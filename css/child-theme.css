@@ -31841,19 +31841,24 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   top: 0;
   width: 100%;
 }
-.block.reveal .layer.top {
+.block.reveal .layer.bottom {
   background-color: #ffffff;
 }
-.block.reveal .layer.top .heading {
-  color: #000000;
-}
-.block.reveal .layer.bottom {
-  background-color: #000000;
-  -webkit-clip-path: circle(25vw at bottom);
-  clip-path: circle(25vw at bottom);
-}
-.block.reveal .layer.bottom .heading {
+.block.reveal .layer.bottom .heading,
+.block.reveal .layer.bottom .superheading,
+.block.reveal .layer.bottom .subheading {
   color: #ffffff;
+}
+.block.reveal .layer.top {
+  background-color: #000000;
+  z-index: 1;
+  -webkit-clip-path: circle(18vw at 50% 90%);
+  clip-path: circle(18vw at 50% 90%);
+}
+.block.reveal .layer.top .heading,
+.block.reveal .layer.top .superheading,
+.block.reveal .layer.top .subheading {
+  color: #000000;
 }
 .block.reveal .layer > .container {
   align-items: center;

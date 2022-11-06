@@ -35,17 +35,24 @@
 		position: absolute;
 		top: 0;
 		width: 100%;
-		&.top {
+		&.bottom {
 			background-color: $white;
-			.heading {
-				color: $black;
+			
+			.heading,
+			.superheading,
+			.subheading {
+				color: $white;
 			}			
 		}
-		&.bottom {
+		&.top {
 			background-color: $black;
-			clip-path: circle(25vw at bottom);
-			.heading {
-				color: $white;
+			z-index: 1;
+			clip-path: circle(18vw at 50% 90%);
+			
+			.heading,
+			.superheading,
+			.subheading {
+				color: $black;
 			}
 		}
 		> .container {
