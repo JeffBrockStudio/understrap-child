@@ -9,8 +9,12 @@ function custom_theme_enqueue_styles() {
     
     $the_theme = wp_get_theme();
     
+		wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js', array(), $the_theme->get( 'Version' ), true );
+		
+		wp_enqueue_script( 'gsap-ScrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js', array(), $the_theme->get( 'Version' ), true );
+		
     wp_enqueue_script( 'custom-javascript', get_stylesheet_directory_uri() . '/src/js/custom-javascript.js', array(), $the_theme->get( 'Version' ), true );
-    
+				
 }
 add_action( 'wp_enqueue_scripts', 'custom_theme_enqueue_styles' );
 

@@ -31849,8 +31849,8 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 }
 .block.reveal .layer.bottom {
   background-color: #000000;
-  -webkit-clip-path: circle(16vw at bottom);
-  clip-path: circle(16vw at bottom);
+  -webkit-clip-path: circle(25vw at bottom);
+  clip-path: circle(25vw at bottom);
 }
 .block.reveal .layer.bottom .heading {
   color: #ffffff;

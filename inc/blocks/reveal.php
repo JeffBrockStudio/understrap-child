@@ -37,8 +37,8 @@
 			?>
 		</div>
 		
-		<div class="layer bottom">
-			<div class="container">
+		<div class="layer bottom" aria-hidden="true">
+			<div class="container"> 
 				<div class="row">
 					
 					<div class="col-12">
@@ -75,3 +75,23 @@
 </div>
 	
 </div>
+
+<script>
+jQuery(document).ready(function($) {
+	console.log( 'reveal2' );
+	
+	gsap.to(".bottom", {
+		scrollTrigger: {
+			trigger: ".block.reveal",
+			scrub: true,
+			start: "top top",
+			end: "+=100%"
+		},
+		//clipPath: "inset(50% 0px 0px)",		
+		clipPath: "circle(100vw at bottom)",
+	//	mask: "radial-gradient(circle at 70%, black 25%, transparent 0)",
+		//clipPath: "circle(100vw)",
+		ease: "power1.inOut"
+	});
+});
+</script>
