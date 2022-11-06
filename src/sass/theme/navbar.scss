@@ -282,3 +282,8 @@ body.search-open {
 body.admin-bar .menu-vertical-accordion-container  {
 	top: 32px;
 }
+
+.fixed-top {
+	background-color: transparent !important;
+	z-index: 999999;
+}

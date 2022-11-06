@@ -1,0 +1,80 @@
+// Reveal
+// ----------------------------------------------
+.block.reveal {
+	background-color: white;
+	//margin-top: -108px;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;	
+	//height: 100vh;
+	left: 0;
+	//position: absolute;
+	text-align: center;
+	top: 0;
+	width: 100vw;
+	z-index: 99999;
+	
+	height: calc(2*100vh);
+	position: relative;
+	
+	.sticky {
+		height: 100vh;
+		overflow: hidden;
+		position: sticky;
+		top: 0;
+		.wipe-stack {
+			height: 100vh;
+			position: relative;
+			overflow: hidden;
+		}
+	}
+	
+	.layer {
+		display: flex;
+		height: 100vh;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		&.top {
+			background-color: $white;
+			.heading {
+				color: $black;
+			}			
+		}
+		&.bottom {
+			background-color: $black;
+			clip-path: circle(16vw at bottom);
+			.heading {
+				color: $white;
+			}
+		}
+		> .container {
+			align-items: center;
+			display: flex;
+			flex-direction: column;			
+			justify-content: center;
+			z-index: 1;
+		}
+		.background {
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			&.video {
+				video {
+					height: 100%;	
+				}				
+			}
+		}
+	}
+}
+body.page-id-1113 {
+	#wrapper-navbar+.wrapper {
+		margin-top: 0;
+	}
+}
+
+body.admin-bar .block.reveal {
+	top: 32px;
+}
