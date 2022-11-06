@@ -45,16 +45,46 @@ $menu_width = $menu_item_width * $vertical_accordion_menu_count;
 				max-width: calc( 1320px - <?php echo $menu_width; ?>rem );
 			}
 		}
-		<?php
-		$i = 1;
+		<?php		
 		$vertical_accordion_menu_items = wp_get_nav_menu_items( $vertical_accordion_menu_id );
-		foreach ( $vertical_accordion_menu_items AS $vertical_accordion_menu_item ):?>					
+		
+		// Get the order in the menu where the active item is
+		$order_in_menu = 0;
+		$i = 1;		
+		foreach ( $vertical_accordion_menu_items AS $vertical_accordion_menu_item ):
+			if ( $post->ID == $vertical_accordion_menu_item->object_id ):
+				$order_in_menu = $i;
+			endif;
+			$i++;
+		endforeach;
+		
+		$i = 1;		
+		foreach ( $vertical_accordion_menu_items AS $vertical_accordion_menu_item ): ?>
+			
 			#menu-item-<?php echo $vertical_accordion_menu_item->ID;?> {
-				background-color: <?php echo get_field('menu_item_background_color', $vertical_accordion_menu_item->ID); ?>;
 				right: <?php echo $menu_item_width * ( $vertical_accordion_menu_count - $i); ?>rem;
 			}
-			<?php
+			#menu-item-<?php echo $vertical_accordion_menu_item->ID;?> a {			
+				background-color: <?php echo get_field('menu_item_background_color', $vertical_accordion_menu_item->ID); ?>;
+			}
+			#menu-item-<?php echo $vertical_accordion_menu_item->ID;?> a:after {
+				background-image: url("data:image/svg+xml,%3Csvg width='16' height='34' viewBox='0 0 16 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.8285 2L2.17139 16.8295L13.8285 31.6528' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-linecap='round'/%3E%3C/svg%3E");						
+			}
+					
+			<?php	
+			// Is the current menu item earlier or equal to active item?		
+			if ( $i <= $order_in_menu ):?>
+				#menu-item-<?php echo $vertical_accordion_menu_item->ID;?> {
+					left: <?php echo $menu_item_width * ( $i - 1 ); ?>rem;
+					right: auto;
+				} 
+				#menu-item-<?php echo $vertical_accordion_menu_item->ID;?> a:after {
+					background-image: url("data:image/svg+xml,%3Csvg width='16' height='34' viewBox='0 0 16 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.17147 31.6528L13.8286 16.8234L2.17147 2.00006' stroke='white' stroke-width='3' stroke-miterlimit='10' stroke-linecap='round'/%3E%3C/svg%3E%0A"); no-repeat top center;							
+				}
+				<?php
+			endif;
 			$i++;		 
+			
 		endforeach;
 		?>
 	</style>

@@ -241,14 +241,16 @@ body.search-open {
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		//text-orientation: mixed;
-		//transform: rotate(180deg);
 		writing-mode: vertical-lr;
 	}
 	.nav-item {
 		height: 100%;
 		position: fixed;
-		//width: 3rem;		
+		&.current_page_item {
+			a {
+				pointer-events: none;
+			}
+		}
 	}
 	.nav-link {
 		align-items: center;
@@ -258,10 +260,23 @@ body.search-open {
 		font-weight: $font-weight-bold;
 		padding-top: 8rem;
 		width: 100%;
+		&:after {
+			background-repeat: no-repeat;
+			background-position: top center;
+			background-size: contain;
+			content: '';
+			height: 1.75rem;		
+			position: absolute;
+			top: 22rem;
+			width: 1.75rem;		
+		}
+		&:hover {
+			background-color: $black !important;
+		}
 		img {
 			margin-bottom: 1rem;
 			width: 60%;
-		}
+		}		
 	}
 }
 body.admin-bar .menu-vertical-accordion-container  {

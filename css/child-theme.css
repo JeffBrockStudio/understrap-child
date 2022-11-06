@@ -30652,6 +30652,9 @@ body.search-open #search-overlay {
   height: 100%;
   position: fixed;
 }
+.menu-vertical-accordion-container .nav-item.current_page_item a {
+  pointer-events: none;
+}
 .menu-vertical-accordion-container .nav-link {
   align-items: center;
   color: #ffffff;
@@ -30659,6 +30662,19 @@ body.search-open #search-overlay {
   font-weight: 700;
   padding-top: 8rem;
   width: 100%;
+}
+.menu-vertical-accordion-container .nav-link:after {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  content: "";
+  height: 1.75rem;
+  position: absolute;
+  top: 22rem;
+  width: 1.75rem;
+}
+.menu-vertical-accordion-container .nav-link:hover {
+  background-color: #000000 !important;
 }
 .menu-vertical-accordion-container .nav-link img {
   margin-bottom: 1rem;
