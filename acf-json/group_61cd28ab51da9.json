@@ -6,6 +6,7 @@
             "key": "field_61cd28d50e7ec",
             "label": "Heading",
             "name": "heading",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -34,6 +35,7 @@
             "key": "field_61cd29150e7ed",
             "label": "Heading Level",
             "name": "heading_level",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -66,12 +68,16 @@
             "acfe_settings": "",
             "acfe_validate": "",
             "acfe_field_group_condition": 0,
-            "ajax": 0
+            "ajax": 0,
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "min": ""
         },
         {
-            "key": "field_62f8185b7bde9",
-            "label": "Subheading",
-            "name": "subheading",
+            "key": "field_62f8188c7bdeb",
+            "label": "Superheading",
+            "name": "superheading",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -97,9 +103,10 @@
             "acfe_field_group_condition": 0
         },
         {
-            "key": "field_62f8188c7bdeb",
-            "label": "Superheading",
-            "name": "superheading",
+            "key": "field_62f8185b7bde9",
+            "label": "Subheading",
+            "name": "subheading",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -151,5 +158,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1660426780
+    "modified": 1667724818
 }
