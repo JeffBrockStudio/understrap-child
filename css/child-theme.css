@@ -31847,7 +31847,7 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 .block.reveal .layer.bottom .heading,
 .block.reveal .layer.bottom .superheading,
 .block.reveal .layer.bottom .subheading {
-  color: #ffffff;
+  color: #000000;
 }
 .block.reveal .layer.top {
   background-color: #000000;
@@ -31858,7 +31858,7 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 .block.reveal .layer.top .heading,
 .block.reveal .layer.top .superheading,
 .block.reveal .layer.top .subheading {
-  color: #000000;
+  color: #ffffff;
 }
 .block.reveal .layer > .container {
   align-items: center;
