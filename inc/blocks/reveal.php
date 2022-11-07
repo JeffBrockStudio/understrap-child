@@ -82,9 +82,11 @@
 					</div>
 				</div> 
 			<?php endif;
-			?>				
+			?>							
 			
 		</div>
+		
+		<div class="anchor-link"><a href="#wrapper-footer"><i class="fa fa-angle-down arrow"></i></a></div>
 		
 	</div>
 </div>
@@ -93,6 +95,8 @@
 
 <script>
 jQuery(document).ready(function($) {
+	
+	// Animate the opening circle clip path on scroll 
 	gsap.to(".top", {
 		scrollTrigger: {
 			trigger: ".block.reveal",
@@ -104,6 +108,7 @@ jQuery(document).ready(function($) {
 		ease: "power1.inOut"
 	});
 	
+	// Move the foreground image on scroll
 	gsap.to(".foreground", {
 		scrollTrigger: {
 			trigger: ".block.reveal",
@@ -114,5 +119,18 @@ jQuery(document).ready(function($) {
 		yPercent: -10,
 		ease: "power1.inOut"
 	});
+	
+	// Add bouncing animation to arrow
+	var arrowBounce = function() {
+		var arrow = $(".arrow");
+		
+		if (arrow.hasClass("lift")) {
+			arrow.removeClass("lift");
+		} else {
+			arrow.addClass("lift");
+		}
+	};
+	setInterval(arrowBounce, 800);
+	
 });
 </script>
