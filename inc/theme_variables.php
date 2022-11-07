@@ -6,6 +6,12 @@ define( 'POWEHI_ENABLE_FIXED_NAVBAR', TRUE );
 
 
 //
+// Enable Page Transitions
+// --------------------------------------------------
+define( 'POWEHI_ENABLE_PAGE_TRANSITIONS', TRUE );
+
+
+//
 // Brand Palette
 // --------------------------------------------------
 

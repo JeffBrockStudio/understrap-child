@@ -30443,6 +30443,22 @@ body.error404 .page-content .search-form {
   margin-top: 0.75rem;
 }
 
+.animate-in {
+  animation: fadeIn 0.2s ease-in;
+}
+
+.animate-out {
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 html {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
@@ -30685,7 +30701,7 @@ body.admin-bar .menu-vertical-accordion-container {
   top: 32px;
 }
 
-.fixed-top {
+body.page-id-1113 .fixed-top {
   background-color: transparent !important;
   z-index: 999999;
 }

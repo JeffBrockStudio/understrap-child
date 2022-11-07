@@ -367,3 +367,28 @@ body.error404 {
 		margin-top: 0.75rem;
 	}
 }
+
+
+//
+// Page transitions
+// --------------------------------------------------
+@if $powehi-enable-page-transitions { 
+	.animate-in {
+			animation: fadeIn .2s ease-in;
+	}
+	
+	.animate-out {
+			transition: opacity .2s;
+			opacity: 0;
+	}
+	
+	@-webkit-keyframes fadeIn {
+			from { opacity: 0; }
+			to { opacity: 1; }
+	}
+	
+	@keyframes fadeIn {
+			from { opacity: 0; }
+			to { opacity: 1; }
+	}
+}
