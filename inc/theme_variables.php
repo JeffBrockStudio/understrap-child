@@ -8,7 +8,7 @@ define( 'POWEHI_ENABLE_FIXED_NAVBAR', TRUE );
 //
 // Enable Page Transitions
 // --------------------------------------------------
-define( 'POWEHI_ENABLE_PAGE_TRANSITIONS', TRUE );
+define( 'POWEHI_ENABLE_PAGE_TRANSITIONS', FALSE );
 
 
 //
@@ -51,12 +51,12 @@ $theme_palette['#198754']['level'] 				= 'dark';
 $theme_palette['#198754']['text_color'] 	= '#ffffff';
 
 // Cyan
-$theme_palette['#10dcaf0']['name'] 				= 'cyan';
-$theme_palette['#10dcaf0']['hex'] 				= '#10dcaf0';
-$theme_palette['#10dcaf0']['bs_class'] 		= 'success';
-$theme_palette['#10dcaf0']['btn_class'] 	= 'btn-light';
-$theme_palette['#10dcaf0']['level'] 			= 'dark';
-$theme_palette['#10dcaf0']['text_color'] 	= '#ffffff';
+$theme_palette['#10caf0']['name'] 				= 'cyan';
+$theme_palette['#10caf0']['hex'] 				= '#10caf0';
+$theme_palette['#10caf0']['bs_class'] 		= 'success';
+$theme_palette['#10caf0']['btn_class'] 	= 'btn-light';
+$theme_palette['#10caf0']['level'] 			= 'dark';
+$theme_palette['#10caf0']['text_color'] 	= '#ffffff';
 
 // Light Gray
 $theme_palette['#f8f9fa']['name'] 				= 'gray-light';

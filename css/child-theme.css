@@ -30444,11 +30444,11 @@ body.error404 .page-content .search-form {
 }
 
 .animate-in {
-  animation: fadeIn 0.2s ease-in;
+  animation: fadeIn 0.15s ease-in;
 }
 
 .animate-out {
-  transition: opacity 0.2s;
+  transition: opacity 0.15s;
   opacity: 0;
 }
 @keyframes fadeIn {
@@ -30459,6 +30459,10 @@ body.error404 .page-content .search-form {
     opacity: 1;
   }
 }
+.site-main {
+  position: relative;
+}
+
 html {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
@@ -31820,6 +31824,77 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+.block.hero.sticky-wrapper {
+  background-image: none !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  z-index: 1;
+  height: 200vh;
+}
+.block.hero .sticky {
+  height: 100vh;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+}
+.block.hero .sticky .wipe-stack {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.block.hero .sticky .wipe-stack .sticky-wipe {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+}
+.block.hero .sticky .wipe-stack .sticky-wipe.item-1 {
+  z-index: 2;
+}
+.block.hero .sticky .wipe-stack .sticky-wipe.item-1 .container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.block.hero .sticky .wipe-stack .sticky-wipe.item-2 {
+  z-index: 3;
+  align-items: center;
+  -webkit-clip-path: inset(0% 0px 0px);
+  clip-path: inset(0% 0px 0px);
+}
+.block.hero .overlay {
+  background-image: url("../img/hero-gradient.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.block.hero .gradient {
+  background-image: url("../img/wavy-lines.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.block.hero .top-gradient {
+  background-image: url("../img/top-gradient.svg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: top;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .block.large_media .image img {
@@ -32007,6 +32082,13 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 
 body.page-id-1113 #wrapper-navbar + .wrapper {
   margin-top: 0;
+}
+
+body.page-id-720 #wrapper-navbar + .wrapper {
+  margin-top: 0;
+}
+body.page-id-720 .bg-primary {
+  background-color: transparent !important;
 }
 
 body.admin-bar .block.reveal {

@@ -2521,6 +2521,36 @@
                             "acfe_settings": "",
                             "acfe_validate": "",
                             "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_636893d715522",
+                            "label": "Add overlay reveal?",
+                            "name": "add_overlay_reveal",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "message": "",
+                            "default_value": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1,
+                            "style": "",
+                            "acfe_field_group_condition": 0
                         }
                     ],
                     "min": "",
@@ -4455,5 +4485,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1667788983
+    "modified": 1667798166
 }

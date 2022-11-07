@@ -69,7 +69,9 @@ endif;
 		echo $layout . ' ';
 		echo $block_layout . ' ';
 		if ( get_sub_field( 'text_placement' )): echo get_sub_field( 'text_placement' ) . ' '; endif;
-		echo ($is_preview) ? 'is-preview' : ''; ?>" 
+		echo ($is_preview) ? 'is-preview' : ''; 
+		if ( get_sub_field( 'add_overlay_reveal' )): echo ' hero-overlay-reveal sticky-wrapper'; endif;
+		?>" 
 	style="
 		<?php if ( $layout_settings['padding_top'] != '' ):
 			echo 'padding-top: ' .  $layout_settings['padding_top']. 'rem; '; 

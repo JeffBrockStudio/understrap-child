@@ -4,4 +4,84 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: relative;
+	&.sticky-wrapper {
+		background-image: none !important;
+		//height: 48rem;
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+		z-index: 1;
+		height: calc(2*100vh);
+	}
+
+	.sticky {
+		//height: 24rem;
+		height: 100vh;
+		overflow: hidden;
+		position: sticky;
+		top: 0;
+		.wipe-stack {			
+			//height: 24rem;
+			height: 100vh;
+			position: relative;
+			overflow: hidden;
+			.sticky-wipe {
+			//	height: 24rem;
+				height: 100vh;
+				width: 100%;
+				position: absolute;
+				&.item-1 {
+					.container {
+						align-items: center;
+						display: flex;
+						height: 100%;
+						position: relative;
+						z-index: 1;
+					}
+					z-index: 2;
+				}
+				&.item-2 {
+					//background-color: yellow;
+					z-index: 3;
+					//display: flex;
+					align-items: center;
+					clip-path: inset(0% 0px 0px);
+				}
+			}
+		}
+		
+	}
+	
+	.overlay {
+		background-image: url( '../img/hero-gradient.svg' );
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}	
+	.gradient {
+		background-image: url( '../img/wavy-lines.png' );
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	.top-gradient {
+		background-image: url( '../img/top-gradient.svg' );
+		background-repeat: repeat-x;
+		background-size: contain;
+		background-position: top;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	
 }

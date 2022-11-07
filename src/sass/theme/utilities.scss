@@ -374,11 +374,11 @@ body.error404 {
 // --------------------------------------------------
 @if $powehi-enable-page-transitions { 
 	.animate-in {
-			animation: fadeIn .2s ease-in;
+			animation: fadeIn .15s ease-in;
 	}
 	
 	.animate-out {
-			transition: opacity .2s;
+			transition: opacity .15s;
 			opacity: 0;
 	}
 	
@@ -391,4 +391,8 @@ body.error404 {
 			from { opacity: 0; }
 			to { opacity: 1; }
 	}
+}
+
+.site-main {
+	position: relative;
 }
