@@ -64,6 +64,42 @@
 			</div>
 		</div>
 		
+	<?php elseif ( get_sub_field( 'add_rotating_headlines' )):?>	
+		
+		<div class="container">			
+			<div class="row">
+				
+				<div class="col-12">
+					<?php if ( get_sub_field( 'subheading' )): ?> 
+						<h2 class="subheading" style="color: <?php the_sub_field( 'text_color' );?>"><?php the_sub_field( 'subheading' );?></h2>
+					<?php endif; ?> 	
+				</div>
+							
+			</div>
+		
+			<div class="row">
+				
+				<div class="col-12 col-md-3">					
+					<h1 style="color: <?php the_sub_field( 'text_color' );?>"><?php the_sub_field( 'heading' );?></h1>					 
+				</div>	
+				
+				<div class="col-12 col-md-8">																
+					<?php 
+					if ( get_sub_field( 'rotating_headlines' )):?>
+						<div class="rotating-headlines"><?php
+							$items = get_sub_field( 'rotating_headlines' );
+							foreach ( $items AS $item ) {?>
+								<h2 class="rotating-headline" style="color: <?php the_sub_field( 'text_color' );?>"><?php echo $item['headline']; ?></h2><?php							
+							}?>
+						</div>
+						<?php
+					endif;
+					?>
+				</div>
+				
+			</div>			
+		</div>
+		
 	<?php else: ?>
 	
 		<div class="container">
@@ -130,7 +166,7 @@ jQuery(document).ready(function($) {
 			trigger: ".sticky-wrapper",
 			scrub: true,
 			start: "top top",
-			end: "+=100%"
+			end: "+=100%",
 		},
 		clipPath: "inset(100% 0px 0px)",
 		ease: "none"	

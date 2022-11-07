@@ -31828,23 +31828,27 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 }
 .block.hero.sticky-wrapper {
   background-image: none !important;
+  height: 48rem;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   z-index: 1;
   height: 200vh;
 }
 .block.hero .sticky {
+  height: 24rem;
   height: 100vh;
   overflow: hidden;
   position: sticky;
   top: 0;
 }
 .block.hero .sticky .wipe-stack {
+  height: 24rem;
   height: 100vh;
   position: relative;
   overflow: hidden;
 }
 .block.hero .sticky .wipe-stack .sticky-wipe {
+  height: 24rem;
   height: 100vh;
   width: 100%;
   position: absolute;
@@ -31895,6 +31899,36 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   position: absolute;
   top: 0;
   width: 100%;
+}
+.block.hero .rotating-headlines {
+  height: 5rem;
+  overflow: hidden;
+  position: relative;
+}
+.block.hero .rotating-headlines .rotating-headline {
+  animation: move 8s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  height: 5rem;
+  margin-bottom: 0;
+  position: relative;
+}
+@keyframes move {
+  0% {
+    top: 0px;
+  }
+  20% {
+    top: -5rem;
+  }
+  40% {
+    top: -10rem;
+  }
+  60% {
+    top: -15rem;
+  }
+  80% {
+    top: -20rem;
+  }
 }
 
 .block.large_media .image img {

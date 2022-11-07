@@ -7,7 +7,7 @@
 	position: relative;
 	&.sticky-wrapper {
 		background-image: none !important;
-		//height: 48rem;
+		height: 48rem;
 		padding-top: 0 !important;
 		padding-bottom: 0 !important;
 		z-index: 1;
@@ -15,18 +15,18 @@
 	}
 
 	.sticky {
-		//height: 24rem;
+		height: 24rem;
 		height: 100vh;
 		overflow: hidden;
 		position: sticky;
 		top: 0;
 		.wipe-stack {			
-			//height: 24rem;
+			height: 24rem;
 			height: 100vh;
 			position: relative;
 			overflow: hidden;
 			.sticky-wipe {
-			//	height: 24rem;
+				height: 24rem;
 				height: 100vh;
 				width: 100%;
 				position: absolute;
@@ -82,6 +82,28 @@
 		position: absolute;
 		top: 0;
 		width: 100%;
+	}
+	
+	.rotating-headlines {
+		height: 5rem;
+		overflow: hidden;
+		position: relative;
+		.rotating-headline {
+			animation: move 8s;
+			animation-iteration-count: infinite;
+			animation-delay: 1s;
+			height: 5rem;
+			margin-bottom: 0;
+			position: relative;
+		}
+	}
+	
+	@keyframes move {
+	0%  { top: 0px; }
+	20% { top: -5rem; }
+	40% { top: -10rem; }
+	60% { top: -15rem; }
+	80% { top: -20rem; }
 	}
 	
 }

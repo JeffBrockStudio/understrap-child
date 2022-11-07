@@ -2551,6 +2551,100 @@
                             "ui": 1,
                             "style": "",
                             "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_63694d9e03c20",
+                            "label": "Add rotating headlines?",
+                            "name": "add_rotating_headlines",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "message": "",
+                            "default_value": 0,
+                            "style": "",
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1,
+                            "acfe_field_group_condition": 0
+                        },
+                        {
+                            "key": "field_63694ae296b3e",
+                            "label": "Rotating Headlines",
+                            "name": "rotating_headlines",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_63694d9e03c20",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "acfe_repeater_stylised_button": 0,
+                            "layout": "table",
+                            "acfe_settings": "",
+                            "min": 0,
+                            "max": 0,
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "acfe_field_group_condition": 0,
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_63694b3496b3f",
+                                    "label": "Headline",
+                                    "name": "headline",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_field_group_condition": 0,
+                                    "default_value": "",
+                                    "acfe_settings": "",
+                                    "acfe_validate": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_63694ae296b3e"
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -4485,5 +4579,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1667798166
+    "modified": 1667845656
 }
