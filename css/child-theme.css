@@ -31873,6 +31873,9 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   color: #ffffff;
   text-shadow: 0 0 0.25rem #000000;
 }
+.block.reveal .layer.top .video-controls .text {
+  color: #ffffff;
+}
 .block.reveal .layer > .container {
   align-items: center;
   display: flex;
@@ -31950,6 +31953,40 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 }
 .block.reveal .anchor-link .lift {
   transform: translateY(14px);
+}
+.block.reveal .video-controls {
+  align-items: center;
+  bottom: 2rem;
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  right: 4rem;
+  z-index: 1;
+}
+.block.reveal .video-controls.paused i:before {
+  content: "\f04b";
+}
+.block.reveal .video-controls .text {
+  color: #000000;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+}
+.block.reveal .video-controls .text .play {
+  display: none;
+}
+.block.reveal .video-controls i {
+  background: #0d6efd;
+  color: #ffffff;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+.block.reveal .video-controls i:hover {
+  background: #000000;
 }
 
 body.page-id-1113 #wrapper-navbar + .wrapper {

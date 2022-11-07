@@ -3,7 +3,7 @@
 <div class="sticky">
 	<div class="wipe-stack">
 	
-		<div class="layer bottom" aria-hidden="true">
+		<div class="layer bottom">
 			<div class="container"> 
 				<div class="row">
 					
@@ -27,7 +27,13 @@
 			<?php if ( get_sub_field( 'top_layer_background_video' )):?>
 					<div class="background video" style="background-image:url(<?php $image = get_sub_field( 'top_layer_background_image'); echo $image['url']; ?>)";>
 							<video id="home-featured-video" src="<?php $video_file = get_sub_field( 'top_layer_background_video' ); echo $video_file['url']; ?>" playsinline autoplay loop muted style="background: url(<?php echo $image['url'];  ?>); background-size: cover;" /></video>						
-							<!-- <div class="video-controls"><i class="fas fa-pause"></i></div> -->
+							<div class="video-controls">								
+								<div class="text">
+									<span class="pause"><?php _e( 'Pause video', 'powehi' ); ?></span>
+									<span class="play"><?php _e( 'Play video', 'powehi' ); ?></span>
+								</div>
+								<i class="fas fa-pause"></i>
+							</div>
 					</div>
 				<?php
 			else: ?>
@@ -54,14 +60,19 @@
 						<?php endif; ?>
 						
 					</div>																	
-				</div>
-				
+				</div>				
 			</div>
 			
 			<?php if ( get_sub_field( 'bottom_layer_background_video' )):?>
 					<div class="background video" style="background-image:url(<?php $image = get_sub_field( 'bottom_layer_background_image'); echo $image['url']; ?>)";>
-							<video id="home-featured-video" src="<?php $video_file = get_sub_field( 'bottom_layer_background_video' ); echo $video_file['url']; ?>" playsinline autoplay loop muted style="background: url(<?php echo $image['url'];  ?>); background-size: cover;" /></video>						
-							<!-- <div class="video-controls"><i class="fas fa-pause"></i></div> -->
+							<video id="home-featured-video" src="<?php $video_file = get_sub_field( 'bottom_layer_background_video' ); echo $video_file['url']; ?>" playsinline autoplay loop muted style="background: url(<?php echo $image['url'];  ?>); background-size: cover;" /></video>
+							<div class="video-controls">								
+								<div class="text">
+									<span class="pause"><?php _e( 'Pause video', 'powehi' ); ?></span>
+									<span class="play"><?php _e( 'Play video', 'powehi' ); ?></span>
+								</div>
+								<i class="fas fa-pause"></i>
+							</div>
 					</div>
 				<?php
 			else: ?>
@@ -139,4 +150,22 @@ jQuery(document).ready(function($) {
 	setInterval(arrowBounce, 800);
 	
 });
+
+jQuery(function ($) {
+	// Video controls
+	$('.video-controls').click(function() {
+		if ( $(this).hasClass( 'paused' )) {
+			$('.video-controls').removeClass( 'paused');
+			$('.video-controls .text .pause').show();		
+			$('.video-controls .text .play').hide();			
+			$('video').trigger('play');			
+		} else {
+			$('.video-controls').addClass( 'paused');
+			$('.video-controls .text .pause').hide();			
+			$('.video-controls .text .play').show();		
+			$('video').trigger('pause');
+		}
+	});
+});
+	
 </script>

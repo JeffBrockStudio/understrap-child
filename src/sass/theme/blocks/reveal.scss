@@ -65,6 +65,12 @@
 				color: $white;
 				text-shadow: 0 0 0.25rem $black;
 			}
+			
+			.video-controls {
+				.text {
+					color: $white;
+				}
+			}
 		}
 		> .container {
 			align-items: center;
@@ -148,6 +154,45 @@
 		}
 		.lift {
 			transform: translateY(14px);
+		}
+	}
+	
+	.video-controls {
+		align-items: center;
+		bottom: 2rem;
+		cursor: pointer;
+		display: flex;
+		position: absolute;
+		right: 4rem;
+		z-index: 1;
+		&.paused {
+			i {
+				&:before {
+					content: '\f04b';
+				}
+			}
+		}
+		.text {
+			color: $black;
+			margin-right: 0.5rem;
+			white-space: nowrap;
+			.play {
+				display: none;
+			}
+		}
+		i {
+			background: $primary;
+			color: $white;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;	
+			transition: $transition-base;		
+			&:hover {
+				background: $black;
+			}
 		}
 	}
 }
