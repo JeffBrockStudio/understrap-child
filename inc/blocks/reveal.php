@@ -68,7 +68,22 @@
 					<div class="background image" style="background-image:url(<?php $image = get_sub_field( 'bottom_layer_background_image'); echo $image['url'];?>)"></div>		
 			<?php
 			endif;
-			?>
+			?>				
+			
+			<div class="background-gradient"></div>
+			
+			<div class="background-overlay"></div>
+			
+										
+			<?php if ( get_sub_field( 'bottom_layer_foreground_image' )):?>
+				<div class="foreground">
+					<div class="image">
+						<img src="<?php $image = get_sub_field( 'bottom_layer_foreground_image' ); echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
+					</div>
+				</div> 
+			<?php endif;
+			?>				
+			
 		</div>
 		
 	</div>
@@ -78,8 +93,6 @@
 
 <script>
 jQuery(document).ready(function($) {
-	console.log( 'reveal2' );
-	
 	gsap.to(".top", {
 		scrollTrigger: {
 			trigger: ".block.reveal",
@@ -88,6 +101,17 @@ jQuery(document).ready(function($) {
 			end: "+=100%"
 		},
 		clipPath: "circle(100vw at 50% 90%)",
+		ease: "power1.inOut"
+	});
+	
+	gsap.to(".foreground", {
+		scrollTrigger: {
+			trigger: ".block.reveal",
+			scrub: true,
+			start: "top top",
+			end: "+=100%"
+		},
+		yPercent: -10,
 		ease: "power1.inOut"
 	});
 });

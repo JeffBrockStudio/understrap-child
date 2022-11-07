@@ -31841,6 +31841,18 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   top: 0;
   width: 100%;
 }
+.block.reveal .layer .heading {
+  margin-bottom: 13vw;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.block.reveal .layer .subheading,
+.block.reveal .layer .superheading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 .block.reveal .layer.bottom {
   background-color: #ffffff;
 }
@@ -31852,13 +31864,14 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 .block.reveal .layer.top {
   background-color: #000000;
   z-index: 1;
-  -webkit-clip-path: circle(18vw at 50% 90%);
-  clip-path: circle(18vw at 50% 90%);
+  -webkit-clip-path: circle(27vw at 50% 90%);
+  clip-path: circle(27vw at 50% 90%);
 }
 .block.reveal .layer.top .heading,
 .block.reveal .layer.top .superheading,
 .block.reveal .layer.top .subheading {
   color: #ffffff;
+  text-shadow: 0 0 0.25rem #000000;
 }
 .block.reveal .layer > .container {
   align-items: center;
@@ -31876,6 +31889,37 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 }
 .block.reveal .layer .background.video video {
   height: 100%;
+}
+.block.reveal .background-gradient {
+  background-image: url("data:image/svg+xml,%3Csvg width='1440' height='345' viewBox='0 0 1440 345' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1440' height='345' fill='url(%23paint0_linear_1032_261)' fill-opacity='0.5'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1032_261' x1='720' y1='0' x2='720' y2='345' gradientUnits='userSpaceOnUse'%3E%3Cstop/%3E%3Cstop offset='1' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.block.reveal .background-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg width='1440' height='984' viewBox='0 0 1440 984' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1447' height='984' fill='black' fill-opacity='0.3'/%3E%3C/svg%3E%0A");
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.block.reveal .foreground {
+  align-items: flex-end;
+  display: flex;
+  height: 100%;
+  left: 0;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.block.reveal .foreground .image {
+  max-width: 30vw;
 }
 
 body.page-id-1113 #wrapper-navbar + .wrapper {
