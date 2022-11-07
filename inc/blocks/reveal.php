@@ -86,7 +86,13 @@
 			
 		</div>
 		
-		<div class="anchor-link"><a href="#wrapper-footer"><i class="fa fa-angle-down arrow"></i></a></div>
+		<?php if ( get_sub_field( 'anchor_link' )):?>
+			<div class="anchor-link">				
+				<a href="#<?php echo get_sub_field( 'anchor_link' );?>">
+					<i class="fa fa-angle-down arrow"></i>
+				</a>
+			</div>
+		<?php endif; ?>		
 		
 	</div>
 </div>
