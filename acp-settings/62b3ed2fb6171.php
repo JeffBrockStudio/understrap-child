@@ -1,11 +1,11 @@
 <?php
 
 return array (
-  'version' => '5.7.2',
+  'version' => '5.7.4',
   'title' => 'Pages',
   'type' => 'page',
   'id' => '62b3ed2fb6171',
-  'updated' => 1655958831,
+  'updated' => 1668130154,
   'columns' => 
   array (
     'title' => 
@@ -20,6 +20,17 @@ return array (
       'bulk_edit' => 'on',
       'search' => 'on',
       'name' => 'title',
+    ),
+    '636da563e6e978' => 
+    array (
+      'type' => 'field_5ba74defea3b7',
+      'label' => 'Blocks',
+      'width' => '',
+      'width_unit' => '%',
+      'flex_display' => 'count',
+      'export' => 'off',
+      'search' => 'on',
+      'name' => '636da563e6e978',
     ),
     'author' => 
     array (

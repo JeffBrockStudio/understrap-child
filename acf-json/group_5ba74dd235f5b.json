@@ -1832,19 +1832,20 @@
                             "hide_label": "",
                             "hide_instructions": "",
                             "hide_required": "",
-                            "instruction_placement": "",
-                            "acfe_permissions": "",
                             "choices": {
                                 "ajax": "Infinite Load",
-                                "links": "Page Links"
+                                "links": "Page Links",
+                                "none": "None"
                             },
-                            "allow_null": 0,
-                            "other_choice": 0,
                             "default_value": "",
-                            "layout": "vertical",
                             "return_format": "value",
                             "acfe_settings": "",
                             "acfe_validate": "",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "layout": "vertical",
                             "acfe_field_group_condition": 0,
                             "save_other_choice": 0
                         },
@@ -4579,5 +4580,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1667845656
+    "modified": 1668130863
 }

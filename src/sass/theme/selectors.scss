@@ -33,9 +33,9 @@ p:last-of-type {
 }
 
 blockquote {
-	border-top: 3px #ffc915 solid;
-	border-bottom: 3px #ffc915 solid;
-	color: #383838;
+	border-top: 3px $secondary solid;
+	border-bottom: 3px $secondary solid;
+	color: $black;
 	font-family: freight-text-pro, serif;
 	font-weight: 400;
 	font-style: normal;

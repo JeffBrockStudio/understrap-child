@@ -641,7 +641,7 @@ endif;
 						endif;
 						wp_reset_postdata();				
 						
-					else: ?>
+					elseif ( $pagination == 'links' ): ?>
 											
 						<div class="row pagination-row">
 							<div class="col-12">
