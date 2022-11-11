@@ -1,8 +1,9 @@
 // Statistics
 // ----------------------------------------------
-.block.statistics {
+.block.statistics {	
 	text-align: center;
 	.statistic {
+		background-color: $white;
 		height: 100%;
 		padding: 2rem;
 		border-left: 1px solid;

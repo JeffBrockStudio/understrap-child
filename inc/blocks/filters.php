@@ -41,13 +41,16 @@ switch( $post_type ):
 	// Team
 	case 'team':
 		$preselected_filter_name = 'team_roles';
-		$search_engine = 'default';?>
+		$search_engine = 'default';
+		// Uncomment the style for a round SVG with the accent color instead of default X
+		/* ?>
 		<style>
 			.block.filters .gridder-navigation .gridder-close:after {
 				background-image: url("data:image/svg+xml,%3Csvg id='b' xmlns='http://www.w3.org/2000/svg' width='46.82' height='46.82' viewBox='0 0 46.82 46.82'%3E%3Cg id='c'%3E%3Cg%3E%3Ccircle cx='23.41' cy='23.41' r='23.41' fill='<?php echo urlencode($accent_color);?>'/%3E%3Cpath d='M35.42,15.05l-8.26,8.26,8.67,8.67-3.86,3.86-8.67-8.67-8.3,8.3-3.69-3.69,8.3-8.3L10.98,14.84l3.86-3.86,8.63,8.63,8.26-8.26,3.69,3.69Z' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 			}
 		</style>		
 		<?php 
+		*/
 		$terms = get_sub_field( 'team_roles' );
 		if ( $terms ):
 			

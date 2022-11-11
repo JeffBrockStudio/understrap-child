@@ -4,13 +4,13 @@
 
 		<div class="row">
 			
-			<div class="col-12 col-md-7 col-lg-5">
+			<div class="col-12 col-md-10 offset-md-1">
 				<?php if ( get_sub_field( 'heading' )): ?>
 					<?php include( get_stylesheet_directory() . '/inc/blocks/headings.php' ); ?>
 				<?php endif; ?>
 			</div>
 
-			<div class="col-12 col-md-10">
+			<div class="col-12 col-md-10 offset-md-1">
 				
 				<?php if ( get_sub_field( 'text' )): ?>
 					<div class="text">
