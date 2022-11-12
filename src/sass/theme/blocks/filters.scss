@@ -237,7 +237,9 @@
 	//
 	// Team Members
 	// --------------------------------------------------
-	#team-type-wrapper {		
+	#team-type-wrapper {
+		padding-top: 1rem;
+		padding-bottom: 1rem;		
 		text-align: center;
 			.buttons {
 				margin-top: 0;
@@ -248,7 +250,7 @@
 		padding-top: 0;
 		padding-bottom: 0;
 		.grid {
-			margin: 4rem 0 0;	
+			margin: 2rem 0 0;	
 		}
 			
 		.gridder {

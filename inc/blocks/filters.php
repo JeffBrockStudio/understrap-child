@@ -134,7 +134,7 @@ endif;
 <?php if ( $post_type == 'team' ):?>
 	<?php if ( $terms AND count($terms) > 1 ): ?>
 	
-		<div id="team-type-wrapper">
+		<div id="team-type-wrapper" style="background-color: <?php echo $layout_settings['background_color'];?>">
 			<div class="container">
 				
 				<div class="row">
@@ -698,3 +698,95 @@ endif;
 		</div>
 			
 </div>
+
+<?php if ( get_sub_field( 'sticky_subnav' )): ?>
+	<script>
+	jQuery(document).ready(function($) {
+		
+		
+		/* Private */
+		/*
+		Waypoint.Inview.prototype.createWaypoints = function() {
+				var configs = {
+					vertical: [{
+						down: 'enter',
+						up: 'exited',
+						offset: function() {
+							var _offset = this.options.offset && this.options.offset.bottom || 0;
+							return this.options.context.innerHeight - _offset;
+						}.bind( this )
+					}, {
+						down: 'entered',
+						up: 'exit',
+						offset: function() {
+							var _offset = this.options.offset && this.options.offset.bottom || 0;
+							return this.options.context.innerHeight - this.element.outerHeight() - _offset;
+						}.bind( this )
+					}, {
+						down: 'exit',
+						up: 'entered',
+						offset: function() {
+							var _offset = this.options.offset && this.options.offset.top || 0;
+							return _offset;
+						}.bind( this )
+					}, {
+						down: 'exited',
+						up: 'enter',
+						offset: function() {
+							var _offset = this.options.offset && this.options.offset.top || 0;
+							return _offset - this.element.outerHeight();
+						}.bind( this )
+					}],
+					horizontal: [{
+						right: 'enter',
+						left: 'exited',
+						offset: '100%'
+					}, {
+						right: 'entered',
+						left: 'exit',
+						offset: 'right-in-view'
+					}, {
+						right: 'exit',
+						left: 'entered',
+						offset: 0
+					}, {
+						right: 'exited',
+						left: 'enter',
+						offset: function() {
+							return -this.adapter.outerWidth()
+						}
+					}]
+				}
+			}
+		*/
+	
+		var $inView = $('#team-list-wrapper');
+		var $sticky = $('#team-type-wrapper');
+			
+		var inview = new Waypoint.Inview({
+			element: $inView[0],
+			enter: function(direction) {
+				// Add stickiness when parent container comes onscreen from scrolling up
+				if (direction === 'up' && !$sticky.hasClass('stuck')) {
+					$sticky.addClass('stuck');
+				}				
+			},
+			exited: function(direction) {
+				// Remove element's stickiness when it moves offscreen
+				
+				$sticky.removeClass('stuck');				
+			},
+			offset: {
+				top: 300, // 300px
+				bottom: 200 // 200px
+			}
+		});
+		
+		var sticky = new Waypoint.Sticky({
+			element: $sticky[0],
+			offset: 0,
+		});
+			
+	});
+	</script>
+<?php endif; ?>

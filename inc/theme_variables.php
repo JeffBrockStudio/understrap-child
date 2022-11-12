@@ -2,7 +2,7 @@
 //
 // Enable Fixed Navbar
 // --------------------------------------------------
-define( 'POWEHI_ENABLE_FIXED_NAVBAR', TRUE );
+define( 'POWEHI_ENABLE_FIXED_NAVBAR', FALSE );
 
 
 //

@@ -396,3 +396,10 @@ body.error404 {
 .site-main {
 	position: relative;
 }
+
+.stuck {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}

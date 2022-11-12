@@ -1651,6 +1651,44 @@
                             ]
                         },
                         {
+                            "key": "field_636ed5b5c1911",
+                            "label": "Sticky subnav?",
+                            "name": "sticky_subnav",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_62d882dd7c404",
+                                        "operator": ">",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "12.5",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_field": "",
+                            "hide_label": "",
+                            "hide_instructions": "",
+                            "hide_required": "",
+                            "message": "",
+                            "default_value": 0,
+                            "acfe_settings": "",
+                            "acfe_validate": "",
+                            "instruction_placement": "",
+                            "acfe_permissions": "",
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1,
+                            "style": "",
+                            "acfe_field_group_condition": 0
+                        },
+                        {
                             "key": "field_62d35257967f4",
                             "label": "Focus Areas",
                             "name": "focus_areas",
@@ -4580,5 +4618,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1668150556
+    "modified": 1668208656
 }
