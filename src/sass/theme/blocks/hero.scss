@@ -84,6 +84,18 @@
 		width: 100%;
 	}
 	
+	.overlay-color {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	
+	.col-12 {
+		z-index: 0;
+	}
+	
 	.rotating-headlines {
 		height: 5rem;
 		overflow: hidden;

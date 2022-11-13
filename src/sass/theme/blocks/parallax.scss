@@ -1,0 +1,24 @@
+// Parallax
+// ----------------------------------------------
+.block.parallax {	
+	display: flex;
+	column-gap: 0.4rem;
+	.image-1 {
+		height: 30vw;
+		flex: 100%;
+	}
+	.image-2 {
+		flex: 50%;
+		height: 30vw;
+		@include media-breakpoint-down(lg) {
+			flex: 100%;		
+		}
+	}
+	.image-3 {
+		flex: 33.33%;
+		height: 40vw;
+		@include media-breakpoint-down(lg) {
+			flex: 100%;		
+		}
+	}
+}

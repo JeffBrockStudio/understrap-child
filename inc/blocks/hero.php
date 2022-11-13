@@ -1,5 +1,13 @@
 <?php include( get_stylesheet_directory() . '/inc/blocks/block-settings.php' ); ?>
 
+	<?php if ( get_sub_field('overlay_color')): ?>
+		<?php $hex = get_sub_field('overlay_color');
+		list($r, $g, $b) = sscanf($hex, "#%02x%02x%02x");
+		?>
+		
+		<div class="overlay-color" style="background-color: rgba( <?php echo "$r, $g, $b,";?> <?php echo $dec = get_sub_field('overlay_opacity') / 100; ?> );"></div>
+	<?php endif; ?>	
+	
 	<?php if ( get_sub_field( 'add_overlay_reveal' )):?>
 	
 		<div class="sticky">

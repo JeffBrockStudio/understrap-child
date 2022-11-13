@@ -7,6 +7,10 @@ if ( have_rows('layout_settings') ):
 		$layout_settings['padding_top'] = get_sub_field('padding_top');
 		$layout_settings['padding_bottom'] = get_sub_field('padding_bottom');
 		$layout_settings['background_color'] = get_sub_field('background_color');
+		if ( get_sub_field( 'block_background_image' )):
+			$image = get_sub_field( 'block_background_image' );
+			$layout_settings['background_image_url'] = $image;
+		endif;		
 		$layout_settings['accent_color'] = get_sub_field('accent_color');
 		$layout_settings['background_color_gradient_start'] = get_sub_field('background_color_gradient_start');
 		$layout_settings['background_color_gradient_end'] = get_sub_field('background_color_gradient_end');
@@ -14,7 +18,6 @@ if ( have_rows('layout_settings') ):
 
 	endwhile;
 endif;
-
 
 // Set a unique block ID
 if ( $layout_settings['anchor_id'] ):
@@ -79,12 +82,17 @@ endif;
 		if ( $layout_settings['padding_bottom'] != '' ):
 			echo 'padding-bottom: ' . $layout_settings['padding_bottom']. 'rem; '; 
 		endif;
-		if ( $layout_settings['background_color'] ): 
+		if ( $layout_settings['background_color'] != '' ): 
 			echo 'background-color: ' . $layout_settings['background_color']. '; '; 
 		endif; 
-		if ( get_sub_field('background_image')): 
+		if ( isset( $layout_settings['background_image_url']) ):
+			$image = $layout_settings['background_image_url'];
+			//echo $layout_settings['background_image_url'];
+			// echo 'URL ' .  $layout_settings['background_image_url'];
+			echo 'background-image: url(' . $image['url'] . '); ';
+		elseif ( get_sub_field('background_image') != ''): 
 			$image = get_sub_field('background_image');
 			echo 'background-image: url(' . $image['url'] . '); '; 
-		endif; 
+		endif;	
 		?>
 ">

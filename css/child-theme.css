@@ -32039,6 +32039,16 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
   top: 0;
   width: 100%;
 }
+.block.hero .overlay-color {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.block.hero .col-12 {
+  z-index: 0;
+}
 .block.hero .rotating-headlines {
   height: 5rem;
   overflow: hidden;
@@ -32072,6 +32082,34 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 
 .block.large_media .image img {
   width: 100%;
+}
+
+.block.parallax {
+  display: flex;
+  -moz-column-gap: 0.4rem;
+  column-gap: 0.4rem;
+}
+.block.parallax .image-1 {
+  height: 30vw;
+  flex: 100%;
+}
+.block.parallax .image-2 {
+  flex: 50%;
+  height: 30vw;
+}
+@media (max-width: 991.98px) {
+  .block.parallax .image-2 {
+    flex: 100%;
+  }
+}
+.block.parallax .image-3 {
+  flex: 33.33%;
+  height: 40vw;
+}
+@media (max-width: 991.98px) {
+  .block.parallax .image-3 {
+    flex: 100%;
+  }
 }
 
 .block.reveal {
