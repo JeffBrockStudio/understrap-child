@@ -282,6 +282,16 @@ jQuery(document).ready(function($) {
 		loadAjax(href);
 	});
 	
+	
+	// var $container = $('.masonry-grid');	
+	// $container.imagesLoaded( function() {
+	// 	
+	// 	$container.masonry({
+	// 		itemSelector: '.masonry-grid-item',
+	// 		gutter: 10
+	// 	});
+	// 	
+	// });
 		
 });
 
@@ -298,5 +308,5 @@ jQuery(function($) {
 
 
 window.addEventListener("beforeunload", function () {
-	document.body.classList.add("animate-out");
+	// document.body.classList.add("animate-out");
 });

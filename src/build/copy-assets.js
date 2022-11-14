@@ -27,6 +27,7 @@ copyDir('./node_modules/understrap/src/sass/theme', './src/sass/assets/understra
 copyDir('./node_modules/@fortawesome/fontawesome-pro/scss', './src/sass/assets/fontawesome-pro');
 copyDir('./node_modules/@fortawesome/fontawesome-pro/webfonts', './fonts');
 fs.copyFile('./node_modules/imagesloaded/imagesloaded.pkgd.min.js', './src/js/imagesloaded.pkgd.min.js');
+fs.copyFile('./node_modules/isotope-layout/dist/isotope.pkgd.min.js', './src/js/isotope.pkgd.min.js');
 fs.copyFile('./node_modules/lazysizes/lazysizes.min.js', './src/js/lazysizes.min.js');
 fs.copyFile('./node_modules/jquery-match-height/dist/jquery.matchHeight-min.js', './src/js/jquery.matchHeight-min.js');
 fs.copyFile('./node_modules/jquery-parallax.js/parallax.min.js', './src/js/parallax.min.js');

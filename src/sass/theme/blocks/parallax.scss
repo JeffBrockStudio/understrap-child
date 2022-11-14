@@ -4,21 +4,65 @@
 	display: flex;
 	column-gap: 0.4rem;
 	.image-1 {
-		height: 30vw;
 		flex: 100%;
 	}
 	.image-2 {
 		flex: 50%;
-		height: 30vw;
 		@include media-breakpoint-down(lg) {
 			flex: 100%;		
 		}
 	}
 	.image-3 {
 		flex: 33.33%;
-		height: 40vw;
 		@include media-breakpoint-down(lg) {
 			flex: 100%;		
 		}
 	}
+
+	.ratio-16-9 {
+		height: 56.25vw;
+		&.image-2 {
+			height: 28.125vw;
+		}
+		&.image-3 {
+			height: 18.75vw;
+		}
+	}	
+	.ratio-4-3 {
+		height: 75vw;
+		&.image-2 {
+			height: 37.5vw;
+		}
+		&.image-3 {
+			height: 25vw;
+		}
+	}
+	.ratio-1-1 {
+		height: 100vw;
+		&.image-2 {
+			height: 50vw;
+		}
+		&.image-3 {
+			height: 33.333vw;
+		}
+	}
+	.ratio-3-4 {
+		height: 133.333vw;
+		&.image-2 {
+			height: 66.6665vw;
+		}
+		&.image-3 {
+			height: 44.444vw;
+		}
+	}
+	.ratio-9-16 {
+		height: 177vw;
+		&.image-2 {
+			height: 88.5vw;
+		}
+		&.image-3 {
+			height: 59vw;
+		}
+	}
+
 }

@@ -14,6 +14,9 @@ function custom_theme_enqueue_styles() {
 		
 		// GSAP Scrolltrigger
 		wp_enqueue_script( 'gsap-ScrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js', array(), $the_theme->get( 'Version' ), true );
+		
+		// Justified Gallery
+		wp_enqueue_script( 'justified-gallery', get_stylesheet_directory_uri() . '/src/js/jquery.justifiedGallery.min.js', array(), $the_theme->get( 'Version' ), true );	
 
 		// Waypoints
 		wp_enqueue_script( 'waypoints', get_stylesheet_directory_uri() . '/src/js/jquery.waypoints.min.js', array(), $the_theme->get( 'Version' ), true );
@@ -22,7 +25,7 @@ function custom_theme_enqueue_styles() {
 		wp_enqueue_script( 'waypoints-sticky', get_stylesheet_directory_uri() . '/src/js/sticky.min.js', array(), $the_theme->get( 'Version' ), true );	
 		
 		// Waypoints InView Plugin
-		wp_enqueue_script( 'waypoints-inview', get_stylesheet_directory_uri() . '/src/js/inview.min.js', array(), $the_theme->get( 'Version' ), true );			
+		wp_enqueue_script( 'waypoints-inview', get_stylesheet_directory_uri() . '/src/js/inview.min.js', array(), $the_theme->get( 'Version' ), true );		
 				
     wp_enqueue_script( 'custom-javascript', get_stylesheet_directory_uri() . '/src/js/custom-javascript.js', array(), $the_theme->get( 'Version' ), true );
 				
