@@ -52,6 +52,7 @@ body .frm_style_formidable-style.with_frm_style {
 	
 	// Submit
 	.frm_submit {
+		padding-top: .9rem;
 		button {
 			background: $primary;
 			background-position: right 1.1rem center;
@@ -76,13 +77,17 @@ body .frm_style_formidable-style.with_frm_style {
 				color: $white;
 			}
 		}
+		&:before {
+			display: none !important;
+		}
 	}
 	
 	// Error message
 	.frm_error {
-		color: $red;
+		color: #F2DEDE;
 		font-family: $font-family-base;		
 		font-size: 0.8rem;
+		font-weight: $font-weight-bold;
 		margin-top: 0.3rem;
 	}
 	.frm_error_style {

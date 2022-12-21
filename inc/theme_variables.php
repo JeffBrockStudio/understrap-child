@@ -2,7 +2,7 @@
 //
 // Enable Fixed Navbar
 // --------------------------------------------------
-define( 'POWEHI_ENABLE_FIXED_NAVBAR', FALSE );
+define( 'POWEHI_ENABLE_FIXED_NAVBAR', TRUE );
 
 
 //
@@ -52,10 +52,10 @@ $theme_palette['#198754']['text_color'] 	= '#ffffff';
 
 // Cyan
 $theme_palette['#10caf0']['name'] 				= 'cyan';
-$theme_palette['#10caf0']['hex'] 				= '#10caf0';
+$theme_palette['#10caf0']['hex'] 					= '#10caf0';
 $theme_palette['#10caf0']['bs_class'] 		= 'success';
-$theme_palette['#10caf0']['btn_class'] 	= 'btn-light';
-$theme_palette['#10caf0']['level'] 			= 'dark';
+$theme_palette['#10caf0']['btn_class'] 		= 'btn-light';
+$theme_palette['#10caf0']['level'] 				= 'dark';
 $theme_palette['#10caf0']['text_color'] 	= '#ffffff';
 
 // Light Gray

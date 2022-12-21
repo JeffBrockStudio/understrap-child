@@ -6,6 +6,7 @@
             "key": "field_62b52e37ef7a2",
             "label": "Newsletter Heading",
             "name": "footer_newsletter_heading",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -26,6 +27,7 @@
             "key": "field_62b52e5cef7a3",
             "label": "Newsletter Form",
             "name": "footer_newsletter_form",
+            "aria-label": "",
             "type": "formidable_select",
             "instructions": "",
             "required": 0,
@@ -42,6 +44,7 @@
             "key": "field_61e61bf5545a4",
             "label": "Logo",
             "name": "logo_footer",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -69,6 +72,7 @@
             "key": "field_62f460568d1fe",
             "label": "Contact Heading",
             "name": "footer_contact_heading",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -89,6 +93,7 @@
             "key": "field_61cabc2fbca0a",
             "label": "Legal",
             "name": "legal",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -115,12 +120,37 @@
             "acfe_wysiwyg_transparent": 0,
             "acfe_wysiwyg_merge_toolbar": 0,
             "acfe_wysiwyg_custom_toolbar": 0,
+            "acfe_field_group_condition": 0,
+            "acfe_wysiwyg_auto_init": 0,
+            "acfe_wysiwyg_min_height": 300,
+            "acfe_wysiwyg_toolbar_buttons": []
+        },
+        {
+            "key": "field_63915d43ecd44",
+            "label": "Affiliations\/Partners Heading",
+            "name": "footer_affiliations_partners_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Affiliations & Partners",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
             "acfe_field_group_condition": 0
         },
         {
             "key": "field_62f46efc0d11c",
             "label": "Affiliations\/Partners",
             "name": "footer_affiliations_partners",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -142,6 +172,7 @@
                     "key": "field_62f470c90d11d",
                     "label": "Image",
                     "name": "image",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -163,12 +194,14 @@
                     "max_size": "",
                     "mime_types": "",
                     "acfe_field_group_condition": 0,
-                    "library": "all"
+                    "library": "all",
+                    "parent_repeater": "field_62f46efc0d11c"
                 },
                 {
                     "key": "field_62f473110d11e",
                     "label": "Link",
                     "name": "link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -179,9 +212,11 @@
                         "id": ""
                     },
                     "return_format": "array",
-                    "acfe_field_group_condition": 0
+                    "acfe_field_group_condition": 0,
+                    "parent_repeater": "field_62f46efc0d11c"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         }
     ],
     "location": [
@@ -209,5 +244,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1660187852
+    "modified": 1670471121
 }

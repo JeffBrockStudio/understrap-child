@@ -123,10 +123,10 @@
 							
 				<div class="<?php echo $columns; ?>">
 					
-					<h1 style="color: <?php the_sub_field( 'text_color' );?>"><?php the_sub_field( 'heading' );?></h1>
+					<h1 <?php if ( $theme_palette['level'] == 'dark' ): ?> class="text-shadow" <?php endif; ?> style="color: <?php the_sub_field( 'text_color' );?>"><?php the_sub_field( 'heading' );?></h1>
 					 
 					<?php if ( get_sub_field( 'subheading' )): ?> 
-						<h2 class="subheading" style="color: <?php the_sub_field( 'text_color' );?>"><?php the_sub_field( 'subheading' );?></h2>
+						<h2 class="subheading <?php if ( $theme_palette['level'] == 'dark' ): ?>text-shadow <?php endif; ?>" style="color: <?php the_sub_field( 'text_color' );?>"><?php the_sub_field( 'subheading' );?></h2>
 					<?php endif; ?> 
 					 
 					 <?php if ( is_single() ): ?>

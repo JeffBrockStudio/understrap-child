@@ -26,6 +26,9 @@ h4 {
 
 a {
 	transition: $transition-base;
+	.text & {
+		font-weight: $font-weight-bold;
+	}
 }
 
 p:last-of-type {

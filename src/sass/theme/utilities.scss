@@ -354,6 +354,11 @@ body.error404 {
 .headings {
 	margin-bottom: 1rem;
 }
+.superheading {
+	font-weight: 700;
+	margin-bottom: .35rem;
+	text-transform: uppercase;
+}
 
 
 //
@@ -402,4 +407,20 @@ body.error404 {
 	top: 0;
 	width: 100%;
 	z-index: 9999;
+}
+
+
+//
+// Blur modal background
+// --------------------------------------------------
+body.modal-open > :not(.modal) {
+	filter: blur(6px);
+}
+
+
+//
+// Text shadow
+// --------------------------------------------------
+.text-shadow {
+	text-shadow: $text-shadow;
 }

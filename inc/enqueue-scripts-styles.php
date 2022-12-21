@@ -5,7 +5,7 @@
 function custom_theme_enqueue_styles() {
 
     // Add Google Fonts
-    wp_enqueue_style( 'child-understrap-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,600,700,300', false ); 
+    wp_enqueue_style( 'child-understrap-google-fonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap', false ); 
     
     $the_theme = wp_get_theme();
     

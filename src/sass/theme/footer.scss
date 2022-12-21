@@ -27,30 +27,45 @@
 		}
 	}
 	
+	.newsletter {
+		margin-bottom: 3rem;
+	}
 	.newsletter-heading {
 		color: $white;
 	}
 	
 	.legal {
 		color: $white;
+		font-size: 0.9rem;
 		@include media-breakpoint-down(sm) {
 			margin-bottom: 1rem;
 		}
 	}
 	
 	.logo {
-		margin-bottom: 1rem;
+		margin-bottom: 3rem;
 		width: 50%;
 	}
 	
 	.contact {
 		color: $white;
 		margin-bottom: 1rem;
+		a {
+			color: $white;	
+		}
+		.phone {
+			margin-top: 1rem;
+		}
 	}
 	
-	.affiliations-partners {
-		display: flex;		
+	.affiliations-partners {		
 		margin-bottom: 2rem;	
+		.heading {
+			color: $white;
+		}
+		.icons {
+			display: flex;
+		}
 		.item {
 			align-items: center;
 			display: flex;

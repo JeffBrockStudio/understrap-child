@@ -1,3 +1,9 @@
+<script>
+jQuery(function($) {
+	$('body').addClass('has-vertical-accordion-menu');
+});
+</script>
+
 <?php	
 // Get number of items in menu
 $vertical_accordion_menu_id = get_field( 'vertical_accordion_menu' );

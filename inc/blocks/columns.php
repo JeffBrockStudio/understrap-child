@@ -74,7 +74,9 @@
 								?>
 								
 								<div class="text dont-break-out">
-									<h3><?php echo $item['heading']; ?></h3>
+									<?php if ( $item['heading'] ): ?>
+										<h3><?php echo $item['heading']; ?></h3>
+									<?php endif; ?>
 									<?php echo apply_filters( 'the_content', $item['text']); ?>					
 									<?php
 									if ( $item['link'] ): ?>

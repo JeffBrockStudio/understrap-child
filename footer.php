@@ -68,15 +68,29 @@ $container = get_theme_mod( 'understrap_container_type' );
 							if ( get_field( 'footer_affiliations_partners', 'options' )):
 								$items = get_field( 'footer_affiliations_partners', 'options' );?>
 								<div class="affiliations-partners">
-									<?php
-									foreach ( $items AS $item ) {?>
-										<div class="item">
-											<a href="<?php $link = $item['link']; echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
-												<img src="<?php $image = $item['image']; echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" width="<?php echo $image['width']; ?>" height="<?php echo $image['height']; ?>" />
-											</a>
+									
+									<div class="row">
+										<div class="col-12">
+											<h3 class="heading"><?php echo get_field( 'footer_affiliations_partners_heading', 'options');?></h3>
 										</div>
-									<?php
-									}?>
+									</div>
+									
+									<div class="row row">
+										<div class="col-12">
+											<div class="icons">
+												<?php
+												foreach ( $items AS $item ) {?>
+													<div class="item">
+														<a href="<?php $link = $item['link']; echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
+															<img src="<?php $image = $item['image']; echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" width="<?php echo $image['width']; ?>" height="<?php echo $image['height']; ?>" />
+														</a>
+													</div>
+												<?php
+												}?>
+											</div>
+										</div>
+									</div>
+									
 								</div>
 								<?php
 							endif;
@@ -189,8 +203,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div><!-- wrapper end -->
 
 </div><!-- #page we need this extra closing tag here -->
-
-<div id="search-overlay"></div>
 
 <?php if ( get_field( 'scripts', 'options' )) {
 	echo $script_code['footer'];

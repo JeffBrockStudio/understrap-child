@@ -132,22 +132,23 @@ endif;
 				</div>
 			
 			<?php else: ?>
-			
-				<div class="carousel-indicators">
-								
-					<?php
-					$i = 0;
-					foreach ( $items AS $item ) {?>
-						<button data-bs-target="#<?php echo $block_id; ?>-carousel" data-bs-slide-to="<?php echo $i; ?>" <?php 
-							if ( $i == 0 ) { 
-								echo ' class="active"';
-								echo ' aria-current="true"';
-							}; ?>>
-						<?php 
-						$i++;
-					}?>
-					
-				</div>
+				<?php if ( count( $items ) > 1 ): ?>
+					<div class="carousel-indicators">
+									
+						<?php
+						$i = 0;
+						foreach ( $items AS $item ) {?>
+							<button data-bs-target="#<?php echo $block_id; ?>-carousel" data-bs-slide-to="<?php echo $i; ?>" <?php 
+								if ( $i == 0 ) { 
+									echo ' class="active"';
+									echo ' aria-current="true"';
+								}; ?>>
+							<?php 
+							$i++;
+						}?>
+						
+					</div>
+				<?php endif; ?>
 			
 			<?php endif; ?>
 			

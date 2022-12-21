@@ -3,7 +3,7 @@ $permalink = esc_url( get_permalink( $resource_id ));
 $target = '';
 ?>
 
-<div class="col-12 col-md-6 col-lg-4">
+<div class="col-12 col-md-6 col-lg-4 item">
 	<article <?php post_class(); ?>>									
 										
 		<div class="row">

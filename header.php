@@ -19,6 +19,15 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	
 	<?php wp_head(); ?>
 </head>
 
@@ -31,16 +40,21 @@ endif; ?>
 <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 
-<div id="wrapper-search" aria-hidden="true">
-	<div class="container">
-		<div class="row">
-			<div class="col-8 offset-1 col-md-8 offset-md-2">
-					<?php get_search_form(); ?>
-					<div class="close"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icon-close.svg"></div>
+
+<div id="wrapper-search" class="modal fade" tabindex="-1" aria-hidden="true" aria-label="Search popup">
+	<div class="modal-dialog modal-xl">
+		<div class="modal-content">
+	
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<?php get_search_form(); ?>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icon-close.svg" alt=""></button>
 			</div>
+
 		</div>
 	</div>
 </div>
+
 
 <div class="site" id="page">
 

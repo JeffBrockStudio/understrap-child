@@ -100,32 +100,12 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 
 
 /**
- * Enable Search WP behind password protection.
- */
-function custom_searchwp_basic_auth_creds() {
-  
-  // NOTE: this needs to be your HTTP BASIC AUTH login
-  //
-  //                 *** NOT *** your WordPress login
-  //
-  //
-  $credentials = array( 
-    'username' => '', // the HTTP BASIC AUTH username
-    'password' => ''  // the HTTP BASIC AUTH password
-  );
-  
-  return $credentials;
-}
-//add_filter( 'searchwp_basic_auth_creds', 'my_searchwp_basic_auth_creds' );
-
-
-/**
  * Formidable Pro offset scroll
  */
-add_filter('frm_scroll_offset', 'frm_scroll_offset');
 function frm_scroll_offset(){
   return 92; //adjust this as needed
 }
+add_filter('frm_scroll_offset', 'frm_scroll_offset');
 
 
 /**
@@ -134,3 +114,25 @@ function frm_scroll_offset(){
 add_filter( 'get_the_archive_title_prefix', '__return_empty_string' );
 
 
+/**
+ * Enable menu links with "Open modal on click?" to open Bootstrap modal
+ */
+function powehi_nav_menu_attribs( $atts, $item, $args ) {
+	
+	$open_modal = get_field('menu_open_modal', $item);	
+	if ( $open_modal == TRUE ) {
+		$atts['data-bs-toggle'] = 'modal';
+		$atts['data-bs-target'] = '#' . get_field('menu_modal_id', $item);
+	}
+	return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'powehi_nav_menu_attribs', 10, 3 );
+
+
+/**
+ * Customize excerpt "read more" content
+ */
+function understrap_all_excerpts_get_more_link( $post_excerpt ) {
+	return $post_excerpt;
+}
+add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );

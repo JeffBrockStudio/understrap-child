@@ -74,6 +74,7 @@ endif;
 		if ( get_sub_field( 'text_placement' )): echo get_sub_field( 'text_placement' ) . ' '; endif;
 		echo ($is_preview) ? 'is-preview' : ''; 
 		if ( get_sub_field( 'add_overlay_reveal' )): echo ' hero-overlay-reveal sticky-wrapper'; endif;
+		if ( get_sub_field( 'add_rotating_headlines' )): echo ' hero-rotating-headlines'; endif;
 		?>" 
 	style="
 		<?php if ( $layout_settings['padding_top'] != '' ):

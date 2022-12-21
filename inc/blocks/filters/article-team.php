@@ -1,4 +1,4 @@
-<li class="gridder-list <?php echo $post_type ?>" data-griddercontent="#content<?php echo $i; ?>">
+<li class="gridder-list <?php echo $post_type ?> item" data-griddercontent="#content<?php echo $i; ?>">
 
 	<div class="inner">
 		<div class="thumb">

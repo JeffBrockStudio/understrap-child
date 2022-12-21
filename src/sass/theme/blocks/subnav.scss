@@ -1,0 +1,20 @@
+// Subnav
+// ----------------------------------------------
+.block.subnav {	
+	.nav-items {
+		text-align: center;
+		a {
+			color: $white;
+			display: inline-block;
+			font-weight: $font-weight-bold;
+			padding: 0 0.5rem;
+			text-decoration: none;
+			@include media-breakpoint-down(sm) {
+				margin-bottom: .5rem;
+			}
+			&:hover {
+				color: $black;
+			}
+		}
+	}
+}

@@ -8,7 +8,7 @@
 // --------------------------------------------------
 
 // Enable fixed navbar?
-$powehi-enable-fixed-navbar: false !default;
+$powehi-enable-fixed-navbar: true !default;
 
 // Enable page transitions?
 $powehi-enable-page-transitions: false !default;
@@ -28,6 +28,9 @@ $powehi-offset-xl: 108px;
 // Set Font Awesome Pro font folder
 $fa-font-path: "../fonts" !default;
 
+// Text shadow
+$text-shadow: 0 0 0.25rem #000 !default;
+
 
 // Slick Carousel
 // $slick-font-family: "Font Awesome 6 Pro" !default;
@@ -45,7 +48,7 @@ $fa-font-path: "../fonts" !default;
 $font-size-base: 1rem;
 
 // scss-docs-start color-variables
-// $blue:    #0d6efd;
+$blue:    #0c69f2;
 // $indigo:  #6610f2;
 // $purple:  #6f42c1;
 // $pink:    #d63384;
@@ -134,7 +137,7 @@ $box-shadow: 0 0 0.75rem rgba( $black, 0.1 );
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-// $font-family-sans-serif: '';
+$font-family-sans-serif: 'Open Sans', sans-serif;
 // stylelint-enable value-keyword-case
 // $font-family-base: $font-family-sans-serif;
 
@@ -156,7 +159,7 @@ $line-height-base:            1.6;
 // $headings-margin-bottom:      $spacer * .5;
 // $headings-font-family:        null;
 // $headings-font-style:         null;
-// $headings-font-weight:        500;
+$headings-font-weight:        700;
 // $headings-line-height:        1.2;
 // $headings-color:              null;
 // scss-docs-end headings-variables
