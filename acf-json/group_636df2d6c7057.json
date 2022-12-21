@@ -22,7 +22,7 @@
             "hide_required": "",
             "default_value": "",
             "acfe_wysiwyg_min_height": 50,
-            "acfe_wysiwyg_max_height": 500,
+            "acfe_wysiwyg_max_height": "",
             "acfe_wysiwyg_valid_elements": "",
             "acfe_wysiwyg_custom_style": "",
             "acfe_wysiwyg_disable_wp_style": 0,
@@ -32,7 +32,90 @@
             "acfe_wysiwyg_menubar": 0,
             "acfe_wysiwyg_transparent": 0,
             "acfe_wysiwyg_merge_toolbar": 1,
-            "acfe_wysiwyg_custom_toolbar": 0,
+            "acfe_wysiwyg_custom_toolbar": 1,
+            "acfe_wysiwyg_toolbar_buttons": {
+                "acfe_wysiwyg_toolbar_1": {
+                    "0": {
+                        "acfe_wysiwyg_toolbar_row": "formatselect"
+                    },
+                    "63a2c682b2b8f": {
+                        "acfe_wysiwyg_toolbar_row": "|"
+                    },
+                    "63a2c60a356c9": {
+                        "acfe_wysiwyg_toolbar_row": "styleselect"
+                    },
+                    "63a2c613356ca": {
+                        "acfe_wysiwyg_toolbar_row": "|"
+                    },
+                    "1": {
+                        "acfe_wysiwyg_toolbar_row": "bold"
+                    },
+                    "2": {
+                        "acfe_wysiwyg_toolbar_row": "italic"
+                    },
+                    "3": {
+                        "acfe_wysiwyg_toolbar_row": "bullist"
+                    },
+                    "4": {
+                        "acfe_wysiwyg_toolbar_row": "numlist"
+                    },
+                    "63a2c662b2b8e": {
+                        "acfe_wysiwyg_toolbar_row": "|"
+                    },
+                    "6": {
+                        "acfe_wysiwyg_toolbar_row": "alignleft"
+                    },
+                    "7": {
+                        "acfe_wysiwyg_toolbar_row": "aligncenter"
+                    },
+                    "63a2c33fd2a34": {
+                        "acfe_wysiwyg_toolbar_row": "outdent"
+                    },
+                    "63a2c33bd2a33": {
+                        "acfe_wysiwyg_toolbar_row": "indent"
+                    },
+                    "63a2c69cb2b90": {
+                        "acfe_wysiwyg_toolbar_row": "|"
+                    },
+                    "9": {
+                        "acfe_wysiwyg_toolbar_row": "link"
+                    }
+                },
+                "acfe_wysiwyg_toolbar_2": {
+                    "63a2c6a2b2b91": {
+                        "acfe_wysiwyg_toolbar_row": "|"
+                    },
+                    "6": {
+                        "acfe_wysiwyg_toolbar_row": "charmap"
+                    },
+                    "63a2c4d3cb87e": {
+                        "acfe_wysiwyg_toolbar_row": "subscript"
+                    },
+                    "63a2c4dbcb87f": {
+                        "acfe_wysiwyg_toolbar_row": "superscript"
+                    },
+                    "2": {
+                        "acfe_wysiwyg_toolbar_row": "hr"
+                    },
+                    "63a2c6acb2b92": {
+                        "acfe_wysiwyg_toolbar_row": "|"
+                    },
+                    "4": {
+                        "acfe_wysiwyg_toolbar_row": "pastetext"
+                    },
+                    "5": {
+                        "acfe_wysiwyg_toolbar_row": "removeformat"
+                    },
+                    "9": {
+                        "acfe_wysiwyg_toolbar_row": "undo"
+                    },
+                    "10": {
+                        "acfe_wysiwyg_toolbar_row": "redo"
+                    }
+                },
+                "acfe_wysiwyg_toolbar_3": "",
+                "acfe_wysiwyg_toolbar_4": ""
+            },
             "acfe_settings": "",
             "acfe_validate": "",
             "instruction_placement": "field",
@@ -43,8 +126,7 @@
             "delay": 0,
             "acfe_field_group_condition": 0,
             "acfe_wysiwyg_auto_init": 0,
-            "acfe_wysiwyg_height": 300,
-            "acfe_wysiwyg_toolbar_buttons": []
+            "acfe_wysiwyg_height": 300
         }
     ],
     "location": [
@@ -73,5 +155,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1668150654
+    "modified": 1671612181
 }
