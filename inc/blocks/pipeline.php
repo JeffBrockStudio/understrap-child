@@ -61,7 +61,7 @@ $footnote_text = get_sub_field( 'footnote_text' );
 								$program_modality = get_sub_field( 'program_modality' );
 								$program_description = get_sub_field( 'program_description' );
 								$program_button = get_sub_field( 'program_button' );
-			
+								$program_indication_with_stage = get_sub_field( 'program_indication_with_stage' );
 								$counter++;
 								?>
 								<div class="card">
@@ -76,21 +76,30 @@ $footnote_text = get_sub_field( 'footnote_text' );
 											
 												<?php 
 												if( have_rows('program_indication_with_stage') ):		
+													$loop_index = 1;
 													while ( have_rows( 'program_indication_with_stage' ) ): the_row();		
 														$indication = get_sub_field( 'indication' );
 														$progress = get_sub_field( 'progress' );
 														$pipeline_text = get_sub_field( 'pipeline_text' );
 														$in_progress = get_sub_field( 'in_progress' );
+														
+														$top_style = '';
+														if ( count( $program_indication_with_stage ) > 1 ):
+															$top_style = 'top: ' . 100 / count( $program_indication_with_stage ) . '%;';
+														endif;
 														?>
 														<div class="card-row">
 															<div class="col1">
-																<div class="program-name"><?php echo $program_name; ?></div>
+																<div class="program-name" style="<?php echo $top_style; ?>"><?php echo $program_name; ?></div>
 																<?php if( $program_code ) { ?>
 																	<div class="program-code"><?php echo $program_code; ?></div>
 																<?php } ?>
 																<?php if( $program_modality ) { ?>
 																	<div class="program-modality"><?php echo $program_modality; ?></div>
-																<?php } ?>
+																<?php } ?>																
+															</div>
+															
+															<div class="col2">
 																<?php if( $indication ) { ?>
 																	<div class="indication">
 																		<?php echo $indication; ?>
@@ -98,15 +107,15 @@ $footnote_text = get_sub_field( 'footnote_text' );
 																<?php } ?>
 															</div>
 															
-															<div class="col2">
+															<div class="col3">
 																<div class="row-out">
 																	<div class="lrg-col">
 																		
 																		<?php 
 																		$i = 0; 
 																		foreach( $sub_headings AS $sub_heading ):
-																			if ( $i > 0 ):?>
-																				<div class="sub-col<?php echo $i ?>"><?php // echo $sub_heading; ?></div>
+																			if ( $i > 1 ):?>
+																				<div class="sub-col<?php echo $i-1 ?>"><?php // echo $sub_heading; ?></div>
 																				<?php
 																			endif;
 																			$i++;
@@ -128,7 +137,9 @@ $footnote_text = get_sub_field( 'footnote_text' );
 															</div>
 														</div>
 														
-													<?php endwhile; ?>
+														<?php 
+														$loop_index++;
+													endwhile; ?>
 												<?php endif; ?>											
 											
 										</a>
