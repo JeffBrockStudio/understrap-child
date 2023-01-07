@@ -12,18 +12,39 @@
 				$items = get_sub_field( 'columns' );
 				$count = count(get_sub_field( 'columns' ));
 				if ( $count == 4 ):
-					$md_columns = 3;
+					$md_columns = 6;
+					$lg_columns = 3;
 				elseif ( $count == 3 ):
-					$md_columns = 4;
+					$md_columns = 6;
+					$lg_columns = 4;
 				else:
 					$md_columns = 6;
+					$lg_columns = 6;
 				endif;
 			
 				foreach ( $items AS $item ):?>
 					
-					<?php if ( $item['image_layout'] == 'left' ): ?>
+					<?php if ( $item['flippable'] ): ?>
+						
+						<div class="col-12 col-md-<?php echo $md_columns; ?> col-lg-<?php echo $lg_columns; ?> col-column flippable">
+							<div class="column flip-card-wrapper">
+								
+								<div class="front">								
+									<h3 class="heading"><?php echo $item['heading']; ?></h3>								
+								</div>
+								
+								<div class="back">
+									<div class="text">
+										<?php echo $item['text'];?>
+									</div>
+								</div>
+								
+							</div>
+						</div>
 					
-						<div class="col-12 col-md-<?php echo $md_columns; ?> col-column image-layout-left">
+					<?php elseif ( $item['image_layout'] == 'left' ): ?>
+					
+						<div class="col-12 col-md-<?php echo $md_columns; ?> col-lg-<?php echo $lg_columns; ?> col-column image-layout-left">
 							<div class="column">	
 								
 								<div class="row g-0">
@@ -63,7 +84,7 @@
 					
 					<?php else: ?>						
 					
-						<div class="col-12 col-md-<?php echo $md_columns; ?> col-column <?php if ( $item['image_layout'] == 'bottom' ) echo 'image-layout-bottom'; ?>">
+						<div class="col-12 col-md-<?php echo $md_columns; ?> col-lg-<?php echo $lg_columns; ?> col-column <?php if ( $item['image_layout'] == 'bottom' ){ echo 'image-layout-bottom'; } else { echo 'image-layout-top'; }?>">
 							<div class="column">						
 								<?php if ( $item['image'] ): ?>
 									<div class="image<?php if ( !$item['heading'] AND !$item['text']) echo ' no-text'; ?>">

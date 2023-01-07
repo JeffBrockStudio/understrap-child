@@ -2,17 +2,20 @@
 // ----------------------------------------------
 .block.columns {
 	text-align: center;
+	> .container > .row {
+		justify-content: center;
+	}
 	.col-column {
-		@include media-breakpoint-down(sm) {
-			margin-bottom: 2rem;					
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 1.5rem;					
 			&:last-of-type {
 				margin-bottom: 0;
 			}
 		}				
 		&.col-md-3 {
 			.column {
-				padding-left: 1rem;
-				padding-right: 1rem;
+				// padding-left: 1rem;
+				// padding-right: 1rem;
 			}
 			.text {
 				h3 {
@@ -21,30 +24,83 @@
 			}		
 			.image {
 				img {
-					height: 100px;
+					// height: 100px;
 				}
 			}			
 		}
 		&.image-layout-left {
 			.image {
-				margin-right: 1rem;
+				margin-left: 1.4rem;
+				margin-right: 0;
+				margin-top: 2.4rem;
 				img {
-					height: auto;
+					height: 5rem;
 				}
 			}
 			.text {
+				padding-left: 1.5rem;
 				text-align: left;
 			}
+		}
+		&.image-layout-top {
+			
 		}
 		&.image-layout-bottom {
 			.column {
 				display: flex;
-				flex-direction: column;
+				flex-direction: column-reverse;
+				padding-bottom: 0;
+				position: relative;
 				.image {
 					margin-top: 2rem;
-					order: 1;
+					//order: 1;
 				}	
+				.text {
+					height: 100%;
+				}
 			}			
+		}
+		&.flippable {
+			.column {
+				align-items: center;
+				display: flex;
+				height: 20rem;
+				justify-content: center;
+				padding: 2rem;
+			}
+			.flip-card-wrapper {	
+				cursor: pointer;
+				&:hover {
+					.front {
+						opacity: 0;
+					}
+					.back {
+						opacity: 1;
+					}
+				}
+				.front {
+					background: $white;	
+					transition: $transition-base;					
+					.heading {
+						margin-bottom: 0;
+						padding: 2rem;
+					}
+				}									
+				.back {
+					align-items: center;
+					display: flex;
+					height: 100%;
+					left: 0;
+					opacity: 0;
+					position: absolute;
+					top: 0;
+					transition: $transition-base;
+					width: 100%;
+					.text {
+						padding: 2rem;
+					}
+				}
+			}
 		}
 	}
 	h2 {
@@ -53,20 +109,21 @@
 	.column {
 		background: $white;
 		height: 100%;				
-		padding: 1.5rem 2rem;
+		padding: 0 0 2rem;
 		position: relative;
 		@if $enable-shadows {
 			box-shadow: 0 0 10px rgba( $black, 0.1 );
 		}
 	}
 	.image {
-		margin-bottom: 0.75rem;
+		//margin-bottom: 0.75rem;
 		img {
-			height: 127px;
+			//height: 127px;
 			width: auto;
 		}
 	}
 	.text {
+		padding: 2rem 2rem 0;
 		h3 {
 			font-size: 1.333rem;
 			font-weight: 600;
