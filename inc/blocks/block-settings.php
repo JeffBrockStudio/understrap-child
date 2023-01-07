@@ -6,6 +6,7 @@ if ( have_rows('layout_settings') ):
 
 		$layout_settings['padding_top'] = get_sub_field('padding_top');
 		$layout_settings['padding_bottom'] = get_sub_field('padding_bottom');
+		$layout_settings['overlap_bottom'] = get_sub_field('overlap_bottom');
 		$layout_settings['background_color'] = get_sub_field('background_color');
 		if ( get_sub_field( 'block_background_image' )):
 			$image = get_sub_field( 'block_background_image' );
@@ -77,7 +78,11 @@ endif;
 		if ( get_sub_field( 'add_rotating_headlines' )): echo ' hero-rotating-headlines'; endif;
 		?>" 
 	style="
-		<?php if ( $layout_settings['padding_top'] != '' ):
+		<?php
+		if ( $layout_settings['overlap_bottom'] != '' ):
+			echo 'margin-bottom: ' .  $layout_settings['overlap_bottom']. 'rem; '; 
+		endif; 
+		if ( $layout_settings['padding_top'] != '' ):
 			echo 'padding-top: ' .  $layout_settings['padding_top']. 'rem; '; 
 		endif;
 		if ( $layout_settings['padding_bottom'] != '' ):
