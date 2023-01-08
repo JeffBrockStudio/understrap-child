@@ -30648,6 +30648,15 @@ body.modal-open > :not(.modal) {
   text-shadow: 0 0 0.25rem #000;
 }
 
+.image-mask {
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
 html {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;

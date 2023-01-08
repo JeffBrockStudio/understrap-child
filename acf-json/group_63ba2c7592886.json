@@ -1,0 +1,79 @@
+{
+    "key": "group_63ba2c7592886",
+    "title": "Image Mask",
+    "fields": [
+        {
+            "key": "field_63ba2c7615d20",
+            "label": "Image Mask",
+            "name": "image_mask",
+            "aria-label": "",
+            "type": "acfe_image_selector",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "all",
+            "hide_instructions": "",
+            "hide_required": "",
+            "choices": {
+                "wobbly-image-large-1.svg": "\/wp-content\/themes\/understrap-child\/img\/masks\/wobbly-image-large-1.svg",
+                "wobbly-image-large-2.svg": "\/wp-content\/themes\/understrap-child\/img\/masks\/wobbly-image-large-2.svg",
+                "wobbly-image-large-3.svg": "\/wp-content\/themes\/understrap-child\/img\/masks\/wobbly-image-large-3.svg",
+                "wobbly-image-medium-1.svg": "\/wp-content\/themes\/understrap-child\/img\/masks\/wobbly-image-medium-1.svg",
+                "wobbly-image-medium-2.svg": "\/wp-content\/themes\/understrap-child\/img\/masks\/wobbly-image-medium-2.svg",
+                "wobbly-image-medium-3.svg": "\/wp-content\/themes\/understrap-child\/img\/masks\/wobbly-image-medium-3.svg",
+                "wobbly-image-small-1.svg": "\/wp-content\/themes\/understrap-child\/img\/masks\/wobbly-image-small-1.svg",
+                "wobbly-image-small-2.svg": "\/wp-content\/themes\/understrap-child\/img\/masks\/wobbly-image-small-2.svg",
+                "wobbly-image-small-3.svg": "\/wp-content\/themes\/understrap-child\/img\/masks\/wobbly-image-small-3.svg"
+            },
+            "default_value": false,
+            "image_size": "medium",
+            "width": "",
+            "height": "",
+            "border": 4,
+            "return_format": "value",
+            "allow_null": 1,
+            "multiple": 0,
+            "max": "",
+            "layout": "horizontal",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "acfe_field_group_condition": 0,
+            "min": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 1,
+    "acfe_display_title": "",
+    "acfe_permissions": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1673151951
+}

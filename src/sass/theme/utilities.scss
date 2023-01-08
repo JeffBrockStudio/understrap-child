@@ -424,3 +424,13 @@ body.modal-open > :not(.modal) {
 .text-shadow {
 	text-shadow: $text-shadow;
 }
+
+
+//
+// Image mask
+// --------------------------------------------------
+.image-mask {
+	mask-position: center;
+	mask-repeat: no-repeat;
+	mask-size: contain;
+}

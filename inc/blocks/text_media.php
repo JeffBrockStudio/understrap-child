@@ -40,7 +40,19 @@
 						</div>
 						<?php	
 					else:	?>
-						<img src="<?php $image = get_sub_field( 'image' ); echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
+						<?php $image_mask = get_sub_field( 'image_mask' );
+						$image_mask = $image_mask['image_mask'];
+						if ( $image_mask ): ?>
+							<div class="image-mask" style="-webkit-mask-image: url(<?php echo get_stylesheet_directory_uri();?>/img/masks/<?php echo $image_mask; ?>);
+								mask-image: url(<?php echo get_stylesheet_directory_uri();?>/img/masks/<?php echo $image_mask; ?>);">
+								<img src="<?php $image = get_sub_field( 'image' ); echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
+							</div>
+							<?php
+						else: ?>
+							<img src="<?php $image = get_sub_field( 'image' ); echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
+							<?php 
+						endif;?>					
+						
 					<?php 
 					endif; ?>
 				</div>
