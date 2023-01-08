@@ -84,30 +84,33 @@
 					
 					<?php else: ?>						
 					
-						<div class="col-12 col-md-<?php echo $md_columns; ?> col-lg-<?php echo $lg_columns; ?> col-column <?php if ( $item['image_layout'] == 'bottom' ){ echo 'image-layout-bottom'; } else { echo 'image-layout-top'; }?>">
+						<div class="col-12 col-md-<?php echo $md_columns; ?> col-lg-<?php echo $lg_columns; ?> col-column <?php 
+							if ( !$item['image'] ):
+								echo 'text-only';
+							elseif ( $item['image_layout'] == 'bottom' ): 
+								echo 'image-layout-bottom'; 
+							elseif ( $item['image_layout'] == 'image-only' ):
+								echo 'image-layout-image-only'; 
+							else:
+								echo 'image-layout-top';
+							endif; ?>">
 							<div class="column">						
 								<?php if ( $item['image'] ): ?>
 									<div class="image<?php if ( !$item['heading'] AND !$item['text']) echo ' no-text'; ?>">
 										<img src="<?php $image = $item['image']; echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
 									</div>
-								<?php
+									<?php
 									endif;
 								?>
 								
-								<div class="text dont-break-out">
-									<?php if ( $item['heading'] ): ?>
-										<h3><?php echo $item['heading']; ?></h3>
-									<?php endif; ?>
-									<?php echo apply_filters( 'the_content', $item['text']); ?>					
-									<?php
-									if ( $item['link'] ): ?>
-										<div class="buttons">
-											
-										</div>
-										<?php
-									endif;?>
-											
-								</div>
+								<?php if ( $item['heading'] OR $item['text'] ): ?>								
+									<div class="text dont-break-out">
+										<?php if ( $item['heading'] ): ?>
+											<h3><?php echo $item['heading']; ?></h3>
+										<?php endif; ?>
+										<?php echo apply_filters( 'the_content', $item['text']); ?>					
+									</div>
+								<?php endif; ?>
 								
 								<?php if ( $item['link'] ): ?>
 									<a class="btn btn-primary stretched-link" href="<?php $link = $item['link']; echo $link['url'];?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>

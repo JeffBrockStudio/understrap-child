@@ -18,7 +18,7 @@
 				// padding-right: 1rem;
 			}
 			.text {
-				h3 {
+				.heading {
 					font-size: 1.083rem;
 				}	
 			}		
@@ -28,6 +28,8 @@
 				}
 			}			
 		}
+		
+		// Image Layout: Left
 		&.image-layout-left {
 			.image {
 				margin-left: 1.4rem;
@@ -42,9 +44,12 @@
 				text-align: left;
 			}
 		}
-		&.image-layout-top {
-			
+		
+		// Image Layout: Top
+		&.image-layout-top {			
 		}
+		
+		// Image Layout: Bottom
 		&.image-layout-bottom {
 			.column {
 				display: flex;
@@ -60,6 +65,16 @@
 				}
 			}			
 		}
+		
+		// Image Layout: Image Only
+
+		&.image-layout-image-only {
+			.column {
+				padding-bottom: 0;
+			}
+		}
+		
+		// Flippable Card
 		&.flippable {
 			.column {
 				align-items: center;
@@ -114,24 +129,29 @@
 		@if $enable-shadows {
 			box-shadow: 0 0 10px rgba( $black, 0.1 );
 		}
-	}
-	.image {
-		//margin-bottom: 0.75rem;
-		img {
-			//height: 127px;
-			width: auto;
+		.image {
+			img {
+				width: auto;
+			}
 		}
-	}
-	.text {
-		padding: 2rem 2rem 0;
-		h3 {
-			font-size: 1.333rem;
-			font-weight: 600;
-			@include media-breakpoint-down(sm) {
-				br {
-					display: none;
+		.text {
+			padding: 2rem 2rem 0;
+			h3 {
+				font-size: 1.333rem;
+				font-weight: 600;
+				@include media-breakpoint-down(sm) {
+					br {
+						display: none;
+					}
 				}
 			}
 		}
+		.btn {
+			margin-top: 1rem;
+		}
+	}
+	
+	.buttons {
+		margin-top: 2rem;
 	}
 }
