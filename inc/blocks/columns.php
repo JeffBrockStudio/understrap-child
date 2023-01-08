@@ -93,15 +93,29 @@
 								echo 'image-layout-image-only'; 
 							else:
 								echo 'image-layout-top';
-							endif; ?>">
+							endif; 
+							
+							$image_mask = $item['image_mask'];
+							$image_mask = $image_mask['image_mask'];
+							if ( $image_mask != '' ):								
+								echo ' image-mask'; 	
+							endif;
+							?>">
 							<div class="column">						
-								<?php if ( $item['image'] ): ?>
-									<div class="image<?php if ( !$item['heading'] AND !$item['text']) echo ' no-text'; ?>">
-										<img src="<?php $image = $item['image']; echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
-									</div>
-									<?php
+								<?php if ( $item['image'] ):
+									if ( $image_mask != '' ): ?>
+										<div class="image-mask" style="-webkit-mask-image: url(<?php echo get_stylesheet_directory_uri();?>/img/masks/<?php echo $image_mask; ?>);
+											mask-image: url(<?php echo get_stylesheet_directory_uri();?>/img/masks/<?php echo $image_mask; ?>);">
+											<img src="<?php $image = $item['image']; echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
+										</div>
+										<?php
+									else: ?>
+										<div class="image<?php if ( !$item['heading'] AND !$item['text']) echo ' no-text'; ?>">
+											<img src="<?php $image = $item['image']; echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
+										</div>
+										<?php									
 									endif;
-								?>
+								endif; ?>
 								
 								<?php if ( $item['heading'] OR $item['text'] ): ?>								
 									<div class="text dont-break-out">

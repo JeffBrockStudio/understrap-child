@@ -433,4 +433,8 @@ body.modal-open > :not(.modal) {
 	mask-position: center;
 	mask-repeat: no-repeat;
 	mask-size: contain;
+	.column {
+		background-color: transparent !important;
+		box-shadow: none !important;
+	}
 }

@@ -30656,6 +30656,10 @@ body.modal-open > :not(.modal) {
   -webkit-mask-size: contain;
   mask-size: contain;
 }
+.image-mask .column {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
 
 html {
   font-size: 18px;
