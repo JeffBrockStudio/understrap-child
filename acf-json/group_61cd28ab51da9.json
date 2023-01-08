@@ -130,6 +130,89 @@
             "acfe_settings": "",
             "acfe_validate": "",
             "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_63ba792384b0b",
+            "label": "Flourish",
+            "name": "use_flourish",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "message": "",
+            "default_value": 0,
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1,
+            "acfe_field_group_condition": 0,
+            "style": ""
+        },
+        {
+            "key": "field_63ba90a995807",
+            "label": "Flourish",
+            "name": "flourish",
+            "aria-label": "",
+            "type": "acfe_image_selector",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63ba792384b0b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "choices": {
+                "underline-orange.svg": "\/wp-content\/themes\/understrap-child\/img\/flourishes\/underline-orange.svg",
+                "underline-purple.svg": "\/wp-content\/themes\/understrap-child\/img\/flourishes\/underline-purple.svg",
+                "underline-yellow.svg": "\/wp-content\/themes\/understrap-child\/img\/flourishes\/underline-yellow.svg",
+                "squiggle-orange-1.svg": "\/wp-content\/themes\/understrap-child\/img\/flourishes\/squiggle-orange-1.svg",
+                "squiggle-orange-2.svg": "\/wp-content\/themes\/understrap-child\/img\/flourishes\/squiggle-orange-2.svg",
+                "squiggle-orange-3.svg": "\/wp-content\/themes\/understrap-child\/img\/flourishes\/squiggle-orange-3.svg",
+                "squiggle-purple.svg": "\/wp-content\/themes\/understrap-child\/img\/flourishes\/squiggle-purple.svg",
+                "squiggle-yellow.svg": "\/wp-content\/themes\/understrap-child\/img\/flourishes\/squiggle-yellow.svg"
+            },
+            "default_value": false,
+            "image_size": "thumbnail",
+            "width": "",
+            "height": "",
+            "border": 4,
+            "return_format": "value",
+            "allow_null": 1,
+            "multiple": 0,
+            "max": "",
+            "layout": "horizontal",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "acfe_field_group_condition": 0,
+            "min": ""
         }
     ],
     "location": [
@@ -158,5 +241,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1667724818
+    "modified": 1673171523
 }

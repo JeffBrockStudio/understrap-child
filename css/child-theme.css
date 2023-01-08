@@ -30615,11 +30615,24 @@ body.error404 .page-content .search-form {
 .headings {
   margin-bottom: 1rem;
 }
+.headings .flourish {
+  margin-top: -0.75rem;
+  max-width: 20%;
+}
+.headings .flourish:after {
+  content: "";
+  display: block;
+}
 
 .superheading {
   font-weight: 700;
   margin-bottom: 0.35rem;
   text-transform: uppercase;
+}
+
+.subheading {
+  font-style: italic;
+  font-weight: 700;
 }
 
 .wp-caption .wp-caption-text {

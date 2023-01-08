@@ -353,11 +353,23 @@ body.error404 {
 // --------------------------------------------------
 .headings {
 	margin-bottom: 1rem;
+	.flourish {
+		margin-top: -.75rem;
+		max-width: 20%;
+		&:after {
+			content: '';
+			display: block;
+		}
+	}
 }
 .superheading {
 	font-weight: 700;
 	margin-bottom: .35rem;
 	text-transform: uppercase;
+}
+.subheading {
+	font-style: italic;
+	font-weight: 700;
 }
 
 

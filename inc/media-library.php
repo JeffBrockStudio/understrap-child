@@ -53,4 +53,14 @@ function custom_attachment_meta_upon_upload( $post_ID ) {
 	
 }
 add_action( 'add_attachment', 'custom_attachment_meta_upon_upload' );
+
+
+function getImg($url){
+		$curl = curl_init($url);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+		$data = curl_exec($curl);
+		curl_close($curl);
+		return $data;
+}
+
 	
