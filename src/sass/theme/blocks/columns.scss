@@ -6,8 +6,8 @@
 		justify-content: center;
 	}
 	.col-column {
-		@include media-breakpoint-down(lg) {
-			margin-bottom: 1.5rem;					
+		margin-bottom: 1.5rem;
+		@include media-breakpoint-down(lg) {							
 			&:last-of-type {
 				margin-bottom: 0;
 			}

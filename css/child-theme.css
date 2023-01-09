@@ -30674,6 +30674,29 @@ body.modal-open > :not(.modal) {
   box-shadow: none !important;
 }
 
+.col-image .image {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.col-image .flourish {
+  align-items: flex-end;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.col-image .flourish img {
+  margin-bottom: 3rem;
+  max-width: 25%;
+}
+
+.block.left .col-image .flourish {
+  justify-content: flex-end;
+}
+
 html {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
@@ -31493,10 +31516,10 @@ body .frm_style_formidable-style.with_frm_style .frm_message p {
 .block.columns > .container > .row {
   justify-content: center;
 }
+.block.columns .col-column {
+  margin-bottom: 1.5rem;
+}
 @media (max-width: 991.98px) {
-  .block.columns .col-column {
-    margin-bottom: 1.5rem;
-  }
   .block.columns .col-column:last-of-type {
     margin-bottom: 0;
   }

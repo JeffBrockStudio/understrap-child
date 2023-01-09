@@ -1,0 +1,73 @@
+{
+    "key": "group_63bb3e55523d3",
+    "title": "Image Flourish",
+    "fields": [
+        {
+            "key": "field_63bb3e55a11f7",
+            "label": "Image Flourish",
+            "name": "image_flourish",
+            "aria-label": "",
+            "type": "acfe_image_selector",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "all",
+            "hide_instructions": "",
+            "hide_required": "",
+            "choices": {
+                "corner-yellow.svg": "\/wp-content\/themes\/understrap-child\/img\/flourishes\/corner-yellow.svg",
+                "underline-exclamation-yellow.svg": "\/wp-content\/themes\/understrap-child\/img\/flourishes\/underline-exclamation-yellow.svg",
+                "squiggle-orange-1.svg": "\/wp-content\/themes\/understrap-child\/img\/flourishes\/squiggle-orange-1.svg"
+            },
+            "default_value": false,
+            "image_size": "medium",
+            "width": "",
+            "height": "",
+            "border": 4,
+            "return_format": "value",
+            "allow_null": 1,
+            "multiple": 0,
+            "max": "",
+            "layout": "horizontal",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "acfe_field_group_condition": 0,
+            "min": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 1,
+    "acfe_display_title": "",
+    "acfe_permissions": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1673223837
+}

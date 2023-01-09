@@ -40,18 +40,36 @@
 						</div>
 						<?php	
 					else:	?>
-						<?php $image_mask = get_sub_field( 'image_mask' );
-						$image_mask = $image_mask['image_mask'];
+						<?php
+						$image_mask = get_sub_field( 'image_mask' );
+						$image_mask = $image_mask['image_mask'];						
 						if ( $image_mask ): ?>
+							
 							<div class="image-mask" style="-webkit-mask-image: url(<?php echo get_stylesheet_directory_uri();?>/img/masks/<?php echo $image_mask; ?>);
 								mask-image: url(<?php echo get_stylesheet_directory_uri();?>/img/masks/<?php echo $image_mask; ?>);">
 								<img src="<?php $image = get_sub_field( 'image' ); echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
+								<?php if ( $image_flourish != '' ): ?>
+									<div class="flourish">
+										<?php	$flourish_url = get_stylesheet_directory_uri() . '/img/flourishes/' . $image_flourish; ?>
+										<img src="<?php echo $flourish_url?>" alt="" aria-hidden="true">
+									</div>
+								<?php endif;?>
 							</div>
 							<?php
 						else: ?>
 							<img src="<?php $image = get_sub_field( 'image' ); echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
 							<?php 
-						endif;?>					
+						endif;?>	
+						
+						<?php 
+							$image_flourish = get_sub_field( 'image_flourish' );
+							$image_flourish = $image_flourish['image_flourish'];
+							if ( $image_flourish != '' ): ?>
+							<div class="flourish">
+								<?php	$flourish_url = get_stylesheet_directory_uri() . '/img/flourishes/' . $image_flourish; ?>
+								<img src="<?php echo $flourish_url?>" alt="" aria-hidden="true">
+							</div>
+						<?php endif;?>				
 						
 					<?php 
 					endif; ?>

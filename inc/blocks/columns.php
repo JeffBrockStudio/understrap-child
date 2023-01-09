@@ -11,7 +11,10 @@
 			<div class="row"><?php
 				$items = get_sub_field( 'columns' );
 				$count = count(get_sub_field( 'columns' ));
-				if ( $count == 4 ):
+				if ( $count > 4 ):
+					$md_columns = 6;
+					$lg_columns = 4;
+				elseif ( $count == 4 ):
 					$md_columns = 6;
 					$lg_columns = 3;
 				elseif ( $count == 3 ):
