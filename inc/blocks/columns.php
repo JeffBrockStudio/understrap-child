@@ -117,7 +117,16 @@
 											<img src="<?php $image = $item['image']; echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
 										</div>
 										<?php									
-									endif;
+									endif; ?>
+									<?php 
+										$image_flourish = $item[ 'image_flourish' ];
+										$image_flourish = $image_flourish['image_flourish'];
+										if ( $image_flourish != '' ): ?>
+										<div class="flourish">
+											<?php	$flourish_url = get_stylesheet_directory_uri() . '/img/flourishes/' . $image_flourish; ?>
+											<img src="<?php echo $flourish_url?>" alt="" aria-hidden="true">
+										</div>
+									<?php endif;
 								endif; ?>
 								
 								<?php if ( $item['heading'] OR $item['text'] ): ?>								

@@ -461,19 +461,37 @@ body.modal-open > :not(.modal) {
 		flex-direction: column;
 		position: relative;
 	}
-	.flourish {
-		align-items: flex-end;
-		display: flex;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		img {
-			margin-bottom: 3rem;
-			max-width: 25%;
+}
+.flourish {
+	align-items: flex-end;
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	img {
+		margin-bottom: 3rem;
+		max-width: 25%;
+	}
+}
+.block.columns {
+	.col-lg-4 {
+		.flourish {
+			img {
+				margin-bottom: 1rem;
+				max-width: 40%;
+			}			
+		}
+	}	
+}
+.block.columns {
+	.col-column:last-of-type {
+		.flourish {
+			justify-content: flex-end;
 		}
 	}
+	
 }
 .block.left {
 	.col-image {
