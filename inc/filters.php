@@ -115,6 +115,15 @@ add_filter( 'get_the_archive_title_prefix', '__return_empty_string' );
 
 
 /**
+* Removes or edits the 'Protected:' part from post/page titles
+*/
+function remove_protected_text() {
+	return __('%s');
+}
+add_filter( 'protected_title_format', 'remove_protected_text' );
+
+
+/**
  * Enable menu links with "Open modal on click?" to open Bootstrap modal
  */
 function powehi_nav_menu_attribs( $atts, $item, $args ) {

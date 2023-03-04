@@ -6,6 +6,9 @@
 			
 		// Fields
 		.form-field {
+			&.horizontal_radio .frm_checkbox {
+				margin-right: 1rem;
+			}
 			input[type=password], 
 			input[type=email], 
 			input[type=number],
@@ -39,7 +42,8 @@
 			textarea {
 				height: auto;
 			}
-			label {
+			label,
+			.frm_primary_label {
 				color: $black;
 				font-family: $font-family-sans-serif;
 				font-size: 0.9444rem;
@@ -48,6 +52,11 @@
 			.frm_description {
 				font-family: $font-family-sans-serif;
 			}
+		}
+		
+		// Floating label
+		.frm_inside_container.frm_label_float_top > label {
+			top: -0.6rem;
 		}
 		
 		// Submit

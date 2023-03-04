@@ -32,7 +32,7 @@ if ( $layout == 'list' ): ?>
 							else: ?>
 								<a href="<?php echo $permalink; ?>" target="<?php echo $target; ?>">
 									<div class="featured-image">
-										<img src="<?php $image = get_field( 'default_blog_image', 'options' ); echo $image['sizes']['medium'] ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
+										<img src="<?php $image = get_field( 'default_image_post', 'options' ); echo $image['sizes']['medium'] ?>" alt="<?php echo $image['alt'] ?>" height="<?php echo $image['height'] ?>" width="<?php echo $image['width'] ?>" />
 									</div>
 								</a>
 							<?php 
