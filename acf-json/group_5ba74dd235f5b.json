@@ -31,6 +31,7 @@
             "acfe_flexible_add_actions": [
                 "title",
                 "toggle",
+                "copy",
                 "close"
             ],
             "acfe_flexible_remove_button": [],
@@ -6398,5 +6399,5 @@
     "acfe_permissions": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1673226893
+    "modified": 1678185618
 }
