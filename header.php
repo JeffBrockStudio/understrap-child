@@ -30,15 +30,15 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 
 	<?php 
 	// External scripts
+	$script_code = array();
+	$script_code['header'] = '';
+	$script_code['body'] = '';
+	$script_code['footer'] = '';
+	
 	if ( get_field( 'scripts', 'options' )) {
 		$scripts = get_field( 'scripts', 'options' );
 		global $script_code;
-		$script_code = array();
 		
-		$script_code['header'] = '';
-		$script_code['body'] = '';
-		$script_code['footer'] = '';
-
 		foreach ( $scripts AS $script ) {
 			
 			if ( $script['script_location'] == 'header' && $script['script_enabled'] ) {
