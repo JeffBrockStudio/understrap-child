@@ -27,6 +27,42 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
+
+	<?php 
+	// External scripts
+	if ( get_field( 'scripts', 'options' )) {
+		$scripts = get_field( 'scripts', 'options' );
+		global $script_code;
+		$script_code = array();
+		
+		$script_code['header'] = '';
+		$script_code['body'] = '';
+		$script_code['footer'] = '';
+
+		foreach ( $scripts AS $script ) {
+			
+			if ( $script['script_location'] == 'header' && $script['script_enabled'] ) {
+				$script_code['header'] .= $script['script_code'] . '
+	
+	';
+			}
+	
+			if ( $script['script_location'] == 'body' && $script['script_enabled'] ) {
+				$script_code['body'] .= $script['script_code'] . '
+	
+	';			
+			}
+	
+			if ( $script['script_location'] == 'footer' && $script['script_enabled'] ) {
+				$script_code['footer'] .= $script['script_code'] . '
+	
+	';						
+			}
+			
+		}
+	}
+
+	echo $script_code['header']; ?>
 	
 	<?php wp_head(); ?>
 </head>
@@ -38,6 +74,12 @@ else:
 	body_class();
 endif; ?>
 <?php understrap_body_attributes(); ?>>
+
+<?php 
+if ( get_field( 'scripts', 'options' )) {
+	echo $script_code['body'];
+}; ?>	
+
 <?php do_action( 'wp_body_open' ); ?>
 
 

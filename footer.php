@@ -205,6 +205,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div><!-- #page we need this extra closing tag here -->
 
 <?php if ( get_field( 'scripts', 'options' )) {
+	global $script_code;
 	echo $script_code['footer'];
 } ?>	
 

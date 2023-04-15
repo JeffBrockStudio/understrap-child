@@ -6,6 +6,7 @@
             "key": "field_57a4dfe160b8b",
             "label": "Scripts",
             "name": "scripts",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -25,6 +26,7 @@
                     "key": "field_57a4e02960b8d",
                     "label": "Enabled ?",
                     "name": "script_enabled",
+                    "aria-label": "",
                     "type": "true_false",
                     "instructions": "",
                     "required": 0,
@@ -38,12 +40,15 @@
                     "default_value": 1,
                     "ui": 0,
                     "ui_on_text": "",
-                    "ui_off_text": ""
+                    "ui_off_text": "",
+                    "style": "",
+                    "parent_repeater": "field_57a4dfe160b8b"
                 },
                 {
                     "key": "field_57a4e01560b8c",
                     "label": "Name",
                     "name": "script_name",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -59,12 +64,14 @@
                     "append": "",
                     "maxlength": "",
                     "readonly": 0,
-                    "disabled": 0
+                    "disabled": 0,
+                    "parent_repeater": "field_57a4dfe160b8b"
                 },
                 {
                     "key": "field_57a4e05560b8e",
                     "label": "Location",
                     "name": "script_location",
+                    "aria-label": "",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
@@ -85,13 +92,21 @@
                     "ui": 0,
                     "ajax": 0,
                     "return_format": "value",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "parent_repeater": "field_57a4dfe160b8b"
                 },
                 {
                     "key": "field_57a4e08260b8f",
                     "label": "Script",
                     "name": "script_code",
-                    "type": "textarea",
+                    "aria-label": "",
+                    "type": "acfe_code_editor",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -102,13 +117,19 @@
                     },
                     "default_value": "",
                     "placeholder": "",
+                    "mode": "javascript",
+                    "lines": 1,
+                    "indent_unit": 4,
                     "maxlength": "",
-                    "rows": 4,
-                    "new_lines": "",
-                    "readonly": 0,
-                    "disabled": 0
+                    "rows": 6,
+                    "max_rows": "",
+                    "return_format": [],
+                    "acfe_field_group_condition": 0,
+                    "parent_repeater": "field_57a4dfe160b8b"
                 }
-            ]
+            ],
+            "rows_per_page": 20,
+            "acfe_repeater_stylised_button": 0
         }
     ],
     "location": [
@@ -136,5 +157,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1640678064
+    "modified": 1681522065
 }
