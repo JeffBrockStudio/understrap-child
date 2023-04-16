@@ -88,4 +88,4 @@ defined( 'ABSPATH' ) || exit;
 		</div>	
 	</div>
 
-</article><!-- #post-## -->
+</article><!-- #post-<?php the_ID(); ?> -->

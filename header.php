@@ -103,8 +103,10 @@ if ( get_field( 'scripts', 'options' )) {
 	<!-- ******************* The Navbar Area ******************* -->
 	<header id="wrapper-navbar">
 
-		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
+		<a class="skip-link <?php echo understrap_get_screen_reader_class( true ); ?>" href="#content">
+			<?php esc_html_e( 'Skip to content', 'understrap' ); ?>
+		</a>
 
 		<?php get_template_part( 'global-templates/navbar', $navbar_type . '-' . $bootstrap_version ); ?>
 
-	</header><!-- #wrapper-navbar end -->
+	</header><!-- #wrapper-navbar -->
