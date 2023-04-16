@@ -28,9 +28,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 	} else {
 		$post_id = $post->ID;
 	}
-		
-	if( have_rows('blocks', $post_id) ): ?>
 	
+	
+	if( have_rows('blocks', $post_id) ): 
+		// Show ACF blocks ?>
 		<main class="site-main" id="content">
 			
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -44,6 +45,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</main>
 		
 		<?php	
+	elseif ( has_blocks( $post_id ) ) :
+		// Show Gutenberg blocks ?>
+		<main class="site-main" id="content">
+			<?php
+			while ( have_posts() ) {
+				the_post();
+				get_template_part( 'loop-templates/content', 'page' );
+
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) {
+					comments_template();
+				}
+			} ?>
+		</main>
+		<?php
 	else:
 	?>
 	
