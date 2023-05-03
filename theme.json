@@ -1,0 +1,137 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true
+    },
+    "color": {
+      "background": true,
+      "custom": true,
+      "customDuotone": true,
+      "customGradient": true,
+      "defaultGradients": true,
+      "defaultPalette": false,
+      "duotone": [],
+      "gradients": [],
+      "link": true,
+      "palette": [
+        {
+          "slug": "theme-blue",
+          "color": "#0c69f2",
+          "name": "Blue"
+        },
+        {
+          "slug": "theme-teal",
+          "color": "#18caef",
+          "name": "Teal"
+        },
+        {
+          "slug": "theme-light-gray",
+          "color": "#f8f9fa",
+          "name": "Light Gray"
+        },
+        {
+          "slug": "theme-white",
+          "color": "#ffffff",
+          "name": "White"
+        },
+        {
+          "slug": "theme-dark-gray",
+          "color": "#6c757d",
+          "name": "Dark Gray"
+        },
+        {
+          "slug": "theme-black",
+          "color": "#000000",
+          "name": "Black"
+        }                                
+      ],
+      "text": true    
+    },
+    "dimensions": {
+			"minHeight": true
+		},
+    "custom": {},
+    "layout": {
+      "contentSize": "80%",
+      "wideSize": "100%"
+    },
+    "shadow": {
+			"defaultPresets": true
+		},
+    "spacing": {
+      "blockGap": true,
+      "customSpacingSize": true,
+      "margin": true,
+      "padding": true,
+      "units": [ "rem" ]
+    },
+    "typography": {
+      "customFontSize": true,
+      "dropCap": true,
+      "fluid": true,
+      "fontFamilies": [
+        {
+					"fontFamily": "Open Sans, sans-serif",
+					"slug": "open-sans",
+					"name": "Open Sans"
+				},
+				{
+					"fontFamily": "Helvetica Neue, Helvetica, Arial, sans-serif",
+					"slug": "helvetica",
+					"name": "Helvetica"
+				}
+      ],
+      "fontSizes": [
+        {
+					"slug": "small",
+					"size": "0.8rem",
+					"name": "Small"
+				},
+        {
+					"slug": "medium",
+					"size": "1rem",
+					"name": "Medium"
+				},
+        {
+					"slug": "large",
+					"size": "1.5rem",
+					"name": "Large"
+				}                
+      ],
+      "fontStyle": true,
+      "fontWeight": true,
+      "letterSpacing": true,
+      "lineHeight": true,
+      "textDecoration": true,
+      "textTransform": true
+    },
+    "useRootPaddingAwareAlignments": true,
+    "blocks": {
+      "core/paragraph": {
+        "color": {},
+        "custom": {},
+        "layout": {},
+        "spacing": {},
+        "typography": {}
+      },
+      "core/heading": {}
+    }
+  },
+  "styles": {
+    "spacing": {
+      "blockGap": "2rem",
+      "padding": {
+				"top": "1rem",
+				"right": "1rem",
+				"bottom": "1rem",
+				"left": "1rem"
+			}
+    }
+  }
+}
