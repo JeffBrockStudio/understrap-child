@@ -31,6 +31,10 @@ require_once('enqueue-scripts-styles.php');
 require_once('filters.php');
 
 
+// Guternberg
+require_once('gutenberg.php');
+
+
 // Login
 require_once('login.php');
 
