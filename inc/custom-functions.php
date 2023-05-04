@@ -3,6 +3,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+add_action( 'init', 'register_acf_blocks' );
+function register_acf_blocks() {
+    register_block_type( __DIR__ . '/blocks/testimonial' );
+}
+
 // Theme variables
 require_once('theme_variables.php');
 
@@ -31,7 +36,7 @@ require_once('enqueue-scripts-styles.php');
 require_once('filters.php');
 
 
-// Guternberg
+// Gutenberg
 require_once('gutenberg.php');
 
 
