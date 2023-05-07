@@ -110,6 +110,11 @@ function child_remove_page_templates( $page_templates ) {
 add_filter( 'theme_page_templates', 'child_remove_page_templates' );
 
 
+add_action( 'init', 'register_acf_blocks' );
+function register_acf_blocks() {
+    register_block_type( get_stylesheet_directory_uri() . '/blocks/testimonial' );
+}
+
 /**
  * Loads custom functions.
  */

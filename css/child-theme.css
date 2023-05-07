@@ -18498,6 +18498,13 @@ body.blog article .focus-areas {
   width: 2rem;
 }
 
+#content.has-blocks .has-background {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0c69f2;

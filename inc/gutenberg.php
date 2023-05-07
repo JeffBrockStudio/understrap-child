@@ -104,7 +104,11 @@ function wpb_embedblock() {
 add_action( 'enqueue_block_editor_assets', 'wpb_embedblock' );
 
 
+/**
+ * Register ACF Blocks￼
+ */
 // add_action( 'init', 'register_acf_blocks' );
 // function register_acf_blocks() {
-//     register_block_type( __DIR__ . '/blocks/testimonial' );
+//     register_block_type( get_stylesheet_directory_uri() . '/blocks/testimonial' );
 // }
+//echo get_stylesheet_directory_uri() . '/blocks/testimonial';

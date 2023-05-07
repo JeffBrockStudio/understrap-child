@@ -53,13 +53,22 @@ $container = get_theme_mod('understrap_container_type');
 		<main class="site-main has-blocks" id="content">
 			<?php
 			while (have_posts()) {
-				the_post();
-				the_content();
+				the_post(); ?>
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<?php
+								the_content();
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if (comments_open() || get_comments_number()) {
-					comments_template();
-				}
+								// If comments are open or we have at least one comment, load up the comment template.
+								if (comments_open() || get_comments_number()) {
+									comments_template();
+								}
+							?>
+						</div>
+					</div>
+				</div>
+				<?php				
 			} ?>
 		</main>
 	<?php

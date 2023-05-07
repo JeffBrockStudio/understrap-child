@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_6452cdd5e7adf",
-            "label": "",
-            "name": "",
+            "label": "Author",
+            "name": "testimonial_author",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -27,9 +27,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "post"
+                "value": "acf\/testimonial"
             }
         ]
     ],
@@ -49,5 +49,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1683148491
+    "modified": 1683407119
 }
