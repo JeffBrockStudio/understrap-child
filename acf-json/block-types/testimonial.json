@@ -1,0 +1,40 @@
+{
+    "name": "testimonial",
+    "title": "Testimonial",
+    "active": true,
+    "description": "",
+    "category": "common",
+    "icon": "",
+    "keywords": [],
+    "post_types": [
+        "page"
+    ],
+    "mode": "auto",
+    "align": "",
+    "align_text": "",
+    "align_content": "top",
+    "render_template": "blocks\/testimonial\/testimonial.php",
+    "render_callback": "",
+    "enqueue_style": "blocks\/testimonial\/testimonial.css",
+    "enqueue_script": "",
+    "enqueue_assets": "",
+    "supports": {
+        "anchor": false,
+        "align": [
+            "left",
+            "right",
+            "full"
+        ],
+        "align_text": true,
+        "align_content": false,
+        "full_height": true,
+        "mode": true,
+        "multiple": true,
+        "example": [],
+        "jsx": false
+    },
+    "acfe_autosync": [
+        "json"
+    ],
+    "modified": 1683408253
+}

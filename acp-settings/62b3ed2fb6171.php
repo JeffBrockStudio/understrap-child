@@ -1,11 +1,11 @@
 <?php
 
 return array (
-  'version' => '5.7.4',
-  'title' => 'Pages',
+  'version' => '6.2.1',
+  'title' => '',
   'type' => 'page',
   'id' => '62b3ed2fb6171',
-  'updated' => 1668130154,
+  'updated' => 1683144078,
   'columns' => 
   array (
     'title' => 
@@ -20,17 +20,6 @@ return array (
       'bulk_edit' => 'on',
       'search' => 'on',
       'name' => 'title',
-    ),
-    '636da563e6e978' => 
-    array (
-      'type' => 'field_5ba74defea3b7',
-      'label' => 'Blocks',
-      'width' => '',
-      'width_unit' => '%',
-      'flex_display' => 'count',
-      'export' => 'off',
-      'search' => 'on',
-      'name' => '636da563e6e978',
     ),
     'author' => 
     array (
@@ -65,21 +54,32 @@ return array (
   ),
   'settings' => 
   array (
+    'roles' => 
+    array (
+    ),
+    'users' => 
+    array (
+    ),
+    'sorting' => '0',
+    'sorting_order' => 'asc',
     'hide_inline_edit' => 'off',
     'hide_bulk_edit' => 'off',
-    'hide_filters' => 'off',
-    'hide_filter_post_date' => 'off',
+    'hide_bulk_delete' => 'off',
     'hide_smart_filters' => 'off',
     'hide_segments' => 'off',
     'hide_export' => 'off',
+    'hide_conditional_formatting' => 'off',
     'hide_new_inline' => 'on',
+    'resize_columns' => 'off',
+    'column_order' => 'off',
+    'hide_filters' => 'off',
+    'hide_filter_post_date' => 'off',
     'hide_submenu' => 'off',
     'hide_search' => 'off',
     'hide_bulk_actions' => 'off',
-    'resize_columns' => 'off',
     'hide_row_actions' => 'off',
     'horizontal_scrolling' => 'off',
-    'sorting' => '0',
-    'sorting_order' => 'asc',
+    'primary_column' => '',
+    'filter_segment' => '',
   ),
 );
