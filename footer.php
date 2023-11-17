@@ -208,10 +208,21 @@ $container = get_theme_mod('understrap_container_type');
 
 </div><!-- #page we need this extra closing tag here -->
 
-<?php if (get_field('scripts', 'options')) {
-	global $script_code;
-	echo $script_code['footer'];
-} ?>
+<?php 
+$external_scripts = get_field( 'scripts', 'options' );
+if ( $external_scripts ) {
+	$script_code = array();
+	$script_code['footer'] = '';
+	foreach ( $external_scripts AS $script ) {
+		if ( $script['script_location'] == 'footer' && $script['script_enabled'] ) {
+			$script_code['footer'] .= $script['script_code'] . "\n";
+		}
+	}
+	if ( $script_code['footer'] != '' ) {
+		echo $script_code['footer'];
+	}
+}
+?>	
 
 <?php wp_footer(); ?>
 

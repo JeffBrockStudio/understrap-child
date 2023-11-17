@@ -32,39 +32,30 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 
 	<?php 
 	// External scripts
-	$script_code = array();
-	$script_code['header'] = '';
-	$script_code['body'] = '';
-	$script_code['footer'] = '';
-	
-	if ( get_field( 'scripts', 'options' )) {
+	$external_scripts = get_field( 'scripts', 'options' );
+	if ( $external_scripts ) {
+		$script_code = array();
+		$script_code['header'] = '';
+		$script_code['body'] = '';
+
 		$scripts = get_field( 'scripts', 'options' );
-		global $script_code;
-		
+
 		foreach ( $scripts AS $script ) {
 			
 			if ( $script['script_location'] == 'header' && $script['script_enabled'] ) {
-				$script_code['header'] .= $script['script_code'] . '
-	
-	';
+				$script_code['header'] .= $script['script_code'] . "\n";
 			}
 	
 			if ( $script['script_location'] == 'body' && $script['script_enabled'] ) {
-				$script_code['body'] .= $script['script_code'] . '
-	
-	';			
+				$script_code['body'] .= $script['script_code'] . "\n";
 			}
-	
-			if ( $script['script_location'] == 'footer' && $script['script_enabled'] ) {
-				$script_code['footer'] .= $script['script_code'] . '
-	
-	';						
-			}
-			
 		}
-	}
 
-	echo $script_code['header']; ?>
+		if ( $external_scripts AND $script_code['header'] != '' ) {
+			echo $script_code['header'];
+		}
+	};
+	?>
 	
 	<?php wp_head(); ?>
 </head>
@@ -78,9 +69,9 @@ endif; ?>
 <?php understrap_body_attributes(); ?>>
 
 <?php 
-if ( get_field( 'scripts', 'options' )) {
+if ( $external_scripts AND $script_code['body'] != '' ) {
 	echo $script_code['body'];
-}; ?>	
+}; ?>
 
 <?php do_action( 'wp_body_open' ); ?>
 
