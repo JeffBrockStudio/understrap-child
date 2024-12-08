@@ -55,18 +55,6 @@ if (! function_exists('custom_fa_setup_kit') ) {
 	
 
 /**
- * Check to make sure the main script has been enqueued and then load the typekit
- * inline script.
- */
-function custom_typekit_inline() {
-    if ( wp_script_is( 'typekit', 'enqueued' ) ) {
-        echo '<script type="text/javascript">try{Typekit.load();}catch(e){}</script>';
-    }
-}    
-//add_action( 'wp_head', 'custom_typekit_inline' );
-
-
-/**
  * Add editor styles
  */
 function custom_add_editor_styles() {
